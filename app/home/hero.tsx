@@ -1,10 +1,27 @@
-
+import Image from "next/image";
+import { FaDotCircle } from "react-icons/fa";
 
 export default function hero() {
   return (
-    <div>
-      <h1>home</h1>
+   
+    <div className="abolute">
+      <Image
+        src="/images/study.webp"
+        alt="Study"
+        width={1000}
+        height={400}
+          className="w-full h-125 object-cover "
+      />
+    <div className="absolute left-20 top-1/2 -translate-y-1/2 text-black pt-0 ">
+    <ul className="list-disc ml-6 space-y-3 text-sm">
+      <li>15+ University and Colleges</li>
+      <li>DKK 80,000 Annual Tuition Fee</li>
+      <li>3 Year Post Study Visa</li>
+    </ul>
     </div>
+
+    </div>
+ 
   )
 }
 
