@@ -155,7 +155,7 @@ export default function Navbar() {
             +92 345 2066 100
           </div>
 
-          <button className="bg-[#43246f] text-white rounded-full px-3 py-1.5 hover:bg-[#5b378f] duration-300">
+          <button className="bg-[#43246f] text-white rounded-full px-3 py-1 hover:bg-[#5b378f] duration-300">
             Get Free Consultation
           </button>
         </div>
