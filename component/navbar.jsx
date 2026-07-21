@@ -6,7 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 export default function Navbar() {
   return (
-    <header className="bg-white py-4 shadow-sm">
+    <header className="bg-white py-4 shadow-sm max-h-max">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div>
@@ -14,7 +14,7 @@ export default function Navbar() {
         </div>
 
         {/* Navigation */}
-        <nav className="bg-[#43246f] rounded-full px-15 py-2">
+        <nav className="bg-[#43246f] rounded-full px-20 py-3">
           <ul className="flex items-center gap-2 text-white text-xs ">
             <li>
               <Link href="/" className="text-yellow-400">
@@ -27,7 +27,7 @@ export default function Navbar() {
             </li>
 
             <li className="relative group">
-              <button className="flex items-center gap-1">
+              <button className="flex items-center gap-2">
                 Services
                 <IoIosArrowDown />
               </button>
@@ -155,7 +155,7 @@ export default function Navbar() {
             +92 345 2066 100
           </div>
 
-          <button className="bg-[#43246f] text-white rounded-full px-3 py-1 hover:bg-[#5b378f] duration-300">
+          <button className="bg-[#43246f] text-xs text-white rounded-full px-4 py-3 hover:bg-[#5b378f] duration-300">
             Get Free Consultation
           </button>
         </div>
