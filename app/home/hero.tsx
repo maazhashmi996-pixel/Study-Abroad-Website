@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function hero() {
   return (
    
-    <div className="absolute h-full bg-gradient-blue-300 to-transparent">
+    <div className="absolute h-full">
       <Image
         src="/images/study.webp"
         alt="Study"
