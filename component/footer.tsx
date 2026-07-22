@@ -81,7 +81,7 @@ export default function Footer() {
             <img src="/images/l.png" alt="l" height={80}  width={200}/>
             <img src="/images/m.png" alt="m" height={80}  width={200}/>
             <img src="/images/v.png" alt="v" height={80}  width={200}/>
-            <img src="/images/year-award.png" alt="year-award" height={80}  width={200}/>
+            <img src="/images/award.png" alt="award" height={80}  width={200}/>
             <img src="/images/Worlds-No1-Partner.png" alt="f" height={80}  width={200}/>
         </div>
         
