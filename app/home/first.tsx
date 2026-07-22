@@ -10,6 +10,7 @@ import Courses from "./courses"
 import Visa from "./visa"
 import Post from "./post"
 import Expert from "./expert"
+import Talk from "./talk"
 
 export default function first() {
   return (
@@ -26,6 +27,7 @@ export default function first() {
       <Visa/>
       <Post/>
       <Expert/>
+      <Talk/>
 
     </div>
   )

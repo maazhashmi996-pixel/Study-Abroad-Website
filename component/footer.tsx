@@ -84,7 +84,6 @@ export default function Footer() {
             <img src="/images/award.png" alt="award" height={80}  width={200}/>
             <img src="/images/Worlds-No1-Partner.png" alt="f" height={80}  width={200}/>
         </div>
-        
       </div>
     </div>
   )
