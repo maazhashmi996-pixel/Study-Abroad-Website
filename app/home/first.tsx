@@ -6,6 +6,10 @@ import Internship from "./internship"
 import Get from "./get"
 import Application from "./application"
 import Cost from "./cost"
+import Courses from "./courses"
+import Visa from "./visa"
+import Post from "./post"
+import Expert from "./expert"
 
 export default function first() {
   return (
@@ -18,6 +22,11 @@ export default function first() {
       <Get/>
       <Application/>
       <Cost/>
+      <Courses/>
+      <Visa/>
+      <Post/>
+      <Expert/>
+
     </div>
   )
 }

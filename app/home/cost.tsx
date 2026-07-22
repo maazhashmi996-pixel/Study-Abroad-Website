@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function cost() {
   return (
-    <div className='flex px-20 py-5 gap-10'>
+    <div className='flex px-20 py-10 gap-10'>
         <div className='flex flex-col border border-gray-200 text-white bg-[#43246f] gap-8 p-5 w-1/2 rounded-2xl'>
       <h1 className='text-2xl '>Cost of Studying In Denmark</h1>
       <p>In general, living expenses in Denmark are expensive. While the suggested monthly budget for smaller towns like Aalborg is about EUR 1,000, living in Copenhagen may cost anything from EUR 1,280 to 1,800 per month.</p>
@@ -11,7 +11,7 @@ export default function cost() {
       </div>
       <div className='flex flex-col border border-gray-200 text-white bg-[#43246f] gap-8 p-5 w-1/2 rounded-2xl'>
         <h1 className='text-2xl'>Scholarships For International Students In Denmark</h1>
-        <ul>
+        <ul className='list-disc px-12'>
         <p>
              Merit-based, covers partial to full tuition for international Master’s students
         </p>
