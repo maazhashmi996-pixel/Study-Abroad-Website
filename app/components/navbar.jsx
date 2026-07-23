@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
+
 export default function Navbar() {
   return (
     <header className="bg-white py-4 shadow-sm max-h-max">
@@ -17,9 +18,7 @@ export default function Navbar() {
         <nav className="bg-[#43246f] rounded-full px-20 py-3">
           <ul className="flex items-center gap-2 text-white text-xs ">
             <li>
-              <Link href="/" className="text-yellow-400">
-                Home
-              </Link>
+              <Link href="/home">Home</Link>
             </li>
 
             <li>
@@ -98,7 +97,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/destinations">Study Destinations</Link>
+              <Link href="/study-destinations/denmark">Study Destinations</Link>
             </li>
 
             <li className="relative group">
