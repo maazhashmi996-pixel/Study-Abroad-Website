@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
       <h1 className="w-70">Times Consultant – Pakistan’s #1 Study Abroad Consultant,
         <br /><span> Trusted Since 2004. Official Rep of 3000+ Global Universities.</span></h1>
       <div>
-          <Image src="/images/logo.png" alt="logo" width={330} height={180} />
+          <Image src="/logos/logo.png" alt="logo" width={330} height={180} />
         </div>
       </div>
       <div className="flex flex-col gap-3">
@@ -77,12 +78,12 @@ export default function Footer() {
         <h1 className="text-3xl">Agent Quality Framework ( AQF) Compliance</h1>
         <p>Studying is committed to upholding the highest standards in international student recruitment. We adhere to the principles of the Agent Quality Framework (AQF), ensuring ethical practices, transparency, and professionalism in all our services. Our agents are trained and certified to provide accurate and reliable guidance to students.</p>
         <div className="flex justify-between border-b border-white">
-            <img src="/images/f.png" alt="f" height={80}  width={200}/>
-            <img src="/images/l.png" alt="l" height={80}  width={200}/>
-            <img src="/images/m.png" alt="m" height={80}  width={200}/>
-            <img src="/images/v.png" alt="v" height={80}  width={200}/>
-            <img src="/images/award.png" alt="award" height={80}  width={200}/>
-            <img src="/images/Worlds-No1-Partner.png" alt="f" height={80}  width={200}/>
+            <img src="/logos/f.png" alt="f" height={80}  width={200}/>
+            <img src="/logos/l.png" alt="l" height={80}  width={200}/>
+            <img src="/logos/m.png" alt="m" height={80}  width={200}/>
+            <img src="/logos/v.png" alt="v" height={80}  width={200}/>
+            <img src="/logos/award.png" alt="award" height={80}  width={200}/>
+            <img src="/logos/Worlds-No1-Partner.png" alt="f" height={80}  width={200}/>
         </div>
       </div>
     </div>
