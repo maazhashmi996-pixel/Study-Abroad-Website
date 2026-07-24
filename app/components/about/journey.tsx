@@ -1,201 +1,97 @@
-import { FaCheckCircle } from "react-icons/fa";
+"use client";
 
+import Image from "next/image";
+
+import {
+  FaBriefcase,
+  FaSearchLocation,
+  FaPlaneDeparture,
+  FaClipboardCheck,
+  FaUniversity,
+  FaPassport,
+} from "react-icons/fa";
+
+import JourneyCard from "JourneyCard";
 
 export default function Journey() {
-
-
-  const journey = [
+  const cards = [
     {
-      id:1,
-      year:"1999",
-      title:"Foundation",
-      description:
-      "Times Consultant started its journey with the aim of helping students achieve international education opportunities."
+      id: 1,
+      title: "Explore",
+      icon: <FaBriefcase />,
     },
-
     {
-      id:2,
-      year:"2010",
-      title:"Global Expansion",
-      description:
-      "Expanded partnerships with international universities and increased study abroad services."
+      id: 2,
+      title: "Apply",
+      icon: <FaSearchLocation />,
     },
-
     {
-      id:3,
-      year:"2020",
-      title:"Digital Growth",
-      description:
-      "Introduced modern counseling solutions and improved online student support."
+      id: 3,
+      title: "Compare",
+      icon: <FaPlaneDeparture />,
     },
-
     {
-      id:4,
-      year:"Present",
-      title:"Global Education Partner",
-      description:
-      "Continuing to guide thousands of students towards successful careers worldwide."
-    }
+      id: 4,
+      title: "Track",
+      icon: <FaClipboardCheck />,
+    },
+    {
+      id: 5,
+      title: "Choose",
+      icon: <FaUniversity />,
+    },
+    {
+      id: 6,
+      title: "Visa",
+      icon: <FaPassport />,
+    },
   ];
 
-
   return (
+    <section className="py-20 bg-white">
 
-    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-5">
 
+        <h2 className="text-center text-5xl md:text-6xl font-bold text-[#4B2E83] mb-14">
+          Simplifying the Study Abroad Journey
+        </h2>
 
-      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-3 gap-10">
 
+          {/* Left */}
 
-        {/* Heading */}
+          <div className="lg:col-span-2">
 
-        <div className="text-center mb-12">
+            <div className="grid md:grid-cols-2 gap-6">
 
+              {cards.map((item) => (
+                <JourneyCard
+                  key={item.id}
+                  title={item.title}
+                  icon={item.icon}
+                />
+              ))}
 
-          <h2 className="
-          text-4xl
-          font-bold
-          text-[#43246f]
-          ">
-            Our Journey
-          </h2>
+            </div>
 
-
-          <p className="text-gray-600 mt-3">
-            A story of dedication, growth and success
-          </p>
-
-
-        </div>
-
-
-
-        {/* Timeline */}
-
-        <div className="
-        max-w-4xl
-        mx-auto
-        relative
-        ">
-
-
-          {/* Line */}
-
-          <div className="
-          absolute
-          left-5
-          top-0
-          h-full
-          w-1
-          bg-[#43246f]
-          md:left-1/2
-          ">
           </div>
 
+          {/* Right */}
 
+          <div className="flex justify-center items-center">
 
-          {
-            journey.map((item,index)=>(
+            <Image
+              src="/images/about/simplifying.jpg"
+              alt="Journey"
+              width={450}
+              height={620}
+              className="rounded-xl object-contain"
+            />
 
-
-              <div
-              key={item.id}
-              className={`
-              relative
-              mb-10
-              flex
-              items-center
-              ${
-                index % 2 === 0
-                ? "md:flex-row"
-                : "md:flex-row-reverse"
-              }
-              `}
-              >
-
-
-                {/* Icon */}
-
-                <div className="
-                absolute
-                left-0
-                md:left-1/2
-                transform
-                -translate-x-1/2
-                w-10
-                h-10
-                rounded-full
-                bg-[#43246f]
-                text-white
-                flex
-                items-center
-                justify-center
-                ">
-
-                  <FaCheckCircle />
-
-                </div>
-
-
-
-                {/* Content */}
-
-                <div className="
-                ml-14
-                md:ml-0
-                md:w-1/2
-                p-6
-                bg-gray-50
-                rounded-xl
-                shadow-md
-                ">
-
-
-                  <h3 className="
-                  text-[#43246f]
-                  font-bold
-                  text-2xl
-                  ">
-                    {item.year}
-                  </h3>
-
-
-                  <h4 className="
-                  text-xl
-                  font-semibold
-                  mt-2
-                  ">
-                    {item.title}
-                  </h4>
-
-
-                  <p className="
-                  text-gray-600
-                  mt-3
-                  leading-6
-                  ">
-                    {item.description}
-                  </p>
-
-
-                </div>
-
-
-              </div>
-
-
-            ))
-          }
-
-
-
-        </div>
-
-
-      </div>
-
+          </div>
+</div>
+</div>
 
     </section>
-
   );
 }

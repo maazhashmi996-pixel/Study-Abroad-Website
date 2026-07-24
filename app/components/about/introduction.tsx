@@ -19,14 +19,15 @@ export default function Introduction() {
 
 
           {/* Image */}
+          <div className="flex gap-30">
 
           <div className="relative">
 
             <Image
-              src="/images/about/about-introduction.jpg"
+              src="/images/about/Academic-Journey.jpg"
               alt="About Times Consultant"
-              width={600}
-              height={450}
+              width={400}
+              height={300}
               className="
               rounded-2xl
               object-cover
@@ -34,6 +35,27 @@ export default function Introduction() {
               "
             />
 
+          </div>
+          <div className="flex items-center text-white font-extrabold  justify-between">
+          <h1 className="bg-amber-500 w-60 flex gap-3 h-30 p-6">
+            22+ <span> years of Experiance</span>
+          </h1>
+          <div className="relative mt-20">
+
+            <Image
+              src="/images/about/Empowering.jpg"
+              alt="About Times Consultant" 
+              width={400}
+              height={300}
+              className="
+              rounded-2xl
+              object-cover
+              shadow-lg
+              "
+            />
+
+          </div>
+          </div>
           </div>
 
 
