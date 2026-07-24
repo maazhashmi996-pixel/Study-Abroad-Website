@@ -44,42 +44,22 @@ export default function Navbar() {
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Submit Application
+                  Accomodations
                 </Link>
 
                 <Link
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Receive Offer Letter
+                  Study Abroad
                 </Link>
 
                 <Link
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Fulfill Conditions
-                </Link>
-
-                <Link
-                  href="#"
-                  className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
-                >
-                  Pay Tuition Deposit
-                </Link>
-
-                <Link
-                  href="#"
-                  className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
-                >
-                  Apply For Visa
-                </Link>
-
-                <Link
-                  href="#"
-                  className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
-                >
-                  Start Your Program
+                  {" "}
+                  Languges
                 </Link>
               </div>
             </li>
@@ -116,31 +96,38 @@ export default function Navbar() {
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Select Your Program
+                  Apply For Visa
                 </Link>
                 <Link
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Select Your Program
+                  Start Your Program
                 </Link>
                 <Link
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Select Your Program
+                  Fulfill Conditions
                 </Link>
                 <Link
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Select Your Program
+                  {" "}
+                  Receive Offer Letter
                 </Link>
                 <Link
                   href="#"
                   className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
                 >
-                  Select Your Program
+                  Submit Application
+                </Link>
+                <Link
+                  href="#"
+                  className="block px-5 py-3 hover:bg-yellow-500 transition-colors duration-500"
+                >
+                  Pay Tuition Deposit
                 </Link>
               </div>
             </li>
