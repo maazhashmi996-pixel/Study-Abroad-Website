@@ -1,31 +1,35 @@
-import Pics from './components/home/pics'
-import Stats from './components/home/stats'
-import Consultant from './components/home/consultant'
-import Partners from './components/home/partner'
-import Services from './components/home/ourServices'
-import Destinations from './components/home/destinations'
-import FeaturedUniversities from './components/home/features'
-import Testimonials from './components/home/testimonials'
-import Blogs from './components/home/blogs'
-import Consultation from './components/home/consultation'
+import Admission from "./components/study-destination/admission"
+import Content from "./components/study-destination/content"
+import Denmark from "./components/study-destination/denmark"
+import Hero from "./components/study-destination/hero"
+import Internship from "./components/study-destination/internship"
+import Get from "./components/study-destination/get"
+import Application from "./components/study-destination/application"
+import Cost from "./components/study-destination/cost"
+import Courses from "./components/study-destination/courses"
+import Visa from "./components/study-destination/visa"
+import Post from "./components/study-destination/post"
+import Expert from "./components/study-destination/expert"
+import Talk from "./components/study-destination/talk"
 
 
-
-export default function Page() {
+export default function StudyDestinations() {
   return (
-    <div>
-     <Pics/>
-     <Stats/>
-     <Consultant/>  
-    <Partners/>
-    <Services/>
-    <Destinations/>
-    <FeaturedUniversities/>
-    <Testimonials/>
-    <Blogs/>
-    <Consultation/>
-    </div>
-  )
+    <main>
+     
+           <Hero/>
+           <Denmark/>
+           <Content/>
+           <Internship/>
+           <Admission/>
+           <Get/>
+           <Application/>
+           <Cost/>
+           <Courses/>
+           <Visa/>
+           <Post/>
+           <Expert/>
+           <Talk/>
+    </main>
+  );    
 }
-
-
