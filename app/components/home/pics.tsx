@@ -52,22 +52,11 @@ export default function HeroSlider() {
           disableOnInteraction: false,
         }}
 
-        className="w-full h-full"
-
-      >
-
-
-        {
-          images.map((item)=>(
-
-
-            <SwiperSlide key={item.id}>
-
-
-              <div className="relative w-full h-screen">
-
-
-                {/* Background Image */}
+        className="w-full h-full">     
+{images.map((item)=>(
+<SwiperSlide key={item.id}>
+ <div className="relative w-full h-screen">
+ {/* Background Image */}
 
                 <Image
 
