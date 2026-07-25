@@ -12,8 +12,8 @@ export default function page() {
       <AboutHero/>
       <Second/>
       <Introduction/>
-     <Testimonials/>
-    <Secure/>
+      <Testimonials/>
+      <Secure/>
     </div>
   )
 }
