@@ -75,7 +75,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/study-destinations/denmark">Study Destinations</Link>
+              <Link href="/study-destinations">Study Destinations</Link>
             </li>
 
             {/* Study Abroad Steps Dropdown */}
@@ -121,7 +121,6 @@ export default function Navbar() {
                 >
                   Receive Offer Letter
                 </Link>
-
                 <Link
                   href="/study-abroad/submit-application"
                   className="block px-5 py-3 hover:bg-yellow-500"

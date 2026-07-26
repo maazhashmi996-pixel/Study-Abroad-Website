@@ -64,21 +64,12 @@ export default function OfficeDetailPage({
       </div>
     );
   }
-
-
-
-  return (
+ return (
 
     <section className="bg-[#fafafa] py-16">
-
-
-      <div className="max-w-6xl mx-auto px-6">
-
-
-
-        {/* Image */}
-
-        <div className="relative h-[450px] rounded-3xl overflow-hidden">
+<div className="max-w-6xl mx-auto px-6">
+{/* Image */}
+<div className="relative h-[450px] rounded-3xl overflow-hidden">
 
           <Image
             src={office.image}
@@ -86,24 +77,14 @@ export default function OfficeDetailPage({
             fill
             className="object-cover"
           />
-
-        </div>
-
-
-
-
+</div>
         {/* Content */}
 
         <div className="bg-white rounded-3xl shadow-md p-8 md:p-12 mt-10">
-
-
-          <h1 className="text-4xl md:text-5xl font-bold text-[#45246d]">
+ <h1 className="text-4xl md:text-5xl font-bold text-[#45246d]">
             {office.name}
           </h1>
-
-
-
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+ <p className="mt-6 text-gray-600 text-lg leading-relaxed">
             {office.description}
           </p>
 
