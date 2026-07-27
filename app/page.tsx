@@ -1,16 +1,17 @@
-import Admission from "./components/study-destination/admission"
-import Content from "./components/study-destination/content"
-import Denmark from "./components/study-destination/denmark"
-import Hero from "./components/study-destination/hero"
-import Internship from "./components/study-destination/internship"
-import Get from "./components/study-destination/get"
-import Application from "./components/study-destination/application"
-import Cost from "./components/study-destination/cost"
-import Courses from "./components/study-destination/courses"
-import Visa from "./components/study-destination/visa"
-import Post from "./components/study-destination/post"
-import Expert from "./components/study-destination/expert"
-import Talk from "./components/study-destination/talk"
+import Admission from "./study-destination/admission";
+import Courses from "./study-destination/courses";
+import Denmark from "./study-destination/denmark";
+import Expert from "./study-destination/expert";
+import Hero from "./study-destination/hero";
+import Internship from "./study-destination/internship";
+import Post from "./study-destination/post";
+import Talk from "./study-destination/talk";
+import Visa from "./study-destination/visa";
+import Content from "./study-destination/content";
+import Get from "./study-destination/get";
+import Cost from "./study-destination/cost";
+import Application from "./study-destination/application";
+
 
 
 export default function StudyDestinations() {
