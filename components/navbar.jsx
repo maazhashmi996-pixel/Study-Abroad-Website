@@ -88,14 +88,14 @@ export default function Navbar() {
 
               <div className="absolute left-0 top-full mt-3 w-64 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible">
                 <Link
-                  href="/study-abroad/select-program"
+                  href="/select"
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Select Your Program
                 </Link>
 
                 <Link
-                  href="/study-abroad/apply-visa"
+                  href="/submit"
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Apply For Visa
