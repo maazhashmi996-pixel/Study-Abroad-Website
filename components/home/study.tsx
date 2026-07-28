@@ -76,36 +76,8 @@ export default function StudyPage() {
       {/* ================= 1. HERO CONSULTATION FORM SECTION ================= */}
       <section className="bg-[#3b2768] text-white py-12 px-6 lg:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Hero Info */}
-          <div className="space-y-6">
-            <div className="space-y-1 text-lg sm:text-xl">
-              <div>
-                <span className="text-[#f7a600] font-bold text-2xl sm:text-3xl">65+</span> Countries
-              </div>
-              <div>
-                <span className="text-[#f7a600] font-bold text-2xl sm:text-3xl">3000+</span> Universities
-              </div>
-              <div>
-                <span className="text-[#f7a600] font-bold text-2xl sm:text-3xl">3.4 Million+</span> Programs
-              </div>
-            </div>
-
-            <div className="pt-2">
-              <h3 className="text-[#f7a600] text-xl sm:text-2xl font-semibold">
-                Not Sure Where to begin?
-              </h3>
-              <p className="text-gray-200 text-base sm:text-lg font-light">
-                Let our experts guide you towards right choice.
-              </p>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight">
-              Share Your <span className="text-[#f7a600]">Details</span> - Our{" "}
-              <span className="text-[#f7a600]">Experts</span> Will Contact You
-            </h1>
-          </div>
-
+    
+       
           {/* Form */}
           <div>
             <form
@@ -235,73 +207,7 @@ export default function StudyPage() {
         </div>
       </section>
 
-      {/* ================= 2. TIMES TECH ADVANTAGES SECTION ================= */}
-      <section className="bg-white py-16 px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-              Times Tech Advantages
-            </h2>
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1">
-              Sophisticated Online platforms
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* List */}
-            <div className="lg:col-span-6 space-y-2">
-              {techAdvantages.map((item) => {
-                const isActive = activeAdvantage === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveAdvantage(item.id)}
-                    className={`w-full text-left py-4 px-3 flex items-start gap-3 border-b border-gray-200 transition-colors ${
-                      isActive ? "text-[#f7a600] font-semibold" : "text-[#3b2768] hover:text-[#f7a600] font-medium"
-                    }`}
-                  >
-                    <span className="text-lg">📄</span>
-                    <span className="text-sm sm:text-base">{item.text}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Platform Widget Card */}
-            <div className="lg:col-span-6">
-              <div className="bg-[#f0ebf8] rounded-2xl p-6 shadow-inner relative overflow-hidden flex items-center justify-center min-h-[380px]">
-                <div className="w-full max-w-md bg-gradient-to-br from-[#f2d398] via-[#e8a338] to-[#f7a600] rounded-3xl p-6 sm:p-8 shadow-lg relative z-10 space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Search Universities"
-                    value={techSearch.university}
-                    onChange={(e) => setTechSearch({ ...techSearch, university: e.target.value })}
-                    className="w-full bg-white text-gray-800 placeholder-gray-400 rounded-full px-5 py-3 text-sm focus:outline-none shadow-sm"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Location"
-                    value={techSearch.location}
-                    onChange={(e) => setTechSearch({ ...techSearch, location: e.target.value })}
-                    className="w-full bg-white text-gray-800 placeholder-gray-400 rounded-full px-5 py-3 text-sm focus:outline-none shadow-sm"
-                  />
-                  <div className="flex justify-end pt-2">
-                    <button className="bg-[#3b2768] hover:bg-[#2e1f52] text-white font-semibold text-sm px-8 py-2.5 rounded-full shadow-md transition-colors">
-                      Search
-                    </button>
-                  </div>
-                  <div className="absolute -left-6 bottom-8 bg-gray-600/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full -rotate-45 shadow">
-                    Deadlines
-                  </div>
-                  <div className="absolute -right-4 top-12 bg-gray-600/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full rotate-45 shadow">
-                    Scholarships
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
      
 

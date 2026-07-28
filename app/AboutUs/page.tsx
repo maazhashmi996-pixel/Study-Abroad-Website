@@ -1,9 +1,10 @@
-import Hero from '../about/aboutHero'
-import Introduction from '../about/introduction'
-import Second from '../about/second'
-import Secure from '../about/secure'
-import Testimonials from '../about/testimonials'
-import Journey from '../about/journey'
+import Hero from "@/components/about/aboutHero";
+import Introduction from "@/components/about/introduction";
+import Journey from "@/components/about/journey";
+import Second from "@/components/about/second";
+import Secure from "@/components/about/secure";
+import Talk from "@/components/study-destination/talk";
+
 
 export default function page() {
   return (
@@ -13,8 +14,7 @@ export default function page() {
       <Introduction/>
       <Journey/>
       <Secure/>
-      <Testimonials/>
-
+<Talk/>
     </div>
   )
 }
