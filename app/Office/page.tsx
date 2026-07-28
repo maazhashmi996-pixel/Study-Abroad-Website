@@ -1,7 +1,7 @@
-import React from 'react'
-import OfficeGrid from '../ourOffices/officeGrid'
-import OfficeSearch from '../ourOffices/officeSearch'
-import Hero from '../ourOffices/officesHero'
+import OfficeGrid from "@/components/ourOffices/officeGrid"
+import OfficeSearch from "@/components/ourOffices/officeSearch"
+import Hero from "@/components/ourOffices/officesHero"
+
 
 function page() {
   return (

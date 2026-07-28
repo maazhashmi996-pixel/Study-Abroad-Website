@@ -1,5 +1,6 @@
-import BlogsPage from '@/app/blogs/blogsPage'
-import ContactBlog from '@/app/blogs/contactBlog'
+import BlogsPage from "@/components/blogs/blogsPage"
+import ContactBlog from "@/components/blogs/contactBlog"
+
 
 function page() {
   return (

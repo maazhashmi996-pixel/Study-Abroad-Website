@@ -1,5 +1,5 @@
-import Destinations from "../events/destinations"
-import FeaturedUniversities from "../events/features"
+import FeaturedUniversities from "@/components/events/features"
+import Destinations from "@/components/events/destinations"
 
 
  function page() {
