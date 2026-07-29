@@ -1,5 +1,5 @@
-import OfficeGrid from "@/components/ourOffices/officeGrid"
-import OfficeSearch from "@/components/ourOffices/officeSearch"
+
+import OfficeSecond from "@/components/ourOffices/officeSecond"
 import Hero from "@/components/ourOffices/officesHero"
 
 
@@ -7,8 +7,7 @@ function page() {
   return (
     <div>
       <Hero/>
-      <OfficeGrid/>
-      <OfficeSearch/>
+      <OfficeSecond/>
     </div>
   )
 }

@@ -1,13 +1,12 @@
-import FeaturedUniversities from "@/components/events/features"
-import Destinations from "@/components/events/destinations"
+import EventHero from "@/components/events/eventHero"
+import ExpoBenefits from "@/components/events/expoBenefite"
 
 
  function page() {
   return (
     <div>
-        <Destinations/>
-        <FeaturedUniversities/>
-      
+      <EventHero/>
+      <ExpoBenefits/>
     </div>
   )
 }
