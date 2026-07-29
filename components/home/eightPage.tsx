@@ -191,167 +191,76 @@ export default function EightPage() {
   return (
     <div className="w-full bg-white text-gray-900 font-sans selection:bg-[#f7a600] selection:text-[#3b2768]">
       
-      {/* ================= 1. HERO CONSULTATION FORM SECTION ================= */}
-      <section className="bg-[#3c2560] text-white py-14 px-6 lg:px-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      {/* ================= 4. TIMES TECH ADVANTAGES SECTION ================= */}
+      <section className="bg-white py-16 px-6 lg:px-16">
+        <div className="max-w-6xl mx-auto space-y-12">
           
-          <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-1 text-lg sm:text-xl font-medium">
-              <div>
-                <span className="text-[#f7a600] font-bold text-2xl sm:text-3xl">65+</span> Countries
-              </div>
-              <div>
-                <span className="text-[#f7a600] font-bold text-2xl sm:text-3xl">3000+</span> Universities
-              </div>
-              <div>
-                <span className="text-[#f7a600] font-bold text-2xl sm:text-3xl">3.4 Million+</span> Programs
-              </div>
-            </div>
-
-            <div className="pt-2 space-y-1">
-              <h3 className="text-[#f7a600] text-xl sm:text-2xl font-bold">
-                Not Sure Where to begin?
-              </h3>
-              <p className="text-gray-200 text-base sm:text-lg font-light">
-                Let our experts guide you towards right choice.
-              </p>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
-              Share Your <span className="text-[#f7a600]">Details</span> - Our{" "}
-              <span className="text-[#f7a600]">Experts</span> Will Contact You
-            </h1>
+          <div className="text-center space-y-1">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+              Times Tech Advantages
+            </h2>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+              Sophisticated Online platforms
+            </h3>
           </div>
 
-          <div className="lg:col-span-7">
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm"
-            >
-              <div className="sm:col-span-2">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  required
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white placeholder-purple-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600]"
-                />
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-6 space-y-1">
+              {techAdvantages.map((item) => {
+                const isActive = activeAdvantage === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => setActiveAdvantage(item.id)}
+                    className={`w-full text-left py-4 px-3 flex items-start gap-3 border-b border-gray-200 transition-colors ${
+                      isActive
+                        ? "text-[#f7a600] font-semibold"
+                        : "text-[#3b2768] hover:text-[#f7a600] font-medium"
+                    }`}
+                  >
+                    <span className="text-lg leading-none mt-0.5">📄</span>
+                    <span className="text-sm sm:text-base leading-snug">{item.text}</span>
+                  </button>
+                );
+              })}
+            </div>
 
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email Address*"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white placeholder-purple-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600]"
-                />
+            <div className="lg:col-span-6">
+              <div className="bg-[#f0ebf8] rounded-2xl p-6 sm:p-8 relative overflow-hidden flex items-center justify-center min-h-[380px] border border-purple-50">
+                <div className="w-full max-w-md bg-gradient-to-br from-[#f2d398] via-[#e8a338] to-[#f7a600] rounded-3xl p-6 sm:p-8 shadow-xl relative z-10 space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Search Universities"
+                    value={techSearch.university}
+                    onChange={(e) => setTechSearch({ ...techSearch, university: e.target.value })}
+                    className="w-full bg-white text-gray-800 placeholder-gray-400 rounded-full px-5 py-3 text-sm focus:outline-none shadow-sm"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Location"
+                    value={techSearch.location}
+                    onChange={(e) => setTechSearch({ ...techSearch, location: e.target.value })}
+                    className="w-full bg-white text-gray-800 placeholder-gray-400 rounded-full px-5 py-3 text-sm focus:outline-none shadow-sm"
+                  />
+                  <div className="flex justify-end pt-2">
+                    <button className="bg-[#3b2768] hover:bg-[#2e1f52] text-white font-bold text-sm px-8 py-2.5 rounded-full shadow-md transition-colors">
+                      Search
+                    </button>
+                  </div>
+                  
+                  <div className="absolute -left-6 bottom-8 bg-gray-600/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full -rotate-45 shadow">
+                    Deadlines
+                  </div>
+                  <div className="absolute -right-4 top-12 bg-gray-600/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full rotate-45 shadow">
+                    Scholarships
+                  </div>
+                </div>
               </div>
-
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Mobile"
-                  value={formData.mobile}
-                  onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                  required
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white placeholder-purple-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600]"
-                />
-              </div>
-
-              <div>
-                <select
-                  value={formData.destination}
-                  onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600] appearance-none"
-                >
-                  <option value="" disabled>Preferred Study Destination</option>
-                  <option value="uk" className="text-gray-900">United Kingdom</option>
-                  <option value="usa" className="text-gray-900">USA</option>
-                  <option value="canada" className="text-gray-900">Canada</option>
-                  <option value="australia" className="text-gray-900">Australia</option>
-                </select>
-              </div>
-
-              <div>
-                <select
-                  value={formData.city}
-                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600] appearance-none"
-                >
-                  <option value="" disabled>Select City</option>
-                  <option value="lahore" className="text-gray-900">Lahore</option>
-                  <option value="karachi" className="text-gray-900">Karachi</option>
-                  <option value="islamabad" className="text-gray-900">Islamabad</option>
-                </select>
-              </div>
-
-              <div>
-                <select
-                  value={formData.counsellingMode}
-                  onChange={(e) => setFormData({ ...formData, counsellingMode: e.target.value })}
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600] appearance-none"
-                >
-                  <option value="" disabled>Preferred Mode of Counselling</option>
-                  <option value="online" className="text-gray-900">Online</option>
-                  <option value="office" className="text-gray-900">In-Office</option>
-                </select>
-              </div>
-
-              <div>
-                <select
-                  value={formData.studyLevel}
-                  onChange={(e) => setFormData({ ...formData, studyLevel: e.target.value })}
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600] appearance-none"
-                >
-                  <option value="" disabled>Preferred Study Level</option>
-                  <option value="undergraduate" className="text-gray-900">Undergraduate</option>
-                  <option value="postgraduate" className="text-gray-900">Postgraduate</option>
-                </select>
-              </div>
-
-              <div className="sm:col-span-2">
-                <textarea
-                  placeholder="Ask Your Question"
-                  value={formData.question}
-                  onChange={(e) => setFormData({ ...formData, question: e.target.value })}
-                  rows={3}
-                  className="w-full bg-[#756493]/70 border border-transparent rounded-xl px-4 py-3 text-white placeholder-purple-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#f7a600] resize-y"
-                ></textarea>
-              </div>
-
-              <div className="sm:col-span-2 flex items-start gap-2 text-xs text-gray-200">
-                <input
-                  type="checkbox"
-                  id="agree"
-                  checked={formData.agree}
-                  onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
-                  className="mt-0.5 accent-[#f7a600] rounded cursor-pointer"
-                />
-                <label htmlFor="agree" className="cursor-pointer">
-                  By selecting this you agree to Times&apos;s{" "}
-                  <a href="#" className="text-indigo-300 underline">privacy policy</a> and{" "}
-                  <a href="#" className="text-indigo-300 underline">Terms & conditions</a> you agree to be contacted by phone, email or messages.
-                </label>
-              </div>
-
-              <div className="sm:col-span-2 pt-1">
-                <button
-                  type="submit"
-                  className="bg-[#f7a600] hover:bg-amber-500 text-[#3b2768] font-extrabold px-8 py-3 rounded-full text-sm flex items-center space-x-2 transition-transform active:scale-95 shadow-md"
-                >
-                  <span>Submit</span>
-                  <span>➔</span>
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
 
         </div>
       </section>
-
       {/* ================= 2. CHOOSE YOUR NEXT STUDY DESTINATION (AUTO-SLIDING 3 SECONDS) ================= */}
       <section className="bg-[#f7a600] py-16 px-6 lg:px-16 text-[#3b2768]">
         <div className="max-w-7xl mx-auto space-y-8">
@@ -437,6 +346,77 @@ export default function EightPage() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* ================= 5. FAQ / CAN'T TALK SECTION ================= */}
+      <section className="bg-white py-16 px-6 lg:px-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto space-y-10">
+          <h2 className="text-center text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+            Can&apos;t talk? Don&apos;t worry, we have got all the answers right here.
+          </h2>
+
+          <div className="flex justify-center space-x-8 text-lg sm:text-xl font-bold pt-2">
+            <button
+              onClick={() => setFaqTab("company")}
+              className={`transition-colors ${
+                faqTab === "company" ? "text-[#f7a600]" : "text-gray-400 hover:text-[#3b2768]"
+              }`}
+            >
+              About Company
+            </button>
+            <button
+              onClick={() => setFaqTab("services")}
+              className={`transition-colors ${
+                faqTab === "services" ? "text-[#f7a600]" : "text-gray-400 hover:text-[#3b2768]"
+              }`}
+            >
+              About Services
+            </button>
+            <button
+              onClick={() => setFaqTab("destinations")}
+              className={`transition-colors ${
+                faqTab === "destinations" ? "text-[#f7a600]" : "text-gray-400 hover:text-[#3b2768]"
+              }`}
+            >
+              About Destinations
+            </button>
+          </div>
+
+          <div className=" flex justify-between items-center gap-20">
+            <div className="">
+             <Image 
+             src="/images/home/times-consultants.webp"
+             alt="times-consultants"
+             width={500}
+             height={400}
+             className=""
+             />
+            </div>
+
+            <div className="lg:col-span-6 space-y-3">
+              {faqs.map((faq, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div key={idx} className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      className="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-gray-800 text-sm sm:text-base hover:bg-gray-50 transition-colors"
+                    >
+                      <span>{faq.question}</span>
+                      <span className="text-lg font-bold ml-2">{isOpen ? "❮" : "❯"}</span>
+                    </button>
+                    {isOpen && (
+                      <div className="px-6 pb-4 text-xs sm:text-sm text-gray-600 bg-gray-50/50">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+
+            </div>
+          </div>
         </div>
       </section>
 
@@ -530,153 +510,9 @@ export default function EightPage() {
         </div>
       </section>
 
-      {/* ================= 4. TIMES TECH ADVANTAGES SECTION ================= */}
-      <section className="bg-white py-16 px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto space-y-12">
-          
-          <div className="text-center space-y-1">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-              Times Tech Advantages
-            </h2>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-              Sophisticated Online platforms
-            </h3>
-          </div>
+    
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6 space-y-1">
-              {techAdvantages.map((item) => {
-                const isActive = activeAdvantage === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveAdvantage(item.id)}
-                    className={`w-full text-left py-4 px-3 flex items-start gap-3 border-b border-gray-200 transition-colors ${
-                      isActive
-                        ? "text-[#f7a600] font-semibold"
-                        : "text-[#3b2768] hover:text-[#f7a600] font-medium"
-                    }`}
-                  >
-                    <span className="text-lg leading-none mt-0.5">📄</span>
-                    <span className="text-sm sm:text-base leading-snug">{item.text}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="lg:col-span-6">
-              <div className="bg-[#f0ebf8] rounded-2xl p-6 sm:p-8 relative overflow-hidden flex items-center justify-center min-h-[380px] border border-purple-50">
-                <div className="w-full max-w-md bg-gradient-to-br from-[#f2d398] via-[#e8a338] to-[#f7a600] rounded-3xl p-6 sm:p-8 shadow-xl relative z-10 space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Search Universities"
-                    value={techSearch.university}
-                    onChange={(e) => setTechSearch({ ...techSearch, university: e.target.value })}
-                    className="w-full bg-white text-gray-800 placeholder-gray-400 rounded-full px-5 py-3 text-sm focus:outline-none shadow-sm"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Location"
-                    value={techSearch.location}
-                    onChange={(e) => setTechSearch({ ...techSearch, location: e.target.value })}
-                    className="w-full bg-white text-gray-800 placeholder-gray-400 rounded-full px-5 py-3 text-sm focus:outline-none shadow-sm"
-                  />
-                  <div className="flex justify-end pt-2">
-                    <button className="bg-[#3b2768] hover:bg-[#2e1f52] text-white font-bold text-sm px-8 py-2.5 rounded-full shadow-md transition-colors">
-                      Search
-                    </button>
-                  </div>
-                  
-                  <div className="absolute -left-6 bottom-8 bg-gray-600/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full -rotate-45 shadow">
-                    Deadlines
-                  </div>
-                  <div className="absolute -right-4 top-12 bg-gray-600/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full rotate-45 shadow">
-                    Scholarships
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 5. FAQ / CAN'T TALK SECTION ================= */}
-      <section className="bg-white py-16 px-6 lg:px-16 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto space-y-10">
-          <h2 className="text-center text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
-            Can&apos;t talk? Don&apos;t worry, we have got all the answers right here.
-          </h2>
-
-          <div className="flex justify-center space-x-8 text-lg sm:text-xl font-bold pt-2">
-            <button
-              onClick={() => setFaqTab("company")}
-              className={`transition-colors ${
-                faqTab === "company" ? "text-[#f7a600]" : "text-gray-400 hover:text-[#3b2768]"
-              }`}
-            >
-              About Company
-            </button>
-            <button
-              onClick={() => setFaqTab("services")}
-              className={`transition-colors ${
-                faqTab === "services" ? "text-[#f7a600]" : "text-gray-400 hover:text-[#3b2768]"
-              }`}
-            >
-              About Services
-            </button>
-            <button
-              onClick={() => setFaqTab("destinations")}
-              className={`transition-colors ${
-                faqTab === "destinations" ? "text-[#f7a600]" : "text-gray-400 hover:text-[#3b2768]"
-              }`}
-            >
-              About Destinations
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-4">
-            <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="bg-[#f7a600] rounded-3xl p-6 text-white font-extrabold flex flex-col justify-end min-h-[180px] shadow-sm">
-                <span className="text-3xl">success</span>
-                <span className="text-sm font-normal">Beyond Borders</span>
-              </div>
-              <div className="bg-[#3b2768] rounded-3xl p-6 text-[#f7a600] font-extrabold flex items-center justify-center min-h-[180px] shadow-sm text-center text-xl">
-                Shaping Global Future.
-              </div>
-              <div className="bg-[#3b2768] rounded-3xl p-6 text-white font-extrabold flex items-center justify-center min-h-[180px] shadow-sm text-center text-2xl">
-                Achievement
-              </div>
-              <div className="bg-[#f7a600] rounded-3xl p-6 text-[#3b2768] font-extrabold flex items-end min-h-[180px] shadow-sm text-lg">
-                Your Trusted Partner
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-3">
-              {faqs.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div key={idx} className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                    <button
-                      onClick={() => setOpenFaq(isOpen ? null : idx)}
-                      className="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-gray-800 text-sm sm:text-base hover:bg-gray-50 transition-colors"
-                    >
-                      <span>{faq.question}</span>
-                      <span className="text-lg font-bold ml-2">{isOpen ? "❮" : "❯"}</span>
-                    </button>
-                    {isOpen && (
-                      <div className="px-6 pb-4 text-xs sm:text-sm text-gray-600 bg-gray-50/50">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
 
     </div>

@@ -47,7 +47,7 @@ export default function Blogs() {
 
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#43246f]">
-            Latest Blogs & News
+          How Do We Support Students?
           </h2>
         </div>
 
