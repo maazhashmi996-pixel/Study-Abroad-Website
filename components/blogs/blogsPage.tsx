@@ -1,87 +1,74 @@
 "use client";
 
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const blogs = [
+interface Blog {
+  id: number;
+  title: string;
+  image: string;
+  tags: string[]; // Added tags to each blog item for accurate mapping
+}
+
+const blogs: Blog[] = [
   {
     id: 1,
     title: "How to Apply for Austria Study Visa in 2026 from Pakistan",
     image: "/images/blog/austria-visa.webp",
+    tags: ["Austria", "Visa", "Europe"],
   },
   {
     id: 2,
     title: "How to Apply for Hungary Study Visa in 2026 from Pakistan",
     image: "/images/blog/MBA.png",
+    tags: ["Hungary", "Visa", "Europe"],
   },
   {
     id: 3,
     title: "How to Apply for Netherlands Study Visa in 2026 from Pakistan",
     image: "/images/blog/neatherlands.webp",
+    tags: ["Netherlands", "Visa", "Europe"],
   },
   {
     id: 4,
     title: "Study in Canada Guide for International Students",
     image: "/images/blog/canada.webp",
+    tags: ["Canada", "Scholarships"],
   },
   {
     id: 5,
     title: "Top Scholarships to Study in Europe",
     image: "/images/blog/china.webp",
+    tags: ["Europe", "Scholarships"],
   },
   {
     id: 6,
-    title: "Student Visa Interview Tips for Beginners",
+    title: "Student Visa Interview Tips for Beginners in Australia",
     image: "/images/blog/turkey.webp",
+    tags: ["Australia", "Visa"],
   },
   {
     id: 7,
-    title: "Student Visa Interview Tips for Beginners",
+    title: "Study Opportunities in United Kingdom for 2026",
     image: "/images/blog/10-Tips.png",
+    tags: ["United Kingdom", "Visa"],
   },
   {
     id: 8,
-    title: "Student Visa Interview Tips for Beginners",
+    title: "Understanding Denmark Higher Education Requirements",
     image: "/images/blog/bunking-myths.png",
+    tags: ["Denmark", "Europe"],
   },
   {
     id: 9,
-    title: "Student Visa Interview Tips for Beginners",
+    title: "United States University Admission Checklist",
     image: "/images/blog/Exchange-programs.png",
-  },
-  {
-    id: 10,
-    title: "Student Visa Interview Tips for Beginners",
-    image: "/images/blog/Ireland.webp",
-  },
-  {
-    id: 11,
-    title: "Student Visa Interview Tips for Beginners",
-    image: "/images/blog/pakistan.webp",
-  },
-  {
-    id: 12,
-    title: "Student Visa Interview Tips for Beginners",
-    image: "/images/blog/turkey.webp",
-  },
-  {
-    id: 13,
-    title: "Student Visa Interview Tips for Beginners",
-    image: "/images/blog/france.webp",
-  },
-  {
-    id: 14,
-    title: "Student Visa Interview Tips for Beginners",
-    image: "/images/blog/UK.png",
-  },
-  {
-    id: 15,
-    title: "Student Visa Interview Tips for Beginners",
-    image: "/images/blog/austria-visa.webp",
+    tags: ["United States", "Scholarships"],
   },
 ];
 
-const tags = [
+const tagsList = [
   "Australia",
   "Denmark",
   "Europe",
@@ -94,136 +81,174 @@ const tags = [
 ];
 
 export default function BlogsPage() {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  // Toggle selection for tags
+  const handleTagChange = (tag: string) => {
+    setSelectedTags((prevTags) =>
+      prevTags.includes(tag)
+        ? prevTags.filter((t) => t !== tag)
+        : [...prevTags, tag]
+    );
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setSelectedTags([]);
+    setSearchQuery("");
+  };
+
+  // Filter blogs based on selected tags AND search query
+  const filteredBlogs = useMemo(() => {
+    return blogs.filter((blog) => {
+      // Check if blog matches selected tags (if any tags are selected)
+      const matchesTag =
+        selectedTags.length === 0 ||
+        selectedTags.some(
+          (tag) =>
+            blog.tags.includes(tag) ||
+            blog.title.toLowerCase().includes(tag.toLowerCase())
+        );
+
+      // Check if blog matches search query
+      const matchesSearch = blog.title
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+
+      return matchesTag && matchesSearch;
+    });
+  }, [selectedTags, searchQuery]);
+
   return (
-    <section className="bg-[#fafafa] py-18 px-30">
-      <div className="max-w-7xl mx-auto px-5">
-
+    <section className="bg-[#fafafa] py-12 md:py-18 px-4 sm:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto">
         {/* Heading */}
-
-        <h1 className="text-center text-3xl md:text-5xl font-bold text-[#45246d] mb-14">
+        <h1 className="text-center text-3xl md:text-5xl font-bold text-[#45246d] mb-12">
           Study Abroad Blogs - Guidance, Tips & More
         </h1>
 
-        <div className="grid lg:grid-cols-4 gap-10">
-
-          {/* Left Side */}
-
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Main Blogs Grid */}
           <div className="lg:col-span-3">
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-              {blogs.map((blog) => (
-
-                <div
-                  key={blog.id}
-                  className="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 duration-300"
+            {filteredBlogs.length === 0 ? (
+              <div className="bg-white rounded-2xl p-12 text-center shadow-sm border border-gray-100">
+                <p className="text-xl text-gray-500 font-medium">
+                  No blogs found matching your selected criteria.
+                </p>
+                <button
+                  onClick={clearFilters}
+                  className="mt-4 bg-[#45246d] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-[#341b53] transition"
                 >
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredBlogs.map((blog) => (
+                  <div
+                    key={blog.id}
+                    className="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 duration-300 flex flex-col justify-between border border-gray-100"
+                  >
+                    <div>
+                      <div className="relative h-44 w-full bg-gray-100">
+                        <Image
+                          src={blog.image}
+                          alt={blog.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
 
-                  <div className="relative h-35 w-full">
-                    <Image
-                      src={blog.image}
-                      alt={blog.title}
-                      fill
-                      className="object-cover"
-                    />
+                      <div className="p-5">
+                        <h2 className="text-base font-semibold text-[#2d2d2d] leading-snug line-clamp-3 mb-4">
+                          {blog.title}
+                        </h2>
+                      </div>
+                    </div>
+
+                    <div className="p-5 pt-0">
+                      <Link href={`/blog/${blog.id}`}>
+                        <button className="bg-[#F8A51B] hover:bg-orange-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition w-full sm:w-auto">
+                          Read More →
+                        </button>
+                      </Link>
+                    </div>
                   </div>
-
-                  <div className="p-2">
-                    <h2 className="text-xl font-semibold text-[#2d2d2d] leading-snug min-h-[120px]">
-                      {blog.title}
-                    </h2>
-
-                    <Link href="#">
-                      <button className="bg-[#F8A51B] hover:bg-orange-500 text-white px-6 py-2 rounded-full font-medium transition">
-                        Read More →
-                      </button>
-                    </Link>
-
-                  </div>
-
-                </div>
-
-              ))}
-
-            </div>
-
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Sidebar */}
-
-          <div className="space-y-8">
-
-            {/* Search */}
-
-            <div className="bg-white rounded-3xl shadow-md p-8">
-
-              <h2 className="text-3xl font-bold text-[#45246d] mb-6">
+          <div className="space-y-6">
+            {/* Search Card */}
+            <div className="bg-white rounded-3xl shadow-md p-6">
+              <h2 className="text-2xl font-bold text-[#45246d] mb-4">
                 Search Here
               </h2>
-
               <input
                 type="text"
-                placeholder="Type to start searching..."
-                className="w-full border rounded-full px-6 py-4 outline-none focus:border-[#45246d]"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Type to search..."
+                className="w-full border border-gray-200 rounded-full px-5 py-3 text-sm outline-none focus:border-[#45246d] transition"
               />
-
             </div>
 
-            {/* Tags */}
-
-            <div className="bg-white rounded-3xl shadow-md p-8">
-
-              <h2 className="text-3xl font-bold text-[#45246d] mb-6">
-                Popular Tags
-              </h2>
-
-              <div className="space-y-4">
-
-                {tags.map((tag) => (
-
-                  <label
-                    key={tag}
-                    className="flex items-center gap-3 text-gray-700 cursor-pointer"
+            {/* Popular Tags Filter Card */}
+            <div className="bg-white rounded-3xl shadow-md p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-[#45246d]">
+                  Popular Tags
+                </h2>
+                {selectedTags.length > 0 && (
+                  <button
+                    onClick={clearFilters}
+                    className="text-xs text-orange-500 hover:underline font-semibold"
                   >
-                    <input
-                      type="checkbox"
-                      className="h-4 w-4 accent-[#45246d]"
-                    />
-                    {tag}
-                  </label>
-
-                ))}
-
+                    Clear All
+                  </button>
+                )}
               </div>
 
+              <div className="space-y-3">
+                {tagsList.map((tag) => {
+                  const isChecked = selectedTags.includes(tag);
+                  return (
+                    <label
+                      key={tag}
+                      className="flex items-center gap-3 text-sm text-gray-700 cursor-pointer hover:text-[#45246d] transition select-none"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={() => handleTagChange(tag)}
+                        className="h-4 w-4 rounded accent-[#45246d] cursor-pointer"
+                      />
+                      <span className={isChecked ? "font-bold text-[#45246d]" : ""}>
+                        {tag}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
-
           </div>
-
         </div>
 
-        {/* Pagination */}
-
-        <div className="flex justify-center items-center gap-3 mt-16">
-
-          <button className="w-10 h-10 rounded-full border hover:bg-[#45246d] hover:text-white">
+        {/* Pagination Placeholder */}
+        <div className="flex justify-center items-center gap-2 mt-16">
+          <button className="w-10 h-10 rounded-full border border-gray-200 bg-white font-medium text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition">
             1
           </button>
-
-          <button className="w-10 h-10 rounded-full border hover:bg-[#45246d] hover:text-white">
+          <button className="w-10 h-10 rounded-full border border-gray-200 bg-white font-medium text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition">
             2
           </button>
-
-          <button className="w-10 h-10 rounded-full border hover:bg-[#45246d] hover:text-white">
+          <button className="w-10 h-10 rounded-full border border-gray-200 bg-white font-medium text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition">
             3
           </button>
-
-          <button className="w-10 h-10 rounded-full border hover:bg-[#45246d] hover:text-white">
-            4
-          </button>
-
         </div>
-
       </div>
     </section>
   );

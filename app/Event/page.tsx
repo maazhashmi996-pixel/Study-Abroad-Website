@@ -1,5 +1,5 @@
 import EventHero from "@/components/events/eventHero"
-import ExpoBenefits from "@/components/events/expoBenefite"
+import ExpoBenefits from "@/components/events/expoBenefits"
 
 
  function page() {

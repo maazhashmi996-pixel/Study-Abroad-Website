@@ -1,24 +1,25 @@
 
-import StudyPage from '@/components/events/eventHero'
+
 import Blogs from '@/components/home/blogs'
-import Consultation from '@/components/home/consultation'
-import NinePage from '@/components/home/ninePage'
-import HeroSlider from '@/components/home/pics'
-import SevenPage from '@/components/home/sevenPage'
-import SixPage from '@/components/home/six'
-import Talk from '@/components/study-destination/talk'
+import Consultant from '@/components/home/consultant'
+import EightPage from '@/components/home/eightPage'
+import HeroSection from '@/components/home/hero'
+import Speak from '@/components/home/speak'
+import Third from '@/components/home/third'
+import Time from '@/components/home/time'
 
 function page() {
   return (
     <div>
-      <HeroSlider/>
-      <Consultation/>
+      <HeroSection/>
+      <Consultant/>
       <Blogs/>
-      <StudyPage/>
-      <SixPage/>
-    <SevenPage/>
-    <NinePage/>
-      <Talk/>
+      <Third/>
+      <EightPage/>
+      <Time/>
+      <Speak/>
+
+  
     </div>
   )
 }
