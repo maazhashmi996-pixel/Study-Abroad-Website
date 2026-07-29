@@ -102,37 +102,36 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                  href="/study-abroad/start-program"
-                  className="block px-5 py-3 hover:bg-yellow-500"
-                >
-                  Start Your Program
-                </Link>
-
-                <Link
-                  href="/study-abroad/fulfill-conditions"
+                  href="/condition"
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Fulfill Conditions
                 </Link>
 
                 <Link
-                  href="/study-abroad/offer-letter"
+                  href="/receive"
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Receive Offer Letter
                 </Link>
                 <Link
-                  href="/study-abroad/submit-application"
+                  href="/submit"
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Submit Application
                 </Link>
 
                 <Link
-                  href="/study-abroad/tuition-deposit"
+                  href="/tution"
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Pay Tuition Deposit
+                </Link>
+                <Link
+                  href="/start"
+                  className="block px-5 py-3 hover:bg-yellow-500"
+                >
+                  Start Your Program
                 </Link>
               </div>
             </li>

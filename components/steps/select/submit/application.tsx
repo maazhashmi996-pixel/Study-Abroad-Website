@@ -179,14 +179,14 @@ export default function Submit() {
               <div className="w-20 h-20 bg-[#3B1E54] text-[#ECA82C] rounded-full flex items-center justify-center shadow-md">
                 <GraduationCap className="w-10 h-10" />
               </div>
-              <div className="space-y-1">
-                <h3 className="font-extrabold text-sm text-[#3B1E54]">
-                  Ready for Submission?
-                </h3>
-                <p className="text-xs text-slate-600">
-                  Let Times Consultant double-check your application documents for maximum success rate.
-                </p>
-              </div>
+           <Image 
+           src="/images/steps/pencil.png"
+           alt="pencil"
+           width={500}
+           height={200}
+           className=""
+           />
+
             </div>
 
           </div>
