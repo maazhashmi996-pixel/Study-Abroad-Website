@@ -1,153 +1,72 @@
 import Image from "next/image";
 
-
 export default function Introduction() {
-
   return (
-
-    <section className="py-16 bg-white px-25">
-
-      <div className="container mx-auto px-6">
-
-        <div className="
-        grid 
-        grid-cols-1 
-        lg:grid-cols-2 
-        gap-10 
-        items-center
-        ">
-
-
-          {/* Image */}
-          <div className="flex gap-30">
-
-          <div className="relative">
-
-            <Image
-              src="/images/about/Academic-Journey.jpg"
-              alt="About Times Consultant"
-              width={400}
-              height={300}
-              className="
-              rounded-2xl
-              object-cover
+    <section className="py-16 bg-white">
+      <div className="container  px-20 ">
+        <div className="flex gap-12  justify-between items-center">
+          
+          {/* Left Column: Media & Experience Card */}
+          <div className=" flex ">
             
-              "
-            />
-
-          </div>
-          <div className="  text-white font-extrabold gap-2">
-          <h1 className="bg-amber-500 w-60 flex gap-3 h-30 p-6 rounded-md">
-            22+ <span> years of Experiance</span>
-          </h1>
-          <div className="relative mt-20">
-
-            <Image
-              src="/images/about/Empowering.jpg"
-              alt="About Times Consultant" 
-              width={400}
-              height={300}
-              className="
-              rounded-2xl
-              object-cover
-             
-              "
-            />
-</div>
-          </div>
-          </div>
-{/* Content */}
-
-          <div>
-<h2 className="
-            text-4xl
-            font-bold
-            text-[#43246f]
-            mb-5
-            ">
-              About Times Consultant
-            </h2>
-<p className="
-            text-gray-600
-            leading-7
-            mb-5
-            ">
-              Times Consultant is a leading study abroad consultancy
-              helping students achieve their international education goals.
-              We provide professional guidance for university admission,
-              scholarships, and visa processing.
-            </p>
-<p className="
-            text-gray-600
-            leading-7
-            mb-6
-            ">
-              With experienced counselors and global university partnerships,
-              we support students at every step of their journey — from
-              selecting the right program to successfully starting their
-              studies abroad.
-            </p>
-{/* Points */}
-
-            <div className="space-y-3">
-<div className="flex gap-3 items-center">
-<span className="
-                w-3
-                h-3
-                rounded-full
-                bg-[#43246f]
-                "></span>
-
-                <p className="text-gray-700">
-                  Expert educational counselors
-                </p>
-              </div>
-<div className="flex gap-3 items-center">
-
-                <span className="
-                w-3
-                h-3
-                rounded-full
-                bg-[#43246f]
-                "></span>
-
-                <p className="text-gray-700">
-                  Trusted university partnerships
-                </p>
-
-              </div>
-
-
-
-              <div className="flex gap-3 items-center">
-
-                <span className="
-                w-3
-                h-3
-                rounded-full
-                bg-[#43246f]
-                "></span>
-
-                <p className="text-gray-700">
-                  Complete admission and visa support
-                </p>
-
-              </div>
-
-
+            {/* Top Illustration Container */}
+            <div className="relative w-full  mb-6">
+              <Image
+                src="/images/about/Academic-Journey.jpg"
+                alt="Times Consultant Discussion"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
 
+            <div>
+            {/* Orange Experience Badge */}
+            <div className="bg-[#f5a623] text-white p-6 rounded-2xl w-full max-w-[340px] shadow-md mb-6">
+              <div className="flex items-baseline gap-2">
+                <span className="text-5xl font-extrabold tracking-tight">22+</span>
+                <span className="text-xl font-bold leading-tight uppercase">
+                  Years Of<br />experience
+                </span>
+              </div>
+            </div>
 
+            {/* Bottom Illustration Container */}
+            <div className="relative w-full max-w-[320px] aspect-[4/3]">
+              <Image
+                src="/images/about/Empowering.jpg"
+                alt="Empowering Education Journey"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
           </div>
 
+          {/* Right Column: Text Content */}
+          <div className="lg:col-span-7">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-[#2a1747] mb-6 tracking-tight">
+              About Times Consultant
+            </h2>
+
+            <p className="text-gray-700 text-xl leading-relaxed mb-6">
+              Our mission is to facilitate a seamless selection process, guiding
+              students to choose the best foreign education institute tailored
+              to their academic requirements.
+            </p>
+            <p className="text-gray-700 text-xl leading-relaxed">
+              Our vision at TIMES is to set new benchmarks in the education
+              consultancy field, upholding performance excellence. Drawing from
+              real-world experiences in problem-solving and equipped with practical
+              insights into the ever-changing landscape of admissions, visa processes,
+              and the dynamic education and career industry, we empower our clients
+              to navigate and overcome the challenges inherent in pursuing education
+              abroad.
+            </p>
+          </div>
 
         </div>
-
-
       </div>
-
-
     </section>
-
   );
 }
