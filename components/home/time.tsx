@@ -114,10 +114,10 @@ export default function Time() {
           >
             {events.map((event) => (
               <SwiperSlide key={event.id}>
-                <div className="flex flex-col items-center text-center h-full px-2">
+                <div className="flex flex-col items-center  h-full px-2">
                   
                   {/* IMAGE PLACEHOLDER CONTAINER */}
-                  <div className="relative w-48 h-48 sm:w-56 sm:h-56 mb-4">
+                  <div className="relative w-78 h-58 sm:w-56 sm:h-56 mb-4">
                     <Image
                       src={event.image}
                       alt={event.title}
@@ -127,27 +127,26 @@ export default function Time() {
                   </div>
 
                   {/* EVENT CONTENT */}
-                  <div className="flex flex-col items-center flex-grow">
-                    <h3 className="text-white text-xl sm:text-2xl font-bold mb-2 leading-snug">
-                      {event.title}
-                    </h3>
+                <div className="flex flex-col items-start">
+  <h3 className="text-white text-xl sm:text-2xl font-bold mb-2 leading-snug">
+    {event.title}
+  </h3>
 
-                    <p className="text-gray-200 text-xs sm:text-sm font-medium mb-1">
-                      <span className="font-bold">{event.time}</span>
-                      <span className="mx-2">||</span>
-                      <span>Date: {event.date}</span>
-                    </p>
+  <p className="text-gray-200 text-xs sm:text-sm font-medium mb-1">
+    <span className="font-bold">{event.time}</span>
+    <span className="mx-2">||</span>
+    <span>Date: {event.date}</span>
+  </p>
 
-                    <p className="text-gray-300 text-xs sm:text-sm font-medium mt-1">
-                      Location: {event.location}
-                    </p>
+  <p className="text-gray-300 text-xs sm:text-sm font-medium mt-1">
+    Location: {event.location}
+  </p>
 
-                    {/* BUTTON */}
-                    <button className="mt-6 bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-extrabold text-xs px-8 py-3 rounded-full shadow-md transition-transform active:scale-95">
-                      More Details
-                    </button>
-                  </div>
-
+  {/* BUTTON WITH PX & PY FOR PADDING */}
+  <button className="mt-6 px-4 py-2 bg-[#f1b317] hover:bg-white text-[#3b1d5c] text-xs font-bold rounded-sm shadow-md transition-transform active:scale-95 cursor-pointer">
+    More Details
+  </button>
+</div>
                 </div>
               </SwiperSlide>
             ))}

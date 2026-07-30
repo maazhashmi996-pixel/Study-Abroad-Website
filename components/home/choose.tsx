@@ -106,7 +106,7 @@ function Choose() {
                     
                     {/* Top Tag Header */}
                     <div className="flex justify-start">
-                      <span className="bg-[#f7a600] text-[#3b2768] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                      <span className="bg-[#525151] text-[#3b2768] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
                         {item.country}
                       </span>
                     </div>
