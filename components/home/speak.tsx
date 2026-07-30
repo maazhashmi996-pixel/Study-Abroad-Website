@@ -1,11 +1,8 @@
 "use client";
 
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp, Play } from "lucide-react";
+import { ChevronRight, ChevronUp, Play } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -25,60 +22,29 @@ const universityTestimonials = [
 ];
 
 // --- DATA: STEPS ---
-const steps = [
-  { title: "Select Your Program", content: "Explore hundreds of programs and choose the one that aligns best with your academic background and career goals." },
-  { title: "Submit Application", content: "Our team helps you compile all required documents and submits your application directly to your chosen universities." },
-  { title: "Receive Offer Letter", content: "Get conditional or unconditional offer letters directly from top international universities." },
-  { title: "Fulfill Conditions", content: "Complete any pending requirements such as English proficiency tests, fee deposits, or academic verification." },
-  { title: "Pay Tuition Deposit", content: "Secure your admission seat by making the necessary fee deposit directly to the university." },
-  { title: "Get Unconditional Offer", content: "Receive your final acceptance letter/CAS required for official visa processing." },
-  { title: "Apply For Visa", content: "Get expert step-by-step guidance on visa documentation, interview prep, and filing." },
-];
-
-// --- DATA: EVENTS ---
-const events = [
-  {
-    id: 1,
-    city: "ISLAMABAD",
-    title: "Islamabad Study Abroad Expo 2026",
-    time: "12:00 PM TO 07:00 PM",
-    date: "Thursday, 13 August 2026",
-    location: "Movenpick Hotel - Islamabad",
-    image: "/images/events/islamabad.webp",
-  },
-  {
-    id: 2,
-    city: "JHELUM",
-    title: "Jhelum Study Abroad Expo 2026",
-    time: "12:00 PM TO 07:00 PM",
-    date: "Wednesday, 05 August 2026",
-    location: "Times Office - Jhelum",
-    image: "/images/events/jhelum.webp",
-  },
-  {
-    id: 3,
-    city: "KARACHI",
-    title: "Karachi Study Abroad Expo 2026",
-    time: "12:00 PM TO 07:00 PM",
-    date: "Saturday, 08 August 2026 || Sunday, 09 August 2026",
-    location: "PC Hotel - Karachi",
-    image: "/images/events/karachi.webp",
-  },
-  {
-    id: 4,
-    city: "PESHAWAR",
-    title: "Peshawar Study Abroad Expo 2026",
-    time: "12:00 PM TO 07:00 PM",
-    date: "Sunday, 16 August 2026",
-    location: "Pearl Continental - Peshawar",
-    image: "/images/events/peshawar.png",
-  },
+const journeySteps = [
+  { title: "Select Your Program", image: "/images/home/study1.webp", content: "Choose from thousands of degrees across top global universities." },
+  { title: "Submit Application", image: "/images/home/study2.webp", content: "Prepare and submit your academic documents carefully." },
+  { title: "Receive Offer Letter", image: "/images/home/study3.webp", content: "Get your conditional or unconditional acceptance letter." },
+  { title: "Fulfill Conditions", image: "/images/home/study4.webp", content: "Complete required language tests or document verification." },
+  { title: "Pay Tuition Deposit", image: "/images/home/study5.webp", content: "Pay your initial fee deposit to secure your seat." },
+  { title: "Get Unconditional Offer", image: "/images/home/study6.webp", content: "Receive confirmation and official confirmation of acceptance." },
 ];
 
 export default function Speak() {
   const [activeTab, setActiveTab] = useState<"student" | "university">("student");
   const [openStep, setOpenStep] = useState<number | null>(0);
 
+  // Auto Slider Effect (Changes slide every 3 seconds)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOpenStep((prev) => (prev === null || prev >= journeySteps.length - 1 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const activeIndex = openStep ?? 0;
   const testimonials = activeTab === "student" ? studentTestimonials : universityTestimonials;
 
   return (
@@ -95,8 +61,9 @@ export default function Speak() {
           {/* TABS */}
           <div className="inline-flex bg-gray-100 rounded-full p-1 mb-12 shadow-inner">
             <button
+              type="button"
               onClick={() => setActiveTab("student")}
-              className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all ${
+              className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "student"
                   ? "bg-[#3b1d5c] text-white shadow"
                   : "text-gray-600 hover:text-gray-900"
@@ -105,8 +72,9 @@ export default function Speak() {
               Student Testimonials
             </button>
             <button
+              type="button"
               onClick={() => setActiveTab("university")}
-              className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all ${
+              className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "university"
                   ? "bg-[#3b1d5c] text-white shadow"
                   : "text-gray-600 hover:text-gray-900"
@@ -136,6 +104,7 @@ export default function Speak() {
                     src={item.image}
                     alt={item.name}
                     fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
@@ -157,38 +126,42 @@ export default function Speak() {
       </section>
 
       {/* ================= 2. STUDY ABROAD JOURNEY STEP BY STEP ================= */}
-      <section className="bg-[#3b1d5c] py-16 px-4 md:px-12 flex gap-20 border-t border-purple-900">
-        <div className="max-w-6xl mx-auto ">
+      <section className="bg-[#3b1d5c] py-16 px-4 md:px-12 text-white border-t border-purple-900">
+        <div className="max-w-6xl mx-auto space-y-12">
           
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          {/* Section Heading */}
+          <h2 className="text-3xl md:text-5xl font-black text-center tracking-tight">
             Study Abroad Journey Step by Step
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            {/* Left Column: Accordion List */}
+            {/* Left Column: Interactive Accordion List */}
             <div className="space-y-3">
-              {steps.map((step, index) => {
+              {journeySteps.map((step, index) => {
                 const isOpen = openStep === index;
                 return (
                   <div
                     key={index}
-                    className="bg-white text-gray-800 rounded-xl overflow-hidden shadow-md border border-gray-100"
+                    className={`rounded-full overflow-hidden transition-all duration-300 ${
+                      isOpen ? "bg-white shadow-xl scale-[1.02]" : "bg-white/90 hover:bg-white"
+                    }`}
                   >
                     <button
-                      onClick={() => setOpenStep(isOpen ? null : index)}
-                      className="w-full px-5 py-3.5 text-left text-sm font-semibold flex justify-between items-center text-[#3b1d5c] hover:bg-purple-50 transition-colors"
+                      type="button"
+                      onClick={() => setOpenStep(index)}
+                      className="w-full px-6 py-4 text-left text-sm font-bold flex justify-between items-center text-[#3b1d5c] cursor-pointer"
                     >
                       <span>{step.title}</span>
                       {isOpen ? (
-                        <ChevronUp className="w-4 h-4 text-[#3b1d5c]" />
+                        <ChevronUp className="w-5 h-5 text-[#3b1d5c]" />
                       ) : (
-                        <ChevronRight className="w-4 h-4 text-gray-400" />
+                        <ChevronRight className="w-5 h-5 text-[#3b1d5c]/60" />
                       )}
                     </button>
 
-                    {isOpen && (
-                      <div className="px-5 pb-4 text-xs text-gray-600 border-t border-gray-100 bg-gray-50/50 leading-relaxed">
+                    {isOpen && step.content && (
+                      <div className="px-6 pb-4 text-xs text-gray-600 bg-white leading-relaxed">
                         {step.content}
                       </div>
                     )}
@@ -197,22 +170,60 @@ export default function Speak() {
               })}
             </div>
 
-            {/* Right Column: Graphic Graphic Box */}
-         
-          <div>
-          <Image
-                  src="/images/home/graduating.webp"
-                  alt="graduating"
-                 width={300}
-                 height={200}
-                  className="object-cover"
-                />
+            {/* Right Column: Custom Screenshot Frame & Auto Slider */}
+            <div className="flex flex-col items-center">
+              
+              {/* Image Outer Container */}
+              <div className="relative w-full max-w-[420px] aspect-square rounded-[2.5rem] p-4 bg-gradient-to-br from-purple-800/40 to-purple-950/80 border border-purple-400/20 shadow-2xl overflow-hidden group">
+                
+                {/* Image Frame Wrapper */}
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-black/20">
+                  {journeySteps.map((step, idx) => (
+                    <div
+                      key={idx}
+                      className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                        idx === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                      }`}
+                    >
+                      <Image
+                        src={step.image}
+                        alt={step.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 420px"
+                        className="object-cover"
+                        priority={idx === 0}
+                      />
+                    </div>
+                  ))}
+
+                  {/* Decorative Pattern / Cutout Style Overlay */}
+                  <div className="absolute inset-0 border-8 border-[#3b1d5c]/30 rounded-[2rem] pointer-events-none z-20" />
                 </div>
+              </div>
+
+              {/* Pagination Dots */}
+              <div className="flex space-x-2 mt-6">
+                {journeySteps.map((_, dotIdx) => (
+                  <button
+                    key={dotIdx}
+                    type="button"
+                    onClick={() => setOpenStep(dotIdx)}
+                    aria-label={`Go to slide ${dotIdx + 1}`}
+                    className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      dotIdx === activeIndex
+                        ? "w-8 bg-white"
+                        : "w-2.5 bg-white/40 hover:bg-white/70"
+                    }`}
+                  />
+                ))}
+              </div>
+
+            </div>
+
           </div>
 
         </div>
       </section>
-
     </div>
   );
 }

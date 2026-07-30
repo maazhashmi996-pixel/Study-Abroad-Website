@@ -13,31 +13,37 @@ export default function Blogs() {
       id: 1,
       title: "How to Study Abroad Successfully",
       image: "/images/home/blog1.webp",
+         image2:"/images/home/suitcase.webp"
     },
     {
       id: 2,
       title: "Top Universities For International Students",
       image: "/images/home/blog2.webp",
+         image2:"/images/home/suitcase.webp"
     },
     {
       id: 3,
       title: "Student Visa Requirements Guide",
       image: "/images/home/blog3.jpg",
+         image2:"/images/home/suitcase.webp"
     },
     {
       id: 4,
       title: "Scholarships for Pakistani Students",
       image: "/images/home/blog4.webp",
+         image2:"/images/home/suitcase.webp"
     },
     {
       id: 5,
       title: "Best Countries to Study Abroad",
       image: "/images/home/blog5.webp",
+         image2:"/images/home/suitcase.webp"
     },
     {
       id: 6,
       title: "How to Apply for Student Visa",
       image: "/images/home/blog6.webp",
+      image2:"/images/home/suitcase.webp"
     },
   ];
 
@@ -73,29 +79,43 @@ export default function Blogs() {
           }}
         >
           {blogs.map((blog) => (
-            <SwiperSlide key={blog.id}>
-              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+          <SwiperSlide key={blog.id}>
+  <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+    {/* Image */}
+    <div className="relative group overflow-hidden">
+      <Image
+        src={blog.image}
+        alt={blog.title}
+        width={400}
+        height={250}
+        className="w-full h-52 object-cover"
+      />
 
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  width={400}
-                  height={250}
-                  className="w-full h-52 object-cover"
-                />
+      {/* White Blur Overlay */}
+      <div className="absolute inset-0 bg-white/70 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+        {/* Read More Button */}
+        <button className="px-6 py-3 bg-yellow-500 text-white rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
+          Read More
+        </button>
+      </div>
+    </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {blog.title}
-                  </h3>
+    {/* Content */}
+    <div className="p-6 flex justify-between items-center">
+      <h3 className="text-xl font-semibold">
+        {blog.title}
+      </h3>
 
-                  <button className="text-[#43246f] font-semibold hover:text-[#f8b21a] duration-300">
-                    Read More →
-                  </button>
-                </div>
-
-              </div>
-            </SwiperSlide>
+      <Image
+        src={blog.image2}
+        alt="Suitcase"
+        width={35}
+        height={35}
+        className="object-contain"
+      />
+    </div>
+  </div>
+</SwiperSlide>
           ))}
         </Swiper>
 

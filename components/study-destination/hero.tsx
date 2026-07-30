@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="relative h-full">
       {/* Image */}
       <Image
-        src="/images/study.webp"
+        src="/logos/study.webp"
         alt="Study"
         width={1000}
         height={400}
@@ -16,8 +16,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-950/40 via-purple-950/40 to-purple-950/40"></div>
 
       {/* Text */}
-      <div className="absolute left-20 bottom-1/6 -translate-y-1/2 text-white z-10">
-        <ul className="list-disc ml-6 space-y-3 text-sm ">
+      <div className="absolute left-20 bottom-1/9 -translate-y-1/2 text-white z-20">
+        <ul className="list-disc ml-8 space-y-2 text-sm ">
           <li>15+ University and Colleges</li>
           <li>DKK 80,000 Annual Tuition Fee</li>
           <li>3 Year Post Study Visa</li>

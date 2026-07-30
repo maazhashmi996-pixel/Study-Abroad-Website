@@ -7,10 +7,10 @@ import Post from "@/components/study-destination/post";
 import Talk from "@/components/study-destination/talk";
 import Visa from "@/components/study-destination/visa";
 import Content from "@/components/study-destination/content";
-import Get from "@/components/study-destination/get";
 import Cost from "@/components/study-destination/cost";
 import Internship from "@/components/study-destination/internship";
 import Application from "@/components/study-destination/application";
+import Get from "@/components/study-destination/get";
 
 
 
@@ -23,7 +23,7 @@ export default function StudyDestinations() {
            <Content/>
            <Internship/>
            <Admission/>
-           <Get/>
+          <Get/>
            <Application/>
            <Cost/>
            <Courses/>
