@@ -190,7 +190,7 @@ export default function HeroSection() {
       </section>
 
       {/* ---------------- 2. WHY CHOOSE SECTION WITH OVERLAPPING CARD ---------------- */}
-      <div className="relative w-full bg-[#43246f] ">
+      <div className="relative mt-18 w-full bg-[#43246f] ">
         
         {/* OVERLAPPING SEARCH CARD */}
         <div className="relative -mt-24 sm:-mt-28 md:-mt-32 z-30 max-w-5xl mx-auto px-4">
@@ -466,7 +466,7 @@ export default function HeroSection() {
 
         {/* WHY CHOOSE CONTENT AREA */}
         <div className="flex flex-col px-6 md:px-20 pt-20 pb-16 text-white  rounded-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left">
+          <h2 className="text-2xl md:text-4xl font-bold mb-10 flex items-center justify-center md:text-left">
             Why Choose Times Consultant?
           </h2>
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronRight, ChevronUp, Play } from "lucide-react";
 
 import "swiper/css";
@@ -21,25 +22,49 @@ const universityTestimonials = [
   { id: 2, name: "University Rep 2", image: "/images/testimonials/univ2.webp" },
 ];
 
-// --- DATA: STEPS ---
+// --- DATA: STEPS WITH LINKS & CONTENT ---
 const journeySteps = [
-  { title: "Select Your Program", image: "/images/home/study1.webp", content: "Choose from thousands of degrees across top global universities." },
-  { title: "Submit Application", image: "/images/home/study2.webp", content: "Prepare and submit your academic documents carefully." },
-  { title: "Receive Offer Letter", image: "/images/home/study3.webp", content: "Get your conditional or unconditional acceptance letter." },
-  { title: "Fulfill Conditions", image: "/images/home/study4.webp", content: "Complete required language tests or document verification." },
-  { title: "Pay Tuition Deposit", image: "/images/home/study5.webp", content: "Pay your initial fee deposit to secure your seat." },
-  { title: "Get Unconditional Offer", image: "/images/home/study6.webp", content: "Receive confirmation and official confirmation of acceptance." },
+  {
+    title: "Select Your Program",
+    image: "/images/home/study1.webp",
+    link: "/select",
+  },
+  {
+    title: "Submit Application",
+    image: "/images/home/study2.webp",
+    link: "/apply",
+  },
+  {
+    title: "Receive Offer Letter",
+    image: "/images/home/study3.webp",
+    link: "/receive",
+  },
+  {
+    title: "Fulfill Conditions",
+    image: "/images/home/study4.webp",
+    link: "/condition",
+  },
+  {
+    title: "Pay Tuition Deposit",
+    image: "/images/home/study5.webp",
+    link: "/tution",
+  },
+  {
+    title: "Get Unconditional Offer",
+    image: "/images/home/study6.webp",
+    link: "/start",
+  },
 ];
 
 export default function Speak() {
   const [activeTab, setActiveTab] = useState<"student" | "university">("student");
   const [openStep, setOpenStep] = useState<number | null>(0);
 
-  // Auto Slider Effect (Changes slide every 3 seconds)
+  // Auto Slider Effect (Changes slide every 3.5 seconds)
   useEffect(() => {
     const interval = setInterval(() => {
       setOpenStep((prev) => (prev === null || prev >= journeySteps.length - 1 ? 0 : prev + 1));
-    }, 3000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
@@ -54,7 +79,7 @@ export default function Speak() {
       <section className="bg-white text-gray-800 py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#3b1d5c] mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3b1d5c] mb-8">
             Experiences That Speak for Us
           </h2>
 
@@ -130,7 +155,7 @@ export default function Speak() {
         <div className="max-w-6xl mx-auto space-y-12">
           
           {/* Section Heading */}
-          <h2 className="text-3xl md:text-5xl font-black text-center tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-center tracking-tight">
             Study Abroad Journey Step by Step
           </h2>
 
@@ -143,8 +168,8 @@ export default function Speak() {
                 return (
                   <div
                     key={index}
-                    className={`rounded-full overflow-hidden transition-all duration-300 ${
-                      isOpen ? "bg-white shadow-xl scale-[1.02]" : "bg-white/90 hover:bg-white"
+                    className={`rounded-xl overflow-hidden transition-all duration-300 ${
+                      isOpen ? "bg-white shadow-xl scale-[1.01]" : "bg-white/90 hover:bg-white"
                     }`}
                   >
                     <button
@@ -152,7 +177,12 @@ export default function Speak() {
                       onClick={() => setOpenStep(index)}
                       className="w-full px-6 py-4 text-left text-sm font-bold flex justify-between items-center text-[#3b1d5c] cursor-pointer"
                     >
-                      <span>{step.title}</span>
+                      <span className="flex items-center gap-3">
+                        <span className="w-6 h-6 rounded-full bg-[#f1b317] text-[#3b1d5c] flex items-center justify-center text-xs font-black">
+                          {index + 1}
+                        </span>
+                        {step.title}
+                      </span>
                       {isOpen ? (
                         <ChevronUp className="w-5 h-5 text-[#3b1d5c]" />
                       ) : (
@@ -160,9 +190,19 @@ export default function Speak() {
                       )}
                     </button>
 
-                    {isOpen && step.content && (
-                      <div className="px-6 pb-4 text-xs text-gray-600 bg-white leading-relaxed">
-                        {step.content}
+                    {/* Expanded Accordion Body with Content and Link Button */}
+                    {isOpen && (
+                      <div className="px-6 pb-5 pt-1 text-xs text-gray-600 bg-white leading-relaxed space-y-3 border-t border-gray-100">
+                        
+                        
+                        {/* Navigation Link Button */}
+                        <div>
+                          <Link href={step.link}>
+                            <button className="px-4 py-2 bg-[#f1b317] hover:bg-[#3b1d5c] text-[#3b1d5c] hover:text-white text-xs font-extrabold rounded-md shadow transition-colors duration-200 cursor-pointer active:scale-95">
+                              Learn More →
+                            </button>
+                          </Link>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -170,7 +210,7 @@ export default function Speak() {
               })}
             </div>
 
-            {/* Right Column: Custom Screenshot Frame & Auto Slider */}
+            {/* Right Column: Screenshot Frame & Auto Slider */}
             <div className="flex flex-col items-center">
               
               {/* Image Outer Container */}
