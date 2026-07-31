@@ -36,24 +36,26 @@ function Choose() {
   };
 
   return (
-    <section className="bg-[#f7a600] py-16 px-6 lg:px-16 text-[#3b2768]">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <section className="bg-[#f7a600] py-10 sm:py-16 px-4 sm:px-8 lg:px-16 text-[#3b2768]">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* Header */}
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white">
+        <div className="text-center space-y-3 sm:space-y-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
             Choose Your Next Study Destination
           </h2>
-          <button 
-            type="button"
-            className="bg-[#3b2768] text-white hover:bg-[#2b1c4d] font-bold px-6 py-2.5 rounded-full text-sm transition-transform active:scale-95 shadow-md cursor-pointer"
-          >
-            View all destinations
-          </button>
+          <div>
+            <button 
+              type="button"
+              className="bg-[#3b2768] text-white hover:bg-[#2b1c4d] font-bold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-transform active:scale-95 shadow-md cursor-pointer"
+            >
+              View all destinations
+            </button>
+          </div>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-start space-x-6 border-b border-[#3b2768]/20 pb-2 text-xl font-bold">
+        <div className="flex justify-center sm:justify-start space-x-6 border-b border-[#3b2768]/20 pb-2 text-lg sm:text-xl font-bold">
           <button
             type="button"
             onClick={() => setDestinationTab("countries")}
@@ -80,47 +82,47 @@ function Choose() {
 
         {/* Carousel Slider */}
         <div
-          className="relative"
+          className="relative px-2 sm:px-0"
           onMouseEnter={() => setIsDestPaused(true)}
           onMouseLeave={() => setIsDestPaused(false)}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 transition-all duration-700 ease-in-out">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 transition-all duration-700 ease-in-out">
             {getVisibleDestinations().map((item, idx) => (
               <div key={`${item.country}-${idx}`} className="flex flex-col items-center">
                 
-                {/* CARD CONTAINER (Must have group & relative) */}
-                <div className="relative w-full h-[300px] rounded-3xl border-4 border-dashed border-[#b3a7d4] shadow-lg hover:shadow-2xl transition-all cursor-pointer overflow-hidden group">
+                {/* CARD CONTAINER */}
+                <div className="relative w-full h-[280px] sm:h-[300px] rounded-3xl border-4 border-dashed border-[#3b2768]/30 shadow-lg hover:shadow-2xl transition-all cursor-pointer overflow-hidden group">
                   
-                  {/* Background Image (Always Visible) */}
+                  {/* Background Image */}
                   <Image
                     src={item.flag}
                     alt={item.country}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500 bg-gradient-purple-950/40 "
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                     unoptimized={process.env.NODE_ENV === "development"}
                   />
 
-                  {/* OVERLAY & TEXT (Hidden by default, shown on hover) */}
-                  <div className="absolute inset-0 bg-[#3b2768]/80 backdrop-blur-xs p-4 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* OVERLAY & TEXT (Shown on hover/focus) */}
+                  <div className="absolute inset-0 bg-[#3b2768]/85 backdrop-blur-sm p-4 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     
                     {/* Top Tag Header */}
                     <div className="flex justify-start">
-                      <span className="bg-[#525151] text-[#3b2768] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                      <span className="bg-[#f7a600] text-[#3b2768] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
                         {item.country}
                       </span>
                     </div>
 
                     {/* Bullet Points */}
-                    <div className="my-auto space-y-2 text-center text-xs font-semibold text-white">
+                    <div className="my-auto space-y-1.5 text-center text-xs font-semibold text-white">
                       {item.details.map((detail, dIdx) => (
-                        <p key={dIdx} className="leading-snug bg-black/30 py-1.5 px-2 rounded-lg backdrop-blur-xs shadow-xs">
+                        <p key={dIdx} className="leading-snug bg-black/30 py-1.5 px-2 rounded-lg backdrop-blur-sm shadow-sm">
                           • {detail}
                         </p>
                       ))}
                     </div>
 
-                    {/* Footer */}
+                    {/* Footer Skyline Indicator */}
                     <div className="w-full h-8 bg-white/10 rounded-xl flex items-center justify-center text-[10px] text-white/80 font-mono font-bold">
                       [ SKYLINE SILHOUETTE ]
                     </div>
@@ -129,20 +131,20 @@ function Choose() {
                 </div>
 
                 {/* Country Title below card */}
-                <span className="mt-3 text-lg font-bold text-[#3b2768] capitalize">
+                <span className="mt-2.5 text-base sm:text-lg font-bold text-[#3b2768] capitalize">
                   {item.country}
                 </span>
               </div>
             ))}
           </div>
 
-          {/* Controls */}
-          <div className="absolute -right-2 top-1/2 -translate-y-1/2 flex flex-col space-y-2 z-10">
+          {/* Controls Navigation Arrows */}
+          <div className="flex justify-center sm:block space-x-4 sm:space-x-0 mt-4 sm:mt-0 sm:absolute sm:-right-4 sm:top-1/2 sm:-translate-y-1/2 sm:flex sm:flex-col sm:space-y-2 z-10">
             <button
               type="button"
               onClick={() => setDestSlideIndex((prev) => (prev === 0 ? destinations.length - 1 : prev - 1))}
               aria-label="Previous slide"
-              className="bg-[#3b2768] text-white p-2.5 rounded-full hover:bg-black transition-colors shadow active:scale-90 cursor-pointer"
+              className="bg-[#3b2768] text-white p-2.5 rounded-full hover:bg-black transition-colors shadow-md active:scale-90 cursor-pointer"
             >
               ❮
             </button>
@@ -150,7 +152,7 @@ function Choose() {
               type="button"
               onClick={() => setDestSlideIndex((prev) => (prev + 1) % destinations.length)}
               aria-label="Next slide"
-              className="bg-[#3b2768] text-white p-2.5 rounded-full hover:bg-black transition-colors shadow active:scale-90 cursor-pointer"
+              className="bg-[#3b2768] text-white p-2.5 rounded-full hover:bg-black transition-colors shadow-md active:scale-90 cursor-pointer"
             >
               ❯
             </button>

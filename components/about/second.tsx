@@ -1,26 +1,27 @@
-import React from 'react'
+import React from 'react';
 
 export default function Second() {
+  const stats = [
+    { number: "1,000+", label: "Partner Universities" },
+    { number: "65+", label: "Countries" },
+    { number: "3.4 M+", label: "Scholarships Secured" },
+    { number: "1,000+", label: "Programs" },
+  ];
+
   return (
-    <div className='flex justify-between bg-[#43246F] text-2xl text-white font-bold px-40 py-10 items-center'>
-      <div>
-        <h1>1,000 +</h1>
-        <p>Partner Universities</p>
-</div>
-        <div>
-        <h1>65 +</h1>
-      <p>Countries</p>
+    <section className="bg-[#43246F] text-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+        {stats.map((stat, index) => (
+          <div key={index} className="flex flex-col items-center justify-center gap-1 sm:gap-2">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-amber-400">
+              {stat.number}
+            </h1>
+            <p className="text-xs sm:text-sm md:text-base font-medium text-gray-200">
+              {stat.label}
+            </p>
+          </div>
+        ))}
       </div>
-      <div>
-        <h1>3.4 M+</h1>
-        <p>Scholarships Secured</p>
-      </div>
-      <div>
-      <h1>1000+</h1>
-      <p>Programs</p>
-      </div>
-    </div>
-  )
+    </section>
+  );
 }
-
-

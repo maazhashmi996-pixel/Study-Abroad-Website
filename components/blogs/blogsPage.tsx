@@ -8,7 +8,7 @@ interface Blog {
   id: number;
   title: string;
   image: string;
-  tags: string[]; // Added tags to each blog item for accurate mapping
+  tags: string[];
 }
 
 const blogs: Blog[] = [
@@ -84,7 +84,6 @@ export default function BlogsPage() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  // Toggle selection for tags
   const handleTagChange = (tag: string) => {
     setSelectedTags((prevTags) =>
       prevTags.includes(tag)
@@ -93,16 +92,13 @@ export default function BlogsPage() {
     );
   };
 
-  // Clear all filters
   const clearFilters = () => {
     setSelectedTags([]);
-    setSearchQuery("");
+    searchQuery && setSearchQuery("");
   };
 
-  // Filter blogs based on selected tags AND search query
   const filteredBlogs = useMemo(() => {
     return blogs.filter((blog) => {
-      // Check if blog matches selected tags (if any tags are selected)
       const matchesTag =
         selectedTags.length === 0 ||
         selectedTags.some(
@@ -111,7 +107,6 @@ export default function BlogsPage() {
             blog.title.toLowerCase().includes(tag.toLowerCase())
         );
 
-      // Check if blog matches search query
       const matchesSearch = blog.title
         .toLowerCase()
         .includes(searchQuery.toLowerCase());
@@ -121,37 +116,39 @@ export default function BlogsPage() {
   }, [selectedTags, searchQuery]);
 
   return (
-    <section className="bg-[#fafafa] py-12 md:py-18 px-4 sm:px-8 lg:px-16">
+    <section className="bg-[#fafafa] py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-12 text-[#2d2d2d]">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <h1 className="text-center text-3xl md:text-5xl font-bold text-[#45246d] mb-12">
+        
+        {/* Main Heading */}
+        <h1 className="text-center text-2xl sm:text-4xl lg:text-5xl font-bold text-[#45246d] mb-8 sm:mb-12 leading-tight">
           Study Abroad Blogs - Guidance, Tips & More
         </h1>
 
-        <div className="grid lg:grid-cols-4 gap-8">
-          {/* Main Blogs Grid */}
-          <div className="lg:col-span-3">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+          
+          {/* Main Blogs Grid (Desktop: Cols 3) */}
+          <div className="lg:col-span-3 order-2 lg:order-1">
             {filteredBlogs.length === 0 ? (
-              <div className="bg-white rounded-2xl p-12 text-center shadow-sm border border-gray-100">
-                <p className="text-xl text-gray-500 font-medium">
+              <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm border border-gray-100">
+                <p className="text-base sm:text-lg text-gray-500 font-medium">
                   No blogs found matching your selected criteria.
                 </p>
                 <button
                   onClick={clearFilters}
-                  className="mt-4 bg-[#45246d] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-[#341b53] transition"
+                  className="mt-4 bg-[#45246d] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#341b53] transition"
                 >
                   Reset Filters
                 </button>
               </div>
             ) : (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredBlogs.map((blog) => (
                   <div
                     key={blog.id}
-                    className="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 duration-300 flex flex-col justify-between border border-gray-100"
+                    className="bg-white rounded-2xl shadow-sm hover:shadow-md overflow-hidden hover:-translate-y-1.5 duration-300 flex flex-col justify-between border border-gray-100"
                   >
                     <div>
-                      <div className="relative h-44 w-full bg-gray-100">
+                      <div className="relative h-48 w-full bg-gray-100">
                         <Image
                           src={blog.image}
                           alt={blog.title}
@@ -161,14 +158,14 @@ export default function BlogsPage() {
                       </div>
 
                       <div className="p-5">
-                        <h2 className="text-base font-semibold text-[#2d2d2d] leading-snug line-clamp-3 mb-4">
+                        <h2 className="text-sm sm:text-base font-semibold text-[#2d2d2d] leading-snug line-clamp-3">
                           {blog.title}
                         </h2>
                       </div>
                     </div>
 
                     <div className="p-5 pt-0">
-                      <Link href={`/blog/${blog.id}`}>
+                      <Link href={`/blog/${blog.id}`} className="inline-block w-full sm:w-auto">
                         <button className="bg-[#F8A51B] hover:bg-orange-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition w-full sm:w-auto">
                           Read More →
                         </button>
@@ -178,13 +175,26 @@ export default function BlogsPage() {
                 ))}
               </div>
             )}
+
+            {/* Pagination Placeholder */}
+            <div className="flex justify-center items-center gap-2 mt-12 sm:mt-16">
+              {[1, 2, 3].map((num) => (
+                <button
+                  key={num}
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 bg-white font-medium text-xs sm:text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition"
+                >
+                  {num}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
+          {/* Sidebar Section (Search & Tags) */}
+          <div className="space-y-6 order-1 lg:order-2">
+            
             {/* Search Card */}
-            <div className="bg-white rounded-3xl shadow-md p-6">
-              <h2 className="text-2xl font-bold text-[#45246d] mb-4">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 p-5 sm:p-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#45246d] mb-3 sm:mb-4">
                 Search Here
               </h2>
               <input
@@ -192,14 +202,14 @@ export default function BlogsPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Type to search..."
-                className="w-full border border-gray-200 rounded-full px-5 py-3 text-sm outline-none focus:border-[#45246d] transition"
+                className="w-full border border-gray-200 rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#45246d] transition"
               />
             </div>
 
             {/* Popular Tags Filter Card */}
-            <div className="bg-white rounded-3xl shadow-md p-6">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 p-5 sm:p-6">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-[#45246d]">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#45246d]">
                   Popular Tags
                 </h2>
                 {selectedTags.length > 0 && (
@@ -212,13 +222,14 @@ export default function BlogsPage() {
                 )}
               </div>
 
-              <div className="space-y-3">
+              {/* Responsive Tag Filter Grid for Mobile */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-2.5 sm:gap-3">
                 {tagsList.map((tag) => {
                   const isChecked = selectedTags.includes(tag);
                   return (
                     <label
                       key={tag}
-                      className="flex items-center gap-3 text-sm text-gray-700 cursor-pointer hover:text-[#45246d] transition select-none"
+                      className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-700 cursor-pointer hover:text-[#45246d] transition select-none"
                     >
                       <input
                         type="checkbox"
@@ -234,21 +245,11 @@ export default function BlogsPage() {
                 })}
               </div>
             </div>
+
           </div>
+
         </div>
 
-        {/* Pagination Placeholder */}
-        <div className="flex justify-center items-center gap-2 mt-16">
-          <button className="w-10 h-10 rounded-full border border-gray-200 bg-white font-medium text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition">
-            1
-          </button>
-          <button className="w-10 h-10 rounded-full border border-gray-200 bg-white font-medium text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition">
-            2
-          </button>
-          <button className="w-10 h-10 rounded-full border border-gray-200 bg-white font-medium text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition">
-            3
-          </button>
-        </div>
       </div>
     </section>
   );

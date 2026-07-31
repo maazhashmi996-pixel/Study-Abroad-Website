@@ -1,4 +1,5 @@
 "use client";
+
 import { FaChevronDown } from "react-icons/fa";
 
 export default function Get() {
@@ -45,43 +46,47 @@ export default function Get() {
   };
 
   return (
-    <div className="w-full bg-[#f8f9fa] py-12 px-4 flex justify-center items-center">
-      <div className="w-full max-w-2xl bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-gray-100">
+    <section className="w-full bg-[#f8f9fa] py-8 sm:py-12 px-3 sm:px-6 md:px-8 flex justify-center items-center">
+      <div className="w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-lg border border-gray-100">
         
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3b1d5c] text-center mb-8">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#3b1d5c] text-center mb-6 sm:mb-8 leading-tight">
           Get a call-back within 24 hours
         </h2>
 
-        <form className="space-y-4">
-          {/* Full Name - Single Field */}
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-3.5 sm:space-y-4">
+          
+          {/* Full Name */}
           <div>
             <input
               type="text"
               placeholder="Full Name"
-              className="w-full bg-[#f2f4f7] text-gray-700 placeholder-gray-400 px-4 py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/20 border border-transparent transition"
+              required
+              className="w-full bg-[#f2f4f7] text-gray-800 placeholder-gray-400 px-4 py-3 sm:py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/30 text-sm sm:text-base border border-transparent transition"
             />
           </div>
 
           {/* Email Address & Mobile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full bg-[#f2f4f7] text-gray-700 placeholder-gray-400 px-4 py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/20 border border-transparent transition"
+              required
+              className="w-full bg-[#f2f4f7] text-gray-800 placeholder-gray-400 px-4 py-3 sm:py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/30 text-sm sm:text-base border border-transparent transition"
             />
             <input
               type="tel"
               placeholder="Mobile"
-              className="w-full bg-[#f2f4f7] text-gray-700 placeholder-gray-400 px-4 py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/20 border border-transparent transition"
+              required
+              className="w-full bg-[#f2f4f7] text-gray-800 placeholder-gray-400 px-4 py-3 sm:py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/30 text-sm sm:text-base border border-transparent transition"
             />
           </div>
 
           {/* Field of Interest & Preferred Study Level */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Field of Interest</option>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Field of Interest</option>
                 {dropdownOptions.fieldsOfInterest.map((field) => (
                   <option key={field} value={field}>
                     {field}
@@ -91,9 +96,9 @@ export default function Get() {
               <FaChevronDown className="absolute right-4 text-gray-500 text-xs pointer-events-none" />
             </div>
 
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Preferred Study Level</option>
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Preferred Study Level</option>
                 {dropdownOptions.preferredStudy.map((level) => (
                   <option key={level} value={level}>
                     {level}
@@ -105,10 +110,10 @@ export default function Get() {
           </div>
 
           {/* Preferred Country & Preferred Mode of Counseling */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Preferred Country</option>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Preferred Country</option>
                 {dropdownOptions.countries.map((country) => (
                   <option key={country} value={country}>
                     {country}
@@ -118,9 +123,9 @@ export default function Get() {
               <FaChevronDown className="absolute right-4 text-gray-500 text-xs pointer-events-none" />
             </div>
 
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Preferred Mode of Counseling</option>
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Preferred Mode of Counseling</option>
                 {dropdownOptions.modeOfCounseling.map((mode) => (
                   <option key={mode} value={mode}>
                     {mode}
@@ -132,18 +137,20 @@ export default function Get() {
           </div>
 
           {/* Date & Select your slot */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             <input
               type="text"
               placeholder="Date"
               onFocus={(e) => (e.target.type = "date")}
-              onBlur={(e) => (e.target.type = "text")}
-              className="w-full bg-[#f2f4f7] text-gray-700 placeholder-gray-400 px-4 py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/20 border border-transparent transition"
+              onBlur={(e) => {
+                if (!e.target.value) e.target.type = "text";
+              }}
+              className="w-full bg-[#f2f4f7] text-gray-800 placeholder-gray-400 px-4 py-3 sm:py-3.5 rounded-xl outline-none focus:ring-2 focus:ring-[#3b1d5c]/30 text-sm sm:text-base border border-transparent transition"
             />
 
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Select your slot</option>
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Select your slot</option>
                 {dropdownOptions.slots.map((slot) => (
                   <option key={slot} value={slot}>
                     {slot}
@@ -155,10 +162,10 @@ export default function Get() {
           </div>
 
           {/* Select City & Nearest Office */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Select City</option>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Select City</option>
                 {dropdownOptions.cities.map((city) => (
                   <option key={city} value={city}>
                     {city}
@@ -168,9 +175,9 @@ export default function Get() {
               <FaChevronDown className="absolute right-4 text-gray-500 text-xs pointer-events-none" />
             </div>
 
-            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl">
-              <select className="w-full bg-transparent text-gray-700 px-4 py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10">
-                <option value="">Nearest Office*</option>
+            <div className="relative flex items-center bg-[#f2f4f7] rounded-xl focus-within:ring-2 focus-within:ring-[#3b1d5c]/30">
+              <select defaultValue="" className="w-full bg-transparent text-gray-800 px-4 py-3 sm:py-3.5 rounded-xl outline-none appearance-none cursor-pointer pr-10 text-sm sm:text-base">
+                <option value="" disabled hidden>Nearest Office*</option>
                 {dropdownOptions.offices.map((office) => (
                   <option key={office} value={office}>
                     {office}
@@ -182,10 +189,10 @@ export default function Get() {
           </div>
 
           {/* Submit Button */}
-          <div className="pt-4 flex justify-center">
+          <div className="pt-3 sm:pt-4 flex justify-center">
             <button
               type="submit"
-              className="bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-black text-xs sm:text-sm tracking-wider uppercase px-10 py-4 rounded-full shadow-md transition-all active:scale-95"
+              className="w-full sm:w-auto bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-black text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-md transition-all active:scale-95"
             >
               GET FREE CONSULTATION
             </button>
@@ -193,6 +200,6 @@ export default function Get() {
         </form>
 
       </div>
-    </div>
+    </section>
   );
 }

@@ -116,28 +116,30 @@ export default function LanguageTestPreparationPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-10 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-10 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
+        
         {/* Main Section Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           
-          {/* LEFT SIDEBAR NAVIGATION */}
-          <div className="lg:col-span-1">
-            <div className="bg-[#3B1E54] p-4 rounded-2xl shadow-md space-y-3 sticky top-6">
+          {/* NAVIGATION SIDEBAR */}
+          <div className="lg:col-span-1 w-full sticky top-4 sm:top-6 z-20">
+            <div className="bg-[#3B1E54] p-2.5 sm:p-4 rounded-2xl shadow-md flex lg:flex-col gap-2 overflow-x-auto">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.name;
                 return (
                   <button
                     key={item.name}
+                    type="button"
                     onClick={() => setActiveTab(item.name)}
-                    className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-200 text-left ${
+                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer focus:outline-none ${
                       isActive
-                        ? "bg-[#ECA82C] text-[#3B1E54] shadow"
-                        : "bg-white text-[#3B1E54] hover:bg-slate-100"
+                        ? "bg-[#ECA82C] text-[#3B1E54] shadow-md"
+                        : "bg-white/10 lg:bg-white text-white lg:text-[#3B1E54] hover:bg-white/20 lg:hover:bg-slate-100"
                     }`}
                   >
-                    <Icon className="w-5 h-5 flex-shrink-0" />
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                     <span>{item.name}</span>
                   </button>
                 );
@@ -146,34 +148,34 @@ export default function LanguageTestPreparationPage() {
           </div>
 
           {/* RIGHT CONTENT AREA */}
-          <div className="lg:col-span-3 space-y-10">
+          <div className="lg:col-span-3 space-y-8 sm:space-y-10">
             
             {/* Header Titles */}
-            <div>
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight mb-2">
+            <div className="space-y-2">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
                 Language Test Preparation
               </h1>
-              <p className="text-sm sm:text-base font-semibold text-[#3B1E54]">
+              <p className="text-xs sm:text-sm font-semibold text-[#ECA82C] bg-[#3B1E54] inline-block px-3 py-1 rounded-md">
                 Master a New Language with Times Consultant
               </p>
-              <p className="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pt-1">
                 Whether you are planning to study, work, or live abroad, mastering the local language can significantly enhance your experience and opportunities.
               </p>
             </div>
 
             {/* We Are Here To Help You With */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-[#3B1E54]">
+            <div className="space-y-3 bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h2 className="text-base sm:text-lg font-bold text-[#3B1E54]">
                 We Are Here to Help You With
               </h2>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 Take the first step to your career with Times Consultant. Looking for solutions? We have got everything covered for you from visa services to career development.
               </p>
 
-              <ul className="space-y-2">
+              <ul className="space-y-2 pt-1">
                 {["Language Courses", "Conversation Practices", "Test Preparation"].map((item, idx) => (
                   <li key={idx} className="flex items-center space-x-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#3B1E54] flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#3B1E54] shrink-0" />
                     <span className="font-semibold text-xs sm:text-sm text-[#3B1E54]">
                       {item}
                     </span>
@@ -185,7 +187,7 @@ export default function LanguageTestPreparationPage() {
             {/* Language Courses Section */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-bold text-[#3B1E54]">
+                <h2 className="text-lg sm:text-xl font-bold text-[#3B1E54]">
                   Language Courses
                 </h2>
                 <p className="text-slate-600 text-xs sm:text-sm mt-1">
@@ -194,15 +196,15 @@ export default function LanguageTestPreparationPage() {
               </div>
 
               {/* Courses Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
                 {coursesData.map((course, index) => (
                   <div
                     key={index}
-                    className="bg-[#3B1E54] text-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                    className="bg-[#3B1E54] text-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                   >
                     <div>
                       {/* Logo Box */}
-                      <div className="bg-white text-[#3B1E54] font-black text-center py-2 px-3 rounded-lg text-sm sm:text-base tracking-wider mb-3 shadow-inner">
+                      <div className="bg-white text-[#3B1E54] font-black text-center py-2 px-3 rounded-lg text-sm tracking-wider mb-3 shadow-inner">
                         {course.logoText}
                       </div>
 
@@ -215,7 +217,7 @@ export default function LanguageTestPreparationPage() {
                       <ul className="space-y-2 mb-6">
                         {course.features.map((feat, fIdx) => (
                           <li key={fIdx} className="flex items-start text-xs text-slate-200">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#ECA82C] mr-1.5 mt-0.5 flex-shrink-0" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#ECA82C] mr-1.5 mt-0.5 shrink-0" />
                             <span>{feat}</span>
                           </li>
                         ))}
@@ -232,21 +234,21 @@ export default function LanguageTestPreparationPage() {
             </div>
 
             {/* Callback Form Card */}
-            <div className="bg-slate-100 rounded-2xl p-6 sm:p-8 border border-slate-200 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div className="bg-slate-100 rounded-2xl p-5 sm:p-8 border border-slate-200 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               
               {/* Left Graphic Illustration */}
-              <div className="md:col-span-5 flex flex-col items-center justify-center text-center p-4">
-                <div className="w-full max-w-[200px] aspect-square bg-purple-100 rounded-full flex items-center justify-center mb-3 text-[#3B1E54]">
-                  <Sparkles className="w-16 h-16 text-[#ECA82C]" />
+              <div className="md:col-span-4 flex flex-col items-center justify-center text-center p-2">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-purple-200/60 rounded-full flex items-center justify-center mb-3">
+                  <Sparkles className="w-10 h-10 sm:w-14 sm:h-14 text-[#3B1E54]" />
                 </div>
-                <span className="font-extrabold text-2xl text-[#3B1E54] tracking-widest">
+                <span className="font-extrabold text-xl sm:text-2xl text-[#3B1E54] tracking-widest">
                   START
                 </span>
               </div>
 
               {/* Right Form */}
-              <div className="md:col-span-7 bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
-                <h3 className="text-lg font-bold text-[#3B1E54]">
+              <div className="md:col-span-8 bg-white p-5 sm:p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
+                <h3 className="text-base sm:text-lg font-bold text-[#3B1E54]">
                   Get a call-back within 24 hours
                 </h3>
 
@@ -274,7 +276,7 @@ export default function LanguageTestPreparationPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <select className="w-full px-3 py-2 text-xs sm:text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B1E54] bg-white text-slate-700">
-                      <option value="">I Test You Want</option>
+                      <option value="">Test You Want</option>
                       <option value="IELTS">IELTS</option>
                       <option value="PTE">PTE</option>
                       <option value="TOEFL">TOEFL</option>
@@ -305,7 +307,7 @@ export default function LanguageTestPreparationPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-2.5 px-4 bg-[#ECA82C] hover:bg-[#d99723] text-[#3B1E54] font-extrabold text-xs sm:text-sm rounded-lg shadow transition-colors uppercase tracking-wider mt-2"
+                    className="w-full py-3 px-4 bg-[#ECA82C] hover:bg-[#d99723] text-[#3B1E54] font-extrabold text-xs sm:text-sm rounded-lg shadow transition-colors uppercase tracking-wider mt-2 cursor-pointer active:scale-[0.99]"
                   >
                     Get Free Consultation
                   </button>
@@ -315,8 +317,8 @@ export default function LanguageTestPreparationPage() {
 
             {/* Content Text Sections */}
             <div className="space-y-6 text-slate-600 text-xs sm:text-sm leading-relaxed">
-              <div className="space-y-2">
-                <h2 className="text-lg font-bold text-[#3B1E54]">
+              <div className="space-y-1.5">
+                <h2 className="text-base sm:text-lg font-bold text-[#3B1E54]">
                   Test Preparation
                 </h2>
                 <p>
@@ -324,8 +326,8 @@ export default function LanguageTestPreparationPage() {
                 </p>
               </div>
 
-              <div className="space-y-2">
-                <h2 className="text-lg font-bold text-[#3B1E54]">
+              <div className="space-y-1.5">
+                <h2 className="text-base sm:text-lg font-bold text-[#3B1E54]">
                   Conversation Practices
                 </h2>
                 <p>
@@ -336,42 +338,42 @@ export default function LanguageTestPreparationPage() {
 
             {/* Why Choose Times Consultant Cards */}
             <div className="space-y-4">
-              <h2 className="text-lg font-bold text-[#3B1E54]">
+              <h2 className="text-base sm:text-lg font-bold text-[#3B1E54]">
                 Why Choose Times Consultant for Test Preparation?
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
                 <div className="bg-[#3B1E54] text-white p-5 rounded-2xl space-y-3">
                   <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-[#ECA82C]">
-                    <Users className="w-6 h-6" />
+                    <Users className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <p className="text-xs text-slate-200 leading-relaxed">
-                    Experienced instructors with a focus on getting students ready for exams like the PTE, IELTS, and German language proficiency provide individualized coaching through Times Consultant in Pakistan. With their extensive understanding of test patterns and methods, our trainers will make sure you are ready for everything.
+                    Experienced instructors with a focus on getting students ready for exams like the PTE, IELTS, and German language proficiency provide individualized coaching through Times Consultant in Pakistan.
                   </p>
                 </div>
 
                 <div className="bg-[#3B1E54] text-white p-5 rounded-2xl space-y-3">
                   <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-[#ECA82C]">
-                    <Target className="w-6 h-6" />
+                    <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <p className="text-xs text-slate-200 leading-relaxed">
-                    Times Consultant provides individualized one-on-one coaching sessions to help you master particular test portions, guaranteeing you receive tailored feedback and support. This is ideal for people looking for more focused attention.
+                    Times Consultant provides individualized one-on-one coaching sessions to help you master particular test portions, guaranteeing you receive tailored feedback and support.
                   </p>
                 </div>
 
                 <div className="bg-[#3B1E54] text-white p-5 rounded-2xl space-y-3">
                   <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-[#ECA82C]">
-                    <Award className="w-6 h-6" />
+                    <Award className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <p className="text-xs text-slate-200 leading-relaxed">
-                    Our team of experts will be there for you at every step of the exam preparation process. To make sure you're on track to meet your objectives, we provide you with regular feedback on how you're doing and modify your learning plan as necessary.
+                    Our team of experts will be there for you at every step of the exam preparation process. To make sure you're on track to meet your objectives, we provide regular feedback on performance.
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Footer Text */}
-            <div className="space-y-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
+            <div className="space-y-2 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-200 pt-6">
               <h3 className="font-bold text-[#3B1E54]">
                 Start Your Language Learning Journey Today!
               </h3>

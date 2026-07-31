@@ -44,48 +44,56 @@ const requirements = [
 
 export default function Requirements() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-[#3B1E54] mb-3">
-            What You Need Before Starting
-          </h2>
+    <section className="py-12 sm:py-16 lg:py-20 bg-white font-sans text-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto space-y-6 sm:space-y-10">
 
-          <p className="text-gray-600 mb-10 text-lg">
-            To work on this stage properly, you must already have:
-          </p>
+          {/* Section Header */}
+          <div className="text-center sm:text-left space-y-2">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
+              What You Need Before Starting
+            </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <p className="text-gray-600 text-sm sm:text-lg">
+              To work on this stage properly, you must already have:
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {requirements.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={index}
-                  className="border border-[#3B1E54] rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full"
+                  className="border border-[#3B1E54]/30 hover:border-[#3B1E54] rounded-2xl p-5 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full bg-white"
                 >
-                  <div className="w-16 h-16 rounded-full bg-[#F4EEFF] flex items-center justify-center text-[#3B1E54] mb-5">
-                    <Icon size={34} />
+                  <div>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#F4EEFF] flex items-center justify-center text-[#3B1E54] mb-4 sm:mb-5 shrink-0">
+                      <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
+                    </div>
+
+                    <h3 className="text-lg sm:text-xl font-bold text-[#3B1E54] mb-2 sm:mb-3 leading-snug">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
-
-                  <h3 className="text-xl font-bold text-[#3B1E54] mb-3">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-600 leading-7">
-                    {item.desc}
-                  </p>
                 </div>
               );
             })}
           </div>
 
-          <div className="mt-12 bg-[#F8F5FF] border border-[#E5D9F2] rounded-xl p-8 text-center">
-            <p className="text-[#3B1E54] font-bold text-lg">
+          {/* Bottom Banner Callout */}
+          <div className="bg-[#F8F5FF] border border-[#E5D9F2] rounded-2xl p-6 sm:p-8 text-center space-y-3 shadow-sm">
+            <p className="text-[#3B1E54] font-bold text-base sm:text-lg leading-snug">
               You must know how many weeks are left before visa filing deadlines.
             </p>
 
-            <p className="text-gray-600 mt-4 leading-7">
+            <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">
               If you don't have these answers yet, you're not late. This is
               exactly{" "}
               <span className="font-semibold text-[#3B1E54]">
@@ -94,6 +102,7 @@ export default function Requirements() {
               during your first session.
             </p>
           </div>
+
         </div>
       </div>
     </section>

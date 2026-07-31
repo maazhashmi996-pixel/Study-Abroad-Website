@@ -1,79 +1,47 @@
 import { FaCheck } from "react-icons/fa";
 
+export default function Content() {
+  const tableOfContents = [
+    "Admission requirements in Denmark",
+    "Cost of studying in Denmark",
+    "Scholarships for students in Denmark",
+    "Visa requirements in Denmark",
+    "Popular courses to Study in Denmark",
+    "Post-Study work opportunities",
+    "Cost of living in Denmark",
+    "Book a meeting with an expert",
+  ];
 
-export default  function content() {
   return (
-    <div className="bg-[#43246F] px-25 py-10  ">
-      <h1 className="text-5xl text-white pb-3">Table Of Content</h1>
-      <div className="flex flex-col  gap-y-8  
-      text-xl ">
-        <div  className="flex gap-10 justify-between ">
-        <div className="flex border  rounded-md border-[#100520] px-25 py-5  items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className=" mb-3 ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] "/>
+    <section className="bg-[#43246F] px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-16 text-white">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Title */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold pb-6 md:pb-10 text-center md:text-left">
+          Table Of Content
+        </h1>
+
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          {tableOfContents.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-3 sm:gap-4 border border-[#522d86] bg-[#391e5e]/50 p-4 sm:p-5 rounded-lg shadow-lg hover:border-amber-500/50 transition duration-300"
+            >
+              {/* Check Icon Wrapper */}
+              <div className="shrink-0 p-2 bg-amber-500 rounded-full flex items-center justify-center text-[#43246f]">
+                <FaCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+
+              {/* Text */}
+              <h4 className="text-amber-500 text-sm sm:text-base md:text-lg font-medium leading-tight">
+                {item}
+              </h4>
             </div>
-            <h4 className="bg-[#43246F] text-amber-500 text-xl ">
-          Admission requirements in Denmark </h4>
+          ))}
         </div>
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-lg ">
-            <div className="  ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246F] text-yellow-500 text-xl ">
-         Cost of studying in Denmark </h4>
-        </div>
-        </div>
-        <div  className="flex gap-10 justify-between">
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className="  ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246f] text-amber-500 text-xl">
-          Scholarships for  students in Denmark </h4>
-        </div>
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className=" ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246f] text-amber-500 text-xl">
-           visa requirements in Denmark </h4>
-        </div>
-        </div>
-        <div  className="flex gap-10 justify-between">
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className="  ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246f] text-amber-500 text-xl">
-         Popular courses to Study in Denmark </h4>
-        </div>
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className="  ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246f] text-amber-500 text-xl">
-          Post-Study work opportunities </h4>
-        </div>
-        </div>
-        <div  className="flex gap-10 justify-between">
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className="  ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246f] text-amber-500 text-xl">
-           Popular courses to Study in Denmark</h4>
-        </div>
-        <div className="flex border rounded-md border-[#100520] px-25 py-5 justify-start items-center gap-4 shadow-blue-750 shadow-2xl">
-            <div className="  ">
-            <FaCheck className="bg-amber-500 w-10 h-10 rounded-full text-[#43246f] items-center "/>
-            </div>
-            <h4 className="bg-[#43246f] text-amber-500 text-xl">
-           Book a meeting with an expert </h4>
-        </div>
-        </div>
+
       </div>
-    </div>
-  )
+    </section>
+  );
 }
-
-

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 // Types
 interface FAQItem {
@@ -30,42 +31,42 @@ const requiredDocuments = [
 const delayConsequences = [
   {
     title: "University can report you as 'did not start'",
-    description: "This can affect your visa status.",
+    description: "This can directly affect your valid visa status.",
   },
   {
     title: "You may be asked to defer to next intake",
-    description: "If you miss too many initial classes/orientation.",
+    description: "If you miss too many initial orientation days or classes.",
   },
   {
-    title: "Your accommodation / part-time work / student benefits get delayed",
-    description: "Because many of these depend on your student ID.",
+    title: "Your student benefits get delayed",
+    description: "Accommodation, part-time work permit, and student IDs rely on enrollment.",
   },
   {
-    title: "You waste the whole year",
-    description: "After doing all 7 steps correctly.",
+    title: "You waste valuable time & money",
+    description: "Delaying your career after completing all application steps.",
   },
 ];
 
 const helpBulletPointsLeft = [
-  "What to carry in your pre-departure file",
-  "When to travel for your specific university and intake",
-  "What to tell immigration if you are asked extra questions",
+  "What to carry in your pre-departure document file",
+  "When to travel for your specific university intake",
+  "What to tell immigration officers during border entry questions",
 ];
 
 const helpBulletPointsRight = [
   "How to report to the university if your flight gets delayed",
-  "What rules apply for part-time work in that country (UK, Canada, Australia rules change often)",
-  "How to stay compliant so your visa remains valid",
+  "Work hour rules for UK, Canada, Australia & Europe",
+  "How to maintain full compliance so your visa stays valid",
 ];
 
 const faqs: FAQItem[] = [
   {
     question: "When should I travel to my study country?",
     answer:
-      "Ideally arrive 7 to 14 days before your course start date to settle down, find accommodation, and complete orientation.",
+      "Ideally arrive 7 to 14 days before your course start date to settle down, find accommodation, and complete mandatory university orientation.",
   },
   {
-    question: "What documents should I carry in hand-carry when traveling as an international student?",
+    question: "What documents should I carry in hand-carry when traveling?",
     answer:
       "Always keep your original passport, visa grant letter, university CAS/offer letter, financial proofs, and accommodation details in your hand luggage.",
   },
@@ -84,24 +85,31 @@ export default function Timeline() {
   };
 
   return (
-    <main className="min-h-screen font-sans bg-slate-50 text-slate-900 pb-20">
+    <main className="min-h-screen font-sans bg-slate-50 text-slate-900 pb-16 sm:pb-20">
       
       {/* SECTION 1: TIMELINE */}
-      <section className="bg-white py-12 px-6 border-b border-slate-200">
-        <div className="max-w-4xl mx-auto space-y-6 text-center">
-          <h2 className="text-2xl font-bold text-[#3a1b5c]">Timeline</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <section className="bg-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+        <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3a1b5c] tracking-tight">
+            Arrival & Program Start Timeline
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {timelineSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-[#3a1b5c] text-white text-xs font-semibold py-3 px-4 rounded-md shadow-sm flex items-center justify-center text-center"
+                className="bg-[#3a1b5c] text-white text-xs sm:text-sm font-semibold p-4 rounded-xl shadow-sm flex flex-col justify-center items-center text-center space-y-2"
               >
-                {step}
+                <span className="text-[10px] uppercase font-bold tracking-wider text-amber-400">
+                  Step 0{idx + 1}
+                </span>
+                <span className="leading-snug">{step}</span>
               </div>
             ))}
           </div>
-          <div>
-            <span className="inline-block bg-amber-500 text-slate-900 text-xs font-bold py-1.5 px-4 rounded-full">
+
+          <div className="pt-2">
+            <span className="inline-flex items-center bg-amber-500 text-slate-900 text-xs font-bold py-2 px-5 rounded-full shadow-sm">
               Previous Step: Apply For Visa →
             </span>
           </div>
@@ -109,25 +117,25 @@ export default function Timeline() {
       </section>
 
       {/* SECTION 2: DOCUMENTS / PROOF REQUIRED */}
-      <section className="bg-[#3a1b5c] text-white py-14 px-6">
+      <section className="bg-[#3a1b5c] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6 text-center">
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight">
-              Documents / proof required
+          <div className="space-y-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Documents & Proof Required at Immigration
             </h2>
-            <p className="text-xs text-purple-200 mt-1">
-              Keep these in a <span className="font-semibold underline">document folder</span> in your hand-carry
+            <p className="text-xs sm:text-sm text-purple-200 max-w-md mx-auto">
+              Keep these in a <strong className="underline text-amber-300">document folder inside your hand-carry bag</strong>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 text-left">
             {requiredDocuments.map((doc, idx) => (
               <div
                 key={idx}
-                className="border border-purple-400/30 rounded-lg p-3.5 bg-[#2c1249] text-xs leading-snug flex items-center space-x-2"
+                className="border border-purple-400/30 rounded-xl p-3.5 bg-[#2c1249] text-xs sm:text-sm leading-snug flex items-center space-x-3 shadow-sm"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
-                <span>{doc}</span>
+                <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                <span className="text-purple-50 font-medium">{doc}</span>
               </div>
             ))}
           </div>
@@ -135,71 +143,75 @@ export default function Timeline() {
       </section>
 
       {/* SECTION 3: WHAT HAPPENS IF YOU DELAY */}
-      <section className="bg-white py-14 px-6">
+      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6 text-center">
-          <div>
-            <h2 className="text-2xl font-bold text-slate-900">
-              What happens if you delay
+          <div className="space-y-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              What Happens If You Delay?
             </h2>
-            <p className="text-xs text-slate-500 mt-1">
-              If you reach late or don&apos;t complete enrollment
+            <p className="text-xs sm:text-sm text-slate-500">
+              If you arrive late or fail to complete mandatory enrollment on time:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             {delayConsequences.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-amber-500 text-slate-900 p-5 rounded-lg space-y-1 shadow-sm"
+                className="bg-amber-500 text-slate-900 p-5 rounded-2xl space-y-1.5 shadow-sm flex flex-col justify-between h-full"
               >
-                <h3 className="font-bold text-sm leading-snug">{item.title}</h3>
-                <p className="text-xs text-slate-800">{item.description}</p>
+                <h3 className="font-extrabold text-sm sm:text-base leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-800 leading-relaxed font-medium">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
 
-          <p className="text-xs text-slate-500 italic pt-2">
-            So even though this looks like a &quot;simple&quot; step, it is very sensitive.
+          <p className="text-xs text-slate-500 italic pt-2 max-w-md mx-auto">
+            Although this seems like a final administrative step, it is extremely time-sensitive.
           </p>
         </div>
       </section>
 
       {/* SECTION 4: HOW TIMES CONSULTANT HELPS */}
-      <section className="bg-slate-100 py-14 px-6 border-t border-b border-slate-200">
-        <div className="max-w-4xl mx-auto space-y-6 text-center">
-          <div>
-            <h2 className="text-2xl font-bold text-[#3a1b5c]">
-              How Times Consultant helps at this stage
+      <section className="bg-slate-100 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-b border-slate-200">
+        <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 text-center">
+          <div className="space-y-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3a1b5c] tracking-tight">
+              How Times Consultant Helps at This Stage
             </h2>
-            <p className="text-xs text-slate-600 mt-1 max-w-xl mx-auto">
-              Times Consultant doesn&apos;t stop at the visa stage, we can guide you on:
+            <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
+              Our support continues well past visa approval. Here is how we assist prior to your departure:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-xs text-slate-700">
-            <ul className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-xs sm:text-sm text-slate-700">
+            <ul className="space-y-3 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
               {helpBulletPointsLeft.map((point, idx) => (
-                <li key={idx} className="flex items-start space-x-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>{point}</span>
+                <li key={idx} className="flex items-start space-x-2.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span className="leading-relaxed">{point}</span>
                 </li>
               ))}
             </ul>
-            <ul className="space-y-2">
+            <ul className="space-y-3 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
               {helpBulletPointsRight.map((point, idx) => (
-                <li key={idx} className="flex items-start space-x-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>{point}</span>
+                <li key={idx} className="flex items-start space-x-2.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span className="leading-relaxed">{point}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="pt-4 flex flex-wrap justify-center gap-3">
-            <button className="bg-amber-500 hover:bg-amber-600 text-slate-900 text-xs font-bold py-2 px-5 rounded-full transition-colors shadow-sm">
+          <div className="pt-2 flex flex-col sm:flex-row justify-center gap-3">
+            <button className="bg-amber-500 hover:bg-amber-600 text-slate-900 text-xs sm:text-sm font-bold py-3 px-6 rounded-full transition-all shadow-sm active:scale-95">
               Get Pre-Departure Guidance
             </button>
-            <button className="bg-[#3a1b5c] hover:bg-[#2c1249] text-white text-xs font-bold py-2 px-5 rounded-full transition-colors shadow-sm">
+            <button className="bg-[#3a1b5c] hover:bg-[#2c1249] text-white text-xs sm:text-sm font-bold py-3 px-6 rounded-full transition-all shadow-sm active:scale-95">
               Stay Supported After Arrival
             </button>
           </div>
@@ -207,31 +219,37 @@ export default function Timeline() {
       </section>
 
       {/* SECTION 5: FAQ ACCORDION */}
-      <section className="bg-white py-14 px-6">
+      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto space-y-6">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Can&apos;t talk? Don&apos;t worry, we have got all the answers right here.
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Frequently Asked Questions
             </h2>
+            <p className="text-xs sm:text-sm text-slate-500">
+              Clear answers to common arrival and orientation inquiries.
+            </p>
           </div>
 
-          <div className="space-y-3 pt-4">
+          <div className="space-y-3 pt-2">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-slate-200 rounded-lg overflow-hidden transition-all"
+                className="border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full flex justify-between items-center p-4 text-left font-medium text-slate-800 text-sm bg-white hover:bg-slate-50 transition-colors"
+                  aria-expanded={openFaq === idx}
+                  className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-slate-800 text-xs sm:text-sm bg-white hover:bg-slate-50 transition-colors"
                 >
-                  <span>{faq.question}</span>
-                  <span className="text-slate-400 font-bold text-lg">
-                    {openFaq === idx ? "−" : "+"}
-                  </span>
+                  <span className="pr-2">{faq.question}</span>
+                  {openFaq === idx ? (
+                    <ChevronUp className="w-5 h-5 text-slate-500 shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
+                  )}
                 </button>
                 {openFaq === idx && (
-                  <div className="px-4 pb-4 text-xs text-slate-600 leading-relaxed bg-slate-50/50">
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50 border-t border-slate-100 pt-3">
                     {faq.answer}
                   </div>
                 )}

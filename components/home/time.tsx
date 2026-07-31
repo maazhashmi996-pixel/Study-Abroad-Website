@@ -1,12 +1,13 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const events = [
   {
@@ -67,29 +68,37 @@ const events = [
 
 export default function Time() {
   return (
-    <section className="bg-[#3b1d5c] py-16 px-4 md:px-12 w-full text-white font-sans font-family:  sans-serif ">
+    <section className="bg-[#3b1d5c] py-12 sm:py-16 px-4 sm:px-8 md:px-12 w-full text-white font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* SECTION HEADER */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+        <div className="text-center mb-8 sm:mb-12 space-y-3">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Time Consultant Events
           </h2>
-          <button className="bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-extrabold text-xs px-6 py-2.5 rounded-full shadow-md transition-transform active:scale-95">
-            View all events
-          </button>
+          <div>
+            <button className="bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-extrabold text-xs px-6 py-2.5 rounded-full shadow-md transition-transform active:scale-95 cursor-pointer">
+              View all events
+            </button>
+          </div>
         </div>
 
         {/* SWIPER CAROUSEL CONTAINER */}
-        <div className="relative px-6 md:px-10">
+        <div className="relative px-4 sm:px-8 md:px-10">
           
           {/* PREVIOUS BUTTON */}
-          <button className="event-prev absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-[#f1b317] text-[#3b1d5c] flex items-center justify-center shadow-lg hover:bg-[#e0a30f] transition">
+          <button 
+            aria-label="Previous event"
+            className="event-prev absolute -left-1 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#f1b317] text-[#3b1d5c] flex items-center justify-center shadow-lg hover:bg-[#e0a30f] transition-all cursor-pointer active:scale-95"
+          >
             <ChevronLeft className="w-5 h-5 stroke-[3]" />
           </button>
 
           {/* NEXT BUTTON */}
-          <button className="event-next absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-[#f1b317] text-[#3b1d5c] flex items-center justify-center shadow-lg hover:bg-[#e0a30f] transition">
+          <button 
+            aria-label="Next event"
+            className="event-next absolute -right-1 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#f1b317] text-[#3b1d5c] flex items-center justify-center shadow-lg hover:bg-[#e0a30f] transition-all cursor-pointer active:scale-95"
+          >
             <ChevronRight className="w-5 h-5 stroke-[3]" />
           </button>
 
@@ -104,50 +113,51 @@ export default function Time() {
               disableOnInteraction: false,
             }}
             loop={true}
-            spaceBetween={30}
+            spaceBetween={24}
             breakpoints={{
               0: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              540: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
-            className="w-full py-4"
+            className="w-full py-2"
           >
             {events.map((event) => (
               <SwiperSlide key={event.id}>
-              <div className="flex flex-col items-center h-full px-2">
+                <div className="flex flex-col items-center h-full px-2 py-4">
 
-  {/* FIXED CONTAINER WITH TAILWIND SIZES */}
-  <div className="relative w-64 h-64 sm:w-80 sm:h-80 mb-4 shrink-0">
-    <Image
-      src={event.image}
-      alt={event.title}
-      fill
-      className="object-contain"
-    />
-  </div>
+                  {/* RESPONSIVE IMAGE CONTAINER */}
+                  <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-square mb-4 shrink-0 overflow-hidden rounded-xl bg-purple-900/30">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-contain"
+                    />
+                  </div>
 
-  {/* EVENT CONTENT */}
-  <div className="flex flex-col items-start w-full">
-    <h3 className="text-white text-xl sm:text-2xl font-bold mb-2 leading-snug">
-      {event.title}
-    </h3>
+                  {/* EVENT CONTENT */}
+                  <div className="flex flex-col items-start w-full text-left">
+                    <h3 className="text-white text-lg sm:text-xl font-bold mb-2 leading-snug">
+                      {event.title}
+                    </h3>
 
-    <p className="text-gray-200 text-xs sm:text-sm font-medium mb-1">
-      <span className="font-bold">{event.time}</span>
-      <span className="mx-2">||</span>
-      <span>Date: {event.date}</span>
-    </p>
+                    <p className="text-gray-200 text-xs sm:text-sm font-medium mb-1 leading-relaxed">
+                      <span className="font-bold text-[#f1b317]">{event.time}</span>
+                      <span className="mx-2 text-gray-400">|</span>
+                      <span>Date: {event.date}</span>
+                    </p>
 
-    <p className="text-gray-300 text-xs sm:text-sm font-medium mt-1">
-      Location: {event.location}
-    </p>
+                    <p className="text-gray-300 text-xs sm:text-sm font-medium mt-0.5">
+                      Location: {event.location}
+                    </p>
 
-    <button className="mt-6 px-4 py-2 bg-[#f1b317] hover:bg-white text-[#3b1d5c] text-xs font-bold rounded-sm shadow-md transition-transform active:scale-95 cursor-pointer">
-      More Details
-    </button>
-  </div>
+                    <button className="mt-5 px-5 py-2.5 bg-[#f1b317] hover:bg-white text-[#3b1d5c] text-xs font-extrabold rounded shadow-md transition-colors duration-200 cursor-pointer active:scale-95">
+                      More Details
+                    </button>
+                  </div>
 
-</div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

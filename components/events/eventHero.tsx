@@ -9,7 +9,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// 6 Cards Data Array (Leading '/' added for Next.js public folder)
 const expoCards = [
   {
     id: 1,
@@ -63,19 +62,19 @@ const expoCards = [
 
 export default function EventHero() {
   return (
-    <section className="w-full bg-white py-12 px-4 md:px-8">
+    <section className="w-full bg-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       {/* Section Title */}
-      <div className="text-center mb-10">
-        <h1 className="text-3xl md:text-5xl font-black text-[#3b1d5c] tracking-tight">
+      <div className="text-center mb-6 sm:mb-10">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-[#3b1d5c] tracking-tight leading-tight">
           The Largest Study Abroad Expo 2026
         </h1>
       </div>
 
       {/* Swiper Slider Container */}
-      <div className="max-w-7xl mx-auto mb-10">
+      <div className="max-w-7xl mx-auto mb-8 sm:mb-10">
         <Swiper
           modules={[Autoplay, Pagination]}
-          spaceBetween={20}
+          spaceBetween={16}
           slidesPerView={1}
           loop={true}
           autoplay={{
@@ -84,27 +83,37 @@ export default function EventHero() {
           }}
           pagination={{ clickable: true }}
           breakpoints={{
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-            1280: { slidesPerView: 5 },
+            480: { slidesPerView: 1.5, spaceBetween: 16 },
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 20 },
+            1280: { slidesPerView: 5, spaceBetween: 20 },
           }}
-          className="pb-14"
+          className="pb-12 sm:pb-14 !px-1"
         >
           {expoCards.map((card) => (
             <SwiperSlide key={card.id}>
-              <div className="h-[380px]  overflow-hidden shadow-lg border border-gray-100 flex flex-col justify-between relative bg-gradient-to-b from-[#3b1d5c] via-[#3b1d5c] to-[#f1b317] group hover:scale-[1.02] transition-transform duration-300">
-           {/* Image Container */}
-                <div
-                  className="flex-1 relative mx-3 mb-3 rounded-xl overflow-hidden "
- >
- <Image
-                      src={card.imageSrc}
-                      alt={card.title}
-                      fill
-                      className="object-cover rounded-xl"
-                    />
-               </div>
+              <div className="h-[360px] sm:h-[380px] rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 flex flex-col justify-between relative bg-gradient-to-b from-[#3b1d5c] via-[#3b1d5c] to-[#f1b317] group hover:scale-[1.02] transition-transform duration-300 p-3">
+                
+                {/* Header Badge/Text inside Card */}
+                <div className="z-10 p-2">
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 bg-[#f1b317] text-[#3b1d5c] rounded-full inline-block mb-1">
+                    {card.subtitle}
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug line-clamp-1">
+                    {card.title}
+                  </h3>
+                </div>
+
+                {/* Image Container */}
+                <div className="flex-1 relative w-full rounded-xl overflow-hidden mt-2">
+                  <Image
+                    src={card.imageSrc}
+                    alt={card.title}
+                    fill
+                    className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
 
               </div>
             </SwiperSlide>
@@ -113,11 +122,25 @@ export default function EventHero() {
       </div>
 
       {/* Register Banner Bottom Section */}
-      <div className="bg-[#3b1d5c] py-6 px-4 rounded-xl max-w-7xl mx-auto flex items-center justify-center">
-        <button className="bg-[#f1b317] hover:bg-[#d99f12] text-[#3b1d5c] font-black text-sm md:text-base  rounded-lg uppercase tracking-wider shadow-md hover:shadow-lg justify-center transition-all active:scale-95">
+      <div className="bg-[#3b1d5c] py-5 sm:py-6 px-4 rounded-2xl max-w-7xl mx-auto flex items-center justify-center shadow-md">
+        <button className="bg-[#f1b317] hover:bg-[#d99f12] text-[#3b1d5c] font-black text-xs sm:text-sm md:text-base px-8 sm:px-12 py-3 sm:py-3.5 rounded-xl uppercase tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95">
           Register Now
         </button>
       </div>
+
+      {/* Custom Styling for Swiper Pagination Dots */}
+      <style jsx global>{`
+        .swiper-pagination-bullet {
+          background: #3b1d5c !important;
+          opacity: 0.3;
+        }
+        .swiper-pagination-bullet-active {
+          background: #f1b317 !important;
+          opacity: 1;
+          width: 24px !important;
+          border-radius: 6px !important;
+        }
+      `}</style>
     </section>
   );
 }

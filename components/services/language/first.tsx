@@ -1,26 +1,25 @@
-  import Image from "next/image";
-  
-  
-  function first() {
-    return (
-     
+"use client";
+
+import Image from "next/image";
+
+export default function First() {
+  return (
+    <section className="w-full py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto overflow-hidden rounded-2xl shadow-sm">
         
-  <section className="w-full py-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <Image
-          src="/images/services/lang-scaled.jpg"
-          alt="Study Abroad"
-          width={800}
-          height={400}
-          className="w-full  object-cover"
-          priority
-        />
+        {/* Responsive Aspect-Ratio Container */}
+        <div className="relative w-full aspect-[16/9] sm:aspect-[21/9]">
+          <Image
+            src="/images/services/lang-scaled.jpg"
+            alt="Study Abroad Services"
+            fill
+            priority
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover object-center"
+          />
+        </div>
+
       </div>
     </section>
-    
-    )
-  }
-  
-  export default first
-  
-  
+  );
+}

@@ -1,93 +1,164 @@
 import Image from "next/image";
-
-import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
+import { FaArrowRight, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col bg-[#43246f] text-white px-20 py-15 mx-auto">
-        <div className="flex justify-between mb-10">
-        <div className="gap-5 text-white flex flex-col">
-      <h1 className="w-70">Times Consultant – Pakistan’s #1 Study Abroad Consultant,
-        <br /><span> Trusted Since 2004. Official Rep of 3000+ Global Universities.</span></h1>
-      <div>
-          <Image src="/logos/logo.png" alt="logo" width={330} height={180} />
-        </div>
-      </div>
-      <div className="flex flex-col gap-3">
-        <h2 className="font-bold text-2xl">Services</h2>
-        <ul>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Study Abroad</li>
+    <footer className="bg-[#43246f] text-white px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-16">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+        
+        {/* Top Grid Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 border-b border-purple-400/30 pb-10">
+          
+          {/* Column 1: About & Logo */}
+          <div className="flex flex-col gap-4">
+            <div className="relative w-48 sm:w-60 h-auto">
+              <Image 
+                src="/logos/logo.png" 
+                alt="Times Consultant Logo" 
+                width={240} 
+                height={120} 
+                className="w-auto h-auto"
+              />
             </div>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Accomodations</li>
-            </div>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Languages</li>
-            </div>
-        </ul>
-      </div>
-      <div className="flex flex-col gap-3">
-        <h2 className="font-bold text-2xl">Useful Links</h2>
-        <ul>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Study Destination</li>
-            </div>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>About</li>
-            </div>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Blogs</li>
-            </div>
-            <div className="flex items-center gap-3"> 
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Event</li>
-            </div>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Student Guide</li>
-            </div>
-            <div className="flex items-center gap-3">
-            <FaArrowRight className="text-yellow-600"/>
-            <li>Brochure</li>
-            </div>
+            <h1 className="text-sm leading-relaxed text-gray-200">
+              <span className="font-semibold text-white">Times Consultant</span> – Pakistan’s #1 Study Abroad Consultant, Trusted Since 2004. Official Rep of 3000+ Global Universities.
+            </h1>
+          </div>
+
+          {/* Column 2: Services */}
+          <div className="flex flex-col gap-4">
+            <h2 className="font-bold text-xl text-yellow-500">Services</h2>
+            <ul className="flex flex-col gap-2.5 text-sm">
+              <li>
+                <Link href="/studyAbroad" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Study Abroad</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/Accommdation" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Accommodations</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/language" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Languages</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Useful Links */}
+          <div className="flex flex-col gap-4">
+            <h2 className="font-bold text-xl text-yellow-500">Useful Links</h2>
+            <ul className="flex flex-col gap-2.5 text-sm">
+              <li>
+                <Link href="/studyDest" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Study Destination</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/AboutUs" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>About</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/Blog" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Blogs</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/Event" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Events</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/step" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                  <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
+                  <span>Student Guide</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Newsletter & Contact */}
+          <div className="flex flex-col gap-4">
+            <h2 className="font-bold text-xl text-yellow-500">Subscribe Our Newsletter</h2>
             
-        </ul>
-      </div>
-      <div className="flex flex-col gap-3">
-        <h2 className="font-bold text-2xl">Subscribe Our Newsletter</h2>
-        <ul>
-            <li><a href="tel:+924567987"></a>
-            <span>+92345678987</span></li>
-            <li><a href="mailto:study@timeconsultant.com"></a>
-            <span>study@timeconsultant.com</span></li>
-        </ul>
-        <label htmlFor=""  className="  justify-evenly flex rounded-full bg-black text-white ">
-            <input type="email" placeholder="Enter Your Email" className=" rounded-full flex-col border "/>
-            <button className="bg-yellow-600 px-3 py-2 text-white justify-end rounded-full">Submit</button>
-        </label>
-      </div>
-      </div>
-      <div className=" border-b border-white">
-        <h1 className="text-3xl">Agent Quality Framework ( AQF) Compliance</h1>
-        <p>Studying is committed to upholding the highest standards in international student recruitment. We adhere to the principles of the Agent Quality Framework (AQF), ensuring ethical practices, transparency, and professionalism in all our services. Our agents are trained and certified to provide accurate and reliable guidance to students.</p>
-        <div className="flex justify-between border-b border-white">
-            <img src="/logos/f.png" alt="f" height={80}  width={200}/>
-            <img src="/logos/l.png" alt="l" height={80}  width={200}/>
-            <img src="/logos/m.png" alt="m" height={80}  width={200}/>
-            <img src="/logos/v.png" alt="v" height={80}  width={200}/>
-            <img src="/logos/award.png" alt="award" height={80}  width={200}/>
-            <img src="/logos/Worlds-No1-Partner.png" alt="f" height={80}  width={200}/>
+            <ul className="flex flex-col gap-2 text-sm">
+              <li className="flex items-center gap-2">
+                <FaPhoneAlt className="text-yellow-500 text-xs shrink-0" />
+                <a href="tel:+92345678987" className="hover:underline">+92 345 678987</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaEnvelope className="text-yellow-500 text-xs shrink-0" />
+                <a href="mailto:study@timeconsultant.com" className="hover:underline break-all">study@timeconsultant.com</a>
+              </li>
+            </ul>
+
+            {/* Form Input Container */}
+            <form onSubmit={(e) => e.preventDefault()} className="mt-2">
+              <div className="relative flex items-center bg-white rounded-full p-1 shadow-md">
+                <input 
+                  type="email" 
+                  placeholder="Enter Your Email" 
+                  className="w-full pl-4 pr-24 py-2 text-xs text-gray-800 rounded-full focus:outline-none"
+                  required
+                />
+                <button 
+                  type="submit" 
+                  className="absolute right-1 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-full text-xs transition font-semibold"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+
         </div>
+
+        {/* Bottom Section: AQF & Logos */}
+        <div className="flex flex-col gap-6 text-xs text-gray-300">
+          <div>
+            <h2 className="text-lg md:text-xl font-semibold text-white mb-2">
+              Agent Quality Framework (AQF) Compliance
+            </h2>
+            <p className="leading-relaxed text-gray-300">
+              Studying is committed to upholding the highest standards in international student recruitment. We adhere to the principles of the Agent Quality Framework (AQF), ensuring ethical practices, transparency, and professionalism in all our services. Our agents are trained and certified to provide accurate and reliable guidance to students.
+            </p>
+          </div>
+
+          {/* Partner & Certification Badges Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-items-center pt-4">
+            <div className="bg-white/10 p-2 rounded-lg w-full flex justify-center">
+              <Image src="/logos/f.png" alt="AQF Logo 1" width={120} height={60} className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-2 rounded-lg w-full flex justify-center">
+              <Image src="/logos/l.png" alt="AQF Logo 2" width={120} height={60} className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-2 rounded-lg w-full flex justify-center">
+              <Image src="/logos/m.png" alt="AQF Logo 3" width={120} height={60} className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-2 rounded-lg w-full flex justify-center">
+              <Image src="/logos/v.png" alt="AQF Logo 4" width={120} height={60} className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-2 rounded-lg w-full flex justify-center">
+              <Image src="/logos/award.png" alt="Award Logo" width={120} height={60} className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-2 rounded-lg w-full flex justify-center">
+              <Image src="/logos/Worlds-No1-Partner.png" alt="World's No 1 Partner Logo" width={120} height={60} className="h-12 object-contain" />
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-  )
+    </footer>
+  );
 }
-
-
