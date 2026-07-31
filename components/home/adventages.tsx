@@ -25,18 +25,18 @@ function Adventages() {
       <section className="bg-white py-16 px-6 lg:px-16">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-1">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
               Times Tech Advantages
             </h2>
 
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+            <h3 className="text-3xl sm:text-3xl font-bold text-gray-900 tracking-tight">
               Sophisticated Online Platforms
             </h3>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Side */}
-            <div className="lg:col-span-6 space-y-1">
+            <div className="lg:col-span-6 space-y-1  ">
               {techAdvantages.map((item) => {
                 const isActive = activeAdvantage === item.id;
 
@@ -44,7 +44,7 @@ function Adventages() {
                   <button
                     key={item.id}
                     onClick={() => setActiveAdvantage(item.id)}
-                    className={`w-full text-left py-4 px-3 flex items-start gap-3 border-b border-gray-200 transition-colors ${
+                    className={`w-full text-left py-4 px-3 flex items-start gap-3  hover:border border-y border-b border-balck transition-colors ${
                       isActive
                         ? "text-[#f7a600] font-semibold"
                         : "text-[#3b2768] hover:text-[#f7a600] font-medium"
@@ -52,7 +52,7 @@ function Adventages() {
                   >
                     <span className="text-lg mt-0.5">📄</span>
 
-                    <span className="text-sm sm:text-base leading-snug">
+                    <span className="text-xl sm:text-base leading-snug">
                       {item.text}
                     </span>
                   </button>

@@ -88,8 +88,8 @@ export default function PayTuition() {
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-md aspect-square">
               <Image
-                src="/hero-tuition-deposit.png" // Replace with your image asset path
-                alt="Students stack books illustration"
+                src="/images/steps/6-2.png" // Replace with your image asset path
+                alt="6-2"
                 fill
                 priority
                 className="object-contain"
@@ -154,8 +154,8 @@ export default function PayTuition() {
             <div className="flex justify-center items-center lg:sticky lg:top-8">
               <div className="relative w-full max-w-xs aspect-square">
                 <Image
-                  src="/payment-illustration.png" // Replace with your image asset path
-                  alt="Graduation Cap Payment Illustration"
+                  src="/images/steps/7-2.png" // Replace with your image asset path
+                  alt="7-2"
                   fill
                   className="object-contain"
                 />

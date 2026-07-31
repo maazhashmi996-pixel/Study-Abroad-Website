@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="w-full bg-white py-3">
-      <div className="max-w-7xl mx-auto px-3 lg:px-20">
+      <div className=" mx-auto px-12 ">
 
-        <div className="grid lg:grid-cols-2 gap-3 items-center">
+        <div className="grid lg:grid-cols-2 gap-5 items-center">
 
           {/* Left Side */}
           <div>
@@ -18,7 +18,7 @@ export default function Hero() {
               Visa Guidance
             </h1>
 
-            <p className="mt-3 text-gray-700  leading-10">
+            <p className="mt-3 text-gray-700 text-xl leading-10">
               Since April 2004, Times Consultant has been among the
               leading Study Abroad Consultants in Pakistan,
               connecting prospective students with suitable

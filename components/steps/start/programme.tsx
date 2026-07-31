@@ -97,8 +97,8 @@ export default function ProgrammePage() {
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-lg aspect-square">
               <Image
-                src="/illustration-travel.png" // Replace with your image path
-                alt="Study Abroad Journey Illustration"
+                src="/images/steps/9-1.png" // Replace with your image path
+                alt="9-1"
                 fill
                 priority
                 className="object-contain"
@@ -166,8 +166,8 @@ export default function ProgrammePage() {
             <div className="flex justify-center items-center lg:sticky lg:top-8">
               <div className="relative w-full max-w-sm aspect-square">
                 <Image
-                  src="/checklist-illustration.png" // Replace with your image path
-                  alt="Checklist Illustration"
+                  src="/images/steps/8.png" // Replace with your image path
+                  alt="8"
                   fill
                   className="object-contain"
                 />

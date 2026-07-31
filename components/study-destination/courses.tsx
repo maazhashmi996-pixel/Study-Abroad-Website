@@ -12,7 +12,7 @@ export default function Courses() {
         Popular Courses In Denmark
       </h1>
 
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-4  text-xl ">
         <li>
           <strong>Business & Economics:</strong> Well-known universities with business programs include Aalborg University, Aarhus University, and Copenhagen Business School.
         </li>

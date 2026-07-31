@@ -128,52 +128,53 @@ export default function Selection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left 4 Cards Grid */}
-            <div className="lg:col-span-8 space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {reasonCards.map((card, idx) => {
-                  const Icon = card.icon;
-                  return (
-                    <div
-                      key={idx}
-                      className="bg-white border-2 border-[#3B1E54] p-5 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between min-h-[120px]"
-                    >
-                      <Icon className="w-6 h-6 text-[#3B1E54]" />
-                      <p className="text-xs sm:text-sm font-bold text-[#3B1E54] leading-snug">
-                        {card.text}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Formula Badge Box */}
-              <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center">
-                <p className="text-xs sm:text-sm text-slate-700">
-                  So the safest way (and the one we use at Times Consultant) is{" "}
-                  <strong className="text-[#3B1E54]">
-                    1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
-                  </strong>
-                  , no skipping.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Decision Illustration */}
-           
-    <div>
-                <Image
-                      src="/images/steps/Why-follow.jpg"
-                      alt="field selection"
-                       width={1200}
-          height={800}
-          className="w-full  object-cover"
-                    />
-               </div>
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+  
+  {/* Left 4 Cards Grid */}
+  <div className="lg:col-span-8 space-y-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {reasonCards.map((card, idx) => {
+        const Icon = card.icon;
+        return (
+          <div
+            key={idx}
+            className="bg-white border-2 border-[#3B1E54] p-5 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between min-h-[120px]"
+          >
+            <Icon className="w-6 h-6 text-[#3B1E54]" />
+            <p className="text-xs sm:text-sm font-bold text-[#3B1E54] leading-snug">
+              {card.text}
+            </p>
           </div>
+        );
+      })}
+    </div>
 
+    {/* Formula Badge Box */}
+    <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center">
+      <p className="text-xs sm:text-sm text-slate-700">
+        So the safest way (and the one we use at Times Consultant) is{" "}
+        <strong className="text-[#3B1E54]">
+          1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+        </strong>
+        , no skipping.
+      </p>
+    </div>
+  </div>
+
+  {/* Right Decision Illustration (FIXED HERE) */}
+  <div className="lg:col-span-4 flex justify-center items-center">
+    <div className="relative w-full max-w-[280px] aspect-[4/5]">
+      <Image
+        src="/images/steps/Why-follow.jpg"
+        alt="field selection"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+  </div>
+
+</div>
           <p className="text-center text-xs text-slate-500 pt-2">
             If you don't have these answers yet, you're not late. This is exactly what{" "}
             <strong className="text-[#3B1E54]">Times Consultant helps</strong> you define during your first session.
