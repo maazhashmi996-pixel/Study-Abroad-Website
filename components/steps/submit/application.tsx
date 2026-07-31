@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 
 import {
@@ -9,13 +10,17 @@ import {
   FileText,
   UserCheck,
   Award,
-  HelpCircle,
-  Search,
   CheckCircle2,
 } from "lucide-react";
 
+interface PrerequisiteItem {
+  title: string;
+  desc: string;
+  icon: React.ElementType;
+}
+
 export default function Submit() {
-  const prerequisites = [
+  const prerequisites: PrerequisiteItem[] = [
     {
       title: "Shortlisted programs and universities",
       desc: "You should not be applying randomly. By Step 2, you should already know 'I'm applying to Program X at University Y for Intake Z.'",
@@ -54,19 +59,19 @@ export default function Submit() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <main className="min-h-screen bg-white text-slate-800 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
         
         {/* TOP HERO SECTION */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-4">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
+          <div className="lg:col-span-7 space-y-4 text-center sm:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3B1E54] tracking-tight leading-tight">
               Submit Your Application
             </h1>
 
-            <div className="space-y-3 pt-2">
+            <div className="space-y-3 pt-1">
               <h2 className="text-lg sm:text-xl font-bold text-[#3B1E54]">
                 Why this step matters
               </h2>
@@ -76,63 +81,57 @@ export default function Submit() {
               </p>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Submitting your application is not “just filling a form.” It’s how you convince an admissions team that:
+                Submitting your application is not &quot;just filling a form.&quot; It&apos;s how you convince an admissions team that:
               </p>
 
-              <ul className="space-y-1.5 pl-1 text-xs sm:text-sm text-[#3B1E54] font-medium">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#3B1E54] flex-shrink-0" />
-                  <span>You're academically eligible,</span>
+              <ul className="space-y-2 text-left max-w-md mx-auto sm:mx-0 text-xs sm:text-sm text-[#3B1E54] font-semibold pt-1">
+                <li className="flex items-center space-x-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#3B1E54] shrink-0" />
+                  <span>You&apos;re academically eligible,</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#3B1E54] flex-shrink-0" />
-                  <span>You're serious about this intake,</span>
+                <li className="flex items-center space-x-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#3B1E54] shrink-0" />
+                  <span>You&apos;re serious about this intake,</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#3B1E54] flex-shrink-0" />
+                <li className="flex items-center space-x-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#3B1E54] shrink-0" />
                   <span>And you can actually join the program on time.</span>
                 </li>
               </ul>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
-                If you do this step properly, you receive an offer letter (conditional or unconditional). If you do this step weakly or with missing documents, you lose time, and in some cases you're rejected for the entire intake.
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-2">
+                If you do this step properly, you receive an offer letter (conditional or unconditional). If you do this step weakly or with missing documents, you lose time, and in some cases you&apos;re rejected for the entire intake.
               </p>
             </div>
           </div>
 
           {/* Right Hero Graphic Illustration */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm aspect-square bg-sky-50 rounded-3xl p-6 flex items-center justify-center border border-sky-100 shadow-sm">
-              <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 w-full text-center space-y-3">
-                <div className="w-16 h-16 bg-[#3B1E54] text-[#ECA82C] rounded-2xl mx-auto flex items-center justify-center shadow">
-                  <Search className="w-8 h-8" />
-                </div>
-                <div className="w-full">
-                <Image
-                      src="/images/steps/2.png"
-                      alt="2"
-                    width={500}
-                    height={200}
-                      className="object-cover"
-                    />
-              </div>
-              </div>
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <div className="relative w-full max-w-xs sm:max-w-md aspect-[4/3]">
+              <Image
+                src="/images/steps/pencil.png"
+                alt="Application submission illustration"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 450px"
+                className="object-contain"
+              />
             </div>
           </div>
 
-        </div>
+        </section>
 
         {/* DIVIDER WITH STAR */}
-        <div className="relative flex py-2 items-center">
+        <div className="relative flex py-2 items-center" aria-hidden="true">
           <div className="flex-grow border-t border-slate-200"></div>
-          <span className="flex-shrink mx-4 text-slate-400 text-xs">★</span>
+          <span className="shrink-0 mx-4 text-slate-400 text-xs">★</span>
           <div className="flex-grow border-t border-slate-200"></div>
         </div>
 
         {/* WHAT YOU NEED BEFORE STARTING SECTION */}
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-2xl font-extrabold text-[#3B1E54]">
+        <section className="space-y-6">
+          <div className="text-center sm:text-left">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3B1E54] tracking-tight">
               What you need before starting
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -150,11 +149,11 @@ export default function Submit() {
                 return (
                   <div
                     key={idx}
-                    className="bg-white border-2 border-[#3B1E54] p-5 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between"
+                    className="bg-white border-2 border-[#3B1E54] p-5 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow duration-200"
                   >
                     <div className="space-y-2">
-                      <Icon className="w-6 h-6 text-[#3B1E54]" />
-                      <h3 className="font-extrabold text-xs sm:text-sm text-[#3B1E54]">
+                      <Icon className="w-6 h-6 text-[#3B1E54] shrink-0" />
+                      <h3 className="font-extrabold text-xs sm:text-sm text-[#3B1E54] leading-snug">
                         {item.title}
                       </h3>
                       <p className="text-xs text-slate-600 leading-relaxed">
@@ -166,33 +165,34 @@ export default function Submit() {
               })}
 
               {/* 8th Warning / Advisory Box */}
-              <div className="bg-slate-50 border-2 border-slate-300 p-5 rounded-2xl flex flex-col justify-center">
-                <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  If these are not ready, pause. Submitting a half-ready application is worse than waiting 1-2 days and submitting a clean, complete file. Need help? Book a free online consultation today!
+              <div className="bg-purple-50/60 border-2 border-purple-200 p-5 rounded-2xl flex flex-col justify-center space-y-2">
+                <p className="text-xs text-slate-700 leading-relaxed font-medium">
+                  If these are not ready, pause. Submitting a half-ready application is worse than waiting 1-2 days and submitting a clean, complete file. Need help?{" "}
+                  <strong className="text-[#3B1E54] underline cursor-pointer">
+                    Book a free online consultation today!
+                  </strong>
                 </p>
               </div>
 
             </div>
 
             {/* Right Side Graduation Student Graphic */}
-            <div className="lg:col-span-4 flex flex-col items-center justify-center p-8 bg-amber-50/60 rounded-3xl border border-amber-100 text-center space-y-4">
-              <div className="w-20 h-20 bg-[#3B1E54] text-[#ECA82C] rounded-full flex items-center justify-center shadow-md">
-                <GraduationCap className="w-10 h-10" />
+            <div className="lg:col-span-4 flex justify-center items-center p-6 bg-amber-50/60 rounded-3xl border border-amber-100 lg:sticky lg:top-8">
+              <div className="relative w-full max-w-xs aspect-square">
+                <Image
+                  src="/images/steps/2.png"
+                  alt="Student document checklist illustration"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                  className="object-contain"
+                />
               </div>
-           <Image 
-           src="/images/steps/pencil.png"
-           alt="pencil"
-           width={500}
-           height={200}
-           className=""
-           />
-
             </div>
 
           </div>
-        </div>
+        </section>
 
       </div>
-    </div>
+    </main>
   );
 }

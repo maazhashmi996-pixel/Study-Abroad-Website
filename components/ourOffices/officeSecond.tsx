@@ -1,6 +1,5 @@
 "use client";
 
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronRight, MessageCircle, X } from "lucide-react";
@@ -46,38 +45,44 @@ export default function OfficeSecond() {
   };
 
   return (
-    <div className="w-full  bg-white text-gray-800 font-sans relative">
+    <div className="w-full bg-white text-gray-800 font-sans relative">
+      
       {/* 1. International Support Section */}
-      <section className="bg-[#3b1d5c] text-white py-12 md:py-16 px-6">
-        <div className="max-w-6xl  mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center justify-center">
-          <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+      <section className="bg-[#3b1d5c] text-white py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center justify-center">
+          
+          <div className="space-y-4 text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
               International Offices for On-Ground Support
             </h2>  
-            <p className="text-xs md:text-sm text-gray-200 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
               Our international presence in Australia, Germany, Saudi Arabia and Dubai sets Times Consultant apart from other study abroad consultants. These offshore offices provide invaluable on-ground support once you arrive in your destination country. From accommodation assistance to opening bank accounts and understanding local regulations, our teams offer comprehensive student visa help and settlement services.
             </p>
-            <p className="text-xs md:text-sm text-gray-200 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
               Students benefit from pre-departure orientations at our Pakistan offices and continued support from our international teams, ensuring a smooth transition to student life abroad.
             </p>
           </div>
 
-          {/* Map Graphic Box */}
-         <div className="">
-          <Image 
-          src="/images/offices/International.jpg"
-          alt="international"
-          width={400}
-          height={200}
-          className=" rounded-2xl"
-          />
-         </div>
-         </div>
+          {/* Map / Image Graphic Box */}
+          <div className="flex justify-center w-full">
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10">
+              <Image 
+                src="/images/offices/International.jpg"
+                alt="International Support"
+                fill
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+        </div>
       </section>
 
       {/* 2. FAQ Accordion Section */}
-      <section className="max-w-4xl mx-auto px-6 py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-8 leading-snug">
           Can't talk? Don't worry, we have got all the answers right here.
         </h2>
 
@@ -90,10 +95,11 @@ export default function OfficeSecond() {
                 className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm transition-all"
               >
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors cursor-pointer"
                 >
-                  <span className="text-xs md:text-sm font-medium text-gray-800">
+                  <span className="text-xs sm:text-sm font-semibold text-gray-800 pr-2">
                     {faq.question}
                   </span>
                   <ChevronRight
@@ -103,7 +109,7 @@ export default function OfficeSecond() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-gray-600 border-t border-gray-100 bg-gray-50/50">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50 leading-relaxed">
                     {faq.answer}
                   </div>
                 )}
@@ -114,8 +120,11 @@ export default function OfficeSecond() {
       </section>
 
       {/* Floating Chat Button */}
-      <div className="fixed bottom-14 right-4 z-50">
-        <button className="bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 transition-transform hover:scale-105">
+      <div className={`fixed ${showCookie ? "bottom-16 sm:bottom-14" : "bottom-6"} right-4 z-50 transition-all duration-300`}>
+        <button 
+          type="button"
+          className="bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+        >
           <MessageCircle className="w-4 h-4" />
           <span>Chat with us</span>
         </button>
@@ -123,32 +132,36 @@ export default function OfficeSecond() {
 
       {/* 3. Bottom Cookie Banner */}
       {showCookie && (
-        <div className="fixed bottom-0 left-0 right-0 bg-[#111111] text-white text-xs py-2 px-4 flex items-center justify-between z-40">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500 shrink-0"></span>
-            <p className="text-[11px] text-gray-300">
+        <div className="fixed bottom-0 left-0 right-0 bg-[#111111] text-white text-xs py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-2 z-40 shadow-2xl">
+          <div className="flex items-center gap-2 text-center sm:text-left">
+            <span className="w-2 h-2 rounded-full bg-green-500 shrink-0 hidden sm:inline-block"></span>
+            <p className="text-[11px] text-gray-300 leading-tight">
               We use cookies to improve your experience and track campaign performance.{" "}
-              <a href="#" className="underline text-gray-100 hover:text-white">
+              <a href="#" className="underline text-gray-100 hover:text-white transition-colors">
                 Learn more
               </a>
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <button
+              type="button"
               onClick={() => setShowCookie(false)}
-              className="bg-gray-800 hover:bg-gray-700 text-white text-[10px] px-3 py-1 rounded transition-colors"
+              className="bg-gray-800 hover:bg-gray-700 text-white text-[10px] px-3 py-1 rounded transition-colors cursor-pointer"
             >
               Decline
             </button>
             <button
+              type="button"
               onClick={() => setShowCookie(false)}
-              className="text-gray-400 hover:text-white p-1"
+              aria-label="Close cookie banner"
+              className="text-gray-400 hover:text-white p-1 cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
       )}
+
     </div>
   );
 }

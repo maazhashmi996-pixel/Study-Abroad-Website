@@ -87,21 +87,23 @@ export default function EightPage() {
 
   return (
     <div className="w-full bg-white text-gray-900 font-sans selection:bg-[#f7a600] selection:text-[#3b2768]">
-      {/* ================= 5. FAQ / CAN'T TALK SECTION ================= */}
-      <section className="bg-white py-16 px-6 lg:px-16 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto space-y-10">
+      {/* ================= FAQ SECTION ================= */}
+      <section className="bg-white py-10 sm:py-16 px-4 sm:px-8 lg:px-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto space-y-6 sm:space-y-10">
+          
           {/* Header */}
-          <h2 className="text-center text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+          <h2 className="text-center text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
             Can&apos;t talk? Don&apos;t worry, we have got all the answers right here.
           </h2>
 
           {/* Navigation Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-lg sm:text-xl font-bold pt-2">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-8 text-base sm:text-xl font-bold pt-2">
             {(["company", "services", "destinations"] as FaqCategory[]).map((category) => (
               <button
                 key={category}
+                type="button"
                 onClick={() => handleTabChange(category)}
-                className={`capitalize transition-colors pb-1 border-b-2 ${
+                className={`capitalize transition-colors pb-1 border-b-2 cursor-pointer ${
                   faqTab === category
                     ? "text-[#f7a600] border-[#f7a600]"
                     : "text-gray-400 border-transparent hover:text-[#3b2768]"
@@ -113,7 +115,8 @@ export default function EightPage() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center pt-2 sm:pt-4">
+            
             {/* Image Container */}
             <div className="lg:col-span-5 flex justify-center">
               <Image
@@ -121,7 +124,7 @@ export default function EightPage() {
                 alt="Times Consultants"
                 width={500}
                 height={400}
-                className="w-full max-w-md h-auto object-contain rounded-2xl"
+                className="w-full max-w-xs sm:max-w-md h-auto object-contain rounded-2xl"
                 priority
               />
             </div>
@@ -136,13 +139,14 @@ export default function EightPage() {
                     className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-shadow hover:shadow-md"
                   >
                     <button
+                      type="button"
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
-                      className="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-gray-800 text-sm sm:text-base hover:bg-gray-50 transition-colors gap-4"
+                      className="w-full flex justify-between items-center px-4 sm:px-6 py-3.5 sm:py-4 text-left font-semibold text-gray-800 text-xs sm:text-base hover:bg-gray-50 transition-colors gap-3 cursor-pointer"
                       aria-expanded={isOpen}
                     >
                       <span>{faq.question}</span>
                       <span
-                        className={`text-sm font-bold transition-transform duration-300 ${
+                        className={`text-xs sm:text-sm font-bold transition-transform duration-300 shrink-0 ${
                           isOpen ? "rotate-90 text-[#f7a600]" : "text-gray-400"
                         }`}
                       >
@@ -157,7 +161,7 @@ export default function EightPage() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-6 pb-4 pt-1 text-xs sm:text-sm text-gray-600 bg-gray-50/50 leading-relaxed border-t border-gray-100">
+                        <div className="px-4 sm:px-6 pb-4 pt-1 text-xs sm:text-sm text-gray-600 bg-gray-50/50 leading-relaxed border-t border-gray-100">
                           {faq.answer}
                         </div>
                       </div>
@@ -166,6 +170,7 @@ export default function EightPage() {
                 );
               })}
             </div>
+
           </div>
         </div>
       </section>

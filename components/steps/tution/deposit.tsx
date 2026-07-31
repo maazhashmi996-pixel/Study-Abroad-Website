@@ -1,10 +1,22 @@
+"use client";
+
 import React from "react";
+import {
+  FileSearch,
+  CheckCircle2,
+  CreditCard,
+  CalendarClock,
+  Receipt,
+  MailCheck,
+  AlertTriangle,
+} from "lucide-react";
 
 // Types
 interface ProcessStep {
   id: number;
   title: string;
   description: string;
+  icon: React.ElementType;
 }
 
 interface CommonMistake {
@@ -18,170 +30,177 @@ const processSteps: ProcessStep[] = [
     id: 1,
     title: "Read the offer letter carefully",
     description:
-      'Find the section that says "Tuition Deposit," "Initial Fee," or "To secure your place..." It will mention the amount, deadline, and method.',
+      'Locate the section stating "Tuition Deposit," "Initial Fee," or "To secure your place." Note the exact deposit amount, deadline, and payment terms.',
+    icon: FileSearch,
   },
   {
     id: 2,
-    title: "Confirm your conditions are okay to proceed",
+    title: "Confirm conditions before proceeding",
     description:
-      "Some universities want you to pay after clearing academic/English conditions. Others want the deposit as part of the conditions. If you're not sure, ask.",
+      "Verify whether the deposit should be paid before or after meeting academic/English entry conditions to avoid hold-ups.",
+    icon: CheckCircle2,
   },
   {
     id: 3,
-    title: "Choose a payment method the university accepts",
+    title: "Select an approved payment method",
     description:
-      "Most universities accept international bank transfer, card via portal, or trusted platforms (like Flywire). Use only the method mentioned in the offer.",
+      "Use only approved university payment portals, international bank transfers, or official partner platforms (such as Flywire or Convera).",
+    icon: CreditCard,
   },
   {
     id: 4,
-    title: "Make the payment within the deadline",
+    title: "Pay ahead of the deadline",
     description:
-      "Always keep currency conversion + bank transfer time in mind. International payments can take 1-3 business days (sometimes more).",
+      "Factor in currency exchange windows and bank processing time. Overseas transfers typically require 1–3 business days.",
+    icon: CalendarClock,
   },
   {
     id: 5,
-    title: "Keep proof of payment",
+    title: "Retain and submit proof of payment",
     description:
-      "Save your bank slip / payment receipt / university portal confirmation. Name it properly and send/upload it to the university if they require proof.",
+      "Save your official bank wire receipt or digital portal confirmation. Upload or email the proof promptly with your application ID.",
+    icon: Receipt,
   },
   {
     id: 6,
-    title: "Follow up for confirmation",
+    title: "Request official receipt confirmation",
     description:
-      "After payment, the university will confirm they received your deposit. That confirmation is often what triggers the next step (issuing your unconditional offer / CAS / CoE).",
+      "Verify that the university acknowledges receipt of funds. This step triggers issuance of your CAS, CoE, or Unconditional Offer.",
+    icon: MailCheck,
   },
 ];
 
 const commonMistakes: CommonMistake[] = [
   {
-    title: "Paying to the wrong account or without reference number",
+    title: "Missing payment reference numbers",
     description:
-      "Universities receive many payments every day. If you don't include your application ID / student number, your payment can't be matched easily.",
+      "Omitting your application ID or student ID makes matching your transfer difficult for university finance teams.",
   },
   {
-    title: "Paying after the deadline",
+    title: "Missing deposit deadlines",
     description:
-      '"I paid but late" can still mean "we don\'t have seats anymore."',
+      "Submitting payment past the deadline risks losing your reserved place in oversubscribed programs.",
   },
   {
-    title: "Not sending proof of payment",
+    title: "Failing to send payment receipts",
     description:
-      "Some universities don't auto-track bank transfers. If you don't email/upload the receipt, they won't move you forward.",
+      "Many institutions do not automatically map wire transfers. Forgetting to upload your receipt delays application progress.",
   },
   {
-    title: "Paying before clearing conditions (when the uni said don't)",
+    title: "Paying before required conditions are met",
     description:
-      "In some cases, you should clear academic/English first. Paying too early can create confusion.",
+      "Transferring funds prior to satisfying academic pre-requisites can cause administrative delays or refund complications.",
   },
   {
-    title: "Using someone else's random account",
-    description: "Very risky. Always pay via official university channels only.",
+    title: "Using unverified third-party accounts",
+    description:
+      "Avoid transferring funds through unverified third-party agents. Stick strictly to verified university payment paths.",
   },
 ];
 
 export default function PayDeposit() {
   return (
-    <main className="min-h-screen font-sans">
+    <main className="min-h-screen font-sans bg-slate-50">
       
       {/* SECTION 1: YELLOW/ORANGE PROCESS SECTION */}
-      <section className="bg-[#e5a00d] py-16 px-6">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="bg-[#e5a00d] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Section Header */}
-          <div className="text-center space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#3a1b5c]">
-              How this step works (checklist / process)
+          <div className="text-center space-y-2 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
+              How This Step Works (Checklist & Process)
             </h2>
+            <p className="text-xs sm:text-sm font-semibold text-[#3a1b5c]/90 leading-relaxed">
+              Step-by-step guidance on securing your university seat with your initial tuition deposit
+            </p>
           </div>
 
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {processSteps.map((step) => (
-              <div
-                key={step.id}
-                className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col space-y-3"
-              >
-                {/* Icon Placeholder */}
-                <div className="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {processSteps.map((step) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={step.id}
+                  className="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-amber-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#3a1b5c] flex items-center justify-center shrink-0">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <span className="text-xs font-black text-amber-700/80 bg-amber-50 px-2.5 py-1 rounded-md">
+                        #{step.id}
+                      </span>
+                    </div>
 
-                <h3 className="text-sm font-bold text-slate-900 leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Bottom Confirmation Tag */}
-          <div className="flex justify-center">
-            <div className="bg-[#cca012] border border-amber-600/30 rounded-lg py-2.5 px-6 text-center text-xs font-medium text-slate-900 inline-block">
-              At the end of this step, the university knows:{" "}
-              <span className="font-bold">&quot;This student is serious and coming.&quot;</span>
+          <div className="flex justify-center pt-2">
+            <div className="bg-[#cca012] border border-amber-600/40 rounded-xl py-3 px-6 text-center text-xs sm:text-sm font-semibold text-slate-900 shadow-sm max-w-xl">
+              At the completion of this step, the university confirms:{" "}
+              <span className="font-extrabold underline decoration-2 underline-offset-2">
+                &quot;This applicant has secured their placement.&quot;
+              </span>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* SECTION 2: DARK PURPLE COMMON MISTAKES SECTION */}
-      <section className="bg-[#3a1b5c] text-white py-16 px-6">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="bg-[#3a1b5c] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Section Header */}
-          <div className="text-center space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-              Common mistakes
+          <div className="text-center space-y-2 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+              Common Mistakes to Avoid
             </h2>
-            <p className="text-purple-200 text-sm font-medium">
-              Students get stuck here because of simple issues
+            <p className="text-purple-200 text-xs sm:text-sm font-medium leading-relaxed">
+              Prevent processing holds and seat forfeitures by avoiding these frequent tuition deposit pitfalls
             </p>
           </div>
 
           {/* Mistakes Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {commonMistakes.slice(0, 4).map((mistake, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {commonMistakes.map((mistake, index) => (
               <div
                 key={index}
-                className="bg-[#2c1249] border border-purple-800/60 rounded-xl p-6 text-center space-y-2 hover:border-purple-600 transition-colors"
+                className={`bg-[#2c1249] border border-purple-800/60 rounded-2xl p-5 sm:p-6 text-center space-y-3 hover:border-purple-500/80 hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between shadow-sm ${
+                  index === commonMistakes.length - 1
+                    ? "md:col-span-2 lg:col-span-1"
+                    : ""
+                }`}
               >
-                <h3 className="text-sm font-bold text-amber-400">
-                  {mistake.title}
-                </h3>
-                <p className="text-xs text-purple-200/80 leading-relaxed">
-                  {mistake.description}
-                </p>
+                <div className="space-y-2">
+                  <div className="flex justify-center mb-1">
+                    <div className="w-8 h-8 rounded-lg bg-amber-400/10 text-amber-400 flex items-center justify-center shrink-0">
+                      <AlertTriangle className="w-4 h-4" />
+                    </div>
+                  </div>
+                  <h3 className="text-xs sm:text-sm font-extrabold text-amber-400 leading-snug">
+                    {mistake.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
+                    {mistake.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
-
-          {/* Centered Last Mistake Card */}
-          {commonMistakes.length > 4 && (
-            <div className="max-w-md mx-auto">
-              <div className="bg-[#2c1249] border border-purple-800/60 rounded-xl p-6 text-center space-y-2 hover:border-purple-600 transition-colors">
-                <h3 className="text-sm font-bold text-amber-400">
-                  {commonMistakes[4].title}
-                </h3>
-                <p className="text-xs text-purple-200/80 leading-relaxed">
-                  {commonMistakes[4].description}
-                </p>
-              </div>
-            </div>
-          )}
 
         </div>
       </section>

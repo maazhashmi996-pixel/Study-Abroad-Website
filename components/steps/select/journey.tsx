@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Journey() {
   const stepsCards = [
@@ -52,22 +52,30 @@ export default function Journey() {
     <div className="w-full font-sans">
       
       {/* 1. YELLOW SECTION: The 8 Study Abroad Steps */}
-      <section className="bg-[#ECA82C] text-[#3B1E54] py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-8">
+      <section className="bg-[#ECA82C] text-[#3B1E54] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
           
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-center tracking-tight">
-            The 8 Study Abroad Steps
-          </h2>
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+              The 8 Study Abroad Steps
+            </h2>
+            <p className="text-xs sm:text-sm font-medium opacity-90 max-w-xl mx-auto">
+              Follow this step-by-step roadmap from initial program selection to stepping onto your new campus.
+            </p>
+          </div>
 
           {/* 8 Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stepsCards.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between border border-amber-200/50"
+                className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between border border-amber-200/50 space-y-3"
               >
                 <div className="space-y-2">
-                  <h3 className="font-bold text-sm sm:text-base text-[#3B1E54]">
+                  <div className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-amber-100 text-[#3B1E54] text-xs font-black">
+                    {String(idx + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="font-extrabold text-sm sm:text-base text-[#3B1E54] leading-snug">
                     {step.title}
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
@@ -80,9 +88,9 @@ export default function Journey() {
 
           {/* Middle Call to Action Pill Button */}
           <div className="text-center pt-2">
-            <button className="bg-white hover:bg-slate-50 text-[#3B1E54] font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow transition-all duration-200 inline-flex items-center space-x-2">
+            <button className="bg-white hover:bg-slate-50 text-[#3B1E54] font-bold text-xs sm:text-sm px-6 py-3 rounded-full shadow transition-all duration-200 inline-flex items-center space-x-2 active:scale-95">
               <span>Talk to a Study Abroad Advisor</span>
-              <ArrowRight className="w-4 h-4 text-[#ECA82C]" />
+              <ArrowRight className="w-4 h-4 text-[#ECA82C] shrink-0" />
             </button>
           </div>
 
@@ -90,13 +98,13 @@ export default function Journey() {
       </section>
 
       {/* 2. PURPLE SECTION: How Times Consultant fits into this journey */}
-      <section className="bg-[#3B1E54] text-white py-14 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto space-y-8 text-center">
+      <section className="bg-[#3B1E54] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10 text-center">
           
           {/* Header */}
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-wide text-white">
-              How Times Consultant fits into this journey
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
+              How Times Consultant Fits Into This Journey
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
               Times Consultant has been guiding students since 2004 across the UK, Canada, Australia, Germany, Europe, and more. The way we work is simple:
@@ -104,15 +112,15 @@ export default function Journey() {
           </div>
 
           {/* 7 Outlined Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
             {valueProps.map((item, idx) => (
               <div
                 key={idx}
-                className={`border border-amber-400/30 rounded-xl p-4 bg-white/5 backdrop-blur-sm flex items-center justify-center text-center ${
-                  idx === valueProps.length - 1 ? "md:col-span-3 max-w-md mx-auto w-full" : ""
+                className={`border border-amber-400/30 rounded-xl p-4 bg-white/5 backdrop-blur-sm flex items-center justify-center text-center shadow-sm ${
+                  idx === valueProps.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-snug">
+                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">
                   {item}
                 </p>
               </div>
@@ -120,18 +128,18 @@ export default function Journey() {
           </div>
 
           {/* Bottom Subtext & Action Button */}
-          <div className="space-y-4 pt-4">
-            <p className="text-xs sm:text-sm text-slate-300">
+          <div className="space-y-4 pt-2 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Tell us which country, which intake, and your last qualification, we'll tell you exactly which step you're on right now.
             </p>
 
             <div>
-              <button className="bg-[#ECA82C] hover:bg-[#d99723] text-[#3B1E54] font-extrabold text-xs sm:text-sm px-6 py-3 rounded-full shadow-lg transition-colors uppercase tracking-wider">
+              <button className="bg-[#ECA82C] hover:bg-[#d99723] text-[#3B1E54] font-extrabold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-lg transition-all duration-200 uppercase tracking-wider active:scale-95">
                 Review My Study Visa Case
               </button>
             </div>
 
-            <p className="text-[11px] sm:text-xs text-amber-300/80 italic">
+            <p className="text-[11px] sm:text-xs text-amber-300/80 italic leading-relaxed">
               Send your offer letter / application status to Times Consultant and we'll tell you what is done, what is pending, and what to do next to catch your intake.
             </p>
           </div>

@@ -44,7 +44,7 @@ function Popular() {
   );
 
   return (
-    <section className="bg-[#fdb813] py-14 px-4 sm:px-8 text-[#3b2768] overflow-hidden">
+    <section className="bg-[#fdb813] py-10 sm:py-14 px-4 sm:px-8 text-[#3b2768] overflow-hidden">
       {/* Inline Styles for Animation & Hover Pause */}
       <style jsx>{`
         @keyframes marqueeLeft {
@@ -52,12 +52,12 @@ function Popular() {
             transform: translateX(0%);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-33.333%);
           }
         }
         @keyframes marqueeRight {
           0% {
-            transform: translateX(-50%);
+            transform: translateX(-33.333%);
           }
           100% {
             transform: translateX(0%);
@@ -79,45 +79,45 @@ function Popular() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto space-y-8">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
         <div className="text-center space-y-2">
-          <h2 className="text-xl sm:text-5xl  tracking-tight text-black">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-black leading-tight">
             Popular And Partner Universities
           </h2>
-          <p className="text-[#3b2768] font-semibold text-lg">
+          <p className="text-[#3b2768] font-semibold text-sm sm:text-lg">
             Universities And Institutions We Serve
           </p>
         </div>
 
         {/* Continuous Moving Carousel Rows */}
-        <div className="space-y-8 pt-4">
+        <div className="space-y-6 sm:space-y-8 pt-2 sm:pt-4">
           {rowsData.map((rowLogos, rowIndex) => {
             const isReverse = rowIndex === 1;
             const animationClass = isReverse
               ? "animate-marquee-right"
               : "animate-marquee-left";
 
-            // Duplicating logos for infinite seamless loop
-            const duplicatedLogos = [...rowLogos, ...rowLogos];
+            // Duplicating logos x3 for smooth continuous loop across wider screens
+            const duplicatedLogos = [...rowLogos, ...rowLogos, ...rowLogos];
 
             return (
               <div
                 key={`row-${rowIndex}`}
                 className="relative w-full overflow-hidden marquee-container flex items-center"
               >
-                <div className={`${animationClass} flex items-center space-x-12 sm:space-x-16`}>
+                <div className={`${animationClass} flex items-center space-x-8 sm:space-x-12 md:space-x-16`}>
                   {duplicatedLogos.map((logo, idx) => (
                     <div
                       key={`r${rowIndex}-${idx}`}
-                      className="flex items-center justify-center shrink-0 cursor-pointer"
+                      className="flex items-center justify-center shrink-0 cursor-pointer px-2"
                     >
                       <Image
                         src={logo.image}
                         alt={logo.alt || "University Logo"}
                         width={180}
                         height={60}
-                        className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                        className="h-9 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
                       />
                     </div>
                   ))}

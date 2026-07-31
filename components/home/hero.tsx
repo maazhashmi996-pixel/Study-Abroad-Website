@@ -130,9 +130,9 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full font-sans bg-[#43246f]  rounded-2xl">
+    <div className="relative w-full font-sans bg-[#43246f] rounded-2xl">
       {/* ---------------- 1. TOP HERO SLIDER ---------------- */}
-      <section className="relative w-full h-[480px] md:h-[580px]">
+      <section className="relative w-full h-[450px] sm:h-[520px] md:h-[580px] overflow-hidden rounded-t-2xl">
         <Swiper
           modules={[Autoplay, EffectFade]}
           effect="fade"
@@ -146,7 +146,7 @@ export default function HeroSection() {
         >
           {images.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="relative w-full h-full  rounded-2xl">
+              <div className="relative w-full h-full">
                 {/* Background Image */}
                 <Image
                   src={item.image}
@@ -161,22 +161,22 @@ export default function HeroSection() {
 
                 {/* CONDITIONAL TEXT CONTENT */}
                 {item.hasText && (
-                  <div className="absolute inset-0 flex items-center max-w-7xl mx-auto px-6 md:px-12 pb-28">
+                  <div className="absolute inset-0 flex items-center max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pb-24 sm:pb-28">
                     <div className="max-w-2xl text-white z-10">
-                      <h1 className="text-3xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight drop-shadow-md">
+                      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight drop-shadow-md">
                         {item.title}
                       </h1>
 
-                      <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-100 font-medium whitespace-pre-line leading-relaxed">
+                      <p className="mt-3 sm:mt-4 text-xs sm:text-base md:text-lg text-gray-100 font-medium leading-relaxed">
                         {item.subtitle}
                       </p>
 
-                      <div className="mt-8 flex flex-wrap gap-4">
-                        <button className="bg-white hover:bg-gray-100 text-[#3b1d5c] px-7 py-3 rounded-full font-bold text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
+                      <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
+                        <button className="bg-white hover:bg-gray-100 text-[#3b1d5c] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
                           Free consultation
                         </button>
 
-                        <button className="bg-[#f1b317] hover:bg-[#d99f12] text-[#3b1d5c] px-7 py-3 rounded-full font-bold text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
+                        <button className="bg-[#f1b317] hover:bg-[#d99f12] text-[#3b1d5c] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
                           Check Eligibility
                         </button>
                       </div>
@@ -190,20 +190,21 @@ export default function HeroSection() {
       </section>
 
       {/* ---------------- 2. WHY CHOOSE SECTION WITH OVERLAPPING CARD ---------------- */}
-      <div className="relative mt-18 w-full bg-[#43246f] ">
+      <div className="relative w-full bg-[#43246f] rounded-b-2xl">
         
         {/* OVERLAPPING SEARCH CARD */}
-        <div className="relative -mt-24 sm:-mt-28 md:-mt-32 z-30 max-w-5xl mx-auto px-4">
-          <div className="bg-white rounded-[28px] shadow-2xl p-6 md:p-8 border border-gray-100 relative">
+        <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 max-w-5xl mx-auto px-4">
+          <div className="bg-white rounded-2xl sm:rounded-[28px] shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100 relative">
             
             {/* TABS HEADER */}
-            <div className="flex items-center gap-6 sm:gap-10 border-b border-gray-100 pb-4 mb-6 overflow-x-auto scrollbar-none">
+            <div className="flex items-center gap-4 sm:gap-8 border-b border-gray-100 pb-3 mb-5 overflow-x-auto scrollbar-none">
               <button
+                type="button"
                 onClick={() => {
                   setActiveTab("courses");
                   setOpenDropdown(null);
                 }}
-                className={`text-sm md:text-base font-semibold transition-colors whitespace-nowrap pb-1 relative ${
+                className={`text-xs sm:text-sm md:text-base font-semibold transition-colors whitespace-nowrap pb-1 relative cursor-pointer ${
                   activeTab === "courses"
                     ? "text-[#3b1d5c] font-bold"
                     : "text-gray-500 hover:text-gray-800"
@@ -211,16 +212,17 @@ export default function HeroSection() {
               >
                 Courses
                 {activeTab === "courses" && (
-                  <span className="absolute bottom-[-17px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
+                  <span className="absolute bottom-[-13px] sm:bottom-[-16px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
                 )}
               </button>
 
               <button
+                type="button"
                 onClick={() => {
                   setActiveTab("universities");
                   setOpenDropdown(null);
                 }}
-                className={`text-sm md:text-base font-semibold transition-colors whitespace-nowrap pb-1 relative ${
+                className={`text-xs sm:text-sm md:text-base font-semibold transition-colors whitespace-nowrap pb-1 relative cursor-pointer ${
                   activeTab === "universities"
                     ? "text-[#3b1d5c] font-bold"
                     : "text-gray-500 hover:text-gray-800"
@@ -228,16 +230,17 @@ export default function HeroSection() {
               >
                 Universities
                 {activeTab === "universities" && (
-                  <span className="absolute bottom-[-17px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
+                  <span className="absolute bottom-[-13px] sm:bottom-[-16px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
                 )}
               </button>
 
               <button
+                type="button"
                 onClick={() => {
                   setActiveTab("scholarships");
                   setOpenDropdown(null);
                 }}
-                className={`text-sm md:text-base font-semibold transition-colors whitespace-nowrap pb-1 relative ${
+                className={`text-xs sm:text-sm md:text-base font-semibold transition-colors whitespace-nowrap pb-1 relative cursor-pointer ${
                   activeTab === "scholarships"
                     ? "text-[#3b1d5c] font-bold"
                     : "text-gray-500 hover:text-gray-800"
@@ -245,44 +248,45 @@ export default function HeroSection() {
               >
                 Scholarships
                 {activeTab === "scholarships" && (
-                  <span className="absolute bottom-[-17px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
+                  <span className="absolute bottom-[-13px] sm:bottom-[-16px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
                 )}
               </button>
 
               <button
+                type="button"
                 onClick={() => {
                   setActiveTab("intelligent");
                   setOpenDropdown(null);
                 }}
-                className={`text-sm md:text-base font-semibold transition-colors whitespace-nowrap flex items-center gap-2 pb-1 relative ${
+                className={`text-xs sm:text-sm md:text-base font-semibold transition-colors whitespace-nowrap flex items-center gap-1.5 pb-1 relative cursor-pointer ${
                   activeTab === "intelligent"
                     ? "text-[#3b1d5c] font-bold"
                     : "text-gray-500 hover:text-gray-800"
                 }`}
               >
                 Intelligent Search
-                <span className="bg-[#fef08a] text-[#a16207] text-[10px] font-bold px-2.5 py-0.5 rounded-full lowercase">
+                <span className="bg-[#fef08a] text-[#a16207] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full lowercase">
                   coming soon
                 </span>
                 {activeTab === "intelligent" && (
-                  <span className="absolute bottom-[-17px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
+                  <span className="absolute bottom-[-13px] sm:bottom-[-16px] left-0 right-0 h-[3px] bg-[#3b1d5c] rounded-full" />
                 )}
               </button>
             </div>
 
             {/* TAB 1: COURSES */}
             {activeTab === "courses" && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-2">
                 <div className="relative">
                   <button
                     type="button"
                     onClick={() => toggleDropdown("course")}
-                    className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-left text-gray-700 flex justify-between items-center focus:border-[#3b1d5c] transition"
+                    className="w-full bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-left text-gray-700 flex justify-between items-center focus:border-[#3b1d5c] transition cursor-pointer"
                   >
                     <span className="truncate">
                       {selectedCourse || "Select Course"}
                     </span>
-                    <ChevronDown className="w-4 h-4 text-gray-400" />
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />
                   </button>
 
                   {openDropdown === "course" && (
@@ -294,7 +298,7 @@ export default function HeroSection() {
                             setSelectedCourse(item);
                             setOpenDropdown(null);
                           }}
-                          className="px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#3b1d5c] rounded-xl cursor-pointer transition"
+                          className="px-4 py-2 text-xs sm:text-sm text-gray-700 hover:bg-purple-50 hover:text-[#3b1d5c] rounded-xl cursor-pointer transition"
                         >
                           {item}
                         </div>
@@ -307,14 +311,14 @@ export default function HeroSection() {
                   <button
                     type="button"
                     onClick={() => toggleDropdown("qualification")}
-                    className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-left text-gray-700 flex justify-between items-center focus:border-[#3b1d5c] transition"
+                    className="w-full bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-left text-gray-700 flex justify-between items-center focus:border-[#3b1d5c] transition cursor-pointer"
                   >
                     <span className="truncate">
                       {selectedQualifications.length > 0
                         ? selectedQualifications.join(", ")
                         : "Select Qualification"}
                     </span>
-                    <ChevronDown className="w-4 h-4 text-gray-400" />
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />
                   </button>
 
                   {openDropdown === "qualification" && (
@@ -322,7 +326,7 @@ export default function HeroSection() {
                       {qualificationList.map((qual) => (
                         <label
                           key={qual}
-                          className="flex items-center gap-3 text-sm text-gray-700 cursor-pointer select-none"
+                          className="flex items-center gap-3 text-xs sm:text-sm text-gray-700 cursor-pointer select-none"
                         >
                           <input
                             type="checkbox"
@@ -341,7 +345,7 @@ export default function HeroSection() {
                   <select
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="w-full appearance-none bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-gray-700 outline-none focus:border-[#3b1d5c] cursor-pointer pr-10"
+                    className="w-full appearance-none bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-gray-700 outline-none focus:border-[#3b1d5c] cursor-pointer pr-10"
                   >
                     <option value="" disabled>
                       Select Location
@@ -358,20 +362,20 @@ export default function HeroSection() {
 
             {/* TAB 2: UNIVERSITIES */}
             {activeTab === "universities" && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-2">
                 <input
                   type="text"
                   value={universityQuery}
                   onChange={(e) => setUniversityQuery(e.target.value)}
                   placeholder="Start typing university name..."
-                  className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-gray-700 outline-none focus:border-[#3b1d5c] transition"
+                  className="w-full bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-gray-700 outline-none focus:border-[#3b1d5c] transition"
                 />
 
                 <div className="relative">
                   <select
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="w-full appearance-none bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-gray-700 outline-none focus:border-[#3b1d5c] cursor-pointer pr-10"
+                    className="w-full appearance-none bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-gray-700 outline-none focus:border-[#3b1d5c] cursor-pointer pr-10"
                   >
                     <option value="" disabled>
                       Select Location
@@ -388,19 +392,19 @@ export default function HeroSection() {
 
             {/* TAB 3: SCHOLARSHIPS */}
             {activeTab === "scholarships" && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-2">
                 <div className="relative">
                   <button
                     type="button"
                     onClick={() => toggleDropdown("qualification")}
-                    className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-left text-gray-700 flex justify-between items-center focus:border-[#3b1d5c] transition"
+                    className="w-full bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-left text-gray-700 flex justify-between items-center focus:border-[#3b1d5c] transition cursor-pointer"
                   >
                     <span className="truncate">
                       {selectedQualifications.length > 0
                         ? selectedQualifications.join(", ")
                         : "Select Qualification"}
                     </span>
-                    <ChevronDown className="w-4 h-4 text-gray-400" />
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />
                   </button>
 
                   {openDropdown === "qualification" && (
@@ -408,7 +412,7 @@ export default function HeroSection() {
                       {qualificationList.map((qual) => (
                         <label
                           key={qual}
-                          className="flex items-center gap-3 text-sm text-gray-700 cursor-pointer select-none"
+                          className="flex items-center gap-3 text-xs sm:text-sm text-gray-700 cursor-pointer select-none"
                         >
                           <input
                             type="checkbox"
@@ -427,7 +431,7 @@ export default function HeroSection() {
                   <select
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="w-full appearance-none bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-sm text-gray-700 outline-none focus:border-[#3b1d5c] cursor-pointer pr-10"
+                    className="w-full appearance-none bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 text-xs sm:text-sm text-gray-700 outline-none focus:border-[#3b1d5c] cursor-pointer pr-10"
                   >
                     <option value="" disabled>
                       Select Location
@@ -444,18 +448,18 @@ export default function HeroSection() {
 
             {/* TAB 4: INTELLIGENT SEARCH */}
             {activeTab === "intelligent" && (
-              <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-2xl p-6 text-center text-gray-400 my-2">
-                <span className="text-sm font-medium block text-gray-500">
+              <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-2xl p-4 sm:p-6 text-center text-gray-400 my-2">
+                <span className="text-xs sm:text-sm font-medium block text-gray-500">
                   Intelligent Search coming soon — placeholder area
                 </span>
               </div>
             )}
 
             {/* FLOATING SEARCH BUTTON */}
-            <div className="flex justify-center -mb-12 mt-6">
+            <div className="flex justify-center -mb-10 sm:-mb-12 mt-4 sm:mt-6">
               <button
                 type="button"
-                className="bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-extrabold text-sm px-8 py-3 rounded-full shadow-lg flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
+                className="bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-extrabold text-xs sm:text-sm px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
               >
                 <Search className="w-4 h-4 stroke-[3]" />
                 <span>Search</span>
@@ -465,27 +469,27 @@ export default function HeroSection() {
         </div>
 
         {/* WHY CHOOSE CONTENT AREA */}
-        <div className="flex flex-col px-6 md:px-20 pt-20 pb-16 text-white  rounded-2xl">
-          <h2 className="text-2xl md:text-4xl font-bold mb-10 flex items-center justify-center md:text-left">
+        <div className="flex flex-col px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center md:text-left">
             Why Choose Times Consultant?
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {boxes.map((box, index) => (
               <div
                 key={index}
-                className="flex flex-col border border-white/20 rounded-2xl bg-[#61389b] hover:bg-amber-500 transition-colors duration-500 p-7 gap-5"
+                className="flex flex-col border border-white/20 rounded-2xl bg-[#61389b] hover:bg-amber-500 transition-colors duration-500 p-5 sm:p-7 gap-4 sm:gap-5"
               >
-                <h3 className="font-bold text-2xl">{box.years}</h3>
+                <h3 className="font-bold text-xl sm:text-2xl">{box.years}</h3>
 
-                <div className="flex items-center justify-between">
-                  <h4 className="text-xl font-bold">{box.title}</h4>
-                  <div className="h-12 w-12 items-center justify-center flex rounded-full text-2xl bg-amber-500 text-white shrink-0">
+                <div className="flex items-center justify-between gap-3">
+                  <h4 className="text-lg sm:text-xl font-bold">{box.title}</h4>
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 items-center justify-center flex rounded-full text-xl sm:text-2xl bg-amber-500 text-white shrink-0">
                     {box.icon}
                   </div>
                 </div>
 
-                <p className="text-sm leading-relaxed text-gray-100">{box.paragraph}</p>
+                <p className="text-xs sm:text-sm leading-relaxed text-gray-100">{box.paragraph}</p>
               </div>
             ))}
           </div>

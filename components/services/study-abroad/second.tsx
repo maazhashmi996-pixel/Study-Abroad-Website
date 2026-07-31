@@ -2,15 +2,13 @@
 
 import React, { useState } from "react";
 import {
-  FileText,
-  UserCheck,
-  FolderCheck,
-  CheckCircle2,
   GraduationCap,
   Award,
   Plane,
   Briefcase,
   ShieldCheck,
+  FolderCheck,
+  CheckCircle2,
   LucideIcon,
   Globe,
   Home,
@@ -132,7 +130,7 @@ const servicesData: ServiceCardProps[] = [
     features: [
       {
         title: "Pre-departure Orientation",
-        description: "Pre-departure Orientation.",
+        description: "Orientation sessions prior to traveling.",
       },
       {
         title: "Travel Arrangements",
@@ -169,8 +167,8 @@ const servicesData: ServiceCardProps[] = [
         description: "Beyond the Length of Stay",
       },
       {
-        title: "Evidence of your English Language Proficiency",
-        description: "may be Require",
+        title: "Evidence of English Language Proficiency",
+        description: "may be required",
       },
       {
         title: "Medical Report",
@@ -190,34 +188,35 @@ export default function StudyAbroadServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto space-y-10">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-10 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-10">
         
         {/* Main Title */}
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight text-center md:text-left">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3B1E54] tracking-tight text-center md:text-left">
           Our Study Abroad Services
         </h1>
 
-        {/* Main Grid: Left Navigation + Right Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Main Grid: Navigation + Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           
-          {/* LEFT SIDEBAR NAVIGATION */}
-          <div className="lg:col-span-1">
-            <div className="bg-[#3B1E54] p-4 rounded-2xl shadow-md space-y-3 sticky top-6">
+          {/* NAVIGATION SIDEBAR */}
+          <div className="lg:col-span-1 w-full sticky top-4 sm:top-6 z-20">
+            <div className="bg-[#3B1E54] p-2.5 sm:p-4 rounded-2xl shadow-md flex lg:flex-col gap-2 overflow-x-auto">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.name;
                 return (
                   <button
                     key={item.name}
+                    type="button"
                     onClick={() => setActiveTab(item.name)}
-                    className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-200 text-left ${
+                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer focus:outline-none ${
                       isActive
-                        ? "bg-[#ECA82C] text-[#3B1E54] shadow"
-                        : "bg-white text-[#3B1E54] hover:bg-slate-100"
+                        ? "bg-[#ECA82C] text-[#3B1E54] shadow-md"
+                        : "bg-white/10 lg:bg-white text-white lg:text-[#3B1E54] hover:bg-white/20 lg:hover:bg-slate-100"
                     }`}
                   >
-                    <Icon className="w-5 h-5 flex-shrink-0" />
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                     <span>{item.name}</span>
                   </button>
                 );
@@ -225,21 +224,21 @@ export default function StudyAbroadServices() {
             </div>
           </div>
 
-          {/* RIGHT CONTENT AREA: ALL 6 CARDS */}
+          {/* RIGHT CONTENT AREA */}
           <div className="lg:col-span-3 space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {servicesData.map((service, index) => {
                 const IconComponent = service.icon;
                 return (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-6 flex flex-col justify-between"
+                    className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 flex flex-col justify-between"
                   >
                     <div>
-                      {/* Card Header Header Box */}
+                      {/* Card Header Box */}
                       <div className="bg-[#3B1E54] text-white p-3.5 rounded-xl flex items-center space-x-3 mb-4">
-                        <IconComponent className="w-5 h-5 text-[#ECA82C] flex-shrink-0" />
-                        <h2 className="text-base font-bold tracking-wide">
+                        <IconComponent className="w-5 h-5 text-[#ECA82C] shrink-0" />
+                        <h2 className="text-sm sm:text-base font-bold tracking-wide">
                           {service.title}
                         </h2>
                       </div>
@@ -255,7 +254,7 @@ export default function StudyAbroadServices() {
                       <ul className="space-y-3">
                         {service.features.map((feature, fIndex) => (
                           <li key={fIndex} className="flex items-start space-x-2.5">
-                            <CheckCircle2 className="w-4 h-4 text-[#3B1E54] flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-4 h-4 text-[#3B1E54] shrink-0 mt-0.5" />
                             <div className="text-xs sm:text-sm">
                               <span className="font-bold text-slate-800">
                                 {feature.title}
@@ -275,8 +274,8 @@ export default function StudyAbroadServices() {
               })}
             </div>
 
-            {/* LOWER CONTENT / COPYWRITING SECTION */}
-            <div className="pt-6 space-y-6 text-slate-700 text-xs sm:text-sm leading-relaxed">
+            {/* LOWER CONTENT SECTION */}
+            <div className="pt-4 space-y-6 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-200">
               <p className="font-medium text-slate-900">
                 Our study visa consultants will explain the entire procedure and guide you through the document needs following the most recent immigration legislation.
               </p>
@@ -300,15 +299,15 @@ export default function StudyAbroadServices() {
 
                 <p>
                   To enhance your visa application success, consider improving your language proficiency through our{" "}
-                  <a href="#" className="text-blue-600 underline font-medium hover:text-blue-800">
+                  <a href="#" className="text-blue-600 underline font-medium hover:text-blue-800 transition-colors">
                     Language Test Preparation
                   </a>
                   , tailored to help you meet the requirements of your study abroad program.
                 </p>
               </div>
 
-              <div className="space-y-2 pt-2">
-                <h3 className="text-base font-bold text-[#3B1E54]">
+              <div className="space-y-1.5 pt-2">
+                <h3 className="text-sm sm:text-base font-bold text-[#3B1E54]">
                   Take the First Step Towards Your International Education Today!
                 </h3>
                 <p>

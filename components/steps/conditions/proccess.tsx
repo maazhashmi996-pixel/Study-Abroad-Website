@@ -10,7 +10,7 @@ import {
 
 const steps = [
   {
-    icon: <FileSearch size={38} />,
+    icon: <FileSearch className="w-8 h-8 sm:w-10 sm:h-10" />,
     title: "Read each condition in your offer letter",
     desc: `Example conditions:
 • Provide final Bachelor's transcript
@@ -21,116 +21,85 @@ const steps = [
 • Tuition deposit`,
   },
   {
-    icon: <FileCheck2 size={38} />,
-    title: "Collect and prepare the required documents",
-    desc: "Get official copies, scanned documents, academic transcripts, English language results, passport copy and every document requested by the university.",
+    icon: <FileCheck2 className="w-8 h-8 sm:w-10 sm:h-10" />,
+    title: "Collect and prepare required documents",
+    desc: "Get official copies, scanned documents, academic transcripts, English language results, passport copy, and every document requested by the university.",
   },
   {
-    icon: <Upload size={38} />,
+    icon: <Upload className="w-8 h-8 sm:w-10 sm:h-10" />,
     title: "Submit the evidence back to the university",
     desc: "Upload the required documents through the university portal or send them by email if instructed. Make sure everything is clear and complete.",
   },
   {
-    icon: <ClipboardCheck size={38} />,
+    icon: <ClipboardCheck className="w-8 h-8 sm:w-10 sm:h-10" />,
     title: "Wait for confirmation",
     desc: "The admissions team reviews your documents. If everything matches their requirements, your conditions will be removed.",
   },
   {
-    icon: <BadgeCheck size={38} />,
-    title: "Receive (or become eligible for) the unconditional offer",
+    icon: <BadgeCheck className="w-8 h-8 sm:w-10 sm:h-10" />,
+    title: "Receive your unconditional offer",
     desc: "After all conditions are approved, you'll receive an unconditional offer and can move towards tuition payment and visa processing.",
   },
 ];
 
 export default function ProcessSection() {
   return (
-    <section className="bg-[#F6A800] py-20">
+    <section className="bg-[#F6A800] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
 
-      <div className="max-w-7xl mx-auto px-5">
-
-        <div className="text-center mb-14">
-
-          <h2 className="text-4xl font-extrabold text-[#3B1E54]">
-            How this step works (checklist / process)
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#3B1E54] tracking-tight">
+            How this step works
           </h2>
-
-          <p className="text-gray-800 mt-3">
+          <p className="text-slate-900 font-medium text-xs sm:text-base lg:text-lg">
             Here's how the "Fulfill Conditions" stage should be completed.
           </p>
-
         </div>
 
-        {/* Top Card */}
-
-        <div className="flex justify-center mb-8">
-
-          <div className="bg-white rounded-2xl shadow-lg p-7 max-w-md border">
-
-            <div className="text-[#3B1E54] mb-5">
-              {steps[0].icon}
-            </div>
-
-            <h3 className="text-xl font-bold text-[#3B1E54] mb-4">
-              {steps[0].title}
-            </h3>
-
-            <p className="text-gray-600 whitespace-pre-line leading-7">
-              {steps[0].desc}
-            </p>
-
-          </div>
-
-        </div>
-
-        {/* Bottom Cards */}
-
-        <div className="grid md:grid-cols-2 gap-7">
-
-          {steps.slice(1).map((step, index) => (
-
+        {/* Responsive Grid Layout for Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+          {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-7 border hover:-translate-y-2 duration-300"
+              className="bg-white rounded-2xl shadow-md border border-amber-200 p-6 sm:p-7 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="text-[#3B1E54]">
+                    {step.icon}
+                  </div>
+                  <span className="text-xs font-bold text-[#3B1E54] bg-amber-100 px-3 py-1 rounded-full border border-amber-200">
+                    Step {index + 1}
+                  </span>
+                </div>
 
-              <div className="text-[#3B1E54] mb-5">
-                {step.icon}
+                <h3 className="text-lg sm:text-xl font-bold text-[#3B1E54] leading-snug">
+                  {step.title}
+                </h3>
+
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed whitespace-pre-line">
+                  {step.desc}
+                </p>
               </div>
-
-              <h3 className="text-xl font-bold text-[#3B1E54] mb-4">
-                {step.title}
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                {step.desc}
-              </p>
-
             </div>
-
           ))}
-
         </div>
 
-        {/* Bottom Note */}
-
-        <div className="flex justify-center mt-12">
-
-          <div className="bg-[#E8A200] border border-yellow-700 rounded-xl px-8 py-4">
-
-            <p className="text-[#3B1E54] font-semibold text-center">
-              At the end of this step, you are no longer
-              <span className="font-bold">
-                {" "}conditionally accepted.
+        {/* Bottom Note Box */}
+        <div className="max-w-3xl mx-auto pt-2">
+          <div className="bg-[#E8A200] border border-yellow-700/40 rounded-xl px-6 sm:px-8 py-4 shadow-sm">
+            <p className="text-[#3B1E54] font-semibold text-center text-xs sm:text-base leading-relaxed">
+              At the end of this step, you are no longer{" "}
+              <span className="font-bold underline decoration-purple-900 decoration-2">
+                conditionally accepted.
               </span>{" "}
               You are cleared.
             </p>
-
           </div>
-
         </div>
 
       </div>
-
     </section>
   );
 }

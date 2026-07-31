@@ -1,10 +1,24 @@
+"use client";
+
 import React from "react";
+import {
+  Calendar,
+  Briefcase,
+  ShieldCheck,
+  Home,
+  GraduationCap,
+  Users,
+  Compass,
+  CheckCircle,
+  AlertTriangle,
+} from "lucide-react";
 
 // Types
 interface StepItem {
   id: number;
   title: string;
   description: string;
+  icon: React.ElementType;
 }
 
 interface CommonMistake {
@@ -18,159 +32,170 @@ const processSteps: StepItem[] = [
     id: 1,
     title: "Plan your travel date",
     description:
-      "Ideally arrive a few days to 2 weeks before your classes start. Too early → could be questioned at immigration. Too late → you may miss enrollment.",
+      "Ideally arrive a few days to 2 weeks before your classes start. Arriving too early may cause questioning at immigration; arriving too late risks missing enrollment.",
+    icon: Calendar,
   },
   {
     id: 2,
     title: "Carry all original documents in hand luggage",
     description:
-      "Passport, visa letter, university offer, CAS/CoE/LOA, fee receipt, accommodation letter, TB/medical (if applicable). Don't put these in checked baggage.",
+      "Passport, visa letter, university offer, CAS/CoE/LOA, fee receipt, accommodation confirmation, and TB/medical results. Never pack these in checked baggage.",
+    icon: Briefcase,
   },
   {
     id: 3,
     title: "Clear immigration confidently",
     description:
-      'Be ready to answer: "Where will you study?", "Where will you stay?", "How will you pay for living?", "When do classes start?"',
+      'Be prepared to answer: "Where will you study?", "Where will you stay?", "How will you cover living expenses?", and "When do classes start?"',
+    icon: ShieldCheck,
   },
   {
     id: 4,
-    title: "Reach your accommodation and notify home",
+    title: "Reach accommodation and notify family",
     description:
-      "Share location with family, keep university informed if they're expecting you.",
+      "Share your location with family, and notify the university international team if they are expecting your arrival.",
+    icon: Home,
   },
   {
     id: 5,
     title: "Attend university registration / enrollment",
     description:
-      'This is VERY important. If you don\'t enroll, the university can report you to immigration as "did not commence."',
+      'Crucial step: failure to enroll on time may prompt the university to report your status to immigration as "did not commence."',
+    icon: GraduationCap,
   },
   {
     id: 6,
     title: "Attend orientation / induction week",
     description:
-      "This is where you learn about attendance, part-time work rules, how to get student card, how to access library, and how to get help.",
+      "Learn about mandatory attendance, part-time work limits, obtaining your student ID card, library access, and support services.",
+    icon: Users,
   },
   {
     id: 7,
     title: "Set up local essentials",
-    description: "SIM, bank account, transport card, student ID, emergency contacts.",
+    description:
+      "Acquire a local SIM card, open a student bank account, set up a transit pass, and register emergency contact details.",
+    icon: Compass,
   },
   {
     id: 8,
     title: "Start classes and maintain attendance",
-    description: "Low attendance = risk to your visa in many countries.",
+    description:
+      "Maintain active class attendance. Dropping below required attendance thresholds poses a direct risk to your student visa validity.",
+    icon: CheckCircle,
   },
 ];
 
 const commonMistakes: CommonMistake[] = [
   {
-    title: "Traveling late",
-    description: "and missing university's last date to enroll",
+    title: "Traveling too late",
+    description: "Missing the university's final deadline for student registration.",
   },
   {
-    title: "Not carrying originals",
-    description: "(they only bring photocopies/WhatsApp screenshots)",
+    title: "Not carrying physical originals",
+    description: "Relying only on photocopies or digital screenshots at border check.",
   },
   {
-    title: "Ignoring orientation",
-    description:
-      '("I\'ll just start classes") bad idea, you miss immigration and academic rules',
+    title: "Skipping orientation week",
+    description: "Assuming classes are all that matter while missing vital visa compliance rules.",
   },
   {
-    title: "Working before allowed",
-    description: "or over allowed hours can affect visa status",
+    title: "Working before authorized",
+    description: "Exceeding legal work limits or working before term start dates.",
   },
   {
-    title: "Not updating the university",
-    description: "if delayed university assumes you didn't come",
+    title: "Not updating the university on delays",
+    description: "Failing to notify the university if your flight is delayed causes automated drop reports.",
   },
   {
-    title: "No accommodation booked for arrival night",
-    description: "creates stress on day 1",
+    title: "No arrival night accommodation",
+    description: "Arriving in a new country without guaranteed night-one housing.",
   },
 ];
 
 export default function Work() {
   return (
-    <main className="min-h-screen font-sans">
+    <main className="min-h-screen font-sans bg-slate-50">
+      
       {/* SECTION 1: YELLOW/ORANGE PROCESS SECTION */}
-      <section className="bg-[#e5a00d] py-16 px-6">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="bg-[#e5a00d] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Section Header */}
           <div className="text-center space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#3a1b5c]">
-              How this step works (checklist / process)
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
+              How This Step Works (Checklist & Process)
             </h2>
-            <p className="text-[#3a1b5c]/90 text-sm font-medium">
-              Here&apos;s how the &quot;Select Your Program&quot; stage should be done properly
+            <p className="text-[#3a1b5c]/90 text-xs sm:text-sm font-semibold max-w-xl mx-auto">
+              Here is how the &quot;Start Your Program&quot; stage should be executed properly step-by-step
             </p>
           </div>
 
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {processSteps.map((step) => (
-              <div
-                key={step.id}
-                className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col space-y-3"
-              >
-                {/* Step Icon Placeholder */}
-                <div className="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
-                </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {processSteps.map((step) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={step.id}
+                  className="bg-white rounded-2xl p-5 shadow-sm border border-amber-200/50 flex flex-col justify-between space-y-3 hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#3a1b5c] flex items-center justify-center shrink-0">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <span className="text-xs font-black text-amber-600/80 bg-amber-50 px-2.5 py-1 rounded-md">
+                        #{step.id}
+                      </span>
+                    </div>
 
-                <h3 className="text-base font-bold text-slate-900 leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Banner Notice */}
-          <div className="bg-[#cca012] border border-amber-600/30 rounded-lg py-3 px-6 text-center text-xs font-semibold text-slate-900">
-            That&apos;s it! At this point, you are no longer &quot;an applicant.&quot; You&apos;re an{" "}
-            <span className="font-bold underline">International student.</span>
+          <div className="bg-[#cca012] border border-amber-600/30 rounded-xl py-3.5 px-6 text-center text-xs sm:text-sm font-semibold text-slate-900 shadow-sm max-w-2xl mx-auto">
+            That&apos;s it! At this point, you are no longer an applicant—you are officially an{" "}
+            <strong className="underline decoration-2 underline-offset-2">International Student.</strong>
           </div>
+
         </div>
       </section>
 
       {/* SECTION 2: DARK PURPLE COMMON MISTAKES SECTION */}
-      <section className="bg-[#3a1b5c] text-white py-16 px-6">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="bg-[#3a1b5c] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Section Header */}
           <div className="text-center space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-              Common mistakes
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+              Common Post-Visa Mistakes
             </h2>
-            <p className="text-purple-200 text-sm font-medium">
-              Students often make these mistakes right after visa approval
+            <p className="text-purple-200 text-xs sm:text-sm font-medium max-w-lg mx-auto">
+              Avoid these frequent pitfalls students make immediately following visa approval
             </p>
           </div>
 
           {/* Mistakes Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {commonMistakes.map((mistake, index) => (
               <div
                 key={index}
-                className="bg-[#2c1249] border border-purple-800/60 rounded-xl p-6 text-center space-y-2 hover:border-purple-600 transition-colors"
+                className="bg-[#2c1249] border border-purple-800/60 rounded-2xl p-5 text-center space-y-2 hover:border-purple-500/80 transition-all duration-200 flex flex-col justify-center shadow-sm"
               >
-                <h3 className="text-base font-bold text-amber-400">
+                <div className="flex justify-center mb-1">
+                  <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0" />
+                </div>
+                <h3 className="text-xs sm:text-sm font-extrabold text-amber-400 leading-snug">
                   {mistake.title}
                 </h3>
                 <p className="text-xs text-purple-200/80 leading-relaxed">
@@ -182,6 +207,7 @@ export default function Work() {
 
         </div>
       </section>
+
     </main>
   );
 }

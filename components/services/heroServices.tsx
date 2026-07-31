@@ -4,17 +4,20 @@ import Image from "next/image";
 
 export default function VisaHero() {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 items-center gap-14">
+    <section className="bg-white py-10 sm:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-14">
+          
           {/* Left Content */}
-          <div>
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-[#43246f]">
-              Tailored Services for Your
-              <br />
-              Study Abroad Success
+          <div className="text-center lg:text-left">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:leading-tight lg:leading-tight text-[#43246f] tracking-tight">
+              Tailored Services for Your{" "}
+              <span className="block sm:inline lg:block">
+                Study Abroad Success
+              </span>
             </h1>
-            <p className="mt-10 text-xl leading-10 text-gray-700">
+
+            <p className="mt-4 sm:mt-6 lg:mt-8 text-base sm:text-lg lg:text-xl leading-relaxed sm:leading-relaxed text-gray-700 max-w-2xl mx-auto lg:mx-0">
               At Times Consultant, we offer Study Visa Services that make
               the visa process easier for students and professionals.
               From your first assessment and one-to-one consultation to
@@ -26,16 +29,19 @@ export default function VisaHero() {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center lg:justify-end">
-            <Image
-              src="/images/visa-hero.webp"
-              alt="Visa Services"
-              width={650}
-              height={650}
-              priority
-              className="w-full max-w-155 object-contain"
-            />
+          <div className="flex justify-center lg:justify-end w-full">
+            <div className="relative w-full max-w-md lg:max-w-xl aspect-square sm:aspect-[4/3] lg:aspect-square">
+              <Image
+                src="/images/visa-hero.webp"
+                alt="Visa Services"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                className="object-contain"
+              />
+            </div>
           </div>
+
         </div>
       </div>
     </section>
