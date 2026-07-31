@@ -71,7 +71,7 @@ export default function HeroSection() {
   const images = [
     {
       id: 1,
-      image: "/images/hero-bg-1.webp",
+      image: "/images/award3.webp",
       title: "Pakistan #1 Study Abroad Consultant With The Largest Network",
       subtitle:
         "Largest Network of Offices in Pakistan Nationwide Access. One Standard of Excellence.",
@@ -87,11 +87,11 @@ export default function HeroSection() {
       image: "/images/award2.webp",
       hasText: false,
     },
-    {
-      id: 4,
-      image: "/images/award3.webp",
-      hasText: false,
-    },
+    // {
+    //   id: 4,
+    //   image: "/images/award3.webp",
+    //   hasText: false,
+    // },
   ];
 
   // SEARCH WIDGET STATES
@@ -172,11 +172,11 @@ export default function HeroSection() {
                       </p>
 
                       <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-                        <button className="bg-white hover:bg-gray-100 text-[#3b1d5c] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
+                        <button className="mb-5 hover:bg-[#f1b317] text-white px-5 sm:px-7 border-white border py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
                           Free consultation
                         </button>
 
-                        <button className="bg-[#f1b317] hover:bg-[#d99f12] text-[#3b1d5c] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
+                        <button className="bg-[#f1b317] mb-4 hover:bg-[#3b1d5c] text-white px-5 sm:px-7 py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
                           Check Eligibility
                         </button>
                       </div>
@@ -469,16 +469,16 @@ export default function HeroSection() {
         </div>
 
         {/* WHY CHOOSE CONTENT AREA */}
-        <div className="flex flex-col px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
+        <div className="flex flex-col  px-20 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center md:text-left">
             Why Choose Times Consultant?
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2  sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
             {boxes.map((box, index) => (
               <div
                 key={index}
-                className="flex flex-col border border-white/20 rounded-2xl bg-[#61389b] hover:bg-amber-500 transition-colors duration-500 p-5 sm:p-7 gap-4 sm:gap-5"
+                className="flex flex-col border border-white/20 rounded-2xl bg-[#61389b] hover:bg-amber-500 transition-colors duration-500p-5 sm:p-7 gap-4 sm:gap-5"
               >
                 <h3 className="font-bold text-xl sm:text-2xl">{box.years}</h3>
 

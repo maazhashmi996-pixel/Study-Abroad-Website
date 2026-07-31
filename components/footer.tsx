@@ -1,8 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { FaArrowRight, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
+//   const [user,setUser] =useState({
+//     email:""
+
+//   })
+// async function changeHandler(e) {
+//   const {name,value }=e.target;
+//   setUser((prev)=>({...prev,[name]:value}))
+// }
+//  function submitHandler(e) {
+//   try(
+//   e.preventDefault()
+// const response = await axios.post("",data)
+// )
+//  }
+
   return (
     <footer className="bg-[#43246f] text-white px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-16">
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
