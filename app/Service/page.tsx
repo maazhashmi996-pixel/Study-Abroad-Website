@@ -1,10 +1,10 @@
-import Benefits from '../services/benefits'
-import ContactCTA from '../services/contact'
-import FAQ from '../services/faq'
-import VisaHero from '../services/heroServices'
-import Process from '../services/process'
-import WhyChooseUs from '../services/whyChoose'
-import Services from '../services/services'
+import Benefits from '@/components/services/benefits'
+import ContactCTA from '@/components/services/contact'
+import FAQ from '@/components/services/faq'
+import Process from '@/components/services/process'
+import WhyChooseUs from '@/components/services/whyChoose'
+import Services from '@/components/services/services'
+import VisaHero from '@/components/services/heroServices'
 
 function page() {
   return (

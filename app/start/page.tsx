@@ -1,6 +1,6 @@
-import ProgrammePage from '@/components/start/programme'
-import Timeline from '@/components/start/timeline'
-import Work from '@/components/start/work'
+import ProgrammePage from '@/components/steps/start/programme'
+import Timeline from '@/components/steps/start/timeline'
+import Work from '@/components/steps/start/work'
 
 function page() {
   return (

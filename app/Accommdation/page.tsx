@@ -1,5 +1,5 @@
-import Hero from '@/components/accommodations/hero'
-import ServicesOffer from '@/components/accommodations/servicesOffer'
+import Hero from '@/components/services/accommodations/hero'
+import ServicesOffer from '@/components/services/accommodations/servicesOffer'
 import Third from '@/components/services/study-abroad/third'
 
 function page() {

@@ -11,7 +11,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const events = [
   {
     id: 1,
-    city: "ISLAMABAD",
+    city: "BAHAWALPUR",
     title: "Islamabad Study Abroad Expo 2026",
     time: "12:00 PM TO 07:00 PM",
     date: "Thursday, 13 August 2026",
@@ -20,7 +20,7 @@ const events = [
   },
   {
     id: 2,
-    city: "JHELUM",
+    city: "ABBOTTABAD",
     title: "Jhelum Study Abroad Expo 2026",
     time: "12:00 PM TO 07:00 PM",
     date: "Wednesday, 05 August 2026",
@@ -29,7 +29,7 @@ const events = [
   },
   {
     id: 3,
-    city: "KARACHI",
+    city: "HYDERABAD",
     title: "Karachi Study Abroad Expo 2026",
     time: "12:00 PM TO 07:00 PM",
     date: "Saturday, 08 August 2026 || Sunday, 09 August 2026",
@@ -67,7 +67,7 @@ const events = [
 
 export default function Time() {
   return (
-    <section className="bg-[#3b1d5c] py-16 px-4 md:px-12 w-full text-white font-sans">
+    <section className="bg-[#3b1d5c] py-16 px-4 md:px-12 w-full text-white font-sans font-family:  sans-serif ">
       <div className="max-w-7xl mx-auto">
         
         {/* SECTION HEADER */}
@@ -114,40 +114,40 @@ export default function Time() {
           >
             {events.map((event) => (
               <SwiperSlide key={event.id}>
-                <div className="flex flex-col items-center  h-full px-2">
-                  
-                  {/* IMAGE PLACEHOLDER CONTAINER */}
-                  <div className="relative w-78 h-58 sm:w-56 sm:h-56 mb-4">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
+              <div className="flex flex-col items-center h-full px-2">
 
-                  {/* EVENT CONTENT */}
-                <div className="flex flex-col items-start">
-  <h3 className="text-white text-xl sm:text-2xl font-bold mb-2 leading-snug">
-    {event.title}
-  </h3>
+  {/* FIXED CONTAINER WITH TAILWIND SIZES */}
+  <div className="relative w-64 h-64 sm:w-80 sm:h-80 mb-4 shrink-0">
+    <Image
+      src={event.image}
+      alt={event.title}
+      fill
+      className="object-contain"
+    />
+  </div>
 
-  <p className="text-gray-200 text-xs sm:text-sm font-medium mb-1">
-    <span className="font-bold">{event.time}</span>
-    <span className="mx-2">||</span>
-    <span>Date: {event.date}</span>
-  </p>
+  {/* EVENT CONTENT */}
+  <div className="flex flex-col items-start w-full">
+    <h3 className="text-white text-xl sm:text-2xl font-bold mb-2 leading-snug">
+      {event.title}
+    </h3>
 
-  <p className="text-gray-300 text-xs sm:text-sm font-medium mt-1">
-    Location: {event.location}
-  </p>
+    <p className="text-gray-200 text-xs sm:text-sm font-medium mb-1">
+      <span className="font-bold">{event.time}</span>
+      <span className="mx-2">||</span>
+      <span>Date: {event.date}</span>
+    </p>
 
-  {/* BUTTON WITH PX & PY FOR PADDING */}
-  <button className="mt-6 px-4 py-2 bg-[#f1b317] hover:bg-white text-[#3b1d5c] text-xs font-bold rounded-sm shadow-md transition-transform active:scale-95 cursor-pointer">
-    More Details
-  </button>
+    <p className="text-gray-300 text-xs sm:text-sm font-medium mt-1">
+      Location: {event.location}
+    </p>
+
+    <button className="mt-6 px-4 py-2 bg-[#f1b317] hover:bg-white text-[#3b1d5c] text-xs font-bold rounded-sm shadow-md transition-transform active:scale-95 cursor-pointer">
+      More Details
+    </button>
+  </div>
+
 </div>
-                </div>
               </SwiperSlide>
             ))}
           </Swiper>

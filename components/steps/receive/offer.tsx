@@ -107,113 +107,109 @@ export default function OfferPage() {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
       
-      {/* 1. HERO & WHY THIS STEP MATTERS */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-8 sm:space-y-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div className="lg:col-span-7 space-y-4">
-            <h1 className="text-2xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
-              Receive Offer Letter
-            </h1>
+    {/* 1. HERO & WHY THIS STEP MATTERS */}
+<section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-8 sm:space-y-12">
+  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    
+    {/* Left Content */}
+    <div className="lg:col-span-7">
+      <h1 className="text-2xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
+        Receive Offer Letter
+      </h1>
 
-            <div className="space-y-3 pt-2">
-              <h2 className="text-lg sm:text-xl font-bold text-[#3B1E54]">
-                Why this step matters
-              </h2>
+      <div className="space-y-3 pt-2">
+        <h2 className="text-lg sm:text-xl font-bold text-[#3B1E54]">
+          Why this step matters
+        </h2>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Your offer letter is the university saying, “We are willing to give you a place if you meet our conditions.”
-              </p>
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Your offer letter is the university saying, “We are willing to give you a place if you meet our conditions.”
+        </p>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                This is the first official confirmation from the university after you submit your application. Most students receive a conditional offer letter first, which means you’re not fully approved yet, but you’re on track.
-              </p>
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          This is the first official confirmation from the university after you submit your application. Most students receive a conditional offer letter first, which means you’re not fully approved yet, but you’re on track.
+        </p>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                You cannot move forward to deposit payment, visa, or travel without an offer letter. It’s the document that proves the university wants you.
-              </p>
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          You cannot move forward to deposit payment, visa, or travel without an offer letter. It’s the document that proves the university wants you.
+        </p>
 
-              <p className="text-xs sm:text-sm text-[#3B1E54] font-semibold pt-1">
-                In short: Step 3 is the point where your application stops being “maybe” and becomes “yes, if...”
+        <p className="text-xs sm:text-sm text-[#3B1E54] font-semibold pt-1">
+          In short: Step 3 is the point where your application stops being “maybe” and becomes “yes, if...”
+        </p>
+      </div>
+    </div>
+
+    {/* Right Hero Image Container (FIXED) */}
+    <div className="lg:col-span-5 flex justify-center items-center">
+      <div className="relative w-full max-w-[380px] aspect-[4/3]">
+        <Image 
+          src="/images/steps/3-1.png"
+          alt="Receive Offer Letter"  
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
+    </div>
+
+  </div>
+
+  {/* DIVIDER WITH STAR */}
+  <div className="relative flex py-2 items-center">
+    <div className="flex-grow border-t border-slate-200"></div>
+    <span className="flex-shrink mx-4 text-[#3B1E54] text-xs">★</span>
+    <div className="flex-grow border-t border-slate-200"></div>
+  </div>
+
+  {/* 2. WHAT YOU NEED BEFORE STARTING */}
+  <div className="space-y-6">
+    <div>
+      <h2 className="text-xl sm:text-2xl font-extrabold text-[#3B1E54]">
+        What you need before starting
+      </h2>
+      <p className="text-xs sm:text-sm text-slate-600 mt-1">
+        Before receiving and processing your offer letter, ensure you have:
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      {/* Left Grid Cards */}
+      <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {prerequisites.map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-white border-2 border-[#3B1E54] p-5 rounded-2xl shadow-sm space-y-2 flex flex-col justify-between"
+          >
+            <div className="space-y-2">
+              <CheckCircle className="w-5 h-5 text-[#3B1E54]" />
+              <h3 className="font-extrabold text-xs sm:text-sm text-[#3B1E54]">
+                {item.title}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {item.desc}
               </p>
             </div>
           </div>
+        ))}
+      </div>
 
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/3] bg-amber-50/50 rounded-3xl p-4 flex flex-col items-center justify-center border border-amber-100 shadow-sm">
-              <div className="relative w-full h-full flex flex-col items-center justify-center space-y-3 p-4 bg-white rounded-2xl border border-slate-100 shadow-md">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#3B1E54] text-[#ECA82C] rounded-2xl flex items-center justify-center shadow shrink-0">
-                  <FileText className="w-6 h-6 sm:w-8 sm:h-8" />
-                </div>
-                <div className="relative w-full h-32 sm:h-40">
-                  <Image 
-                    src="/images/steps/3-1.png"
-                    alt="Offer Letter Step"  
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
+      {/* Right Prerequisites Image Container (FIXED) */}
+      <div className="lg:col-span-4 flex justify-center items-center">
+        <div className="relative w-full max-w-[300px] aspect-square">
+          <Image 
+            src="/images/steps/3.png"
+            alt="Prerequisites Illustration"
+            fill
+            className="object-contain"
+          />
         </div>
+      </div>
 
-        {/* DIVIDER WITH STAR */}
-        <div className="relative flex py-2 items-center">
-          <div className="flex-grow border-t border-slate-200"></div>
-          <span className="flex-shrink mx-4 text-[#3B1E54] text-xs">★</span>
-          <div className="flex-grow border-t border-slate-200"></div>
-        </div>
-
-        {/* 2. WHAT YOU NEED BEFORE STARTING */}
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#3B1E54]">
-              What you need before starting
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Before receiving and processing your offer letter, ensure you have:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {prerequisites.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white border-2 border-[#3B1E54] p-5 rounded-2xl shadow-sm space-y-2 flex flex-col justify-between"
-                >
-                  <div className="space-y-2">
-                    <CheckCircle className="w-5 h-5 text-[#3B1E54]" />
-                    <h3 className="font-extrabold text-xs sm:text-sm text-[#3B1E54]">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 sm:p-8 bg-purple-50/60 rounded-3xl border border-purple-100 text-center space-y-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#3B1E54] text-[#ECA82C] rounded-full flex items-center justify-center shadow-md shrink-0">
-                <ShieldCheck className="w-8 h-8 sm:w-10 sm:h-10" />
-              </div>
-              <div className="relative w-full h-36 sm:h-48">
-                <Image 
-                  src="/images/step/3.png"
-                  alt="Requirements Illustration"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* 3. HOW THIS STEP WORKS (YELLOW BACKGROUND) */}
       <section className="bg-[#ECA82C] text-[#3B1E54] py-10 sm:py-14 px-4 sm:px-6 lg:px-8">

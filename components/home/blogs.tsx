@@ -101,8 +101,8 @@ export default function Blogs() {
     </div>
 
     {/* Content */}
-    <div className="p-6 flex justify-between items-center">
-      <h3 className="text-xl font-semibold">
+    <div className="p-6 flex justify-between gap-4 items-center">
+      <h3 className="text-xl ">
         {blog.title}
       </h3>
 

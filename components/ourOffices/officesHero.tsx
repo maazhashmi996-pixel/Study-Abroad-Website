@@ -20,11 +20,11 @@ export default function OfficesHero() {
   const [selectedCountry, setSelectedCountry] = useState("Pakistan");
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans">
+    <div className="min-h-screen bg-white text-gray-800 ">
     
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="max-w-7xl mx-auto px-6   grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="space-y-5 max-w-lg">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#3b1d5c] leading-tight">
             Global Presence, Local Expertise for Your Study Abroad Dreams

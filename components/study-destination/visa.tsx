@@ -4,7 +4,7 @@ export default function Visa() {
   return (
     <div className="flex flex-col px-20 py-5 gap-10 bg-[#43246f] text-white">
       <h1 className="text-4xl ">Student Visa Requirements In Denmark</h1>
-    <ul className="list-disc pl-14">
+    <ul className="list-disc pl-14  text-xl ">
         <li>Letter of admission from an educational institution</li>
         <li>Details of the academic program</li>
         <li>Valid passport</li>

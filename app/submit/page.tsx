@@ -1,7 +1,7 @@
-import Submit from '@/components/steps/select/submit/application'
-import Blue from '@/components/steps/select/submit/blue'
-import Mistakes from '@/components/steps/select/submit/mistakes'
-import Yellow from '@/components/steps/select/submit/yellow'
+import Submit from '@/components/steps/submit/application'
+import Blue from '@/components/steps/submit/blue'
+import Mistakes from '@/components/steps/submit/mistakes'
+import Yellow from '@/components/steps/submit/yellow'
 
 export default function page() {
   return (

@@ -7,7 +7,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <header className="relative z-50 bg-white py-4 shadow-sm">
+    <header className=" z-50 bg-white py-4 shadow-sm sticky top-0">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="relative z-10">
@@ -34,7 +34,7 @@ export default function Navbar() {
             {/* Services Dropdown */}
             <li className="relative group">
               <button className="flex items-center gap-1">
-                Services
+                <Link href="/Service">Services</Link>
                 <IoIosArrowDown />
               </button>
 
@@ -75,18 +75,24 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/study-destinations">Study Destinations</Link>
+              <Link href="/studyDest">Study Destinations</Link>
             </li>
 
             {/* Study Abroad Steps Dropdown */}
 
             <li className="relative group">
               <button className="flex items-center gap-1">
-                Study Abroad Steps
+                <Link href="/step">Study Abroad Steps</Link>
                 <IoIosArrowDown />
               </button>
 
               <div className="absolute left-0 top-full mt-3 w-64 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible">
+                <Link
+                  href="/start"
+                  className="block px-5 py-3 hover:bg-yellow-500"
+                >
+                  Start Your Program
+                </Link>
                 <Link
                   href="/select"
                   className="block px-5 py-3 hover:bg-yellow-500"
@@ -126,12 +132,6 @@ export default function Navbar() {
                   className="block px-5 py-3 hover:bg-yellow-500"
                 >
                   Pay Tuition Deposit
-                </Link>
-                <Link
-                  href="/start"
-                  className="block px-5 py-3 hover:bg-yellow-500"
-                >
-                  Start Your Program
                 </Link>
               </div>
             </li>
