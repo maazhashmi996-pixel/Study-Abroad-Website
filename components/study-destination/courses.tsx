@@ -30,7 +30,7 @@ export default function Courses() {
           <li className="bg-[#43246f]/5 p-4 sm:p-5 rounded-xl border border-[#43246f]/10 hover:shadow-md transition">
             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gray-800">
               <strong className="text-[#43246f] font-semibold block sm:inline mb-1 sm:mb-0">
-                Engineering:{" "}
+                Engineering:
               </strong>
               Pioneers in sustainability teaching and research are DTU, University of Copenhagen, and Aarhus University.
             </p>

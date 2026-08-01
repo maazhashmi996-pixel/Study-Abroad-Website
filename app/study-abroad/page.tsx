@@ -9,7 +9,6 @@ function Page() {
       <First/>
     < StudyAbroadServices/>
       <Third/>
-
     </div>
   )
 }

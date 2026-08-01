@@ -33,13 +33,13 @@ export default function Navbar() {
         <nav className="hidden lg:block relative z-50 bg-[#43246f] rounded-full px-8 xl:px-12 py-3">
           <ul className="flex items-center gap-4 xl:gap-6 text-white text-xs whitespace-nowrap">
             <li>
-              <Link href="/OurHome" className="hover:text-yellow-400">
+              <Link href="/Home" className="hover:text-yellow-400">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link href="/AboutUs" className="hover:text-yellow-400">
+              <Link href="/About" className="hover:text-yellow-400">
                 About
               </Link>
             </li>
@@ -47,25 +47,25 @@ export default function Navbar() {
             {/* Services Dropdown */}
             <li className="relative group">
               <button className="flex items-center gap-1 hover:text-yellow-400">
-                <Link href="/Service">Services</Link>
+                <Link href="/service">Services</Link>
                 <IoIosArrowDown />
               </button>
 
               <div className="absolute left-0 top-full mt-3 w-60 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
                 <Link
-                  href="/Accommdation"
+                  href="/Accommodation"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Accommodation
                 </Link>
                 <Link
-                  href="/studyAbroad"
+                  href="/study-abroad"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Study Abroad
                 </Link>
                 <Link
-                  href="/language"
+                  href="/languages"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Languages
@@ -86,66 +86,66 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/Office" className="hover:text-yellow-400">
+              <Link href="/our-offices" className="hover:text-yellow-400">
                 Our Offices
               </Link>
             </li>
 
             <li>
-              <Link href="/studyDest" className="hover:text-yellow-400">
-                Study Destinations
+              <Link href="/study-Destination" className="hover:text-yellow-400">
+                Study Destination
               </Link>
             </li>
 
             {/* Study Abroad Steps Dropdown */}
             <li className="relative group">
               <button className="flex items-center gap-1 hover:text-yellow-400">
-                <Link href="/step">Study Abroad Steps</Link>
+                <Link href="/study-abroad-steps">Study Abroad Steps</Link>
                 <IoIosArrowDown />
               </button>
 
               <div className="absolute left-0 top-full mt-3 w-64 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
                 <Link
-                  href="/start"
+                  href="/start-your-program"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Start Your Program
                 </Link>
                 <Link
-                  href="/select"
+                  href="/select-your-program"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Select Your Program
                 </Link>
                 <Link
-                  href="/"
+                  href="/apply-for-visa"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Apply For Visa
                 </Link>
                 <Link
-                  href="/condition"
+                  href="/fulfill-conditions"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Fulfill Conditions
                 </Link>
                 <Link
-                  href="/receive"
+                  href="/receive-offer-letter"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Receive Offer Letter
                 </Link>
                 <Link
-                  href="/submit"
+                  href="/submit-application"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
                   Submit Application
                 </Link>
                 <Link
-                  href="/tution"
+                  href="/pay-tution-deposit"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
-                  Pay Tuition Deposit
+                  Pay Tution Deposit
                 </Link>
               </div>
             </li>
@@ -180,12 +180,12 @@ export default function Navbar() {
         <div className="lg:hidden bg-[#43246f] text-white mt-4 rounded-2xl p-6 transition-all">
           <ul className="flex flex-col gap-4 text-sm">
             <li>
-              <Link href="/OurHome" onClick={() => setIsOpen(false)}>
+              <Link href="/Home" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/AboutUs" onClick={() => setIsOpen(false)}>
+              <Link href="/About" onClick={() => setIsOpen(false)}>
                 About
               </Link>
             </li>
@@ -196,20 +196,22 @@ export default function Navbar() {
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center justify-between w-full"
               >
-                <span>Services</span>
+                <Link href="/service">
+                  <span>Services</span>
+                </Link>
                 <IoIosArrowDown
                   className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
                 />
               </button>
               {servicesOpen && (
                 <div className="pl-4 mt-2 flex flex-col gap-2 text-xs text-gray-200">
-                  <Link href="/Accommdation" onClick={() => setIsOpen(false)}>
+                  <Link href="/Accommodation" onClick={() => setIsOpen(false)}>
                     Accommodation
                   </Link>
-                  <Link href="/studyAbroad" onClick={() => setIsOpen(false)}>
+                  <Link href="/study-abroad" onClick={() => setIsOpen(false)}>
                     Study Abroad
                   </Link>
-                  <Link href="/language" onClick={() => setIsOpen(false)}>
+                  <Link href="/languages" onClick={() => setIsOpen(false)}>
                     Languages
                   </Link>
                 </div>
@@ -227,13 +229,13 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/Office" onClick={() => setIsOpen(false)}>
+              <Link href="/our-offices" onClick={() => setIsOpen(false)}>
                 Our Offices
               </Link>
             </li>
             <li>
-              <Link href="/studyDest" onClick={() => setIsOpen(false)}>
-                Study Destinations
+              <Link href="/study-Destination" onClick={() => setIsOpen(false)}>
+                Study Destination
               </Link>
             </li>
 
@@ -243,32 +245,52 @@ export default function Navbar() {
                 onClick={() => setStepsOpen(!stepsOpen)}
                 className="flex items-center justify-between w-full"
               >
-                <span>Study Abroad Steps</span>
+                <Link href="/study-abroad-steps">
+                  <span>Study Abroad Steps</span>
+                </Link>
                 <IoIosArrowDown
                   className={`transition-transform ${stepsOpen ? "rotate-180" : ""}`}
                 />
               </button>
               {stepsOpen && (
                 <div className="pl-4 mt-2 flex flex-col gap-2 text-xs text-gray-200">
-                  <Link href="/start" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/start-your-program"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Start Your Program
                   </Link>
-                  <Link href="/select" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/select-your-program"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Select Your Program
                   </Link>
-                  <Link href="/" onClick={() => setIsOpen(false)}>
+                  <Link href="/apply-for-visa" onClick={() => setIsOpen(false)}>
                     Apply For Visa
                   </Link>
-                  <Link href="/condition" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/fulfill-conditions"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Fulfill Conditions
                   </Link>
-                  <Link href="/receive" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/receive-offer-letter"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Receive Offer Letter
                   </Link>
-                  <Link href="/submit" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/submit-application"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Submit Application
                   </Link>
-                  <Link href="/tution" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/pay-tution-deposit"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Pay Tuition Deposit
                   </Link>
                 </div>
