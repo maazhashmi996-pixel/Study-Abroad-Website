@@ -1,24 +1,24 @@
 "use client";
 
 
-import Benefits from '@/components/services/benefits'
-import ContactCTA from '@/components/services/contact'
+
 import FAQ from '@/components/services/faq'
 import Process from '@/components/services/process'
 import WhyChooseUs from '@/components/services/whyChoose'
-import Services from '@/components/services/services'
 import VisaHero from '@/components/services/heroServices'
+import Second from '@/components/services/second';
+import StudyVisa from '@/components/services/study-visa';
 
 function page() {
   return (
     <div>
         <VisaHero/>
-     <Benefits/>
-     <ContactCTA/>
-     <FAQ/>
-     <Process/>
+        <Second/>
+        <StudyVisa/>
      <WhyChooseUs/>
-     <Services/>
+     <Process/>
+ <FAQ/>
+    
 
     </div>
   )

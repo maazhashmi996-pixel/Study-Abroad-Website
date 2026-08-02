@@ -40,7 +40,7 @@ export default function Share() {
         
         {/* Left Column: Information & Marketing */}
         <div className="space-y-6 text-center lg:text-left">
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-base sm:text-lg">
+          <div className="flex flex-wrap flex-col justify-center lg:justify-start gap-4 sm:gap-6 text-base sm:text-lg">
             <div>
               <span className="text-[#f7a600] font-bold text-xl sm:text-2xl">65+</span> Countries
             </div>

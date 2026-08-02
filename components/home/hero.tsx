@@ -172,11 +172,11 @@ export default function HeroSection() {
                       </p>
 
                       <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-                        <button className="mb-5 hover:bg-[#f1b317] text-white px-5 sm:px-7 border-white border py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
+                        <button className="mb-5 text-blue hover:bg-[#f1b317] hover:text-white px-5 sm:px-7 border-white border py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
                           Free consultation
                         </button>
 
-                        <button className="bg-[#f1b317] mb-4 hover:bg-[#3b1d5c] text-white px-5 sm:px-7 py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
+                        <button className="bg-[#f1b317] text-[#3b1d5c] mb-4 hover:bg-[#3b1d5c] hover:text-white px-5 sm:px-7 py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
                           Check Eligibility
                         </button>
                       </div>
@@ -193,7 +193,7 @@ export default function HeroSection() {
       <div className="relative w-full bg-[#43246f] rounded-b-2xl">
         
         {/* OVERLAPPING SEARCH CARD */}
-        <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 max-w-5xl mx-auto px-4">
+        <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 max-w-3xl mx-auto px-4">
           <div className="bg-white rounded-2xl sm:rounded-[28px] shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100 relative">
             
             {/* TABS HEADER */}
