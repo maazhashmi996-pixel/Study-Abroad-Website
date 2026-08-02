@@ -39,7 +39,7 @@ export default function Blue() {
         {/* Header Title & Subtitle */}
         <div className="text-center space-y-2 max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-            Common Application Mistakes
+            Common  Mistakes
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 opacity-90 leading-relaxed">
             Most application delays and rejections happen because of these easily avoidable issues.

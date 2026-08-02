@@ -131,6 +131,12 @@ export default function Navbar() {
                   Select Your Program
                 </Link>
                 <Link
+                  href="/receive-offer-letter"
+                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
+                >
+                  Receive Offer Letter
+                </Link>
+                <Link
                   href="/apply-for-visa"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
@@ -142,12 +148,7 @@ export default function Navbar() {
                 >
                   Fulfill Conditions
                 </Link>
-                <Link
-                  href="/receive-offer-letter"
-                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
-                >
-                  Receive Offer Letter
-                </Link>
+
                 <Link
                   href="/submit-application"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"

@@ -83,8 +83,8 @@ export default function Selection() {
           
             <div className="  ">
                 <Image
-                  src="/images/steps/selection.jpg"
-                  alt="selction"
+                  src="/images/steps/2-1.png"
+                  alt="2-1"
                  
                   height={800}
                   width={800}
@@ -151,8 +151,8 @@ export default function Selection() {
             <div className="lg:col-span-4 flex justify-center items-center">
               <div className="relative w-full max-w-[280px] aspect-[4/5]">
                 <Image
-                  src="/images/steps/Why-follow.jpg"
-                  alt="Process order illustration"
+                  src="/images/steps/1.png"
+                  alt="1"
                   fill
                   sizes="(max-width: 1024px) 100vw, 280px"
                   className="object-contain"

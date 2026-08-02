@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -92,7 +91,7 @@ export default function Mistakes() {
             {requiredDocs.map((doc, idx) => (
               <div
                 key={idx}
-                className="bg-[#2E1643] border border-amber-400/30 rounded-xl p-4 flex items-center space-x-3 shadow-md hover:border-amber-400/60 transition-colors"
+                className="bg-[#2E1643]  rounded-xl p-4 flex items-center space-x-3 shadow-md  transition-colors"
               >
                 <div className="w-2 h-2 rounded-full bg-[#ECA82C] shrink-0" />
                 <p className="text-xs sm:text-sm text-slate-100 font-medium leading-snug">

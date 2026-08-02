@@ -181,7 +181,7 @@ export default function Submit() {
               <div className="relative w-full max-w-xs aspect-square">
                 <Image
                   src="/images/steps/2.png"
-                  alt="Student document checklist illustration"
+                  alt="2"
                   fill
                   sizes="(max-width: 1024px) 100vw, 320px"
                   className="object-contain"
