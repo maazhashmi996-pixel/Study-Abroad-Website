@@ -1,48 +1,37 @@
-"use client";
+import Image from "next/image";
 
-const process = [
-  "Free Consultation",
-  "Profile Evaluation",
-  "University Selection",
-  "Application Submission",
-  "Offer Letter",
-  "Visa Filing",
-  "Departure",
-];
-
-export default function Process() {
+export default function Secure() {
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-orange-500 font-semibold uppercase text-xs sm:text-sm tracking-widest">
-            Study Process
-          </span>
-
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#43246f] mt-2 sm:mt-4 tracking-tight">
-            Your Journey Starts Here
-          </h2>
+    <section className="bg-amber-500  text-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 md:py-16">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
+ {/* Image Block */}
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <Image
+            src="/images/about/Secure.jpg"
+            alt="Secure Your Future"
+            width={800}
+            height={700}
+            className="w-full max-w-[650px] h-auto object-cover rounded-2xl shadow-md"
+          />
         </div>
 
-        {/* Process Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {process.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white border border-slate-100 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center"
-            >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-6 shadow-md shrink-0">
-                {index + 1}
-              </div>
 
-              <h3 className="font-semibold text-base sm:text-xl text-[#43246f]">
-                {item}
-              </h3>
-            </div>
-          ))}
+        {/* Text Content Block */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-6 w-full lg:w-1/2">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#43246f] leading-tight">
+            Secure Your Future With Times Consultant
+          </h1>
+
+          <p className="text-sm sm:text-base lg:text-lg text-gray-900 leading-relaxed max-w-2xl">
+            Unlock your future with guaranteed guidance and secure admission in 3000+ world-class universities through our expert counseling.
+          </p>
+
+          <button className="px-6 sm:px-8 py-3 bg-[#43246f] hover:bg-amber-400 text-white hover:text-[#43246f] border-2 border-[#43246f] font-semibold text-sm sm:text-base rounded-full transition-all duration-300 shadow-md active:scale-95">
+            Book a free Consultation
+          </button>
         </div>
+
+       
 
       </div>
     </section>

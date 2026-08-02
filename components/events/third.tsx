@@ -92,18 +92,6 @@ const expoFeatures = [
           </div>
         </div>
       </section>
-
-      {/* 3. UPCOMING EVENTS BANNER (Yellow Background) */}
-      <section className="bg-[#f1b317] py-8 sm:py-10 px-4 sm:px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-lg sm:text-2xl font-bold text-[#3b1d5c] leading-snug">
-            Explore Our Upcoming Events: Your Guide to What&apos;s Next
-          </h2>
-          <button className="bg-[#3b1d5c] hover:bg-[#2a1443] text-white text-xs sm:text-sm font-bold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-all active:scale-95 shadow-sm">
-            View All Events
-          </button>
-        </div>
-      </section>
     </>
   )
 }

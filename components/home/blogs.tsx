@@ -10,37 +10,37 @@ export default function Blogs() {
   const blogs = [
     {
       id: 1,
-      title: "How to Study Abroad Successfully",
+      title: "Counseling",
       image: "/images/home/blog1.webp",
       image2: "/images/home/suitcase.webp",
     },
     {
       id: 2,
-      title: "Top Universities For International Students",
+      title: "Visa Assistance",
       image: "/images/home/blog2.webp",
       image2: "/images/home/suitcase.webp",
     },
     {
       id: 3,
-      title: "Student Visa Requirements Guide",
+      title: "Test Prepration",
       image: "/images/home/blog3.jpg",
       image2: "/images/home/suitcase.webp",
     },
     {
       id: 4,
-      title: "Scholarships for Pakistani Students",
+      title: "Applicataion And Admission Process",
       image: "/images/home/blog4.webp",
       image2: "/images/home/suitcase.webp",
     },
     {
       id: 5,
-      title: "Best Countries to Study Abroad",
+      title: "Scholarship Abroad",
       image: "/images/home/blog5.webp",
       image2: "/images/home/suitcase.webp",
     },
     {
       id: 6,
-      title: "How to Apply for Student Visa",
+      title: "Country And University Selection",
       image: "/images/home/blog6.webp",
       image2: "/images/home/suitcase.webp",
     },
@@ -81,7 +81,7 @@ export default function Blogs() {
               spaceBetween: 30,
             },
           }}
-          className="!pb-4"
+          className="pb-4"
         >
           {blogs.map((blog) => (
             <SwiperSlide key={blog.id}>

@@ -1,13 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { IoIosArrowDown } from "react-icons/io";
+
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [stepsOpen, setStepsOpen] = useState(false);
@@ -103,11 +108,14 @@ export default function Navbar() {
             <li className="relative group">
               <Link
                 href="/study-abroad-steps"
-                className="flex items-center gap-1 hover:text-yellow-400"
+                className={`flex items-center justify-between ${
+                  pathname === "/study-abroad-steps"
+                    ? "text-yellow-400"
+                    : "text-white hover:text-yellow-400"
+                }`}
               >
                 Study Abroad Steps
               </Link>
-              <IoIosArrowDown />
 
               <div className="absolute left-0 top-full mt-3 w-64 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
                 <Link
@@ -253,17 +261,16 @@ export default function Navbar() {
 
             {/* Accordion 2: Steps */}
             <li>
-              <button
-                onClick={() => setStepsOpen(!stepsOpen)}
-                className="flex items-center justify-between w-full"
+              <Link
+                href="/study-abroad-steps"
+                className={`flex items-center justify-between ${
+                  pathname === "/study-abroad-steps"
+                    ? "text-yellow-400"
+                    : "text-white hover:text-yellow-400"
+                }`}
               >
-                <Link href="/study-abroad-steps">
-                  <span>Study Abroad Steps</span>
-                </Link>
-                <IoIosArrowDown
-                  className={`transition-transform ${stepsOpen ? "rotate-180" : ""}`}
-                />
-              </button>
+                Study Abroad Steps
+              </Link>
               {stepsOpen && (
                 <div className="pl-4 mt-2 flex flex-col gap-2 text-xs text-gray-200">
                   <Link
