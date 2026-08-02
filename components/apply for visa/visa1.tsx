@@ -1,15 +1,51 @@
-import React from 'react';
-
+"use client";
+import Image from 'next/image';
 export default function ApplyForVisaPage() {
+const boxes=[
+  {
+    icon:'/images/steps/research.png',
+    title:"Unconditional offer ",
+    description:"from the university (or CAS for UK, CoE for Australia, LOA for Canada). No final admission = no visa."
+  },
+  {
+    icon:'/images/steps/preference.png',
+    title:"Valid passport  ",
+    description:"(covering your study period)."
+  },
+  {
+    icon:'/images/steps/location.png',
+    title:"Proof of tuition payment / deposit ",
+    description:"(many UK/Aus universities ask for this before giving CAS/CoE)"
+  },
+  {
+    icon:'/images/steps/budget.png',
+    title:" Proof of funds ",
+    description:"that actually match the 2025 rules of that country (Canada increased funds from Sept 1, 2025; you can’t show old amounts)."
+  },
+  {
+    icon:'/images/steps/language.png',
+    title:"English test ",
+    description:" (if your visa route requires separate proof)."
+  },
+  {
+    icon:'/images/steps/product.png',
+    title:" Medical / TB test / biometrics readiness",
+    description:"(Canada gives 30 days for biometrics after letter; Australia needs health & OSHC; UK sometimes asks for TB for certain countries)."
+  },
+  {
+    icon:'/images/steps/product.png',
+    title:"SOP / Study plan / GTE-style explanation ",
+    description:"(Canada & Australia especially care about intention)."
+  },
+]
+
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-12 px-3 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white p-4 sm:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-sm border border-slate-200">
+    <main className="min-h-screen   py-6 sm:py-12 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto bg-white p-4 sm:p-8 lg:p-10    ">
         
         {/* Header Section */}
         <header className="border-b border-slate-200 pb-4 sm:pb-6 mb-6 sm:mb-8">
-          <span className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-blue-600 bg-blue-50 px-2.5 sm:px-3 py-1 rounded-full inline-block mb-2">
-            Step 07
-          </span>
+        
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
             Apply for Visa
           </h1>
@@ -20,47 +56,77 @@ export default function ApplyForVisaPage() {
 
         {/* Section 1: Why this step matters */}
         <section className="mb-8 sm:mb-10">
+          <div className='grid grid-cols-2'>
+            <div>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3">
             Why This Step Matters
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            This is the part where everything becomes real. You already have your unconditional offer (or CAS/CoE/LOA depending on country), but you cannot travel or start classes until the embassy/high commission approves your student visa / study permit.
+            This is the part where everything becomes real. You already have your <span className='font-bold text-black'>unconditional offer</span>  (or CAS/CoE/LOA depending on country), but you <span className='font-bold text-black'> cannot travel</span>  or start classes until the embassy/high commission approves your<span className='font-bold text-black'>student visa / study permit.</span> 
           </p>
           
-          <div className="mt-4 sm:mt-6 bg-blue-50/50 border-l-4 border-blue-600 p-4 sm:p-5 rounded-r-lg">
-            <h3 className="font-semibold text-slate-900 text-base sm:text-lg mb-2">
+          <div className="   sm:p-5 rounded-r-lg">
+            <h3 className=" text-base sm:text-lg mb-2">
               A strong visa file shows 4 things:
             </h3>
-            <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-slate-700 text-xs sm:text-sm md:text-base">
-              <li>You have a genuine offer from a recognized institution (CAS – UK, LOA – Canada, CoE – Australia).</li>
-              <li>You have enough money to pay tuition + live in that country.</li>
-              <li>You meet English / academic requirements.</li>
-              <li>You're a genuine student who will follow visa rules and return/transition legally.</li>
+            <ul className="   text-slate-700 text-xs sm:text-sm md:text-base">
+              <li>You have a <span className='font-bold text-black'> genuine offer</span> from a recognized institution (CAS – UK, LOA – Canada, CoE – Australia).</li>
+              <li>You have <span className='font-bold text-black'>enough money</span> to pay tuition + live in that country.</li>
+              <li>You meet <span className='font-bold text-black'>English / academic</span> requirements.</li>
+              <li>You're a <span className='font-bold text-black'> genuine student</span> who will follow visa rules and return/transition legally.</li>
             </ul>
           </div>
+          </div>
+         
+          <div className=''>
+            <Image
+                    src="/images/steps/8-2.png"
+                    alt="8-2"
+                   height={500}
+                  width={400}
+                    className=""
+                  />
+          </div>
+           </div>
         </section>
 
         {/* Section 2: Checklist */}
         <section className="mb-8 sm:mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">
+          <div className='flex justify-between gap-10'>
+
+            <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">
             What You Need Before Starting
-          </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
-            {[
-              "Unconditional offer (CAS / CoE / LOA)",
-              "Valid passport (covering study period)",
-              "Proof of tuition payment / deposit",
-              "Proof of funds matching current country rules",
-              "English test scores (if required)",
-              "Medical / TB test / biometrics readiness",
-              "SOP / Study plan / GTE explanation",
-            ].map((item, idx) => (
-              <li key={idx} className="flex items-center space-x-2.5 bg-slate-50 p-2.5 sm:p-3 rounded-lg border border-slate-100 text-xs sm:text-sm font-medium text-slate-700">
-                <span className="text-green-500 font-bold flex-shrink-0">✓</span>
-                <span>{item}</span>
-              </li>
+              </h2>
+            <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+            {boxes.map((boxes, index) => (
+              <div key={index} className="flex flex-col gap-2  space-x-2.5  p-4 sm:p-3 rounded-lg border border-black text-xs sm:text-sm font-medium text-black">
+                <Image 
+                src={boxes.icon}
+                alt='icon'
+                height={80}
+                width={80}
+                className='text-black'
+                />
+                <h4 className='text-blue-950 font-extrabold'>{boxes.title}</h4>
+                <p className='text-black'>{boxes.description}</p>
+                
+              </div>
             ))}
-          </ul>
+            </div>
+            </div>
+             </div>
+               <div className=''>
+              <Image
+                    src="/images/steps/offer.png"
+                    alt="offer"
+                 height={800}
+                  width={800}
+                  className="  "
+                  />
+            </div>
+          </div>
         </section>
 
         {/* Section 3: Process */}

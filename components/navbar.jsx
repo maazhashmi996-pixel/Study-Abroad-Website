@@ -47,7 +47,9 @@ export default function Navbar() {
             {/* Services Dropdown */}
             <li className="relative group">
               <button className="flex items-center gap-1 hover:text-yellow-400">
-                <Link href="/service">Services</Link>
+                <span>
+                  <Link href="/services">Services</Link>
+                </span>
                 <IoIosArrowDown />
               </button>
 
@@ -99,10 +101,13 @@ export default function Navbar() {
 
             {/* Study Abroad Steps Dropdown */}
             <li className="relative group">
-              <button className="flex items-center gap-1 hover:text-yellow-400">
-                <Link href="/study-abroad-steps">Study Abroad Steps</Link>
-                <IoIosArrowDown />
-              </button>
+              <Link
+                href="/study-abroad-steps"
+                className="flex items-center gap-1 hover:text-yellow-400"
+              >
+                Study Abroad Steps
+              </Link>
+              <IoIosArrowDown />
 
               <div className="absolute left-0 top-full mt-3 w-64 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
                 <Link
@@ -159,9 +164,16 @@ export default function Navbar() {
             +92 345 2066 100
           </div>
 
-          <button className="rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap">
-            Get Free Consultation
-          </button>
+          <div>
+            <button>
+              <Link
+                href="/free-consultation"
+                className="inline-block rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
+              >
+                Get Free Consultation
+              </Link>
+            </button>
+          </div>
         </div>
 
         {/* 4. Hamburger Icon for Mobile */}
@@ -196,9 +208,9 @@ export default function Navbar() {
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center justify-between w-full"
               >
-                <Link href="/service">
-                  <span>Services</span>
-                </Link>
+                <span>
+                  <Link href="/services">Services</Link>
+                </span>
                 <IoIosArrowDown
                   className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
                 />
@@ -304,9 +316,16 @@ export default function Navbar() {
               <FaPhoneAlt className="text-orange-400" />
               +92 345 2066 100
             </div>
-            <button className="w-full rounded-full bg-orange-500 py-3 text-xs font-semibold text-white hover:bg-orange-600 transition">
-              Get Free Consultation
-            </button>
+            <div>
+              <button>
+                <Link
+                  href="/free-consultation"
+                  className="inline-block rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
+                >
+                  Get Free Consultation
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
       )}

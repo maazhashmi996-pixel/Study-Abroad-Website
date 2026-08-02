@@ -11,7 +11,7 @@ export default function VisaHero() {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:leading-tight lg:leading-tight text-[#43246f] tracking-tight">
-              Tailored Services for Your{" "}
+              Tailored Services for Your
               <span className="block sm:inline lg:block">
                 Study Abroad Success
               </span>
@@ -32,11 +32,11 @@ export default function VisaHero() {
           <div className="flex justify-center lg:justify-end w-full">
             <div className="relative w-full max-w-md lg:max-w-xl aspect-square sm:aspect-[4/3] lg:aspect-square">
               <Image
-                src="/images/visa-hero.webp"
-                alt="Visa Services"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                src="/images/services/Tailored-Services.jpg"
+                alt="Tailored-Services"
+               height={800}
+               width={800}
+             
                 className="object-contain"
               />
             </div>

@@ -1,5 +1,6 @@
 import EventHero from "@/components/events/eventHero"
 import ExpoBenefits from "@/components/events/expoBenefits"
+import Third from "@/components/events/third"
 
 
  function page() {
@@ -7,6 +8,7 @@ import ExpoBenefits from "@/components/events/expoBenefits"
     <div>
       <EventHero/>
       <ExpoBenefits/>
+      <Third/>
     </div>
   )
 }

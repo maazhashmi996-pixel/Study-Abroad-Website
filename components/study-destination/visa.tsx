@@ -1,3 +1,5 @@
+"use client";
+
 export default function Visa() {
   const visaRequirements = [
     "Letter of admission from an educational institution",
@@ -18,7 +20,7 @@ export default function Visa() {
         {/* Main Heading */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold border-b border-purple-400/20 pb-3 text-center md:text-left">
           Student Visa Requirements In Denmark
-        </h1>
+        </h1>  
 
         {/* Responsive Grid List */}
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 text-sm sm:text-base md:text-lg">
