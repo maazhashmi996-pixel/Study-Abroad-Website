@@ -145,7 +145,7 @@ export default function LanguageTestPreparationPage() {
                 );
               })}
             </div>
-          </div>
+          </div>  
 
           {/* RIGHT CONTENT AREA */}
           <div className="lg:col-span-3 space-y-8 sm:space-y-10">

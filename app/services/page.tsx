@@ -1,3 +1,6 @@
+"use client";
+
+
 import Benefits from '@/components/services/benefits'
 import ContactCTA from '@/components/services/contact'
 import FAQ from '@/components/services/faq'

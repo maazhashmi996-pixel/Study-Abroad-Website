@@ -7,7 +7,7 @@ function Page() {
   return (
     <div>
       <First/>
-    < StudyAbroadServices/>
+      <StudyAbroadServices/>
       <Third/>
     </div>
   )

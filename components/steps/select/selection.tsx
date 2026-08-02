@@ -16,7 +16,7 @@ export default function Selection() {
     { number: 2, title: "Submit Application", href: "/study-abroad-steps/submit-application" },
     { number: 3, title: "Receive Offer Letter", href: "/study-abroad-steps/receive-offer-letter" },
     { number: 4, title: "Fulfill Conditions", href: "/study-abroad-steps/fulfill-conditions" },
-    { number: 5, title: "Pay Tuition Deposit", href: "/study-abroad-steps/pay-tuition-deposit" },
+    { number: 5, title: "Pay Tuition Deposit", href: "/study-abroad-steps/pay-tution-deposit" },
     { number: 6, title: "Get Unconditional Offer", href: "/study-abroad-steps/get-unconditional-offer" },
     { number: 7, title: "Apply for Visa", href: "/study-abroad-steps/apply-for-visa" },
     { number: 8, title: "Start Your Program", href: "/study-abroad-steps/start-your-program" },
@@ -46,16 +46,16 @@ export default function Selection() {
       <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16">
         
         {/* HERO SECTION */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className=" flex gap-15 ">
           
           {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-6 text-center sm:text-left">
+          <div className=" flex flex-col gap-4">
             <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#3B1E54] leading-tight tracking-tight">
               Study Abroad Steps: From Course Selection to Your First Class
             </h1>
 
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Studying abroad is not one form or one email; it’s a{" "}
+              Studying abroad is not one form or one email; it’s a
               <strong className="text-[#3B1E54]">structured sequence</strong>. Every successful international student follows these 8 core stages:
             </p>
 
@@ -77,34 +77,24 @@ export default function Selection() {
             <p className="text-xs sm:text-sm text-slate-500 italic pt-1">
               Miss one step or delay submission and you risk missing your target intake.
             </p>
-          </div>
+             </div>
 
-          {/* Right Hero Illustration */}
-          <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="relative w-full max-w-xs sm:max-w-sm aspect-square bg-purple-50 rounded-3xl p-6 flex flex-col items-center justify-between border border-purple-100 shadow-sm overflow-hidden">
-              <div className="flex justify-center space-x-3 w-full pt-2">
-                <div className="w-12 h-12 rounded-2xl bg-[#3B1E54] text-[#ECA82C] flex items-center justify-center shadow">
-                  <GraduationCap className="w-6 h-6" />
-                </div>
-                <div className="w-12 h-12 rounded-2xl bg-[#ECA82C] text-[#3B1E54] flex items-center justify-center shadow">
-                  <MapPin className="w-6 h-6" />
-                </div>
-              </div>
-
-              <div className="relative w-full h-48 sm:h-56 mt-4">
+             {/* Right Hero Illustration */}
+          
+            <div className="  ">
                 <Image
                   src="/images/steps/selection.jpg"
-                  alt="Field selection illustration"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 380px"
+                  alt="selction"
+                 
+                  height={800}
+                  width={800}
+                 
                   className="object-cover rounded-xl"
-                  priority
+                
                 />
               </div>
-            </div>
-          </div>
-
         </div>
+       
 
         {/* DIVIDER WITH STAR */}
         <div className="relative flex py-2 items-center">
