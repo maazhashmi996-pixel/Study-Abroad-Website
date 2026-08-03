@@ -1,43 +1,51 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Journey() {
-  const stepsCards = [
-    {
-      title: "Select Your Program",
-      desc: "This is where you match your academics + budget + country preference + intake. A good choice here increases acceptance and visa success.",
-    },
-    {
-      title: "Submit Application",
-      desc: "You fill the university / portal form, upload documents, and pay the application fee (if required). Clean, complete files get faster decisions.",
-    },
-    {
-      title: "Receive Offer Letter",
-      desc: "The university reviews your file and sends a conditional offer (usually). You must read it carefully as it contains deadlines and conditions.",
-    },
-    {
-      title: "Fulfill Conditions",
-      desc: "You send whatever the university is still asking for; final transcript, IELTS/PTE, passport copy, deposit in some cases. This is what unlocks your unconditional offer.",
-    },
-    {
-      title: "Pay Tuition Deposit",
-      desc: "To secure your seat, you pay the tuition deposit mentioned in your offer letter, using the official university channel. Delays here = delays in CAS/CoE.",
-    },
-    {
-      title: "Get Unconditional Offer",
-      desc: "Now the university confirms all good, nothing pending, you're fully accepted. This is the admission proof most embassies want to see.",
-    },
-    {
-      title: "Apply for Visa",
-      desc: "You submit your student visa / study permit file with admission proof, funds, medical/biometrics, and a proper study plan (where needed).",
-    },
-    {
-      title: "Start Your Program",
-      desc: "You travel, clear immigration, enroll at the university, attend orientation, and start classes on time without breaking visa rules.",
-    },
-  ];
-
+ const stepsCards = [
+  {
+    link: "/select-program",
+    title: "Select Your Program",
+    desc: "This is where you match your academics + budget + country preference + intake. A good choice here increases acceptance and visa success.",
+  },
+  {
+    link: "/submit-application",
+    title: "Submit Application",
+    desc: "You fill the university / portal form, upload documents, and pay the application fee (if required). Clean, complete files get faster decisions.",
+  },
+  {
+    link: "@app/receive-offer-letter",
+    title: "Receive Offer Letter",
+    desc: "The university reviews your file and sends a conditional offer (usually). You must read it carefully as it contains deadlines and conditions.",
+  },
+  {
+    link: "/fulfill-conditions",
+    title: "Fulfill Conditions",
+    desc: "You send whatever the university is still asking for; final transcript, IELTS/PTE, passport copy, deposit in some cases. This is what unlocks your unconditional offer.",
+  },
+  {
+    link: "/pay-tution-deposit",
+    title: "Pay Tuition Deposit",
+    desc: "To secure your seat, you pay the tuition deposit mentioned in your offer letter, using the official university channel. Delays here = delays in CAS/CoE.",
+  },
+  {
+    link: "/get-unconditional-offer",
+    title: "Get Unconditional Offer",
+    desc: "Now the university confirms all good, nothing pending, you're fully accepted. This is the admission proof most embassies want to see.",
+  },
+  {
+    link: "/apply-for-visa",
+    title: "Apply for Visa",
+    desc: "You submit your student visa / study permit file with admission proof, funds, medical/biometrics, and a proper study plan (where needed).",
+  },
+  {
+    link: "/start-your-program",
+    title: "Start Your Program",
+    desc: "You travel, clear immigration, enroll at the university, attend orientation, and start classes on time without breaking visa rules.",
+  },
+];
   const valueProps = [
     "We check your profile before telling you where to apply",
     "We prepare and submit applications on time",
@@ -67,6 +75,7 @@ export default function Journey() {
           {/* 8 Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stepsCards.map((step, idx) => (
+               <Link key={idx} href={step.link}>
               <div
                 key={idx}
                 className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between border border-amber-200/50 space-y-3"
@@ -83,6 +92,7 @@ export default function Journey() {
                   </p>
                 </div>
               </div>
+                </Link>
             ))}
           </div>
 

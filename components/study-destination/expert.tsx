@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 export default function Expert() {
   return (
     <section className="bg-amber-500 px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12 text-[#43246f]">
@@ -16,11 +18,13 @@ export default function Expert() {
         </p>
 
         {/* Action Button */}
-        <button className="mt-2 bg-[#43246f] text-white hover:text-[#43246f] hover:bg-amber-400 border-2 border-[#43246f] font-semibold py-3 px-8 sm:px-10 rounded-full transition duration-300 shadow-md">
+        <Link 
+          href="/get" 
+          className="mt-2 inline-block bg-[#43246f] text-white hover:text-[#43246f] hover:bg-amber-400 border-2 border-[#43246f] font-semibold py-3 px-8 sm:px-10 rounded-full transition duration-300 shadow-md text-center"
+        >
           APPLY NOW
-        </button>
-
-      </div>
+        </Link>
+</div>
     </section>
   );
 }

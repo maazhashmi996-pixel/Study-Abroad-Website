@@ -1,4 +1,4 @@
-
+"use client";
 
 import Adventages from '@/components/home/adventages'
 import Blogs from '@/components/home/blogs'
@@ -9,6 +9,7 @@ import Popular from '@/components/home/popular'
 import Share from '@/components/home/share'
 import Speak from '@/components/home/speak'
 import Time from '@/components/home/time'
+import Update from '@/components/home/update'
 
 function page() {
   return (
@@ -22,6 +23,7 @@ function page() {
       <Popular/>
       <Time/>
       <Speak/>
+   <Update/>
 
     </div>
   )
