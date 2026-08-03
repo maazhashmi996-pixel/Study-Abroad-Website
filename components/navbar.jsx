@@ -131,6 +131,12 @@ export default function Navbar() {
                   Select Your Program
                 </Link>
                 <Link
+                  href="/receive-offer-letter"
+                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
+                >
+                  Receive Offer Letter
+                </Link>
+                <Link
                   href="/apply-for-visa"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
@@ -142,12 +148,7 @@ export default function Navbar() {
                 >
                   Fulfill Conditions
                 </Link>
-                <Link
-                  href="/receive-offer-letter"
-                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
-                >
-                  Receive Offer Letter
-                </Link>
+
                 <Link
                   href="/submit-application"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
@@ -261,16 +262,17 @@ export default function Navbar() {
 
             {/* Accordion 2: Steps */}
             <li>
-              <Link
-                href="/study-abroad-steps"
-                className={`flex items-center justify-between ${
-                  pathname === "/study-abroad-steps"
-                    ? "text-yellow-400"
-                    : "text-white hover:text-yellow-400"
-                }`}
+              <button
+                onClick={() => setStepsOpen(!servicesOpen)}
+                className="flex items-center justify-between w-full"
               >
-                Study Abroad Steps
-              </Link>
+                <span>
+                  <Link href="/study-abroad-steps">Study Abroad Steps</Link>
+                </span>
+                <IoIosArrowDown
+                  className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
               {stepsOpen && (
                 <div className="pl-4 mt-2 flex flex-col gap-2 text-xs text-gray-200">
                   <Link

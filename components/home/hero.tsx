@@ -1,12 +1,15 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { Search, ChevronDown } from "lucide-react";
 
 // Swiper Components & Styles
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 import {
   FaUser,
@@ -16,12 +19,12 @@ import {
   FaNewspaper,
   FaCertificate,
 } from "react-icons/fa";
-import "swiper/css";
-import "swiper/css/effect-fade";
+import Link from "next/link";
 
 type TabType = "courses" | "universities" | "scholarships" | "intelligent";
 
-export default function HeroSection() {
+export default function HeroSlider() {
+
   // SLIDER IMAGES & BOXES DATA
   const boxes = [
     {
@@ -130,71 +133,80 @@ export default function HeroSection() {
   };
 
   return (
+    <>
     <div className="relative w-full font-sans bg-[#43246f] rounded-2xl">
       {/* ---------------- 1. TOP HERO SLIDER ---------------- */}
-      <section className="relative w-full h-[450px] sm:h-[520px] md:h-[580px] overflow-hidden rounded-t-2xl">
-        <Swiper
-          modules={[Autoplay, EffectFade]}
-          effect="fade"
-          slidesPerView={1}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          className="w-full h-full"
-        >
-          {images.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="relative w-full h-full">
-                {/* Background Image */}
-                <Image
-                  src={item.image}
-                  alt="Study Abroad"
-                  fill
-                  priority
-                  className="object-cover"
-                />
+      <section className="relative w-full min-h-[520px] sm:min-h-[580px] md:h-[650px] lg:h-[720px] overflow-hidden rounded-t-2xl">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        slidesPerView={1}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        className="w-full h-full"
+      >
+        {images.map((item) => (
+          <SwiperSlide key={item.id} className="w-full h-full">
+            <div className="relative w-full h-full min-h-[520px] sm:min-h-[580px] md:min-h-full flex items-center">
+              
+              {/* Background Image: Mobile par center-contain/fit aur desktop par cover */}
+              <Image
+                src={item.image}
+                alt="Study Abroad"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-center sm:object-center"
+              />
 
-                {/* Purple Overlay */}
-                <div className="absolute inset-0 bg-[#3b1d5c]/40" />
+              {/* Purple Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#3b1d5c]/70 via-[#3b1d5c]/50 to-[#3b1d5c]/80 sm:bg-[#3b1d5c]/40 z-10" />
 
-                {/* CONDITIONAL TEXT CONTENT */}
-                {item.hasText && (
-                  <div className="absolute inset-0 flex items-center max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pb-24 sm:pb-28">
-                    <div className="max-w-2xl text-white z-10">
-                      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight drop-shadow-md">
-                        {item.title}
-                      </h1>
+                  {/* CONDITIONAL TEXT CONTENT */}
+                   {item.hasText && (
+                  <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-10 pb-20 sm:pb-24 flex flex-col justify-center items-center text-center sm:items-start sm:text-left">
+                  <div className="max-w-2xl text-white">
+                    
+                    {/* Heading: Responsive Text Sizing */}
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight drop-shadow-lg">
+                      {item.title}
+                    </h1>
 
-                      <p className="mt-3 sm:mt-4 text-xs sm:text-base md:text-lg text-gray-100 font-medium leading-relaxed">
-                        {item.subtitle}
-                      </p>
+                    {/* Subtitle */}
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-base md:text-lg text-gray-100 font-medium leading-relaxed max-w-lg mx-auto sm:mx-0">
+                      {item.subtitle}
+                    </p>
 
-                      <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-                        <button className="mb-5 text-blue hover:bg-[#f1b317] hover:text-white px-5 sm:px-7 border-white border py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
-                          Free consultation
-                        </button>
+                    {/* Action Buttons: Mobile par centered flex wrap */}
+                    <div className="mt-6 sm:mt-8 flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4">
+                      
+                        <Link href="/free-consultation" className="text-white hover:bg-[#f1b317] hover:text-[#3b1d5c] border-2 border-white px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-all active:scale-95 cursor-pointer">
+                        Free consultation
+                        </Link>
+                      
 
-                        <button className="bg-[#f1b317] text-[#3b1d5c] mb-4 hover:bg-[#3b1d5c] hover:text-white px-5 sm:px-7 py-3.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-transform active:scale-95 cursor-pointer">
-                          Check Eligibility
-                        </button>
-                      </div>
+                        <Link href="/eligibility "  className="bg-[#f1b317] text-[#3b1d5c] hover:bg-white hover:text-[#3b1d5c] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm md:text-base shadow-md transition-all active:scale-95 cursor-pointer">
+                        Check Eligibility
+                        </Link>
                     </div>
+
                   </div>
+               </div>
                 )}
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+       </section>
 
       {/* ---------------- 2. WHY CHOOSE SECTION WITH OVERLAPPING CARD ---------------- */}
       <div className="relative w-full bg-[#43246f] rounded-b-2xl">
         
         {/* OVERLAPPING SEARCH CARD */}
-        <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 max-w-3xl mx-auto px-4">
-          <div className="bg-white rounded-2xl sm:rounded-[28px] shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100 relative">
+           <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 w-full max-w-3xl mx-auto px-3 sm:px-4">          <div className="bg-white rounded-2xl sm:rounded-[28px] shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100 relative">
             
             {/* TABS HEADER */}
             <div className="flex items-center gap-4 sm:gap-8 border-b border-gray-100 pb-3 mb-5 overflow-x-auto scrollbar-none">
@@ -461,7 +473,7 @@ export default function HeroSection() {
                 type="button"
                 className="bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-extrabold text-xs sm:text-sm px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
               >
-                <Search className="w-4 h-4 stroke-[3]" />
+                <Search className="w-4 h-4 stroke-[3]"/>
                 <span>Search</span>
               </button>
             </div>
@@ -469,7 +481,7 @@ export default function HeroSection() {
         </div>
 
         {/* WHY CHOOSE CONTENT AREA */}
-        <div className="flex flex-col  px-20 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
+        <div className="flex flex-col  px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center md:text-left">
             Why Choose Times Consultant?
           </h2>
@@ -497,5 +509,6 @@ export default function HeroSection() {
 
       </div>
     </div>
+    </>
   );
 }

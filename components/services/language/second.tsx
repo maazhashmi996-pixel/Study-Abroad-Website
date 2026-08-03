@@ -11,6 +11,7 @@ import {
   Target,
   Sparkles,
 } from "lucide-react";
+import Image from "next/image";
 
 interface CourseCard {
   title: string;
@@ -238,12 +239,13 @@ export default function LanguageTestPreparationPage() {
               
               {/* Left Graphic Illustration */}
               <div className="md:col-span-4 flex flex-col items-center justify-center text-center p-2">
-                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-purple-200/60 rounded-full flex items-center justify-center mb-3">
-                  <Sparkles className="w-10 h-10 sm:w-14 sm:h-14 text-[#3B1E54]" />
-                </div>
-                <span className="font-extrabold text-xl sm:text-2xl text-[#3B1E54] tracking-widest">
-                  START
-                </span>
+               <Image
+                              src="/images/services/10-1.png"
+                              alt="10-1"
+                           width={500}
+                           height={400}
+                              className="object-cover"
+                            />
               </div>
 
               {/* Right Form */}

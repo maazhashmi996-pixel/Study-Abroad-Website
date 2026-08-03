@@ -7,7 +7,6 @@ import {
   FileText,
   AlertCircle,
   FileCheck,
-  MapPin,
 } from "lucide-react";
 
 export default function Selection() {
@@ -42,28 +41,28 @@ export default function Selection() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16">
+    <div className="min-h-screen bg-white text-slate-800 py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-6xl mx-auto space-y-10 sm:space-y-16">
         
         {/* HERO SECTION */}
-        <div className=" flex gap-15 ">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           
           {/* Left Text Content */}
-          <div className=" flex flex-col gap-4">
-            <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#3B1E54] leading-tight tracking-tight">
+          <div className="flex flex-col gap-4 w-full lg:w-1/2">
+            <h1 className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-[#3B1E54] leading-tight tracking-tight">
               Study Abroad Steps: From Course Selection to Your First Class
             </h1>
 
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Studying abroad is not one form or one email; it’s a
+              Studying abroad is not one form or one email; it’s a{" "}
               <strong className="text-[#3B1E54]">structured sequence</strong>. Every successful international student follows these 8 core stages:
             </p>
 
             {/* 8 Steps Numbered List */}
-            <ol className="space-y-2.5 pt-1 text-left max-w-xl mx-auto sm:mx-0">
+            <ol className="space-y-2.5 pt-1 text-left w-full">
               {stepsList.map((step) => (
                 <li key={step.number} className="flex items-center space-x-2 text-xs sm:text-sm font-bold text-[#3B1E54]">
-                  <span className="w-5 text-right text-slate-400">{step.number}.</span>
+                  <span className="w-5 text-right text-slate-400 shrink-0">{step.number}.</span>
                   <Link
                     href={step.href}
                     className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
@@ -77,24 +76,22 @@ export default function Selection() {
             <p className="text-xs sm:text-sm text-slate-500 italic pt-1">
               Miss one step or delay submission and you risk missing your target intake.
             </p>
-             </div>
+          </div>
 
-             {/* Right Hero Illustration */}
-          
-            <div className="  ">
-                <Image
-                  src="/images/steps/selection.jpg"
-                  alt="selction"
-                 
-                  height={800}
-                  width={800}
-                 
-                  className="object-cover rounded-xl"
-                
-                />
-              </div>
+          {/* Right Hero Illustration Container */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="relative w-full max-w-[500px] aspect-[4/3] sm:aspect-square">
+              <Image
+                src="/images/steps/2-1.png"
+                alt="Study abroad step illustration"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-contain rounded-xl"
+              />
+            </div>
+          </div>
         </div>
-       
 
         {/* DIVIDER WITH STAR */}
         <div className="relative flex py-2 items-center">
@@ -106,7 +103,7 @@ export default function Selection() {
         {/* WHY FOLLOW THE STEPS IN ORDER SECTION */}
         <div className="space-y-8">
           <div className="text-center space-y-1">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3B1E54] tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-[#3B1E54] tracking-tight">
               Why follow the steps in order?
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto">
@@ -139,7 +136,7 @@ export default function Selection() {
               <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center">
                 <p className="text-xs sm:text-sm text-slate-700">
                   The most reliable pathway (utilized by Times Consultant) is{" "}
-                  <strong className="text-[#3B1E54] whitespace-nowrap">
+                  <strong className="text-[#3B1E54] inline-block">
                     1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
                   </strong>
                   , with zero skipped stages.
@@ -151,8 +148,8 @@ export default function Selection() {
             <div className="lg:col-span-4 flex justify-center items-center">
               <div className="relative w-full max-w-[280px] aspect-[4/5]">
                 <Image
-                  src="/images/steps/Why-follow.jpg"
-                  alt="Process order illustration"
+                  src="/images/steps/1.png"
+                  alt="Decision step illustration"
                   fill
                   sizes="(max-width: 1024px) 100vw, 280px"
                   className="object-contain"
