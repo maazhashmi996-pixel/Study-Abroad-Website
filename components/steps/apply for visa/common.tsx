@@ -32,7 +32,7 @@ export default function Common() {
   ];
 
   return (
-    <div className="w-full font-sans  text-white">
+    <div className="w-full font-sans mx-auto  text-white">
       {/* Section 1: Common Mistakes */}
       <section className="py-12 bg-[#2a1a4a]  max-w-7xl text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2">

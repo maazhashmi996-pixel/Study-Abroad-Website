@@ -10,15 +10,16 @@ import {
 } from "lucide-react";
 
 export default function Selection() {
+  // FIXED: Array ke properties ko render keys (href, number) ke sath match kar diya gaya hai
   const stepsList = [
-    { number: 1, title: "Select Your Program", href: "/study-abroad-steps/select-your-program" },
-    { number: 2, title: "Submit Application", href: "/study-abroad-steps/submit-application" },
-    { number: 3, title: "Receive Offer Letter", href: "/study-abroad-steps/receive-offer-letter" },
-    { number: 4, title: "Fulfill Conditions", href: "/study-abroad-steps/fulfill-conditions" },
-    { number: 5, title: "Pay Tuition Deposit", href: "/study-abroad-steps/pay-tution-deposit" },
-    { number: 6, title: "Get Unconditional Offer", href: "/study-abroad-steps/get-unconditional-offer" },
-    { number: 7, title: "Apply for Visa", href: "/study-abroad-steps/apply-for-visa" },
-    { number: 8, title: "Start Your Program", href: "/study-abroad-steps/start-your-program" },
+    { number: 1, title: "Select Your Program", href: "/select-your-program" },
+    { number: 2, title: "Submit Application", href: "/submit-application" },
+    { number: 3, title: "Receive Offer Letter", href: "/receive-offer-letter" },
+    { number: 4, title: "Fulfill Conditions", href: "/fulfill-conditions" },
+    { number: 5, title: "Pay Tuition Deposit", href: "/pay-tution-deposit" },
+    { number: 6, title: "Get Unconditional Offer", href: "/get-unconditional-offer" },
+    { number: 7, title: "Apply for Visa", href: "/apply-for-visa" },
+    { number: 8, title: "Start Your Program", href: "/start-your-program" },
   ];
 
   const reasonCards = [
@@ -83,7 +84,7 @@ export default function Selection() {
             <div className="relative w-full max-w-[500px] aspect-[4/3] sm:aspect-square">
               <Image
                 src="/images/steps/2-1.png"
-                alt="Study abroad step illustration"
+                alt="2-1"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 500px"

@@ -3,12 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import { IoIosArrowDown } from "react-icons/io";
-
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 export default function Navbar() {
@@ -19,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="z-50 bg-white py-4 shadow-sm sticky top-0 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-8xl mx-auto flex items-center justify-between">
         {/* 1. Logo */}
         <div className="relative z-10 flex-shrink-0">
           <Link href="/">
@@ -51,33 +48,40 @@ export default function Navbar() {
 
             {/* Services Dropdown */}
             <li className="relative group">
-              <button className="flex items-center gap-1 hover:text-yellow-400">
-                <span>
-                  <Link href="/services">Services</Link>
-                </span>
-                <IoIosArrowDown />
-              </button>
+              <Link
+                href="/services"
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center justify-between w-full gap-1"
+              >
+                <span>Services</span>
+                <IoIosArrowDown
+                  className={`transition-transform duration-200 ${
+                    servicesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </Link>
 
-              <div className="absolute left-0 top-full mt-3 w-60 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
-                <Link
-                  href="/Accommodation"
-                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
-                >
-                  Accommodation
-                </Link>
-                <Link
-                  href="/study-abroad"
-                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
-                >
-                  Study Abroad
-                </Link>
-                <Link
-                  href="/languages"
-                  className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
-                >
-                  Languages
-                </Link>
-              </div>
+              {servicesOpen && (
+                <div className="absolute left-0 top-full mt-3 w-48 rounded-md bg-[#43246f] shadow-2xl z-[9999] p-3 flex flex-col gap-2 text-xs text-gray-200">
+                  <Link href="/Accommodation" onClick={() => setIsOpen(false)}>
+                    Accommodation
+                  </Link>
+                  <Link
+                    href="/study-abroad"
+                    className="hover:text-yellow-400"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Study Abroad
+                  </Link>
+                  <Link
+                    href="/languages"
+                    className="hover:text-yellow-400"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Languages
+                  </Link>
+                </div>
+              )}
             </li>
 
             <li>
@@ -148,7 +152,6 @@ export default function Navbar() {
                 >
                   Fulfill Conditions
                 </Link>
-
                 <Link
                   href="/submit-application"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
@@ -159,7 +162,7 @@ export default function Navbar() {
                   href="/pay-tution-deposit"
                   className="block px-5 py-3 hover:bg-yellow-500 hover:text-black"
                 >
-                  Pay Tution Deposit
+                  Pay Tuition Deposit
                 </Link>
               </div>
             </li>
@@ -174,14 +177,12 @@ export default function Navbar() {
           </div>
 
           <div>
-            <button>
-              <Link
-                href="/free-consultation"
-                className="inline-block rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
-              >
-                Get Free Consultation
-              </Link>
-            </button>
+            <Link
+              href="/free-consultation"
+              className="inline-block rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
+            >
+              Get Free Consultation
+            </Link>
           </div>
         </div>
 
@@ -213,17 +214,19 @@ export default function Navbar() {
 
             {/* Accordion 1: Services */}
             <li>
-              <button
+              <Link
+                href="/services"
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center justify-between w-full"
               >
-                <span>
-                  <Link href="/services">Services</Link>
-                </span>
+                <span>Services</span>
                 <IoIosArrowDown
-                  className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-200 ${
+                    servicesOpen ? "rotate-180" : ""
+                  }`}
                 />
-              </button>
+              </Link>
+
               {servicesOpen && (
                 <div className="pl-4 mt-2 flex flex-col gap-2 text-xs text-gray-200">
                   <Link href="/Accommodation" onClick={() => setIsOpen(false)}>
@@ -262,17 +265,23 @@ export default function Navbar() {
 
             {/* Accordion 2: Steps */}
             <li>
-              <button
-                onClick={() => setStepsOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full"
+              <div
+                onClick={() => setStepsOpen(!stepsOpen)}
+                className="flex items-center justify-between w-full cursor-pointer"
               >
-                <span>
-                  <Link href="/study-abroad-steps">Study Abroad Steps</Link>
-                </span>
+                <Link
+                  href="/study-abroad-steps"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Study Abroad Steps
+                </Link>
                 <IoIosArrowDown
-                  className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-200 ${
+                    stepsOpen ? "rotate-180" : ""
+                  }`}
                 />
-              </button>
+              </div>
+
               {stepsOpen && (
                 <div className="pl-4 mt-2 flex flex-col gap-2 text-xs text-gray-200">
                   <Link
@@ -326,14 +335,13 @@ export default function Navbar() {
               +92 345 2066 100
             </div>
             <div>
-              <button>
-                <Link
-                  href="/free-consultation"
-                  className="inline-block rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
-                >
-                  Get Free Consultation
-                </Link>
-              </button>
+              <Link
+                href="/free-consultation"
+                onClick={() => setIsOpen(false)}
+                className="inline-block rounded-full bg-white text-[#43246f] px-4 py-2.5 text-xs font-semibold transition whitespace-nowrap text-center w-full"
+              >
+                Get Free Consultation
+              </Link>
             </div>
           </div>
         </div>

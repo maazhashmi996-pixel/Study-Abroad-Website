@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Globe,
   Home,
@@ -9,7 +11,6 @@ import {
   Award,
   Users,
   Target,
-  Sparkles,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -108,11 +109,11 @@ const coursesData: CourseCard[] = [
 ];
 
 export default function LanguageTestPreparationPage() {
-  const [activeTab, setActiveTab] = useState("Languages");
+  const pathname = usePathname();
 
   const sidebarItems = [
-    { name: "Study Abroad", icon: Globe, href: "/studyAbroad" },
-    { name: "Accommodations", icon: Home, href: "/accommodations" },
+    { name: "Study Abroad", icon: Globe, href: "/study-abroad" },
+    { name: "Accommodations", icon: Home, href: "/Accommodation" },
     { name: "Languages", icon: Languages, href: "/languages" },
   ];
 
@@ -128,13 +129,12 @@ export default function LanguageTestPreparationPage() {
             <div className="bg-[#3B1E54] p-2.5 sm:p-4 rounded-2xl shadow-md flex lg:flex-col gap-2 overflow-x-auto">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = activeTab === item.name;
+                const isActive = pathname === item.href;
                 return (
-                  <button
+                  <Link
                     key={item.name}
-                    type="button"
-                    onClick={() => setActiveTab(item.name)}
-                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer focus:outline-none ${
+                    href={item.href}
+                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full focus:outline-none ${
                       isActive
                         ? "bg-[#ECA82C] text-[#3B1E54] shadow-md"
                         : "bg-white/10 lg:bg-white text-white lg:text-[#3B1E54] hover:bg-white/20 lg:hover:bg-slate-100"
@@ -142,7 +142,7 @@ export default function LanguageTestPreparationPage() {
                   >
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                     <span>{item.name}</span>
-                  </button>
+                  </Link>
                 );
               })}
             </div>
@@ -239,13 +239,13 @@ export default function LanguageTestPreparationPage() {
               
               {/* Left Graphic Illustration */}
               <div className="md:col-span-4 flex flex-col items-center justify-center text-center p-2">
-               <Image
-                              src="/images/services/10-1.png"
-                              alt="10-1"
-                           width={500}
-                           height={400}
-                              className="object-cover"
-                            />
+                <Image
+                  src="/images/services/10-1.png"
+                  alt="Language test preparation representation"
+                  width={500}
+                  height={400}
+                  className="object-cover"
+                />
               </div>
 
               {/* Right Form */}
