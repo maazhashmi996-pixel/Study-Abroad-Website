@@ -47,19 +47,19 @@ export default function Footer() {
             <h2 className="font-bold text-xl text-yellow-500">Services</h2>
             <ul className="flex flex-col gap-2.5 text-sm">
               <li>
-                <Link href="/studyAbroad" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                <Link href="/study-abroad" className="flex items-center gap-2 hover:text-yellow-400 transition">
                   <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
                   <span>Study Abroad</span>
                 </Link>
               </li>
               <li>
-                <Link href="/Accommdation" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                <Link href="/Accommodation" className="flex items-center gap-2 hover:text-yellow-400 transition">
                   <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
                   <span>Accommodations</span>
                 </Link>
               </li>
               <li>
-                <Link href="/language" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                <Link href="/languages" className="flex items-center gap-2 hover:text-yellow-400 transition">
                   <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
                   <span>Languages</span>
                 </Link>
@@ -72,13 +72,13 @@ export default function Footer() {
             <h2 className="font-bold text-xl text-yellow-500">Useful Links</h2>
             <ul className="flex flex-col gap-2.5 text-sm">
               <li>
-                <Link href="/studyDest" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                <Link href="/study-Destination" className="flex items-center gap-2 hover:text-yellow-400 transition">
                   <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
                   <span>Study Destination</span>
                 </Link>
               </li>
               <li>
-                <Link href="/AboutUs" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                <Link href="/About" className="flex items-center gap-2 hover:text-yellow-400 transition">
                   <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
                   <span>About</span>
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/step" className="flex items-center gap-2 hover:text-yellow-400 transition">
+                <Link href="/study-abroad-steps" className="flex items-center gap-2 hover:text-yellow-400 transition">
                   <FaArrowRight className="text-yellow-500 text-xs shrink-0" />
                   <span>Student Guide</span>
                 </Link>

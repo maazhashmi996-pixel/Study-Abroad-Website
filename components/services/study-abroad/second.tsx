@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   GraduationCap,
   Award,
@@ -179,12 +181,12 @@ const servicesData: ServiceCardProps[] = [
 ];
 
 export default function StudyAbroadServices() {
-  const [activeTab, setActiveTab] = useState("Study Abroad");
+  const pathname = usePathname();
 
   const sidebarItems = [
-    { name: "Study Abroad", icon: Globe },
-    { name: "Accommodations", icon: Home },
-    { name: "Languages", icon: Languages },
+    { name: "Study Abroad", icon: Globe, href: "/study-abroad" },
+    { name: "Accommodation", icon: Home, href: "/Accommodation" },
+    { name: "Languages", icon: Languages, href: "/languages" },
   ];
 
   return (
@@ -204,13 +206,14 @@ export default function StudyAbroadServices() {
             <div className="bg-[#3B1E54] p-2.5 sm:p-4 rounded-2xl shadow-md flex lg:flex-col gap-2 overflow-x-auto">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = activeTab === item.name;
+                // Pathname match logic to keep dynamic active states
+                const isActive = pathname === item.href;
+
                 return (
-                  <button
+                  <Link
                     key={item.name}
-                    type="button"
-                    onClick={() => setActiveTab(item.name)}
-                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer focus:outline-none ${
+                    href={item.href}
+                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full focus:outline-none ${
                       isActive
                         ? "bg-[#ECA82C] text-[#3B1E54] shadow-md"
                         : "bg-white/10 lg:bg-white text-white lg:text-[#3B1E54] hover:bg-white/20 lg:hover:bg-slate-100"
@@ -218,7 +221,7 @@ export default function StudyAbroadServices() {
                   >
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                     <span>{item.name}</span>
-                  </button>
+                  </Link>
                 );
               })}
             </div>
@@ -299,9 +302,9 @@ export default function StudyAbroadServices() {
 
                 <p>
                   To enhance your visa application success, consider improving your language proficiency through our{" "}
-                  <a href="#" className="text-blue-600 underline font-medium hover:text-blue-800 transition-colors">
+                  <Link href="/languages" className="text-blue-600 underline font-medium hover:text-blue-800 transition-colors">
                     Language Test Preparation
-                  </a>
+                  </Link>
                   , tailored to help you meet the requirements of your study abroad program.
                 </p>
               </div>

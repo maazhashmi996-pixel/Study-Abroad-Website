@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { CheckCircle2, Globe, Home, Languages, Calendar } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation"; // Active link highlighted rakhne ke liye
 
 type TabName = "Study Abroad" | "Accommodations" | "Languages";
 
@@ -30,87 +32,59 @@ const servicesData: Record<TabName, TabContent> = {
     sections: [
       {
         title: "Student Accommodation",
-        text: "We recognize that students have specific accommodation demands. Our comprehensive services ensure that you discover the ideal student accommodation. We help students choose college accommodation that is both convenient and provides a sense of belonging. In addition, we can help you identify private rental options that fit your budget and lifestyle.",
+        text: "We recognize that students have specific accommodation demands. Our comprehensive services ensure that you discover the ideal student accommodation.",
       },
       {
         title: "University Accommodation",
-        text: "Living on campus can significantly improve your education experience. We offer special accommodation services for all major and high-ranking universities, ensuring that you find comfortable and convenient housing. We also help you secure housing at various universities, providing a safe and supportive atmosphere for your study.",
+        text: "Living on campus can significantly improve your education experience. We offer special accommodation services for all major universities.",
       },
       {
         title: "Customized Accommodation",
-        text: "Recognizing that each student has unique needs, we provide specialized accommodation alternatives. This includes personalized counseling sessions to better understand your preferences and needs, and assisting you in completing and submitting applications to ensure a smooth experience.",
+        text: "Recognizing that each student has unique needs, we provide specialized accommodation alternatives.",
       },
       {
         title: "Trust Times Consultant for Safety and Security",
-        text: "Your safety is our top priority. We ensure that the accommodation options we recommend to book are in safe neighborhoods and have necessary security measures in place.",
+        text: "Your safety is our top priority. We ensure that the accommodation options we recommend are in safe neighborhoods.",
       },
     ],
     ctaText: "Book Accommodation",
   },
   "Study Abroad": {
     title: "Study Abroad",
-    subtitle: "Your Gateway to Global Education",
-    intro:
-      "Navigating international admissions can be overwhelming. We guide you step-by-step through university applications, course selections, and visa processes for top destinations globally.",
-    bulletHeader: "Our Core Study Abroad Services",
-    bullets: [
-      "University & Course Selection",
-      "Visa Guidance & Filing",
-      "Scholarship Applications",
-    ],
-    sections: [
-      {
-        title: "University Admissions",
-        text: "We assist in matching your career goals with the best-fit global universities and guide you through the complete application workflow.",
-      },
-      {
-        title: "Visa Assistance",
-        text: "Our experts provide complete documentation review and mock interview sessions to maximize your student visa approval success rate.",
-      },
-    ],
-    ctaText: "Apply For Consultation",
+    subtitle: "Explore International Education Opportunities",
+    intro: "Get guidance on choosing universities, courses, and visas worldwide.",
+    bulletHeader: "Study Abroad Services",
+    bullets: ["University Selection", "Visa Guidance", "Scholarship Assistance"],
+    sections: [{ title: "Overview", text: "Complete end-to-end guidance for students." }],
+    ctaText: "Apply Now",
   },
   Languages: {
-    title: "Language Courses",
-    subtitle: "Master the Language, Master Your Future",
-    intro:
-      "Achieve your required proficiency test scores with our specialized prep classes for IELTS, PTE, TOEFL, and regional languages.",
-    bulletHeader: "Available Language Programs",
-    bullets: [
-      "IELTS & PTE Preparation",
-      "German Language Courses",
-      "English Communication Skills",
-    ],
-    sections: [
-      {
-        title: "IELTS & PTE Training",
-        text: "Interactive lectures and periodic mock tests led by certified trainers to ensure you achieve target band scores.",
-      },
-      {
-        title: "German Language Modules",
-        text: "Structured courses covering A1 to B2 levels designed specifically for students planning to study in Germany.",
-      },
-    ],
-    ctaText: "Enroll in a Course",
+    title: "Languages",
+    subtitle: "Language Prep & Certification",
+    intro: "Prepare for IELTS, TOEFL, and other language tests.",
+    bulletHeader: "Language Courses Offered",
+    bullets: ["IELTS Prep", "TOEFL Prep", "Spoken English"],
+    sections: [{ title: "Prep Classes", text: "Expert tutors and practice materials." }],
+    ctaText: "Enroll Now",
   },
 };
 
 export default function ServicesOffer() {
-  const [activeTab, setActiveTab] = useState<TabName>("Accommodations");
+  const pathname = usePathname();
 
+  // Sidebar Items list with proper href strings
   const sidebarItems = [
-    { name: "Study Abroad" as TabName, icon: Globe },
-    { name: "Accommodations" as TabName, icon: Home },
-    { name: "Languages" as TabName, icon: Languages },
+    { name: "Study Abroad" as TabName, icon: Globe, href: "/study-abroad" },
+    { name: "Accommodation" as TabName, icon: Home, href: "/Accommodation" },
+    { name: "Languages" as TabName, icon: Languages, href: "/languages" },
   ];
 
-  const currentContent = servicesData[activeTab];
+  // Default fallback content if needed
+  const currentContent = servicesData["Accommodations"];
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
-        
-        {/* MAIN SECTION LAYOUT */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           
           {/* NAVIGATION SIDEBAR */}
@@ -118,12 +92,12 @@ export default function ServicesOffer() {
             <div className="bg-[#3B1E54] p-2.5 sm:p-4 rounded-2xl shadow-md flex lg:flex-col gap-2 overflow-x-auto no-scrollbar">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = activeTab === item.name;
+                const isActive = pathname === item.href;
+
                 return (
-                  <button
+                  <Link
                     key={item.name}
-                    type="button"
-                    onClick={() => setActiveTab(item.name)}
+                    href={item.href}
                     className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer focus:outline-none ${
                       isActive
                         ? "bg-[#ECA82C] text-[#3B1E54] shadow-md"
@@ -132,7 +106,7 @@ export default function ServicesOffer() {
                   >
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                     <span>{item.name}</span>
-                  </button>
+                  </Link>
                 );
               })}
             </div>
@@ -140,8 +114,6 @@ export default function ServicesOffer() {
 
           {/* MAIN CONTENT AREA */}
           <div className="lg:col-span-3 bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6 sm:space-y-8">
-            
-            {/* Header Titles */}
             <div className="space-y-2">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
                 {currentContent.title}
@@ -153,17 +125,14 @@ export default function ServicesOffer() {
               </div>
             </div>
 
-            {/* Introductory Text */}
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               {currentContent.intro}
             </p>
 
-            {/* Bullet Points Section */}
             <div className="space-y-3 bg-slate-50 p-4 sm:p-5 rounded-xl border border-slate-100">
               <h2 className="text-base sm:text-lg font-bold text-[#3B1E54]">
                 {currentContent.bulletHeader}
               </h2>
-
               <ul className="space-y-2">
                 {currentContent.bullets.map((item, index) => (
                   <li key={index} className="flex items-center space-x-2.5">
@@ -176,7 +145,6 @@ export default function ServicesOffer() {
               </ul>
             </div>
 
-            {/* Detail Content Sections */}
             <div className="space-y-6 text-slate-600 text-xs sm:text-sm leading-relaxed">
               {currentContent.sections.map((sec, idx) => (
                 <div key={idx} className="space-y-1.5">
@@ -187,9 +155,8 @@ export default function ServicesOffer() {
                 </div>
               ))}
 
-              {/* Call-to-Action Button */}
               <div className="pt-4">
-                <button 
+                <button
                   type="button"
                   className="bg-[#3B1E54] hover:bg-[#2B153E] text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-200 text-xs sm:text-sm flex items-center space-x-2.5 cursor-pointer active:scale-95"
                 >
@@ -197,13 +164,10 @@ export default function ServicesOffer() {
                   <span>{currentContent.ctaText}</span>
                 </button>
               </div>
-
             </div>
-
           </div>
 
         </div>
-
       </div>
     </div>
   );
