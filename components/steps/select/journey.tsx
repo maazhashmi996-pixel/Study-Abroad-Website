@@ -62,15 +62,7 @@ export default function Journey() {
       {/* 1. YELLOW SECTION: The 8 Study Abroad Steps */}
       <section className="bg-[#ECA82C] text-[#3B1E54] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
-          
-          <div className="text-center space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
-              The 8 Study Abroad Steps
-            </h2>
-            <p className="text-xs sm:text-sm font-medium opacity-90 max-w-xl mx-auto">
-              Follow this step-by-step roadmap from initial program selection to stepping onto your new campus.
-            </p>
-          </div>
+
 
           {/* 8 Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">

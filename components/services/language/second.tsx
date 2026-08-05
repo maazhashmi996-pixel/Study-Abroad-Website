@@ -157,7 +157,7 @@ export default function LanguageTestPreparationPage() {
                 Language Test Preparation
               </h1>
               <p className="text-xs sm:text-sm font-semibold text-[#ECA82C] bg-[#3B1E54] inline-block px-3 py-1 rounded-md">
-                Master a New Language with Times Consultant
+                Master a New Language with D.Education Zone
               </p>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pt-1">
                 Whether you are planning to study, work, or live abroad, mastering the local language can significantly enhance your experience and opportunities.
@@ -170,7 +170,7 @@ export default function LanguageTestPreparationPage() {
                 We Are Here to Help You With
               </h2>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                Take the first step to your career with Times Consultant. Looking for solutions? We have got everything covered for you from visa services to career development.
+                Take the first step to your career with D.Education Zone. Looking for solutions? We have got everything covered for you from visa services to career development.
               </p>
 
               <ul className="space-y-2 pt-1">
@@ -324,7 +324,7 @@ export default function LanguageTestPreparationPage() {
                   Test Preparation
                 </h2>
                 <p>
-                  Get structured coaching for language tests like IELTS and PTE with Times Consultant. Our trainers focus on all test modules, share proven strategies, and provide regular mock tests so you understand the format, manage time better, and aim for your target score with confidence.
+                  Get structured coaching for language tests like IELTS and PTE with D.Education Zone. Our trainers focus on all test modules, share proven strategies, and provide regular mock tests so you understand the format, manage time better, and aim for your target score with confidence.
                 </p>
               </div>
 
@@ -338,10 +338,10 @@ export default function LanguageTestPreparationPage() {
               </div>
             </div>
 
-            {/* Why Choose Times Consultant Cards */}
+            {/* Why Choose D.Education Zone Cards */}
             <div className="space-y-4">
               <h2 className="text-base sm:text-lg font-bold text-[#3B1E54]">
-                Why Choose Times Consultant for Test Preparation?
+                Why Choose D.Education Zone for Test Preparation?
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
@@ -350,7 +350,7 @@ export default function LanguageTestPreparationPage() {
                     <Users className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <p className="text-xs text-slate-200 leading-relaxed">
-                    Experienced instructors with a focus on getting students ready for exams like the PTE, IELTS, and German language proficiency provide individualized coaching through Times Consultant in Pakistan.
+                    Experienced instructors with a focus on getting students ready for exams like the PTE, IELTS, and German language proficiency provide individualized coaching through D.Education Zone in Pakistan.
                   </p>
                 </div>
 
@@ -359,7 +359,7 @@ export default function LanguageTestPreparationPage() {
                     <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <p className="text-xs text-slate-200 leading-relaxed">
-                    Times Consultant provides individualized one-on-one coaching sessions to help you master particular test portions, guaranteeing you receive tailored feedback and support.
+                    D.Education Zone provides individualized one-on-one coaching sessions to help you master particular test portions, guaranteeing you receive tailored feedback and support.
                   </p>
                 </div>
 
@@ -380,7 +380,7 @@ export default function LanguageTestPreparationPage() {
                 Start Your Language Learning Journey Today!
               </h3>
               <p>
-                Don't let language barriers hold you back. Contact Times Consultant now to enroll in our language courses and take the first step towards mastering a new language. Visit or Call us today to learn more and begin your language learning journey with confidence!
+                Don't let language barriers hold you back. Contact D.Education Zone now to enroll in our language courses and take the first step towards mastering a new language. Visit or Call us today to learn more and begin your language learning journey with confidence!
               </p>
             </div>
 

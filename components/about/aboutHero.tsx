@@ -13,7 +13,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-4 text-gray-700 text-sm sm:text-base lg:text-xl leading-relaxed">
-              Since April 2004, Times Consultant has been among the leading
+              Since April 2004, D.Education Zone has been among the leading
               Study Abroad Consultants in Pakistan, connecting prospective
               students with suitable universities and study destinations. We
               act as a direct link between students and international

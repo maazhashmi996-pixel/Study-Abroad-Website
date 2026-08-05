@@ -18,7 +18,7 @@ export default function VisaHero() {
             </h1>
 
             <p className="mt-4 sm:mt-6 lg:mt-8 text-base sm:text-lg lg:text-xl leading-relaxed sm:leading-relaxed text-gray-700 max-w-2xl mx-auto lg:mx-0">
-              At Times Consultant, we offer Study Visa Services that make
+              At D.Education Zone, we offer Study Visa Services that make
               the visa process easier for students and professionals.
               From your first assessment and one-to-one consultation to
               shortlisting universities or programs, we guide you at

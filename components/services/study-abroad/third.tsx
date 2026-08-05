@@ -11,27 +11,27 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What services does Times Consultant provide for student visas?",
+    question: "What services does D.Education Zone provide for student visas?",
     answer:
-      "Times Consultant offers comprehensive support for student visas, including visa application help, document preparation, interview practice, and ongoing support throughout the application process.",
+      "D.Education Zone offers comprehensive support for student visas, including visa application help, document preparation, interview practice, and ongoing support throughout the application process.",
   },
   {
-    question: "How does Times Consultant assist with university and course selection?",
+    question: "How does D.Education Zone assist with university and course selection?",
     answer:
       "We provide personalized counseling based on your academic background, career goals, and budget, guiding you to select the top universities and programs that best fit your profile.",
   },
   {
-    question: "What kind of admission support does Times Consultant offer?",
+    question: "What kind of admission support does D.Education Zone offer?",
     answer:
       "Our admission guidance includes application reviews, SOP (Statement of Purpose) writing assistance, recommendation letter preparation, and mock interview coaching.",
   },
   {
-    question: "Can Times Consultant help me find scholarships?",
+    question: "Can D.Education Zone help me find scholarships?",
     answer:
       "Yes, we help identify eligible scholarships matching your academic profile, assist with scholarship application forms, and offer guidance on financial planning.",
   },
   {
-    question: "What pre-departure support does Times Consultant provide?",
+    question: "What pre-departure support does D.Education Zone provide?",
     answer:
       "We offer comprehensive pre-departure orientation, assistance with flight bookings and accommodation arrangements, packing checklists, and cultural adaptation guidance.",
   },
@@ -57,7 +57,7 @@ export default function StudyAbroadBannerAndFAQ() {
               Your Gateway to Global Education
             </h1>
             <p className="text-sm sm:text-lg font-medium text-[#3B1E54]/90 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Times Consultant helps students secure admission to 3000+ leading universities across the world.
+              D.Education Zone helps students secure admission to 3000+ leading universities across the world.
             </p>
             <div>
               <button

@@ -23,7 +23,7 @@ export default function HeroSection() {
           </p>
 
           <p className="text-gray-600 max-w-lg mx-auto md:mx-0 text-xs sm:text-sm md:text-base leading-relaxed">
-            Our team at Times Consultant is here to help you with course selection,
+            Our team at D.Education Zone is here to help you with course selection,
             applications, visa support, and every step of your study abroad journey.
             Reach out to us anytime, we&apos;re just a message away!
           </p>
@@ -43,7 +43,7 @@ export default function HeroSection() {
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
             <Image
               src="/images/home/contactus.webp"
-              alt="Times Consultant Contact Us Illustration"
+              alt="D.Education Zone Contact Us Illustration"
               fill
               priority
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"

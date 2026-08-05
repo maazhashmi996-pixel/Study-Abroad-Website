@@ -12,10 +12,10 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "How can I find study abroad consultants near me?",
-    answer: "You can find your nearest Times Consultant office by visiting our 'Our Offices' section on the website or contacting our central helpline for guidance.",
+    answer: "You can find your nearest D.Education Zone office by visiting our 'Our Offices' section on the website or contacting our central helpline for guidance.",
   },
   {
-    question: "Do I need an appointment before visiting a Times Consultant office?",
+    question: "Do I need an appointment before visiting a D.Education Zone office?",
     answer: "Walk-ins are always welcome, but scheduling an appointment in advance helps us match you with the right regional counselor immediately.",
   },
   {
@@ -31,7 +31,7 @@ const faqs: FAQItem[] = [
     answer: "Our international offices specialize in post-arrival support, accommodation aid, airport pickup arrangements, local orientation, and ongoing student welfare.",
   },
   {
-    question: "What should I bring when I visit a Times Consultant office for the first time?",
+    question: "What should I bring when I visit a D.Education Zone office for the first time?",
     answer: "Please bring your educational documents (transcripts, degrees, certificates), updated CV, passport (if available), and any English proficiency test scores (IELTS/PTE).",
   },
 ];
@@ -56,7 +56,7 @@ export default function OfficeSecond() {
               International Offices for On-Ground Support
             </h2>  
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
-              Our international presence in Australia, Germany, Saudi Arabia and Dubai sets Times Consultant apart from other study abroad consultants. These offshore offices provide invaluable on-ground support once you arrive in your destination country. From accommodation assistance to opening bank accounts and understanding local regulations, our teams offer comprehensive student visa help and settlement services.
+              Our international presence in Australia, Germany, Saudi Arabia and Dubai sets D.Education Zone apart from other study abroad consultants. These offshore offices provide invaluable on-ground support once you arrive in your destination country. From accommodation assistance to opening bank accounts and understanding local regulations, our teams offer comprehensive student visa help and settlement services.
             </p>
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
               Students benefit from pre-departure orientations at our Pakistan offices and continued support from our international teams, ensuring a smooth transition to student life abroad.

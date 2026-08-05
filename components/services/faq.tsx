@@ -5,7 +5,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "How can Times Consultant help me?",
+    question: "How can D.Education Zone help me?",
     answer:
       "We provide university admissions, visa assistance, scholarship guidance, accommodation support and complete counselling.",
   },

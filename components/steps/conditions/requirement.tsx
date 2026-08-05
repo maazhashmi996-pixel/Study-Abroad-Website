@@ -97,7 +97,7 @@ export default function Requirements() {
               If you don't have these answers yet, you're not late. This is
               exactly{" "}
               <span className="font-semibold text-[#3B1E54]">
-                what Times Consultant helps you define
+                what D.Education Zone helps you define
               </span>{" "}
               during your first session.
             </p>

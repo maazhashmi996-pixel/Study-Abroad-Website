@@ -51,13 +51,13 @@ const eventData = [
 ];
 
 const faqs = [
-  "What is the Times Consultant Study Abroad Education Expo?",
-  "In which cities of Pakistan are the Times Consultant Study Abroad Expos held?",
-  "What kind of advice can I get at the Times Consultant Study Abroad Expo?",
-  "Are there any benefits to registering early for the Times Consultant Expo?",
-  "Can I learn about scholarships at the Times Consultant Study Abroad Expo?",
-  "What should I bring to the Times Consultant Study Abroad Expo?",
-  "How can I make the most out of the Times Consultant Study Abroad Expo?",
+  "What is the D.Education Zone Study Abroad Education Expo?",
+  "In which cities of Pakistan are the D.Education Zone Study Abroad Expos held?",
+  "What kind of advice can I get at the D.Education Zone Study Abroad Expo?",
+  "Are there any benefits to registering early for the D.Education Zone Expo?",
+  "Can I learn about scholarships at the D.Education Zone Study Abroad Expo?",
+  "What should I bring to the D.Education Zone Study Abroad Expo?",
+  "How can I make the most out of the D.Education Zone Study Abroad Expo?",
 ];
 
 export default function City() {

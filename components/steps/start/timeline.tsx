@@ -176,12 +176,12 @@ export default function Timeline() {
         </div>
       </section>
 
-      {/* SECTION 4: HOW TIMES CONSULTANT HELPS */}
+      {/* SECTION 4: HOW D.Education Zone HELPS */}
       <section className="bg-slate-100 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-b border-slate-200">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 text-center">
           <div className="space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3a1b5c] tracking-tight">
-              How Times Consultant Helps at This Stage
+              How D.Education Zone Helps at This Stage
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
               Our support continues well past visa approval. Here is how we assist prior to your departure:

@@ -56,17 +56,17 @@ export default function EndPage() {
   return (
     <main className="min-h-screen font-sans bg-white text-slate-800 pb-16">
       
-      {/* SECTION 1: HOW TIMES CONSULTANT HELPS */}
+      {/* SECTION 1: HOW D.Education Zone HELPS */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
         <div className="max-w-4xl mx-auto space-y-8 text-center">
           
           {/* Section Header */}
           <div className="space-y-2 max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
-              How Times Consultant Helps at This Stage
+              How D.Education Zone Helps at This Stage
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Here is how Times Consultant makes this step safer, faster, and stress-free for you:
+              Here is how D.Education Zone makes this step safer, faster, and stress-free for you:
             </p>
           </div>
 
@@ -96,12 +96,12 @@ export default function EndPage() {
                 type="button"
                 className="w-full sm:w-auto bg-[#e5a00d] hover:bg-[#d99723] active:scale-98 text-slate-900 font-extrabold text-xs sm:text-sm py-3.5 px-8 rounded-full shadow-sm transition-all cursor-pointer"
               >
-                Confirm My Deposit with Times Consultant
+                Confirm My Deposit with D.Education Zone
               </button>
             </div>
 
             <p className="text-[11px] sm:text-xs text-slate-500 italic pt-1">
-              Times Consultant has guided thousands of students from offer letter acceptance to visa-ready status.
+              D.Education Zone has guided thousands of students from offer letter acceptance to visa-ready status.
             </p>
           </div>
 

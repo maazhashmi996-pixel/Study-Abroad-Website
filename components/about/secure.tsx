@@ -8,7 +8,7 @@ export default function Secure() {
         {/* Text Content Block */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-6 w-full lg:w-1/2">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#43246f] leading-tight">
-            Secure Your Future With Times Consultant
+            Secure Your Future With D.Education Zone
           </h1>
 
           <p className="text-sm sm:text-base lg:text-lg text-gray-900 leading-relaxed max-w-2xl">

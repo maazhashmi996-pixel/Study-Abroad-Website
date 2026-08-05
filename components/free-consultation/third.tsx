@@ -76,7 +76,7 @@ const expoFeatures = [
               Pakistan&apos;s Largest & Trusted Education Expo
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Established in 2004, Times Consultant brings together 1000+ partner universities from around the globe. Our Expo series in major cities across Pakistan gives you an opportunity to:
+              Established in 2004, D.Education Zone brings together 1000+ partner universities from around the globe. Our Expo series in major cities across Pakistan gives you an opportunity to:
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-left">

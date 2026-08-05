@@ -55,7 +55,7 @@ export default function OurOffices() {
         </div>
         <div>
           <p className="text-xs sm:text-sm leading-relaxed text-gray-600">
-            Visit any of our Times Consultant offices for expert guidance on study abroad, admissions, and visa support. Our teams across multiple locations are ready to assist you in person and help you take the next step toward your international education journey.
+            Visit any of our D.Education Zone offices for expert guidance on study abroad, admissions, and visa support. Our teams across multiple locations are ready to assist you in person and help you take the next step toward your international education journey.
           </p>
         </div>
       </div>

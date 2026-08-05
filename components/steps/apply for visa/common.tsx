@@ -32,9 +32,9 @@ export default function Common() {
   ];
 
   return (
-    <div className="w-full font-sans mx-auto  text-white">
+    <div className=" font-sans  px-4 sm:px-6 md:px-8 lg:px-12  text-white">
       {/* Section 1: Common Mistakes */}
-      <section className="py-12 bg-[#2a1a4a]  max-w-7xl text-center">
+      <section className="py-12 mx-auto bg-[#2a1a4a]  max-w-7xl text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2">
           Common mistakes
         </h2>
@@ -60,7 +60,7 @@ export default function Common() {
 
         {/* Small Notice Bar */}
         <div className="bg-[#342058] border border-[#482e75] rounded-lg max-w-xl mx-auto py-2 px-4 text-xs text-slate-300">
-          Most of these are fixable <strong className="text-white">before</strong> submission that's where Times Consultant should be involved.
+          Most of these are fixable <strong className="text-white">before</strong> submission that's where D.Education Zone should be involved.
         </div>
       </section>
 

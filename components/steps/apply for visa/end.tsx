@@ -51,17 +51,17 @@ export default function EndPage() {
     <div className="w-full bg-white font-sans text-slate-900 py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto space-y-16">
         
-        {/* Section 1: How Times Consultant Helps */}
+        {/* Section 1: How D.Education Zone Helps */}
         <section className="text-center max-w-5xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#2a1a4a] mb-3">
-            How Times Consultant helps at this stage
+            How D.Education Zone helps at this stage
           </h2>
           <p className="text-xs sm:text-sm text-black font-medium mb-8">
-            This is where Times Consultant is most valuable, because visa refusals hurt reputation and waste intakes.
+            This is where D.Education Zone is most valuable, because visa refusals hurt reputation and waste intakes.
           </p>
 
           <p className="text-xs sm:text-sm font-semibold text-black text-left  mx-auto mb-4">
-            Times Consultant can:
+            D.Education Zone can:
           </p>
 
           {/* 2-Column Checklist */}
@@ -92,7 +92,7 @@ export default function EndPage() {
               You've reached the most sensitive step. One small mistake here can undo months of admission work.
             </p>
             <p>
-              Let Times Consultant check your visa file before you submit documents, funds, SOP, and everything so you can file with confidence.
+              Let D.Education Zone check your visa file before you submit documents, funds, SOP, and everything so you can file with confidence.
             </p>
           </div>
 
@@ -105,7 +105,7 @@ export default function EndPage() {
 
           {/* Disclaimer Footer */}
           <p className="text-[11px] sm:text-xs text-black max-w-4xl mx-auto">
-            Times Consultant helps Pakistani and many international students apply for UK, Canada, Australia, Germany and other major destinations with updated 2025-26 visa rules and financial requirements.
+            D.Education Zone helps Pakistani and many international students apply for UK, Canada, Australia, Germany and other major destinations with updated 2025-26 visa rules and financial requirements.
           </p>
         </section>
 

@@ -11,7 +11,7 @@ export default function Introduction() {
         <div className="relative w-full max-w-[280px] sm:max-w-[240px] md:max-w-[280px] aspect-square rounded-2xl overflow-hidden shadow-sm">
           <Image
             src="/images/about/Academic-Journey.jpg"
-            alt="Times Consultant Discussion"
+            alt="D.Education Zone Discussion"
             fill
             className="object-cover"
             priority
@@ -45,7 +45,7 @@ export default function Introduction() {
       {/* Right Column: Text Content */}
       <div className="w-full md:w-1/2 text-center md:text-left">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2a1747] mb-4 sm:mb-6 tracking-tight">
-          About Times Consultant
+          About D.Education Zone
         </h2>
 
         <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">

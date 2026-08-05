@@ -483,7 +483,7 @@ export default function HeroSlider() {
         {/* WHY CHOOSE CONTENT AREA */}
         <div className="flex flex-col  px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center md:text-left">
-            Why Choose Times Consultant?
+            Why Choose D.Education Zone?
           </h2>
 
           <div className="grid grid-cols-2  sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">

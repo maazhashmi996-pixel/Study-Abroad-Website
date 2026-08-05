@@ -19,7 +19,7 @@ export default function OnlineConsultation() {
             </h1>
             
             <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-              Times Consultant's online overseas education consultants help you plan your studies abroad from wherever you are. In a one-on-one video consultation, our experienced counselors review your academic background and goals, shortlist universities and courses that genuinely fit your profile, and walk you through applications, scholarships, and the student visa process step by step. Sessions are scheduled around your availability, so you receive clear, personalized advice without the guesswork of searching alone. Book your online consultation today and take a confident first step toward studying overseas.
+              D.Education Zone's online overseas education consultants help you plan your studies abroad from wherever you are. In a one-on-one video consultation, our experienced counselors review your academic background and goals, shortlist universities and courses that genuinely fit your profile, and walk you through applications, scholarships, and the student visa process step by step. Sessions are scheduled around your availability, so you receive clear, personalized advice without the guesswork of searching alone. Book your online consultation today and take a confident first step toward studying overseas.
             </p>
 
             <div className="pt-2">

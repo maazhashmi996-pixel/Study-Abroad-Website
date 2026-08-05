@@ -40,7 +40,7 @@ const checklistItems: ChecklistCardProps[] = [
     subtitle: "(in cash + card)",
   },
   {
-    title: "Times Consultant pre-departure checklist",
+    title: "D.Education Zone pre-departure checklist",
     subtitle: "(so you don't forget anything)",
   },
 ];
@@ -177,7 +177,7 @@ export default function ProgrammePage() {
           <p className="text-center sm:text-left text-xs text-slate-500 pt-2 max-w-2xl">
             If you don&apos;t have these answers yet, you&apos;re not late. This is exactly{" "}
             <span className="font-bold text-[#3B1E54]">
-              what Times Consultant helps
+              what D.Education Zone helps
             </span>{" "}
             you define during your first session.
           </p>
