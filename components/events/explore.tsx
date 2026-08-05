@@ -100,12 +100,12 @@ export default function Explore() {
           {/* Left Side: Text and Checklist */}
           <div className="flex-1">
             <h2 className="text-2xl font-bold text-purple-950 mb-6">
-              What to Expect at the Times Consultant Study Abroad Expo
+              What to Expect at the D.Education Zone Study Abroad Expo
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-700">
               <div className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-purple-900 shrink-0 mt-0.5" />
-                <span>What to Expect at the Times Consultant Study Abroad Expo</span>
+                <span>What to Expect at the D.Education Zone Study Abroad Expo</span>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-purple-900 shrink-0 mt-0.5" />

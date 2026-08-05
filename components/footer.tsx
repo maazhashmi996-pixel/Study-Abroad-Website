@@ -31,14 +31,14 @@ export default function Footer() {
             <div className="relative w-48 sm:w-60 h-auto">
               <Image 
                 src="/logos/logo.png" 
-                alt="Times Consultant Logo" 
+                alt="D.Education Zone Logo" 
                 width={240} 
                 height={120} 
                 className="w-auto h-auto"
               />
             </div>
             <h1 className="text-sm leading-relaxed text-gray-200">
-              <span className="font-semibold text-white">Times Consultant</span> – Pakistan’s #1 Study Abroad Consultant, Trusted Since 2004. Official Rep of 3000+ Global Universities.
+              <span className="font-semibold text-white">D.Education Zone</span> – Pakistan’s #1 Study Abroad Consultant, Trusted Since 2004. Official Rep of 3000+ Global Universities.
             </h1>
           </div>
 

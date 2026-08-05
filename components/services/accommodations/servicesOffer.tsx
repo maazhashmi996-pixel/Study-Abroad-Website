@@ -21,8 +21,7 @@ const servicesData: Record<TabName, TabContent> = {
   Accommodations: {
     title: "Accommodations",
     subtitle: "Helping You Secure the Best Place to Stay",
-    intro:
-      "Finding the ideal accommodation service is integral to having a comfortable and successful study or work stay abroad. At Times Consultant, we are committed to assisting you in finding the finest area to live based on your requirements and preferences.",
+    intro:      "Finding the ideal accommodation service is integral to having a comfortable and successful study or work stay abroad. At D.Education Zone, we are committed to assisting you in finding the finest area to live based on your requirements and preferences.",
     bulletHeader: "Accommodation Services We Offer",
     bullets: [
       "Student Accommodation",
@@ -43,7 +42,7 @@ const servicesData: Record<TabName, TabContent> = {
         text: "Recognizing that each student has unique needs, we provide specialized accommodation alternatives.",
       },
       {
-        title: "Trust Times Consultant for Safety and Security",
+        title: "Trust D.Education Zone for Safety and Security",
         text: "Your safety is our top priority. We ensure that the accommodation options we recommend are in safe neighborhoods.",
       },
     ],
@@ -69,6 +68,7 @@ const servicesData: Record<TabName, TabContent> = {
   },
 };
 
+
 export default function ServicesOffer() {
   const pathname = usePathname();
 
@@ -83,7 +83,7 @@ export default function ServicesOffer() {
   const currentContent = servicesData["Accommodations"];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-12 px-4 sm:px-6 lg:px-2 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           
@@ -93,7 +93,6 @@ export default function ServicesOffer() {
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = pathname === item.href;
-
                 return (
                   <Link
                     key={item.name}

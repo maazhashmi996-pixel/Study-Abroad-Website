@@ -20,29 +20,29 @@ export default function EightPage() {
   const faqsByCategory: Record<FaqCategory, FaqItem[]> = {
     company: [
       {
-        question: "Who is Times Consultant?",
+        question: "Who is D.Education Zone?",
         answer:
-          "Times Consultant is a leading education and study abroad consultancy in Pakistan helping students achieve their international academic goals.",
+          "D.Education Zone is a leading education and study abroad consultancy in Pakistan helping students achieve their international academic goals.",
       },
       {
-        question: "What is the mission of Times Consultant?",
+        question: "What is the mission of D.Education Zone?",
         answer:
           "Our mission is to empower students through personalized counseling, application guidance, and visa support to access world-class education.",
       },
       {
-        question: "What is the vision of Times Consultant?",
+        question: "What is the vision of D.Education Zone?",
         answer:
           "To be the most trusted international education platform connecting students with global learning opportunities seamlessly.",
       },
       {
-        question: "Why should I choose Times Consultant as my study abroad consultant in Pakistan?",
+        question: "Why should I choose D.Education Zone as my study abroad consultant in Pakistan?",
         answer:
           "We offer end-to-end guidance from expert counselors, direct university partnerships, high visa success rates, and full transparency.",
       },
       {
-        question: "How much experience does Times Consultant have?",
+        question: "How much experience does D.Education Zone have?",
         answer:
-          "Times Consultant has over 20 years of industry experience assisting thousands of students worldwide.",
+          "D.Education Zone has over 20 years of industry experience assisting thousands of students worldwide.",
       },
     ],
     services: [
@@ -121,7 +121,7 @@ export default function EightPage() {
             <div className="lg:col-span-5 flex justify-center">
               <Image
                 src="/images/home/times-consultants.webp"
-                alt="Times Consultants"
+                alt="D.Education Zones"
                 width={500}
                 height={400}
                 className="w-full max-w-xs sm:max-w-md h-auto object-contain rounded-2xl"

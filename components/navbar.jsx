@@ -15,25 +15,24 @@ export default function Navbar() {
   const [stepsOpen, setStepsOpen] = useState(false);
 
   return (
-    <header className="z-50 bg-white py-4 shadow-sm sticky top-0 px-4 md:px-8">
-      <div className="max-w-8xl mx-auto flex items-center justify-between">
+    <header className="z-50 bg-white  shadow-sm sticky top-0 px-4 md:px-8">
+      <div className="max-w-8xl mx-auto flex items-center justify-between ">
         {/* 1. Logo */}
         <div className="relative z-10 flex-shrink-0">
           <Link href="/">
             <Image
-              src="/images/logo.png"
+              src="/logos/logo2.png"
               alt="Logo"
-              width={100}
-              height={70}
+              width={120}
+              height={30}
               priority
-              className="w-auto h-auto"
             />
           </Link>
         </div>
 
         {/* 2. Desktop Navigation */}
         <nav className="hidden lg:block relative z-50 bg-[#43246f] rounded-full px-8 xl:px-12 py-3">
-          <ul className="flex items-center gap-4 xl:gap-6 text-white text-xs whitespace-nowrap">
+          <ul className="flex items-center gap-4 xl:gap-6 text-white lg:px-14 text-xs whitespace-nowrap">
             <li>
               <Link href="/Home" className="hover:text-yellow-400">
                 Home
@@ -179,7 +178,7 @@ export default function Navbar() {
           <div>
             <Link
               href="/free-consultation"
-              className="inline-block rounded-full bg-[#43246f] px-4 py-2.5 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
+              className="inline-block rounded-full bg-[#43246f] px-4 py-4 text-xs text-white hover:bg-[#5b378f] transition whitespace-nowrap text-center"
             >
               Get Free Consultation
             </Link>

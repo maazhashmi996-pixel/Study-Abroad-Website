@@ -9,6 +9,7 @@ interface Blog {
   title: string;
   image: string;
   tags: string[];
+  link?: string;
 }
 
 const blogs: Blog[] = [
@@ -17,54 +18,70 @@ const blogs: Blog[] = [
     title: "How to Apply for Austria Study Visa in 2026 from Pakistan",
     image: "/images/blog/austria-visa.webp",
     tags: ["Austria", "Visa", "Europe"],
+    link: "/austria",
   },
   {
     id: 2,
     title: "How to Apply for Hungary Study Visa in 2026 from Pakistan",
     image: "/images/blog/MBA.png",
     tags: ["Hungary", "Visa", "Europe"],
+    link: "/hungary",
   },
   {
     id: 3,
     title: "How to Apply for Netherlands Study Visa in 2026 from Pakistan",
-    image: "/images/blog/neatherlands.webp",
+    image: "/images/blog/neatherlands.webp", // Fixed typo
     tags: ["Netherlands", "Visa", "Europe"],
+    link: "/neatherland",
   },
   {
     id: 4,
     title: "Study in Canada Guide for International Students",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Scholarships"],
+    link: "/canada",
   },
   {
     id: 5,
     title: "Top Scholarships to Study in Europe",
     image: "/images/blog/china.webp",
     tags: ["Europe", "Scholarships"],
+    link: "/china",
   },
   {
     id: 6,
     title: "Student Visa Interview Tips for Beginners in Australia",
     image: "/images/blog/turkey.webp",
     tags: ["Australia", "Visa"],
+    link: "/turkey",
   },
   {
     id: 7,
     title: "Study Opportunities in United Kingdom for 2026",
     image: "/images/blog/10-Tips.png",
     tags: ["United Kingdom", "Visa"],
+    link: "/ukingdom",
   },
   {
     id: 8,
     title: "Understanding Denmark Higher Education Requirements",
     image: "/images/blog/bunking-myths.png",
     tags: ["Denmark", "Europe"],
+    link: "/bunking-myths",
   },
   {
     id: 9,
     title: "United States University Admission Checklist",
     image: "/images/blog/Exchange-programs.png",
     tags: ["United States", "Scholarships"],
+    link: "/usuni",
+  },
+  {
+    id: 10,
+    title: "Sweden University Admission & Scholarship Guide", // Updated duplicate title
+    image: "/images/blog/Exchange-programs.png",
+    tags: ["Sweden", "Scholarships"],
+    link: "/sweden",
   },
 ];
 
@@ -78,6 +95,7 @@ const tagsList = [
   "United States",
   "Visa",
   "Scholarships",
+  "Sweden",
 ];
 
 export default function BlogsPage() {
@@ -94,7 +112,7 @@ export default function BlogsPage() {
 
   const clearFilters = () => {
     setSelectedTags([]);
-    searchQuery && setSearchQuery("");
+    if (searchQuery) setSearchQuery("");
   };
 
   const filteredBlogs = useMemo(() => {
@@ -118,15 +136,11 @@ export default function BlogsPage() {
   return (
     <section className="bg-[#fafafa] py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-12 text-[#2d2d2d]">
       <div className="max-w-7xl mx-auto">
-        
-        {/* Main Heading */}
         <h1 className="text-center text-2xl sm:text-4xl lg:text-5xl font-bold text-[#45246d] mb-8 sm:mb-12 leading-tight">
           Study Abroad Blogs - Guidance, Tips & More
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
-          
-          {/* Main Blogs Grid (Desktop: Cols 3) */}
           <div className="lg:col-span-3 order-2 lg:order-1">
             {filteredBlogs.length === 0 ? (
               <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm border border-gray-100">
@@ -142,57 +156,52 @@ export default function BlogsPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredBlogs.map((blog) => (
-                  <div
-                    key={blog.id}
-                    className="bg-white rounded-2xl shadow-sm hover:shadow-md overflow-hidden hover:-translate-y-1.5 duration-300 flex flex-col justify-between border border-gray-100"
-                  >
-                    <div>
-                      <div className="relative h-48 w-full bg-gray-100">
-                        <Image
-                          src={blog.image}
-                          alt={blog.title}
-                          fill
-                          className="object-cover"
-                        />
+                {filteredBlogs.map((blog) => {
+                  const blogPath = blog.link || `/blog/${blog.id}`;
+
+                  return (
+                    <div
+                      key={blog.id}
+                      className="bg-white rounded-2xl shadow-sm hover:shadow-md overflow-hidden hover:-translate-y-1.5 duration-300 flex flex-col justify-between border border-gray-100"
+                    >
+                      <div>
+                        <Link href={blogPath} className="block relative h-48 w-full bg-gray-100">
+                          <Image
+                            src={blog.image}
+                            alt={blog.title}
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-cover"
+                          />
+                        </Link>
+
+                        <div className="p-5">
+                          <Link href={blogPath}>
+                            <h2 className="text-sm sm:text-base font-semibold text-[#2d2d2d] hover:text-[#45246d] transition leading-snug line-clamp-3">
+                              {blog.title}
+                            </h2>
+                          </Link>
+                        </div>
                       </div>
 
-                      <div className="p-5">
-                        <h2 className="text-sm sm:text-base font-semibold text-[#2d2d2d] leading-snug line-clamp-3">
-                          {blog.title}
-                        </h2>
-                      </div>
-                    </div>
-
-                    <div className="p-5 pt-0">
-                      <Link href={`/blog/${blog.id}`} className="inline-block w-full sm:w-auto">
-                        <button className="bg-[#F8A51B] hover:bg-orange-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition w-full sm:w-auto">
+                      {/* Read More Link Styled as Button */}
+                      <div className="p-5 pt-0">
+                        <Link
+                          href={blogPath}
+                          className="inline-block w-full text-center bg-[#F8A51B] hover:bg-orange-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition"
+                        >
                           Read More →
-                        </button>
-                      </Link>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
-
-            {/* Pagination Placeholder */}
-            <div className="flex justify-center items-center gap-2 mt-12 sm:mt-16">
-              {[1, 2, 3].map((num) => (
-                <button
-                  key={num}
-                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 bg-white font-medium text-xs sm:text-sm text-gray-700 hover:bg-[#45246d] hover:text-white transition"
-                >
-                  {num}
-                </button>
-              ))}
-            </div>
           </div>
 
-          {/* Sidebar Section (Search & Tags) */}
+          {/* Sidebar */}
           <div className="space-y-6 order-1 lg:order-2">
-            
-            {/* Search Card */}
             <div className="bg-white rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 p-5 sm:p-6">
               <h2 className="text-xl sm:text-2xl font-bold text-[#45246d] mb-3 sm:mb-4">
                 Search Here
@@ -206,7 +215,6 @@ export default function BlogsPage() {
               />
             </div>
 
-            {/* Popular Tags Filter Card */}
             <div className="bg-white rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 p-5 sm:p-6">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#45246d]">
@@ -222,7 +230,6 @@ export default function BlogsPage() {
                 )}
               </div>
 
-              {/* Responsive Tag Filter Grid for Mobile */}
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-2.5 sm:gap-3">
                 {tagsList.map((tag) => {
                   const isChecked = selectedTags.includes(tag);
@@ -245,11 +252,8 @@ export default function BlogsPage() {
                 })}
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

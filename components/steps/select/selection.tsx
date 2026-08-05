@@ -136,7 +136,7 @@ export default function Selection() {
               {/* Formula Badge Box */}
               <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center">
                 <p className="text-xs sm:text-sm text-slate-700">
-                  The most reliable pathway (utilized by Times Consultant) is{" "}
+                  The most reliable pathway (utilized by D.Education Zone) is{" "}
                   <strong className="text-[#3B1E54] inline-block">
                     1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
                   </strong>
@@ -162,7 +162,7 @@ export default function Selection() {
 
           <p className="text-center text-xs text-slate-500 pt-2 max-w-xl mx-auto">
             If you aren't sure where to start, you are not late. This is precisely what{" "}
-            <strong className="text-[#3B1E54]">Times Consultant</strong> structures during your first profile assessment session.
+            <strong className="text-[#3B1E54]">D.Education Zone</strong> structures during your first profile assessment session.
           </p>
         </div>
 

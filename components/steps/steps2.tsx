@@ -108,10 +108,10 @@ export default function Steps() {
           
           <div className="space-y-3 max-w-2xl mx-auto px-2">
             <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-              How Times Consultant fits into this journey
+              How D.Education Zone fits into this journey
             </h2>
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-              Times Consultant has been guiding students since 2004 across the UK, Canada, Australia, Germany, Europe, and more. The way we work is simple:
+              D.Education Zone has been guiding students since 2004 across the UK, Canada, Australia, Germany, Europe, and more. The way we work is simple:
             </p>
           </div>
 
@@ -145,7 +145,7 @@ export default function Steps() {
             </div>
 
             <p className="text-[11px] sm:text-xs text-amber-300/90 font-light leading-relaxed pt-2">
-              Send your offer letter or application status to Times Consultant and we'll review what is done, what is pending, and what to do next to catch your intake.
+              Send your offer letter or application status to D.Education Zone and we'll review what is done, what is pending, and what to do next to catch your intake.
             </p>
           </div>
 

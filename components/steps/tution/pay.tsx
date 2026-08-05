@@ -203,7 +203,7 @@ export default function PayTuition() {
                 Need verification before transferring funds?
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Times Consultant can verify your offer letter and official payment channels before you initiate an international transfer. Book a free consultation to ensure a smooth transition.
+                D.Education Zone can verify your offer letter and official payment channels before you initiate an international transfer. Book a free consultation to ensure a smooth transition.
               </p>
             </div>
           </div>

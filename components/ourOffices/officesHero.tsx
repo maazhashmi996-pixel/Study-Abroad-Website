@@ -67,7 +67,7 @@ export default function OfficesHero() {
             Global Presence, Local Expertise for Your Study Abroad Dreams
           </h1>
           <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Finding trusted study abroad consultants near me is now easier than ever. Times Consultant operates across multiple countries with 36+ branches in Pakistan and international offices in Australia, Germany, Saudi Arabia, and Dubai, bringing expert study abroad help right to your doorstep.
+            Finding trusted study abroad consultants near me is now easier than ever. D.Education Zone operates across multiple countries with 36+ branches in Pakistan and international offices in Australia, Germany, Saudi Arabia, and Dubai, bringing expert study abroad help right to your doorstep.
           </p>
           <div>
             <button 
@@ -100,7 +100,7 @@ export default function OfficesHero() {
         <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8">
           
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3b1d5c] tracking-tight">
-            Visit Your Nearest Times Consultant Office Today
+            Visit Your Nearest D.Education Zone Office Today
           </h2>
 
           <div className="flex flex-col md:flex-row gap-6 items-start">

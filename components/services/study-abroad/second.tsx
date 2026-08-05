@@ -285,7 +285,7 @@ export default function StudyAbroadServices() {
 
               <div className="space-y-3">
                 <h2 className="text-lg sm:text-xl font-bold text-[#3B1E54]">
-                  Why Choose Times Consultant for Your Student Visa Requirements?
+                  Why Choose D.Education Zone for Your Student Visa Requirements?
                 </h2>
 
                 <p>
@@ -293,7 +293,7 @@ export default function StudyAbroadServices() {
                 </p>
 
                 <p>
-                  Thousands of students have trusted Times Consultant for their study visa applications. Our solid track record for dependability and success makes us the top choice for students looking to study abroad.
+                  Thousands of students have trusted D.Education Zone for their study visa applications. Our solid track record for dependability and success makes us the top choice for students looking to study abroad.
                 </p>
 
                 <p>
@@ -314,7 +314,7 @@ export default function StudyAbroadServices() {
                   Take the First Step Towards Your International Education Today!
                 </h3>
                 <p>
-                  Do not let the complexities of the student visa process hold you back from achieving your academic dreams. Contact Times Consultant now to schedule your consultation and start your journey to studying abroad with confidence.
+                  Do not let the complexities of the student visa process hold you back from achieving your academic dreams. Contact D.Education Zone now to schedule your consultation and start your journey to studying abroad with confidence.
                 </p>
               </div>
             </div>

@@ -65,7 +65,7 @@ export default function BottomBanner() {
               <div className="bg-white p-4 border-b flex items-start justify-between">
                 <div>
                   <h3 className="font-bold text-gray-800 text-sm">
-                    Times Consultant
+                    D.Education Zone
                   </h3>
                   <p className="text-xs text-gray-500">
                     We will be back online tomorrow

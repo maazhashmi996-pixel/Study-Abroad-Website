@@ -114,7 +114,7 @@ export default function StudyAbroadSteps() {
             {/* Bottom Full-width Note Box inside Grid */}
             <div className="sm:col-span-2 border border-purple-900/20 rounded-xl p-4 bg-purple-50/50 text-center">
               <p className="text-xs sm:text-sm text-gray-700">
-                So the safest way (and the one we use at Times Consultant) is{" "}
+                So the safest way (and the one we use at D.Education Zone) is{" "}
                 <span className="font-bold text-[#2a1747] whitespace-nowrap">
                   1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
                 </span>
@@ -140,7 +140,7 @@ export default function StudyAbroadSteps() {
 
         <p className="text-center text-xs sm:text-sm text-gray-500 max-w-xl mx-auto pt-2">
           If you don't have these answers yet, you're not late. This is exactly{" "}
-          <strong className="text-gray-900 font-semibold">what Times Consultant helps</strong> you define during your first session.
+          <strong className="text-gray-900 font-semibold">what D.Education Zone helps</strong> you define during your first session.
         </p>
       </section>
 
