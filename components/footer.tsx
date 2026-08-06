@@ -115,7 +115,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-yellow-500 text-xs shrink-0" />
-                <a href="mailto:study@timeconsultant.com" className="hover:underline break-all">study@timeconsultant.com</a>
+                <a href="mailto:study@timeconsultant.com" className="hover:underline break-all">study@d.educationzone.com</a>
               </li>
             </ul>
 

@@ -83,7 +83,7 @@ export default function Journey() {
           <div className="flex justify-center w-full">
             <div className="bg-white rounded-xl p-4 sm:p-5 border border-gray-100 shadow-sm w-full max-w-[420px] flex justify-center">
               <Image
-                src="/images/about/Simplifying.jpg"
+                src="/images/about/aboutImg.png"
                 alt="D.Education Zone"
                 width={420}
                 height={420}
