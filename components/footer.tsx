@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <div className="relative w-48 sm:w-60 h-auto">
               <Image 
-                src="/logos/logo.png" 
+                src="/logos/logo2.png" 
                 alt="D.Education Zone Logo" 
                 width={240} 
                 height={120} 
