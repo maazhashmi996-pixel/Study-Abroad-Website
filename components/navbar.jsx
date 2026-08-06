@@ -15,32 +15,38 @@ export default function Navbar() {
   const [stepsOpen, setStepsOpen] = useState(false);
 
   return (
-    <header className="z-50 bg-white  shadow-sm sticky top-0 px-4 md:px-8">
-      <div className="max-w-8xl mx-auto flex items-center justify-between ">
+    <header className="sticky top-0 z-50 bg-white border-b-white shadow-sm">
+      <div className="max-w-8xl mx-auto h-24 flex items-center px-4 justify-between">
         {/* 1. Logo */}
         <div className="relative z-10 flex-shrink-0">
           <Link href="/">
             <Image
               src="/logos/logo2.png"
               alt="Logo"
-              width={120}
-              height={30}
-              priority
+              width={90}
+              height={90}
+              className="object-contain"
             />
           </Link>
         </div>
 
         {/* 2. Desktop Navigation */}
-        <nav className="hidden lg:block relative z-50 bg-[#43246f] rounded-full px-8 xl:px-12 py-3">
-          <ul className="flex items-center gap-4 xl:gap-6 text-white lg:px-14 text-xs whitespace-nowrap">
+        <nav className="hidden lg:flex items-center bg-[#43246f] rounded-full px-8 py-3">
+          <ul className="flex items-center gap-4 text-xs font-medium text-white px-12">
             <li>
-              <Link href="/Home" className="hover:text-yellow-400">
+              <Link
+                href="/Home"
+                className="transition-colors duration-300 hover:text-[#FDB913]"
+              >
                 Home
               </Link>
             </li>
 
             <li>
-              <Link href="/About" className="hover:text-yellow-400">
+              <Link
+                href="/About"
+                className="transition-colors duration-300 hover:text-[#FDB913]"
+              >
                 About
               </Link>
             </li>
@@ -50,7 +56,7 @@ export default function Navbar() {
               <Link
                 href="/services"
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full gap-1"
+                className="flex items-center justify-between w-full gap-1 transition-colors duration-300 hover:text-[#FDB913]"
               >
                 <span>Services</span>
                 <IoIosArrowDown
@@ -67,14 +73,14 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/study-abroad"
-                    className="hover:text-yellow-400"
+                    className="transition-colors duration-300 hover:text-[#FDB913]"
                     onClick={() => setIsOpen(false)}
                   >
                     Study Abroad
                   </Link>
                   <Link
                     href="/languages"
-                    className="hover:text-yellow-400"
+                    className="transition-colors duration-300 hover:text-[#FDB913]"
                     onClick={() => setIsOpen(false)}
                   >
                     Languages
@@ -84,25 +90,37 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/Blog" className="hover:text-yellow-400">
+              <Link
+                href="/Blog"
+                className="transition-colors duration-300 hover:text-[#FDB913]"
+              >
                 Blogs
               </Link>
             </li>
 
             <li>
-              <Link href="/Event" className="hover:text-yellow-400">
+              <Link
+                href="/Event"
+                className="transition-colors duration-300 hover:text-[#FDB913]"
+              >
                 Events
               </Link>
             </li>
 
             <li>
-              <Link href="/our-offices" className="hover:text-yellow-400">
+              <Link
+                href="/our-offices"
+                className="transition-colors duration-300 hover:text-[#FDB913]"
+              >
                 Our Offices
               </Link>
             </li>
 
             <li>
-              <Link href="/study-Destination" className="hover:text-yellow-400">
+              <Link
+                href="/study-Destination"
+                className="transition-colors duration-300 hover:text-[#FDB913]"
+              >
                 Study Destination
               </Link>
             </li>
@@ -118,6 +136,11 @@ export default function Navbar() {
                 }`}
               >
                 Study Abroad Steps
+                <IoIosArrowDown
+                  className={`transition-transform duration-200 ${
+                    servicesOpen ? "rotate-180" : ""
+                  }`}
+                />
               </Link>
 
               <div className="absolute left-0 top-full mt-3 w-64 rounded-md bg-[#43246f] shadow-2xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
