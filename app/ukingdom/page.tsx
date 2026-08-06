@@ -1,11 +1,13 @@
 "use client";
 import UK from '@/components/blogs/ukingdom/uk'
+import UKBlogSection from '@/components/blogs/ukingdom/ukblog';
 import React from 'react'
 
 function page() {
   return (
     <div>
       <UK/>
+      <UKBlogSection/>
     </div>
   )
 }
