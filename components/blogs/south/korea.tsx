@@ -1,19 +1,23 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import { 
   CheckCircle2, 
   ChevronRight, 
   PhoneCall, 
- 
+  FileText, 
+  GraduationCap, 
+  HelpCircle, 
   Calendar 
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How to Apply for Hungry Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on hungry study visa requirements, fees, process, and timeline for Pakistani students.',
+  title: 'How to Apply for South Korea Study Visa in 2026 from Pakistan',
+  description: 'Complete step-by-step guide on South Korea study visa requirements, fees, process, and timeline for Pakistani students.',
 };
 
-export default function Hungary() {
+export default function SouthKorea() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Top Banner / Header */}
@@ -23,7 +27,7 @@ export default function Hungary() {
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            How to Apply for a hungary Study Visa in 2026 from Pakistan
+            How to Apply for a South Korea Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
             A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
@@ -35,13 +39,13 @@ export default function Hungary() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            Hungary is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, hungry offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            South Korea is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, South Korea offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
           </p>
 
           <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
             <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
             <p className="text-amber-800 text-sm mt-1">
-              Hungary does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Hungary Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a hungary university.
+              South Korea does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
             </p>
           </div>
 
@@ -65,7 +69,7 @@ export default function Hungary() {
 
           <ul className="space-y-4">
             <RequirementItem title="Valid Passport">
-              Your passport should remain valid throughout your intended stay in hungry. You cannot be granted a permit for longer than your passport is valid.
+              Your passport should remain valid throughout your intended stay in South Korea. You cannot be granted a permit for longer than your passport is valid.
             </RequirementItem>
             <RequirementItem title="University Admission Letter">
               Official admission confirmation from a recognised Swedish university. You count as finally admitted only once any tuition fee has been paid.
@@ -74,7 +78,7 @@ export default function Hungary() {
               Programme applications go through the official national portal universityadmissions.se (the Swedish-language version is antagning.se), run by the Swedish Council for Higher Education. A <strong className="font-semibold text-slate-800">non-EU application fee of SEK 900</strong> applies, and you can choose up to four programmes per round.
             </RequirementItem>
             <RequirementItem title="Proof of Funds">
-              Financial evidence showing you can cover tuition fees and living expenses in hungry. <em>Note: the bank statement must be issued no more than four months before your permit start date.</em>
+              Financial evidence showing you can cover tuition fees and living expenses in South Korea. <em>Note: the bank statement must be issued no more than four months before your permit start date.</em>
             </RequirementItem>
             <RequirementItem title="Academic Documents">
               Matric, Intermediate, Bachelor&apos;s degree, transcripts, and other supporting certificates. All documents must be in Swedish or English; if translated, include a certified translation together with a copy of the original.
@@ -89,7 +93,7 @@ export default function Hungary() {
               If your programme lasts less than <strong className="font-semibold text-slate-800">one year</strong>, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last <strong className="font-semibold text-slate-800">one year or more</strong>, you register in the Swedish population register, which gives you access to healthcare.
             </RequirementItem>
             <RequirementItem title="Accommodation Details">
-              Proof of housing arrangements in hungry. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can.
+              Proof of housing arrangements in South Korea. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can.
             </RequirementItem>
             <RequirementItem title="Residence Permit Documents">
               Completed online residence permit application through the <strong className="font-semibold text-slate-800">Migrationsverket e-service</strong>, with passport-size photographs. Your fingerprints and photo are taken later when you present your passport.
@@ -105,7 +109,7 @@ export default function Hungary() {
 
           <div className="space-y-6">
             <StepCard number="1" title="Choose Your Program">
-              Research Hungarian universities and select a degree program that matches your academic interests. The <strong className="font-semibold text-slate-800">main intake is autumn</strong>, with applications usually open from <strong className="font-semibold text-slate-800">mid-October to mid-January</strong> deadline.
+              Research Swedish universities and select a degree program that matches your academic interests. The <strong className="font-semibold text-slate-800">main intake is autumn</strong>, with applications usually open from <strong className="font-semibold text-slate-800">mid-October to mid-January</strong> deadline.
             </StepCard>
 
             <StepCard number="2" title="Apply through admissions.se">
@@ -117,7 +121,7 @@ export default function Hungary() {
             </StepCard>
 
             <StepCard number="4" title="Apply for Scholarships">
-              Look for scholarships from your university and from the Hungarian Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs.
+              Look for scholarships from your university and from the Swedish Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs.
             </StepCard>
 
             <StepCard number="5" title="Arrange Financial Documents">
@@ -125,11 +129,11 @@ export default function Hungary() {
             </StepCard>
 
             <StepCard number="6" title="Apply for a Residence Permit">
-              Apply online through the Hungarian Migration Agency (<strong className="font-semibold text-slate-800">Migrationsverket</strong>) e-service after you are admitted and have paid any tuition. You pay the <strong className="font-semibold text-slate-800">SEK 1,500 fee by card</strong> and state which Swedish embassy you will visit.
+              Apply online through the Swedish Migration Agency (<strong className="font-semibold text-slate-800">Migrationsverket</strong>) e-service after you are admitted and have paid any tuition. You pay the <strong className="font-semibold text-slate-800">SEK 1,500 fee by card</strong> and state which Swedish embassy you will visit.
             </StepCard>
 
             <StepCard number="7" title="Receive Approval & Travel">
-              Once approved, prepare for your journey to hungry. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare.
+              Once approved, prepare for your journey to South Korea. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare.
             </StepCard>
           </div>
         </section>
@@ -137,7 +141,7 @@ export default function Hungary() {
         {/* Section 3: Fees & Table */}
         <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            Hungry Study Visa Fee &amp; Processing Time
+            South Korea Study Visa Fee &amp; Processing Time
           </h2>
 
           <div className="overflow-x-auto">
@@ -181,7 +185,7 @@ export default function Hungary() {
         {/* CTA Contact Form */}
         <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your hungry Study Visa?</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your South Korea Study Visa?</h2>
             <p className="text-indigo-200 text-sm sm:text-base">
               Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
             </p>

@@ -22,10 +22,10 @@ const blogs: Blog[] = [
   },
   {
     id: 2,
-    title: "How to Apply for Hungary Study Visa in 2026 from Pakistan",
+    title: "How to Apply for Europe Study Visa in 2026 from Pakistan",
     image: "/images/blog/MBA.png",
     tags: ["Hungary", "Visa", "Europe"],
-    link: "/hungary",
+    link: "/europe",
   },
   {
     id: 3,
@@ -39,18 +39,18 @@ const blogs: Blog[] = [
     title: "Study in Canada Guide for International Students",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Scholarships"],
-    link: "/canada",
+    link: "/china",
   },
   {
     id: 5,
-    title: "Top Scholarships to Study in Europe",
+    title: "Top Scholarships to Study in China",
     image: "/images/blog/china.webp",
     tags: ["Europe", "Scholarships"],
     link: "/china",
   },
   {
     id: 6,
-    title: "Student Visa Interview Tips for Beginners in Australia",
+    title: "Student Visa Interview Tips for Beginners in Turkey",
     image: "/images/blog/turkey.webp",
     tags: ["Australia", "Visa"],
     link: "/turkey",
@@ -79,9 +79,38 @@ const blogs: Blog[] = [
   {
     id: 10,
     title: "Sweden University Admission & Scholarship Guide", // Updated duplicate title
-    image: "/images/blog/Exchange-programs.png",
+    image: "/images/blog/sweden.webp",
     tags: ["Sweden", "Scholarships"],
     link: "/sweden",
+  },
+
+  {
+    id: 11,
+    title: "France University Admission & Scholarship Guide", // Updated duplicate title
+    image: "/images/blog/france-study.webp",
+    tags: ["france", "Scholarships"],
+    link: "/france",
+  },
+  {
+    id: 12,
+    title: "Ireland University Admission & Scholarship Guide", // Updated duplicate title
+    image: "/images/blog/Ireland-study.png",
+    tags: ["ireland", "Scholarships"],
+    link: "/ireland",
+  },
+  {
+    id: 13,
+    title: "malysia University Admission & Scholarship Guide", // Updated duplicate title
+    image: "/images/blog/maly.webp",
+    tags: ["malysia", "Scholarships"],
+    link: "/malysia",
+  },
+    {
+    id: 14,
+    title: "South Korea University Admission & Scholarship Guide", // Updated duplicate title
+    image: "/images/blog/south-korea.webp",
+    tags: ["Sweden", "Scholarships"],
+    link: "/south",
   },
 ];
 
@@ -89,13 +118,13 @@ const tagsList = [
   "Australia",
   "Denmark",
   "Europe",
-  "Hungary",
-  "Netherlands",
-  "United Kingdom",
-  "United States",
-  "Visa",
-  "Scholarships",
-  "Sweden",
+  "China",
+  "Ireland",
+  "New Zealand",
+  "Italy",
+  "Pakistan",
+  "UK",
+  "USA",
 ];
 
 export default function BlogsPage() {
@@ -128,7 +157,6 @@ export default function BlogsPage() {
       const matchesSearch = blog.title
         .toLowerCase()
         .includes(searchQuery.toLowerCase());
-
       return matchesTag && matchesSearch;
     });
   }, [selectedTags, searchQuery]);

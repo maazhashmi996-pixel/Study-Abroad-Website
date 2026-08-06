@@ -1,12 +1,12 @@
 "use client";
 
-import Canada from '@/components/blogs/canada/canada';
+import Europe from '@/components/blogs/europe/europe'
 import React from 'react'
 
 function page() {
   return (
     <div>
-      <Canada/>
+      <Europe/>
     </div>
   )
 }
