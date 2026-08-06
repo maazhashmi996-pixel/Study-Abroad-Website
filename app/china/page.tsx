@@ -1,10 +1,10 @@
 "use client"
-import React from 'react'
+import China from '@/components/blogs/china/china'
 
 function page() {
   return (
     <div>
-      
+      <China/>
     </div>
   )
 }
