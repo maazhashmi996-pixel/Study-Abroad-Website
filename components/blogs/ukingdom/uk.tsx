@@ -8,15 +8,15 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How to Apply for Sweden Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on Sweden study visa requirements, fees, process, and timeline for Pakistani students.',
+  title: 'How to Apply for United Kingdom Study Visa in 2026 from Pakistan',
+  description: 'Complete step-by-step guide on United Kingdom study visa requirements, fees, process, and timeline for Pakistani students.',
 };
 
 // Data structures for inline rendering
 const requirementsData = [
   {
     title: "Valid Passport",
-    text: "Your passport should remain valid throughout your intended stay in Sweden. You cannot be granted a permit for longer than your passport is valid."
+    text: "Your passport should remain valid throughout your intended stay in United Kingdom. You cannot be granted a permit for longer than your passport is valid."
   },
   {
     title: "University Admission Letter",
@@ -28,7 +28,7 @@ const requirementsData = [
   },
   {
     title: "Proof of Funds",
-    text: "Financial evidence showing you can cover tuition fees and living expenses in Sweden. Note: the bank statement must be issued no more than four months before your permit start date."
+    text: "Financial evidence showing you can cover tuition fees and living expenses in United Kingdom. Note: the bank statement must be issued no more than four months before your permit start date."
   },
   {
     title: "Academic Documents",
@@ -48,7 +48,7 @@ const requirementsData = [
   },
   {
     title: "Accommodation Details",
-    text: "Proof of housing arrangements in Sweden. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
+    text: "Proof of housing arrangements in United Kingdom. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
   },
   {
     title: "Residence Permit Documents",
@@ -90,7 +90,7 @@ const stepsData = [
   {
     number: "7",
     title: "Receive Approval & Travel",
-    text: "Once approved, prepare for your journey to Sweden. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare."
+    text: "Once approved, prepare for your journey to United Kingdom. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare."
   }
 ];
 
@@ -128,7 +128,7 @@ export default function UK() {
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            How to Apply for a Sweden Study Visa in 2026 from Pakistan
+            How to Apply for a United Kingdom Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
             A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
@@ -140,13 +140,13 @@ export default function UK() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            Sweden is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, Sweden offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            United Kingdom is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, United Kingdom offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
           </p>
 
           <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
             <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
             <p className="text-amber-800 text-sm mt-1">
-              Sweden does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
+              United Kingdom does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
             </p>
           </div>
 
@@ -204,7 +204,7 @@ export default function UK() {
         {/* Section 3: Fees & Table */}
         <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            Sweden Study Visa Fee &amp; Processing Time
+            United Kingdom Study Visa Fee &amp; Processing Time
           </h2>
 
           <div className="overflow-x-auto">
@@ -248,7 +248,7 @@ export default function UK() {
         {/* CTA Contact Form */}
         <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your Sweden Study Visa?</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your United Kingdom Study Visa?</h2>
             <p className="text-indigo-200 text-sm sm:text-base">
               Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
             </p>

@@ -68,7 +68,7 @@ export default function Journey() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stepsCards.map((step, idx) => (
              
-                <div className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between border border-amber-200/50 space-y-3 h-full">
+                <div key={idx} className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between border border-amber-200/50 space-y-3 h-full">
                   <div className="space-y-2">
                     <div className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-amber-100 text-[#3B1E54] text-xs font-black">
                       {String(idx + 1).padStart(2, "0")}

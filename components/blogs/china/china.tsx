@@ -8,31 +8,31 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How to Apply for Sweden Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on Sweden study visa requirements, fees, process, and timeline for Pakistani students.',
+  title: 'How to Apply for China Study Visa in 2026 from Pakistan',
+  description: 'Complete step-by-step guide on China study visa requirements, fees, process, and timeline for Pakistani students.',
 };
 
 // Data structures for inline rendering
 const requirementsData = [
   {
     title: "Valid Passport",
-    text: "Your passport should remain valid throughout your intended stay in Sweden. You cannot be granted a permit for longer than your passport is valid."
+    text: "Your passport should remain valid throughout your intended stay in China. You cannot be granted a permit for longer than your passport is valid."
   },
   {
     title: "University Admission Letter",
-    text: "Official admission confirmation from a recognised Swedish university. You count as finally admitted only once any tuition fee has been paid."
+    text: "Official admission confirmation from a recognised China university. You count as finally admitted only once any tuition fee has been paid."
   },
   {
     title: "Application Through universityadmissions.se",
-    text: "Programme applications go through the official national portal universityadmissions.se (the Swedish-language version is antagning.se), run by the Swedish Council for Higher Education. A non-EU application fee of SEK 900 applies, and you can choose up to four programmes per round."
+    text: "Programme applications go through the official national portal universityadmissions.se (the China-language version is antagning.se), run by the China Council for Higher Education. A non-EU application fee of SEK 900 applies, and you can choose up to four programmes per round."
   },
   {
     title: "Proof of Funds",
-    text: "Financial evidence showing you can cover tuition fees and living expenses in Sweden. Note: the bank statement must be issued no more than four months before your permit start date."
+    text: "Financial evidence showing you can cover tuition fees and living expenses in China. Note: the bank statement must be issued no more than four months before your permit start date."
   },
   {
     title: "Academic Documents",
-    text: "Matric, Intermediate, Bachelor's degree, transcripts, and other supporting certificates. All documents must be in Swedish or English; if translated, include a certified translation together with a copy of the original."
+    text: "Matric, Intermediate, Bachelor's degree, transcripts, and other supporting certificates. All documents must be in China or English; if translated, include a certified translation together with a copy of the original."
   },
   {
     title: "English Language Requirement",
@@ -44,11 +44,11 @@ const requirementsData = [
   },
   {
     title: "Health Insurance",
-    text: "If your programme lasts less than one year, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last one year or more, you register in the Swedish population register, which gives you access to healthcare."
+    text: "If your programme lasts less than one year, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last one year or more, you register in the China population register, which gives you access to healthcare."
   },
   {
     title: "Accommodation Details",
-    text: "Proof of housing arrangements in Sweden. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
+    text: "Proof of housing arrangements in China. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
   },
   {
     title: "Residence Permit Documents",
@@ -60,7 +60,7 @@ const stepsData = [
   {
     number: "1",
     title: "Choose Your Program",
-    text: "Research Swedish universities and select a degree program that matches your academic interests. The main intake is autumn, with applications usually open from mid-October to mid-January deadline."
+    text: "Research China universities and select a degree program that matches your academic interests. The main intake is autumn, with applications usually open from mid-October to mid-January deadline."
   },
   {
     number: "2",
@@ -75,7 +75,7 @@ const stepsData = [
   {
     number: "4",
     title: "Apply for Scholarships",
-    text: "Look for scholarships from your university and from the Swedish Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs."
+    text: "Look for scholarships from your university and from the China Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs."
   },
   {
     number: "5",
@@ -85,12 +85,12 @@ const stepsData = [
   {
     number: "6",
     title: "Apply for a Residence Permit",
-    text: "Apply online through the Swedish Migration Agency (Migrationsverket) e-service after you are admitted and have paid any tuition. You pay the SEK 1,500 fee by card and state which Swedish embassy you will visit."
+    text: "Apply online through the China Migration Agency (Migrationsverket) e-service after you are admitted and have paid any tuition. You pay the SEK 1,500 fee by card and state which China embassy you will visit."
   },
   {
     number: "7",
     title: "Receive Approval & Travel",
-    text: "Once approved, prepare for your journey to Sweden. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare."
+    text: "Once approved, prepare for your journey to China. If your studies last a year or more, register in the China population register after arrival to access healthcare."
   }
 ];
 
@@ -128,7 +128,7 @@ export default function China() {
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            How to Apply for a Sweden Study Visa in 2026 from Pakistan
+            How to Apply for a China Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
             A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
@@ -140,13 +140,13 @@ export default function China() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            Sweden is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, Sweden offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            China is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, China offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
           </p>
 
           <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
             <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
             <p className="text-amber-800 text-sm mt-1">
-              Sweden does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
+              China does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">China Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a China university.
             </p>
           </div>
 
@@ -166,7 +166,7 @@ export default function China() {
           <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
             Requirements for Pakistani Students
           </h2>
-          <p className="text-slate-600 mb-6">To apply for a Swedish study visa, Pakistani students need the following documents:</p>
+          <p className="text-slate-600 mb-6">To apply for a China study visa, Pakistani students need the following documents:</p>
 
           <ul className="space-y-4">
             {requirementsData.map((item, index) => (
@@ -204,7 +204,7 @@ export default function China() {
         {/* Section 3: Fees & Table */}
         <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            Sweden Study Visa Fee &amp; Processing Time
+            China Study Visa Fee &amp; Processing Time
           </h2>
 
           <div className="overflow-x-auto">
@@ -248,7 +248,7 @@ export default function China() {
         {/* CTA Contact Form */}
         <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your Sweden Study Visa?</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your China Study Visa?</h2>
             <p className="text-indigo-200 text-sm sm:text-base">
               Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
             </p>
