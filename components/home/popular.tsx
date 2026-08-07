@@ -44,7 +44,7 @@ function Popular() {
   );
 
   return (
-    <section className="bg-[#fdb813] py-10 sm:py-14 px-4 sm:px-8 text-[#3b2768] overflow-hidden">
+    <section className="bg-[#fdb813] w-full py-10 sm:py-14 px-4 sm:px-8 text-[#3b2768] overflow-hidden">
       {/* Inline Styles for Animation & Hover Pause */}
       <style jsx>{`
         @keyframes marqueeLeft {
@@ -104,7 +104,7 @@ function Popular() {
             return (
               <div
                 key={`row-${rowIndex}`}
-                className="relative w-full overflow-hidden marquee-container flex items-center"
+                className="relative max-w-7xl mx-auto overflow-hidden marquee-container flex items-center"
               >
                 <div className={`${animationClass} flex items-center space-x-8 sm:space-x-12 md:space-x-16`}>
                   {duplicatedLogos.map((logo, idx) => (

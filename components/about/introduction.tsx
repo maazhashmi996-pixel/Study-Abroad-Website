@@ -2,16 +2,16 @@ import Image from "next/image";
 
 export default function Introduction() {
   return (
-    <section className="bg-white max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+    <section className="bg-white w-full  px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
       
       {/* Left Column: Media & Experience Card Layout */}
-      <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <div className=" max-w-7xl mx-auto md:w-1/2 flex flex-col sm:flex-row gap-4 items-center justify-center">
         
         {/* Top/Left Illustration Container */}
         <div className="relative w-full max-w-[280px] sm:max-w-[240px] md:max-w-[280px] aspect-square rounded-2xl overflow-hidden shadow-sm">
           <Image
             src="/images/about/Academic-Journey.jpg"
-            alt="D.Education Zone Discussion"
+            alt="D.Education Zone "
             fill
             className="object-cover"
             priority
@@ -43,7 +43,7 @@ export default function Introduction() {
       </div>
 
       {/* Right Column: Text Content */}
-      <div className="w-full md:w-1/2 text-center md:text-left">
+      <div className="w-full max-w-7xl mx-auto md:w-1/2 text-center md:text-left">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2a1747] mb-4 sm:mb-6 tracking-tight">
           About D.Education Zone
         </h2>

@@ -7,11 +7,11 @@ const poppins = Poppins({
 
 export default function Courses() {
   return (
-    <section className={`${poppins.className} bg-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12 text-[#43246f]`}>
+    <section className={`${poppins.className} bg-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12 `}>
       <div className="max-w-7xl mx-auto flex flex-col gap-6">
         
         {/* Main Heading */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold border-b-2 border-[#43246f]/10 pb-3 text-center md:text-left">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold border-b-2  pb-3 text-center md:text-left">
           Popular Courses In Denmark
         </h1>
 
@@ -20,7 +20,7 @@ export default function Courses() {
           
           <li className="bg-[#43246f]/5 p-4 sm:p-5 rounded-xl border border-[#43246f]/10 hover:shadow-md transition">
             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gray-800">
-              <strong className="text-[#43246f] font-semibold block sm:inline mb-1 sm:mb-0">
+              <strong className=" font-semibold block sm:inline mb-1 sm:mb-0">
                 Business & Economics:{" "}
               </strong>
               Well-known universities with business programs include Aalborg University, Aarhus University, and Copenhagen Business School.
@@ -29,7 +29,7 @@ export default function Courses() {
 
           <li className="bg-[#43246f]/5 p-4 sm:p-5 rounded-xl border border-[#43246f]/10 hover:shadow-md transition">
             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gray-800">
-              <strong className="text-[#43246f] font-semibold block sm:inline mb-1 sm:mb-0">
+              <strong className=" font-semibold block sm:inline mb-1 sm:mb-0">
                 Engineering:
               </strong>
               Pioneers in sustainability teaching and research are DTU, University of Copenhagen, and Aarhus University.

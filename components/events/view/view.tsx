@@ -204,7 +204,7 @@ export default function View() {
     : eventsData.filter(event => event.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-[#381d60] text-white py-12 px-4 sm:px-8 font-sans">
+    <div className="w-full bg-[#381d60] text-white py-12 px-4 sm:px-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         
         {/* Left Sidebar Filters */}

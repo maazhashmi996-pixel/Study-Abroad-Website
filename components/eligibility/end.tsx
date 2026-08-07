@@ -42,7 +42,7 @@ export default function OurOffices() {
   if (!isMounted) return null;
 
   return (
-    <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto font-sans text-gray-800">
+    <section className="bg-white py-8  px-4 sm:px-6 lg:px-8 w-full mx-auto font-sans text-gray-800">
       {/* Header Container */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 mb-8 items-start">
         <div>

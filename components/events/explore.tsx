@@ -17,9 +17,11 @@ export default function Explore() {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
           Explore Our Upcoming Events: Your Guide to What's Next
         </h1>
-        <button className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-md text-sm transition-colors mb-12">
+        <Link 
+        href="/view"
+        className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-md text-sm transition-colors ">
           View All Events
-        </button>
+        </Link>
 
         {/* 2x2 Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -96,7 +98,7 @@ export default function Explore() {
 
       {/* Expo Expectation Section */}
       <section className="bg-white/90 py-10 px-4 mt-8">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           
           {/* Left Side: Text and Checklist */}
           <div className="flex-1">

@@ -57,7 +57,7 @@ export default function OfficesHero() {
   const currentCities = cityDataByCountry[selectedCountry] || [];
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans overflow-hidden">
+    <div className="w-full min-h-screen bg-white text-gray-800 font-sans overflow-hidden">
       
       {/* 1. HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -97,7 +97,7 @@ export default function OfficesHero() {
 
       {/* 2. VISIT OFFICES SECTION */}
       <section className="bg-[#f1b317] py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8">
+        <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8">
           
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3b1d5c] tracking-tight">
             Visit Your Nearest D.Education Zone Office Today

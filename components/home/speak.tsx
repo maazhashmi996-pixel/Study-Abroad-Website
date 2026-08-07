@@ -83,7 +83,7 @@ export default function Speak() {
       
       {/* ================= 1. EXPERIENCES THAT SPEAK FOR US ================= */}
       <section className="bg-white text-gray-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3b1d5c] mb-6 sm:mb-8">
             Experiences That Speak for Us
@@ -158,7 +158,7 @@ export default function Speak() {
 
       {/* ================= 2. STUDY ABROAD JOURNEY STEP BY STEP ================= */}
       <section className="bg-[#3b1d5c] py-12 sm:py-16 px-4 sm:px-6 md:px-12 text-white border-t border-purple-900">
-        <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+        <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
           
           {/* Section Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center tracking-tight">

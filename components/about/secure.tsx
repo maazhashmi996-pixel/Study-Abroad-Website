@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Secure() {
   return (
-    <section className="bg-amber-500 text-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 md:py-16">
+    <section className="w-full bg-amber-500 text-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
 
         {/* Text Content Block */}

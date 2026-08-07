@@ -34,7 +34,7 @@ export default function Share() {
   };
 
   return (
-    <div className="min-h-screen bg-[#3b2768] text-white flex flex-col font-sans">
+    <div className="w-full bg-[#3b2768] text-white flex flex-col font-sans">
       {/* --- MAIN HERO SECTION --- */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         
