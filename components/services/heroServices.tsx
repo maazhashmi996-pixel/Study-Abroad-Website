@@ -32,7 +32,7 @@ export default function VisaHero() {
           <div className="flex justify-center lg:justify-end w-full">
             <div className="relative w-full max-w-md lg:max-w-xl aspect-square sm:aspect-[4/3] lg:aspect-square">
               <Image
-                src="/images/services/Tailored-Services.jpg"
+                src="/images/services/services.png"
                 alt="Tailored-Services"
                height={800}
                width={800}

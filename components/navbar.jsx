@@ -15,8 +15,8 @@ export default function Navbar() {
   const [stepsOpen, setStepsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b-white shadow-sm">
-      <div className="max-w-8xl mx-auto h-24 flex items-center px-4 justify-between">
+    <header className="sticky top-0 z-50 bg-white px-3 border-b-white shadow-sm">
+      <div className="max-w-8xl mx-auto h-24 flex items-center px-6 py-3 justify-between">
         {/* 1. Logo */}
         <div className="relative z-10 flex-shrink-0">
           <Link href="/">

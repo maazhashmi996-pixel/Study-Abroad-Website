@@ -68,7 +68,7 @@ export default function Journey() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-center">
           
-          {/* Cards Grid Container */}
+          {/* Cards Grid Container */} 
           <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {cards.map((item, index) => (
               <JourneyCard
