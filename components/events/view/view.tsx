@@ -133,56 +133,56 @@ const eventsData = [
   },
   {
     id: 15,
-    title: "Sialkot Study Abroad Expo 2026",
+    title: "Lahore Study Abroad Expo 2026",
     image: "/images/events/lahore.webp",
     time: "12:00 PM TO 07:00 PM",
     date: "Date: Monday, 17 August 2026",
-    location: "Location: Times Office - Sialkot",
+    location: "Location: Times Office - lahore",
     category: "Punjab"
   },
   {
     id: 16,
-    title: "Sialkot Study Abroad Expo 2026",
+    title: "Mardan Study Abroad Expo 2026",
     image: "/images/events/mardan.webp",
     time: "12:00 PM TO 07:00 PM",
     date: "Date: Monday, 17 August 2026",
-    location: "Location: Times Office - Sialkot",
+    location: "Location: Times Office - mardan",
     category: "Punjab"
   },
   {
     id: 17,
-    title: "Sialkot Study Abroad Expo 2026",
+    title: "Kharian Study Abroad Expo 2026",
     image: "/images/events/kharian.webp",
     time: "12:00 PM TO 07:00 PM",
     date: "Date: Monday, 17 August 2026",
-    location: "Location: Times Office - Sialkot",
+    location: "Location: Times Office - kharian",
     category: "Punjab"
   },
   {
     id: 18,
-    title: "Sialkot Study Abroad Expo 2026",
+    title: "Mirpur Study Abroad Expo 2026",
     image: "/images/events/mirpur.webp",
     time: "12:00 PM TO 07:00 PM",
     date: "Date: Monday, 17 August 2026",
-    location: "Location: Times Office - Sialkot",
+    location: "Location: Times Office - mirpur",
     category: "Punjab"
   },
   {
     id: 18,
-    title: "Sialkot Study Abroad Expo 2026",
+    title: "Multan Study Abroad Expo 2026",
     image: "/images/events/multan.webp",
     time: "12:00 PM TO 07:00 PM",
     date: "Date: Monday, 17 August 2026",
-    location: "Location: Times Office - Sialkot",
+    location: "Location: Times Office - multan",
     category: "Punjab"
   },
   {
     id: 18,
-    title: "Sialkot Study Abroad Expo 2026",
+    title: "Rawalpindi Study Abroad Expo 2026",
     image: "/images/events/rawalpindi.webp",
     time: "12:00 PM TO 07:00 PM",
     date: "Date: Monday, 17 August 2026",
-    location: "Location: Times Office - Sialkot",
+    location: "Location: Times Office - rawalpindi",
     category: "Punjab"
   },
 ];
@@ -213,10 +213,10 @@ export default function View() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`w-full py-3 px-4 rounded-lg text-black font-semibold text-sm transition-all duration-200 shadow-md ${
+              className={`w-full py-3 px-4 rounded-lg text-black  font-semibold text-sm transition-all duration-400 shadow-md ${
                 selectedCategory === category
                   ? "bg-[#f5a623] ring-2 ring-white"
-                  : "bg-[#e89d27] hover:bg-[#f5a623]"
+                  : "bg-[#e89d27] hover:bg-[#43246f] hover:border-2 hover:border-white hover:text-white"
               }`}
             >
               {category}

@@ -101,15 +101,15 @@ export default function City() {
           {filteredEvents.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#331c56] rounded-xl p-5 flex flex-col items-center border border-purple-900/50 shadow-lg hover:border-amber-500/40 transition-all"
+              className="bg-[#331c56]  p-5 flex flex-col items-center   transition-all"
             >
               {/* Circular Graphic Placeholder */}
-              <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden border-2 border-amber-500/30">
+              <div className="relative w-60 h-60 mb-4 ">
                 <Image
                   src={item.image}
                   alt={`${item.city} Expo`}
                   fill
-                  sizes="96px"
+                 
                   className="object-cover"
                 />
               </div>
