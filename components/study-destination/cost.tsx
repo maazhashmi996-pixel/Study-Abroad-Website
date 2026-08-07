@@ -1,57 +1,117 @@
+"use client";
+
+import { Wallet, Award, CheckCircle2 } from "lucide-react";
+
 export default function Cost() {
+  const scholarships = [
+    {
+      name: "Danish Government Scholarship",
+      desc: "Covers full tuition and monthly stipend for non-EU/EEA students with outstanding academic records.",
+    },
+    {
+      name: "DTU Scholarship",
+      desc: "Partial tuition waiver for high-achieving non-EU/EEA Master’s students.",
+    },
+    {
+      name: "Aarhus University Scholarship",
+      desc: "Covers 50%-100% tuition for exceptional international students.",
+    },
+    {
+      name: "Erasmus+ Scholarship",
+      desc: "EU-funded, covers tuition, travel, and living allowance for exchange students.",
+    },
+    {
+      name: "Novo Nordisk Foundation Scholarship",
+      desc: "Covers full tuition and stipend for students in life sciences and health programs.",
+    },
+    {
+      name: "HEC Denmark Scholarship (For Pakistanis)",
+      desc: "Higher Education Commission Pakistan offers funded programs for Danish universities.",
+    },
+  ];
+
   return (
-    <section className="bg-gray-50 px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 lg:gap-10">
+    <section className="bg-white px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20">
+      <div className="max-w-7xl mx-auto">
         
-        {/* Left Box: Cost of Studying */}
-        <div className="flex flex-col border border-purple-900/10 text-white bg-[#43246f] gap-4 sm:gap-6 p-6 sm:p-8 md:w-1/2 rounded-2xl shadow-xl">
-          <h1 className="text-xl sm:text-2xl font-bold text-amber-400 border-b border-purple-400/20 pb-3">
-            Cost of Studying In Denmark
-          </h1>
-          
-          <div className="flex flex-col gap-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-200">
-            <p>
-              In general, living expenses in Denmark are expensive. While the suggested monthly budget for smaller towns like Aalborg is about EUR 1,000, living in Copenhagen may cost anything from EUR 1,280 to 1,800 per month.
-            </p>
-            <p>
-              However, students from Switzerland and the EU/EEA should consider that Danish institutions do not charge tuition for these students, so they save a lot of money in this area.
-            </p>
-            <p>
-              Several students in Denmark dwell in off-campus residence halls because getting to Danish metropolitan areas by car is typically simple. Make friends and become settled by living in dorms, especially if it’s your first year. Moreover, it is the least expensive choice; one may expect to pay between EUR 240 and EUR 460 monthly for living in residence halls.
-            </p>
+        {/* Section Header */}
+        <div className="mb-10 md:mb-14 text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
+            <span className="w-8 h-[2px] bg-red-500" />
+            <span className="text-red-600 text-xs uppercase tracking-widest font-bold">
+              Financial Information
+            </span>
           </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
+            Cost & <span className="text-[#0b5cff]">Scholarships</span>
+          </h2>
         </div>
 
-        {/* Right Box: Scholarships */}
-        <div className="flex flex-col border border-purple-900/10 text-white bg-[#43246f] gap-4 sm:gap-6 p-6 sm:p-8 md:w-1/2 rounded-2xl shadow-xl">
-          <h1 className="text-xl sm:text-2xl font-bold text-amber-400 border-b border-purple-400/20 pb-3">
-            Scholarships For International Students In Denmark
-          </h1>
+        {/* Two-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          
+          {/* Left Card: Cost of Studying */}
+          <div className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            
+            {/* Header with Red Accent Icon */}
+            <div className="flex items-center gap-4 mb-6 pb-4 border-b border-slate-200/80">
+              <div className="w-12 h-12 bg-red-50 border border-red-100 text-red-600 rounded-2xl flex items-center justify-center shrink-0">
+                <Wallet className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#1a233d]">
+                Cost of Studying In Denmark
+              </h3>
+            </div>
 
-          <p className="text-xs sm:text-sm text-gray-300 italic">
-            Merit-based, covers partial to full tuition for international Master’s students:
-          </p>
+            <div className="flex flex-col gap-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p>
+                In general, living expenses in Denmark can be high. While the suggested monthly budget for smaller towns like Aalborg is about <span className="font-semibold text-[#1a233d]">EUR 1,000</span>, living in Copenhagen typically ranges from <span className="font-semibold text-[#1a233d]">EUR 1,280 to 1,800</span> per month.
+              </p>
+              <p>
+                However, students from Switzerland and the EU/EEA benefit from tuition-free education at Danish institutions, saving a significant amount.
+              </p>
+              <p>
+                Many international students opt for off-campus residence halls as public transport makes commuting simple. Dorms offer an affordable way to settle in—expect to pay between <span className="font-semibold text-[#0b5cff]">EUR 240 and EUR 460</span> monthly for residence hall accommodation.
+              </p>
+            </div>
+          </div>
 
-          <ul className="list-disc pl-5 sm:pl-6 flex flex-col gap-3 text-xs sm:text-sm md:text-base text-gray-200">
-            <li>
-              <strong className="text-amber-200">Danish Government Scholarship:</strong> Covers full tuition and monthly stipend for non-EU/EEA students with outstanding academic records.
-            </li>
-            <li>
-              <strong className="text-amber-200">DTU Scholarship:</strong> Partial tuition waiver for high-achieving non-EU/EEA Master’s students.
-            </li>
-            <li>
-              <strong className="text-amber-200">Aarhus University Scholarship:</strong> Covers 50%-100% tuition for exceptional international students.
-            </li>
-            <li>
-              <strong className="text-amber-200">Erasmus+ Scholarship:</strong> EU-funded, covers tuition, travel, and living allowance for exchange students.
-            </li>
-            <li>
-              <strong className="text-amber-200">Novo Nordisk Foundation Scholarship:</strong> Covers full tuition and stipend for students in life sciences and health programs.
-            </li>
-            <li>
-              <strong className="text-amber-200">HEC Denmark Scholarship (For Pakistanis):</strong> Higher Education Commission Pakistan offers funded programs for Danish universities.
-            </li>
-          </ul>
+          {/* Right Card: Scholarships */}
+          <div className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            
+            {/* Header with Red Accent Icon */}
+            <div className="flex items-center gap-4 mb-4 pb-4 border-b border-slate-200/80">
+              <div className="w-12 h-12 bg-red-50 border border-red-100 text-red-600 rounded-2xl flex items-center justify-center shrink-0">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#1a233d]">
+                Scholarships For International Students
+              </h3>
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-500 font-medium mb-6 italic">
+              Merit-based financial aid covering partial to full tuition for international Master’s students:
+            </p>
+
+            {/* List of Scholarships */}
+            <ul className="flex flex-col gap-4">
+              {scholarships.map((item, index) => (
+                <li key={index} className="flex items-start gap-3 bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200/60 shadow-2xs">
+                  <CheckCircle2 className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+                  <div className="text-sm sm:text-base leading-snug">
+                    <strong className="text-[#1a233d] font-bold block mb-0.5">
+                      {item.name}:
+                    </strong>
+                    <span className="text-slate-600 text-xs sm:text-sm">
+                      {item.desc}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+
         </div>
 
       </div>

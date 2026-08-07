@@ -17,7 +17,7 @@ export default function Hero() {
       </div>
 
       {/* 2. Gradient Overlay */}
-      <div className="absolute inset-0 bg-linear-to-t from-indigo-950/80 via-indigo-750/80 to-indigo-750/80"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-blue-950/80 via-blue-750/80 to-blue-750/80"></div>
       
 
       {/* 3. Responsive Content/Text Position */}
