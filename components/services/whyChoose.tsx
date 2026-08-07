@@ -20,7 +20,7 @@ function WhyChoose() {
         {/* Image Container: Aspect ratio maintain rakhega taake sides cut na ho */}
         <div className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto md:h-80 rounded-xl overflow-hidden shrink-0">
           <Image 
-            src="/images/services/Tailored-Services.jpg" 
+            src="/images/services/services.png" 
             alt="Client Testimonial"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

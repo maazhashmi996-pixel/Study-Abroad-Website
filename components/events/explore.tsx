@@ -7,6 +7,7 @@ import {
   Mail, 
   CheckCircle2 
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Explore() {
   return (
@@ -143,9 +144,9 @@ export default function Explore() {
 
         {/* CTA Button */}
         <div className="text-center mt-8">
-          <button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs px-6 py-2.5 rounded shadow transition-colors">
+          <Link href="/get" className="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs px-6 py-2.5 rounded shadow transition-colors">
             Reserve Your Seat
-          </button>
+          </Link>
         </div>
       </section>
 
