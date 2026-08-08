@@ -225,7 +225,7 @@ export default function Journey() {
               >
                 <Image
                   src="/images/about/aboutImg.png"
-                  alt="D.Education Zone Study Abroad Journey"
+                  alt="aboutImg"
                   width={420}
                   height={420}
                   className="
