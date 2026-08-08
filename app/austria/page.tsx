@@ -1,12 +1,13 @@
 "use client";
 
 import Austria from '@/components/blogs/austria/austria';
-import React from 'react'
+import AustriaBlog from '@/components/blogs/austria/austria-blog';
 
 function page() {
   return (
     <div>
       <Austria/>
+      <AustriaBlog/>
       
     </div>
   )

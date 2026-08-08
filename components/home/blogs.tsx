@@ -47,11 +47,11 @@ export default function Blogs() {
   ];
 
   return (
-    <section className="py-10 sm:py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-10 sm:py-16 bg-gray-50">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center mb-8 sm:mb-12">
+        <div className=" text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#43246f] leading-tight">
             How Do We Support Students?
           </h2>
@@ -85,7 +85,7 @@ export default function Blogs() {
         >
           {blogs.map((blog) => (
             <SwiperSlide key={blog.id}>
-              <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+              <div className="bg-white max-w-7xl mx-auto rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col ">
                 
                 {/* Main Card Image */}
                 <div className="relative group overflow-hidden h-48 sm:h-52 w-full bg-gray-100">

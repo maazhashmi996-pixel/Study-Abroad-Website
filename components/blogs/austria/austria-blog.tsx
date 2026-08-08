@@ -147,7 +147,7 @@ image: "/images/blog/south-korea.webp",
   },
 ];
 
-export default function AustriaBlogSection() {
+export default function AustriaBlog() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-8 relative group">
       {/* Title Header */}

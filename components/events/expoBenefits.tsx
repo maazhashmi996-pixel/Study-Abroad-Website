@@ -40,7 +40,7 @@ export default function ExpoBenefits() {
       
       {/* 1. BENEFITS SECTION (Yellow Background) */}
       <section className="bg-[#f1b317] py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#3b1d5c] leading-tight">

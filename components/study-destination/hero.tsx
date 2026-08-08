@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Hero() {
@@ -6,8 +8,8 @@ export default function Hero() {
       {/* 1. Responsive Image Container */}
       <div className="relative w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[550px]">
         <Image
-          src="/logos/study.webp"
-          alt="Study in Denmark Hero"
+          src="/images/study-dest/learn.png"
+          alt="learn"
           fill
           priority
           className="object-cover object-center "

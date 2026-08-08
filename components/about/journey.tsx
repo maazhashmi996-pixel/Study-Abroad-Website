@@ -17,8 +17,8 @@ interface CardProps {
 
 function JourneyCard({ title, icon }: CardProps) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 flex items-center gap-4 sm:gap-5 hover:shadow-xl hover:border-[#44246f]/30 transition-all duration-300 cursor-pointer">
-      <div className="text-[#44246f] text-2xl sm:text-3xl shrink-0 p-3 bg-[#44246f]/5 rounded-lg">
+    <div className="bg-white rounded-xl w-full  border border-gray-200 p-5 sm:p-6 flex items-center gap-4 sm:gap-5 hover:shadow-xl hover:border-[#44246f]/30 transition-all duration-300 cursor-pointer">
+      <div className="text-[#44246f] max-w-7xl mx-auto text-2xl sm:text-3xl shrink-0 p-3 bg-[#44246f]/5 rounded-lg">
         {icon}
       </div>
 

@@ -136,7 +136,7 @@ export default function HeroSlider() {
     <>
     <div className="relative w-full font-sans bg-[#43246f] rounded-2xl">
       {/* ---------------- 1. TOP HERO SLIDER ---------------- */}
-      <section className="relative w-full min-h-[520px] sm:min-h-[580px] md:h-[650px] lg:h-[720px] overflow-hidden rounded-t-2xl">
+      <section className="relative max-w-7xl mx-auto min-h-[520px] sm:min-h-[580px] md:h-[650px] lg:h-[720px] overflow-hidden rounded-t-2xl">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
@@ -203,10 +203,10 @@ export default function HeroSlider() {
        </section>
 
       {/* ---------------- 2. WHY CHOOSE SECTION WITH OVERLAPPING CARD ---------------- */}
-      <div className="relative w-full bg-[#43246f] rounded-b-2xl">
+      <div className="relative max-w-7xl mx-auto bg-[#43246f] rounded-b-2xl">
         
         {/* OVERLAPPING SEARCH CARD */}
-           <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 w-full max-w-3xl mx-auto px-3 sm:px-4">          <div className="bg-white rounded-2xl sm:rounded-[28px] shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100 relative">
+           <div className="relative -mt-16 sm:-mt-24 md:-mt-28 z-30 w-full max-w-5xl mx-auto px-3 sm:px-4">          <div className="bg-white rounded-2xl sm:rounded-[28px] shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100 relative">
             
             {/* TABS HEADER */}
             <div className="flex items-center gap-4 sm:gap-8 border-b border-gray-100 pb-3 mb-5 overflow-x-auto scrollbar-none">
@@ -481,7 +481,7 @@ export default function HeroSlider() {
         </div>
 
         {/* WHY CHOOSE CONTENT AREA */}
-        <div className="flex flex-col  px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
+        <div className="flex flex-col max-w-7xl mx-auto  px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 pb-12 sm:pb-16 text-white rounded-2xl">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center md:text-left">
             Why Choose D.Education Zone?
           </h2>

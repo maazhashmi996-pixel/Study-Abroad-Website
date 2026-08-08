@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronRight, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 interface FAQItem {
   question: string;
@@ -60,12 +61,12 @@ export default function StudyAbroadBannerAndFAQ() {
               D.Education Zone helps students secure admission to 3000+ leading universities across the world.
             </p>
             <div>
-              <button
-                type="button"
+              <Link
+               href="/get"
                 className="bg-[#3B1E54] hover:bg-[#2A153E] text-white font-bold py-3 px-8 rounded-full shadow-md transition-all duration-200 text-xs sm:text-base active:scale-95 cursor-pointer"
               >
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
 

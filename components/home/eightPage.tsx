@@ -88,8 +88,8 @@ export default function EightPage() {
   return (
     <div className="w-full bg-white text-gray-900 font-sans selection:bg-[#f7a600] selection:text-[#3b2768]">
       {/* ================= FAQ SECTION ================= */}
-      <section className="bg-white py-10 sm:py-16 px-4 sm:px-8 lg:px-16 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto space-y-6 sm:space-y-10">
+      <section className="bg-white max-w-7xl mx-auto py-10 sm:py-16 px-4 sm:px-8 lg:px-16 border-t border-gray-100">
+        <div className=" space-y-6 sm:space-y-10">
           
           {/* Header */}
           <h2 className="text-center text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">

@@ -36,7 +36,7 @@ function Choose() {
   };
 
   return (
-    <section className="bg-[#f7a600] py-10 sm:py-16 px-4 sm:px-8 lg:px-16 text-[#3b2768]">
+    <section className="bg-[#f7a600] w-full py-10 sm:py-16 px-4 sm:px-8 lg:px-16 text-[#3b2768]">
       <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* Header */}

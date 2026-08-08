@@ -20,8 +20,8 @@ export default function Advantages() {
   ];
 
   return (
-    <section className="bg-white py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
-      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+    <section className="bg-white w-full py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
         
         {/* Section Heading */}
         <div className="text-center space-y-1">
