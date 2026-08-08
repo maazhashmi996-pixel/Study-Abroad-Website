@@ -24,7 +24,7 @@ export default function TableOfContent() {
             Quick Overview
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a233d] tracking-tight">
-            Table Of Contents
+            Table Of <span className="text-[#0b5cff]">Content</span>
           </h2>
         </div>
 

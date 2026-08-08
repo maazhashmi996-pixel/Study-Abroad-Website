@@ -121,7 +121,7 @@ export default function Footer() {
                   <Mail className="w-3.5 h-3.5" />
                 </div>
                 <a href="mailto:study@d.educationzone.com" className="hover:text-[#0b5cff] transition-colors break-all">
-                  study@d.educationzone.com
+                  education@learn.com
                 </a>
               </li>
             </ul>

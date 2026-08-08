@@ -5,7 +5,7 @@ export default function Internship() {
         
         {/* Main Heading */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl  font-bold text-[#1a233d] border-b-2  pb-3">
-          Why Study In Denmark
+          Why Study <span className="text-[#0b5cff]">In Denmark</span>
         </h1>
 
         {/* Paragraph 1 */}
