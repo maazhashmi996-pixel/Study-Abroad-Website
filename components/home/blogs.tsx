@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { ArrowRight } from "lucide-react";
 
 import "swiper/css";
 
@@ -11,119 +13,193 @@ export default function Blogs() {
     {
       id: 1,
       title: "Counseling",
-      image: "/images/home/blog1.webp",
-      image2: "/images/home/suitcase.webp",
+      image: "/images/home/counciling.jpg",
+      description:
+        "Get personalized guidance to choose the right country, university, and program for your future.",
     },
     {
       id: 2,
       title: "Visa Assistance",
-      image: "/images/home/blog2.webp",
-      image2: "/images/home/suitcase.webp",
+      image: "/images/home/visa.jpg",
+      description:
+        "Get expert support throughout your student visa application and documentation process.",
     },
     {
       id: 3,
-      title: "Test Prepration",
+      title: "Test Preparation",
       image: "/images/home/blog3.jpg",
-      image2: "/images/home/suitcase.webp",
+      description:
+        "Prepare confidently for English language and other admission tests with proper guidance.",
     },
     {
       id: 4,
-      title: "Applicataion And Admission Process",
-      image: "/images/home/blog4.webp",
-      image2: "/images/home/suitcase.webp",
+      title: "Application & Admission Process",
+      image: "/images/home/admission.jpg",
+      description:
+        "We guide you through applications, documents, admission requirements, and university deadlines.",
     },
     {
       id: 5,
-      title: "Scholarship Abroad",
-      image: "/images/home/blog5.webp",
-      image2: "/images/home/suitcase.webp",
+      title: "Scholarships Abroad",
+      image: "/images/home/celebration.jpg",
+      description:
+        "Discover scholarship opportunities and learn how to prepare a stronger scholarship application.",
     },
     {
       id: 6,
-      title: "Country And University Selection",
-      image: "/images/home/blog6.webp",
-      image2: "/images/home/suitcase.webp",
+      title: "Country & University Selection",
+      image: "/images/home/country.jpg",
+      description:
+        "Compare study destinations and universities according to your academic and career goals.",
     },
   ];
 
   return (
-    <section className="w-full py-10 sm:py-16 bg-gray-50">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Heading */}
-        <div className=" text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#43246f] leading-tight">
-            How Do We Support Students?
+    <section className="relative overflow-hidden bg-[#faf9fc] py-14 sm:py-16 lg:py-20">
+      
+      {/* Decorative Background */}
+      <div className="pointer-events-none absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[#43246f]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-[#f7a600]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        {/* ================= HEADER ================= */}
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+
+          <span className="inline-flex items-center rounded-full border border-[#43246f]/15 bg-[#43246f]/5 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#43246f] sm:text-xs">
+            Our Student Support
+          </span>
+
+          <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-[#43246f] sm:text-4xl md:text-5xl">
+            How Do We Support
+            <span className="block text-[#f7a600]">
+              Students?
+            </span>
           </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-500 sm:text-base">
+            From choosing the right university to getting your visa, our
+            experts are here to guide you at every important step of your
+            study abroad journey.
+          </p>
         </div>
 
-        {/* Swiper Slider */}
+        {/* ================= SLIDER ================= */}
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={20}
+          spaceBetween={18}
           slidesPerView={1}
           loop={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           breakpoints={{
-            480: {
-              slidesPerView: 1.2,
-              spaceBetween: 20,
-            },
             640: {
               slidesPerView: 2,
-              spaceBetween: 24,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 24,
             },
           }}
-          className="pb-4"
+          className="!overflow-visible"
         >
           {blogs.map((blog) => (
-            <SwiperSlide key={blog.id}>
-              <div className="bg-white max-w-7xl mx-auto rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col ">
-                
-                {/* Main Card Image */}
-                <div className="relative group overflow-hidden h-48 sm:h-52 w-full bg-gray-100">
+            <SwiperSlide key={blog.id} className="h-auto">
+
+              {/* ================= CARD ================= */}
+              <div className="group flex h-full min-h-[410px] flex-col overflow-hidden rounded-[1.5rem] border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#43246f]/30 hover:shadow-2xl">
+
+                {/* IMAGE */}
+                <div className="relative h-52 w-full overflow-hidden bg-[#43246f] sm:h-56">
+
                   <Image
                     src={blog.image}
                     alt={blog.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
-                  {/* White Blur Hover Overlay */}
-                  <div className="absolute inset-0 bg-white/70 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center p-4">
-                    <button className="px-5 py-2.5 sm:px-6 sm:py-3 bg-yellow-500 hover:bg-yellow-600 text-white text-xs sm:text-sm rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100 shadow-md">
-                      Read More
-                    </button>
+                  {/* Image Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#43246f]/80 via-transparent to-transparent opacity-80" />
+
+                  {/* Number */}
+                  <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-sm font-black text-[#43246f] shadow-lg">
+                    0{blog.id}
+                  </div>
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-[#43246f]/70 opacity-0 backdrop-blur-[2px] transition-all duration-300 group-hover:opacity-100">
+
+                    <Link
+                      href={`/services/${blog.id}`}
+                      className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-bold text-[#43246f] shadow-xl transition-all duration-300 hover:bg-[#f7a600] hover:text-white"
+                    >
+                      Explore Service
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+
                   </div>
                 </div>
 
-                {/* Card Content Footer */}
-                <div className="p-4 sm:p-6 flex justify-between gap-3 items-center flex-1">
-                  <h3 className="text-sm sm:text-base font-semibold text-gray-800 leading-snug line-clamp-2">
+                {/* CONTENT */}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+
+                  {/* Small Label */}
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#f7a600]">
+                    Student Support
+                  </span>
+
+                  {/* Title */}
+                  <h3 className="mt-2 min-h-[3.5rem] text-lg font-black leading-6 text-[#43246f] transition-colors duration-300 group-hover:text-[#f7a600] sm:text-xl">
                     {blog.title}
                   </h3>
 
-                  <div className="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0">
-                    <Image
-                      src={blog.image2}
-                      alt="Suitcase Icon"
-                      fill
-                      className="object-contain"
-                    />
+                  {/* Description */}
+                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-gray-500">
+                    {blog.description}
+                  </p>
+
+                  {/* Bottom CTA */}
+                  <div className="mt-auto pt-5">
+
+                    <Link
+                      href={`/services/${blog.id}`}
+                      className="group/link inline-flex items-center gap-2 text-xs font-extrabold text-[#43246f] transition-colors hover:text-[#f7a600]"
+                    >
+                      Learn More
+
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#43246f]/10 transition-all duration-300 group-hover/link:bg-[#f7a600] group-hover/link:text-white">
+                        <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/link:translate-x-0.5" />
+                      </span>
+                    </Link>
+
                   </div>
                 </div>
 
               </div>
+
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* ================= BOTTOM CTA ================= */}
+        <div className="mt-10 flex justify-center sm:mt-12">
+
+          <Link
+            href="/services"
+            className="group inline-flex items-center gap-2 rounded-full bg-[#43246f] px-7 py-3.5 text-xs font-bold text-white shadow-lg shadow-[#43246f]/20 transition-all duration-300 hover:bg-[#f7a600] hover:shadow-[#f7a600]/20"
+          >
+            Explore All Services
+
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+
+        </div>
 
       </div>
     </section>

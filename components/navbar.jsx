@@ -95,7 +95,6 @@ export default function Navbar() {
                 </div>
               )}
             </li>
-
             <li>
               <Link
                 href="/Blog"

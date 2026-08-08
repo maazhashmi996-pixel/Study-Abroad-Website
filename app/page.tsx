@@ -1,3 +1,5 @@
+"use client"
+
 import Admission from "@/components/study-destination/admission";
 import Courses from "@/components/study-destination/courses";
 import Denmark from "@/components/study-destination/denmark";
@@ -17,8 +19,7 @@ import Get from "@/components/study-destination/get";
 export default function StudyDestinations() {
   return (
     <main>
-     
-           <Hero/>
+<Hero/>
            <Denmark/>
            <Content/>
            <Internship/>

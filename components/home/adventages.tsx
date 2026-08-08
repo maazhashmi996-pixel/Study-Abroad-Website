@@ -1,7 +1,16 @@
+
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
+import {
+  Search,
+  CheckCircle2,
+  GraduationCap,
+  CalendarDays,
+  Award,
+  BookOpen,
+} from "lucide-react";
 
 export default function Advantages() {
   const [activeAdvantage, setActiveAdvantage] = useState(1);
@@ -12,116 +21,306 @@ export default function Advantages() {
   });
 
   const techAdvantages = [
-    { id: 1, text: "Search 3000+ Universities and 3.4M+ programs by location" },
-    { id: 2, text: "Explore English-taught degree in 60+ countries" },
-    { id: 3, text: "View intakes, modules, and deadlines in one place" },
-    { id: 4, text: "Fully Funded Scholarships In Top Study Destinations" },
-    { id: 5, text: "Access programs at every level – from diploma to PhDs" },
+    {
+      id: 1,
+      text: "Search 3000+ Universities and 3.4M+ programs by location",
+      icon: Search,
+    },
+    {
+      id: 2,
+      text: "Explore English-taught degree in 60+ countries",
+      icon: GlobeIcon,
+    },
+    {
+      id: 3,
+      text: "View intakes, modules, and deadlines in one place",
+      icon: CalendarDays,
+    },
+    {
+      id: 4,
+      text: "Fully Funded Scholarships In Top Study Destinations",
+      icon: Award,
+    },
+    {
+      id: 5,
+      text: "Access programs at every level – from diploma to PhDs",
+      icon: BookOpen,
+    },
   ];
 
   return (
-    <section className="bg-white w-full py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
-        
-        {/* Section Heading */}
-        <div className="text-center space-y-1">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
-            Times Tech Advantages
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      {/* =====================================================
+          BACKGROUND DECORATION
+      ===================================================== */}
+      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#0b5cff]/5 blur-3xl" />
+
+      <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#1a233d]/5 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        {/* =====================================================
+            SECTION HEADING
+        ===================================================== */}
+        <div className="mx-auto max-w-3xl text-center">
+
+          <span className="inline-flex items-center rounded-full bg-[#0b5cff]/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#0b5cff]">
+            D.Education Zone
+          </span>
+
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-[#1a233d] sm:text-4xl lg:text-5xl">
+            D.Education Zone
+            <span className="block text-[#0b5cff]">
+              Advantages
+            </span>
           </h2>
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
-            Sophisticated Online Platforms
-          </h3>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
+            Discover tools and guidance designed to make your international
+            education search easier, faster and more informed.
+          </p>
+
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Left Side Advantages List */}
-          <div className="lg:col-span-6 space-y-2">
-            {techAdvantages.map((item) => {
-              const isActive = activeAdvantage === item.id;
+        {/* =====================================================
+            CONTENT GRID
+        ===================================================== */}
+        <div className="mt-12 grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
 
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveAdvantage(item.id)}
-                  className={`w-full text-left py-3.5 px-4 flex items-start gap-3 rounded-xl border border-gray-100 transition-all ${
-                    isActive
-                      ? "text-[#f7a600] font-semibold bg-amber-50/50 border-amber-200"
-                      : "text-[#3b2768] hover:text-[#f7a600] font-medium hover:bg-gray-50"
-                  }`}
-                >
-                  <span className="text-lg mt-0.5 shrink-0">📄</span>
-                  <span className="text-sm sm:text-base leading-snug">
-                    {item.text}
-                  </span>
-                </button>
-              );
-            })}
+          {/* ===================================================
+              LEFT SIDE
+          =================================================== */}
+          <div className="lg:col-span-6">
+
+            <div className="space-y-3">
+
+              {techAdvantages.map((item) => {
+                const isActive = activeAdvantage === item.id;
+                const Icon = item.icon;
+
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setActiveAdvantage(item.id)}
+                    className={`group flex w-full items-start gap-4 rounded-2xl border p-4 text-left transition-all duration-300 sm:p-5 ${
+                      isActive
+                        ? "border-[#0b5cff]/30 bg-[#0b5cff]/5 shadow-md"
+                        : "border-slate-200 bg-white hover:border-[#0b5cff]/20 hover:bg-slate-50 hover:shadow-sm"
+                    }`}
+                  >
+
+                    {/* Number / Icon */}
+                    <div
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
+                        isActive
+                          ? "bg-[#0b5cff] text-white shadow-md shadow-[#0b5cff]/20"
+                          : "bg-[#0b5cff]/10 text-[#0b5cff] group-hover:bg-[#0b5cff] group-hover:text-white"
+                      }`}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </div>
+
+                    {/* Text */}
+                    <div className="flex-1">
+
+                      <div className="flex items-center justify-between gap-3">
+
+                        <span
+                          className={`text-sm leading-6 sm:text-base ${
+                            isActive
+                              ? "font-bold text-[#1a233d]"
+                              : "font-medium text-slate-600"
+                          }`}
+                        >
+                          {item.text}
+                        </span>
+
+                        {isActive && (
+                          <CheckCircle2 className="hidden h-5 w-5 shrink-0 text-[#0b5cff] sm:block" />
+                        )}
+
+                      </div>
+
+                    </div>
+
+                  </button>
+                );
+              })}
+
+            </div>
+
+            {/* Bottom Note */}
+            <div className="mt-6 flex items-start gap-3 rounded-2xl border border-[#0b5cff]/10 bg-[#0b5cff]/5 p-4">
+
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0b5cff]" />
+
+              <p className="text-xs leading-5 text-slate-600 sm:text-sm">
+                Everything you need to make informed decisions about your
+                international education journey.
+              </p>
+
+            </div>
+
           </div>
 
-          {/* Right Side Image & Search Card Container */}
+          {/* ===================================================
+              RIGHT SIDE IMAGE + SEARCH
+          =================================================== */}
           <div className="lg:col-span-6">
-            <div className="relative bg-[#f0ebf8] rounded-2xl p-4 sm:p-8 overflow-hidden min-h-[350px] sm:min-h-[420px] border border-purple-50 flex items-center justify-center">
-              
+
+            <div className="relative min-h-[400px] overflow-hidden rounded-[2rem] border border-slate-200 bg-[#1a233d] p-4 shadow-xl sm:min-h-[470px] sm:p-8">
+
               {/* Background Image */}
               <Image
                 src="/images/home/times.jpg"
-                alt="Times Tech Platform"
+                alt="D.Education Zone online platform"
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/30"></div>
+              {/* Image Overlay */}
+              <div className="absolute inset-0 bg-[#1a233d]/70" />
 
-              {/* Inner Interactive Search Card */}
-              <div className="relative z-10 w-full max-w-md bg-gradient-to-br from-[#f2d398] via-[#e8a338] to-[#f7a600] rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl space-y-3.5 sm:space-y-4">
-                <input
-                  type="text"
-                  placeholder="Search Universities"
-                  value={techSearch.university}
-                  onChange={(e) =>
-                    setTechSearch({
-                      ...techSearch,
-                      university: e.target.value,
-                    })
-                  }
-                  className="w-full bg-white rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-inner"
-                />
+              {/* Blue Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0b5cff]/20 via-transparent to-[#1a233d]/80" />
 
-                <input
-                  type="text"
-                  placeholder="Location"
-                  value={techSearch.location}
-                  onChange={(e) =>
-                    setTechSearch({
-                      ...techSearch,
-                      location: e.target.value,
-                    })
-                  }
-                  className="w-full bg-white rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none shadow-inner"
-                />
+              {/* =================================================
+                  SEARCH CARD
+              ================================================= */}
+              <div className="relative z-10 flex min-h-[365px] items-center justify-center">
 
-                <div className="flex justify-end pt-1">
-                  <button className="w-full sm:w-auto bg-[#3b2768] hover:bg-[#2e1f52] text-white text-xs sm:text-sm font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition shadow-md active:scale-95">
-                    Search
+                <div className="relative w-full max-w-md rounded-[1.5rem] border border-white/20 bg-white/95 p-5 shadow-2xl backdrop-blur-md sm:rounded-[2rem] sm:p-7">
+
+                  {/* Card Header */}
+                  <div className="mb-5 flex items-center gap-3">
+
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0b5cff]/10 text-[#0b5cff]">
+                      <GraduationCap className="h-5 w-5" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-black text-[#1a233d]">
+                        Find Your Programme
+                      </h3>
+
+                      <p className="text-xs text-slate-500">
+                        Search universities and study options
+                      </p>
+                    </div>
+
+                  </div>
+
+                  {/* University Search */}
+                  <div className="relative">
+
+                    <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
+                    <input
+                      type="text"
+                      placeholder="Search Universities"
+                      value={techSearch.university}
+                      onChange={(e) =>
+                        setTechSearch({
+                          ...techSearch,
+                          university: e.target.value,
+                        })
+                      }
+                      className="w-full rounded-full border border-slate-200 bg-slate-50 py-3 pl-11 pr-4 text-xs text-[#1a233d] outline-none transition-all placeholder:text-slate-400 focus:border-[#0b5cff] focus:bg-white focus:ring-4 focus:ring-[#0b5cff]/10 sm:text-sm"
+                    />
+
+                  </div>
+
+                  {/* Location */}
+                  <div className="relative mt-3">
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 21s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"
+                      />
+
+                      <circle cx="12" cy="11" r="2.5" />
+                    </svg>
+
+                    <input
+                      type="text"
+                      placeholder="Location"
+                      value={techSearch.location}
+                      onChange={(e) =>
+                        setTechSearch({
+                          ...techSearch,
+                          location: e.target.value,
+                        })
+                      }
+                      className="w-full rounded-full border border-slate-200 bg-slate-50 py-3 pl-11 pr-4 text-xs text-[#1a233d] outline-none transition-all placeholder:text-slate-400 focus:border-[#0b5cff] focus:bg-white focus:ring-4 focus:ring-[#0b5cff]/10 sm:text-sm"
+                    />
+
+                  </div>
+
+                  {/* Search Button */}
+                  <button
+                    type="button"
+                    className="group mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#0b5cff] px-6 py-3 text-xs font-bold text-white shadow-lg shadow-[#0b5cff]/20 transition-all duration-300 hover:bg-[#1a233d] active:scale-[0.98] sm:text-sm"
+                  >
+                    <Search className="h-4 w-4" />
+
+                    Search Universities
+
                   </button>
-                </div>
 
-                {/* Floating Decorative Badges */}
-                <div className="hidden sm:block absolute -left-4 bottom-8 bg-gray-800/90 backdrop-blur-sm text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full -rotate-12 shadow-lg border border-white/20">
-                  Deadlines
-                </div>
+                  {/* =================================================
+                      INFO BOXES
+                  ================================================= */}
+                  <div className="mt-5 grid grid-cols-2 gap-2">
 
-                <div className="hidden sm:block absolute -right-4 top-10 bg-gray-800/90 backdrop-blur-sm text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full rotate-12 shadow-lg border border-white/20">
-                  Scholarships
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                      <p className="text-sm font-black text-[#0b5cff]">
+                        3000+
+                      </p>
+                      <p className="mt-1 text-[10px] text-slate-500">
+                        Universities
+                      </p>
+                    </div>
+
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                      <p className="text-sm font-black text-[#0b5cff]">
+                        60+
+                      </p>
+                      <p className="mt-1 text-[10px] text-slate-500">
+                        Countries
+                      </p>
+                    </div>
+
+                  </div>
+
+                  {/* Floating Badge */}
+                  <div className="absolute -bottom-4 -left-4 hidden rounded-full border border-white/20 bg-[#1a233d] px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white shadow-xl sm:block">
+                    <span className="mr-1 text-[#0b5cff]">●</span>
+                    Deadlines
+                  </div>
+
+                  <div className="absolute -right-4 -top-4 hidden rounded-full border border-white/20 bg-[#1a233d] px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white shadow-xl sm:block">
+                    <span className="mr-1 text-[#0b5cff]">●</span>
+                    Scholarships
+                  </div>
+
                 </div>
 
               </div>
 
             </div>
+
           </div>
 
         </div>
@@ -130,3 +329,28 @@ export default function Advantages() {
     </section>
   );
 }
+
+/* =========================================================
+   SIMPLE GLOBE ICON
+========================================================= */
+
+function GlobeIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={1.8}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"
+      />
+    </svg>
+  );
+}
+
