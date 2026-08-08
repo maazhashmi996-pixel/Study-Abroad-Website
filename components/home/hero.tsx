@@ -34,7 +34,7 @@ export default function Home() {
       title: "Admission Guidance",
       description:
         "Get support throughout your university application and admission process.",
-      href: "/admission",
+      href: "/guidance",
     },
     {
       icon: ShieldCheck,
