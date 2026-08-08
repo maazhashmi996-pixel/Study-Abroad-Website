@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaChevronRight, FaChevronDown } from "react-icons/fa";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 export default function Talk() {
   const [open, setOpen] = useState<number | null>(0);
@@ -55,43 +55,68 @@ export default function Talk() {
   ];
 
   return (
-    <section className="px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-14 text-[#43246f]">
-      <div className="max-w-5xl mx-auto flex flex-col gap-6 sm:gap-8">
+    <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20">
+      {/* Container aligned with all other sections (max-w-7xl) */}
+      <div className="max-w-7xl mx-auto flex flex-col gap-10">
         
-        {/* Main Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center leading-tight">
-          Can’t talk? Don’t worry, we have got all the answers right here.
-        </h1>
+        {/* Header Section */}
+        <div className="text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
+            <span className="w-8 h-[2px] bg-red-500" />
+            <span className="text-red-600 text-xs uppercase tracking-widest font-bold">
+              Frequently Asked Questions
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
+            Can’t talk? Don’t worry, <span className="text-[#0b5cff]">we have got all answers right here.</span>
+          </h2>
+        </div>
 
-        {/* FAQ List */}
-        <div className="space-y-3 sm:space-y-4">
-          {faqData.map((item, index) => (
-            <div
-              key={index}
-              className="border border-purple-900/10 rounded-xl sm:rounded-2xl bg-white shadow-sm overflow-hidden transition-all duration-200"
-            >
-              {/* Accordion Toggle Header */}
-              <button
-                onClick={() => setOpen(open === index ? null : index)}
-                className="w-full flex justify-between items-center gap-4 px-4 sm:px-6 py-4 text-left transition hover:bg-purple-50/50"
+        {/* Accordion FAQ Grid */}
+        <div className="space-y-4 max-w-5xl">
+          {faqData.map((item, index) => {
+            const isOpen = open === index;
+            return (
+              <div
+                key={index}
+                className={`border rounded-2xl bg-white shadow-2xs overflow-hidden transition-all duration-200 ${
+                  isOpen ? "border-[#0b5cff] shadow-md" : "border-slate-200/80 hover:border-slate-300"
+                }`}
               >
-                <span className="text-base sm:text-lg font-medium text-[#43246f] leading-snug">
-                  {item.question}
-                </span>
+                {/* Accordion Toggle Button */}
+                <button
+                  onClick={() => setOpen(isOpen ? null : index)}
+                  className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left transition-colors cursor-pointer"
+                >
+                  <div className="flex items-center gap-3">
+                    {/* Red Accent Icon Container */}
+                    <div className="shrink-0 w-8 h-8 bg-red-50 border border-red-100 text-red-600 rounded-xl flex items-center justify-center">
+                      <HelpCircle className="w-4 h-4" />
+                    </div>
+                    <span className="text-base sm:text-lg font-bold text-[#1a233d] leading-snug">
+                      {item.question}
+                    </span>
+                  </div>
 
-                <span className="text-amber-500 shrink-0 text-sm sm:text-base">
-                  {open === index ? <FaChevronDown /> : <FaChevronRight />}
-                </span>
-              </button>
+                  {/* Toggle Arrow */}
+                  <div
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                      isOpen ? "bg-[#0b5cff] text-white rotate-180" : "bg-slate-100 text-slate-500"
+                    }`}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
+                </button>
 
-              {/* Accordion Content */}
-              {open === index && (
-                <div className="px-4 sm:px-6 pb-4 sm:pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-purple-50 pt-3">
-                  {item.answer}
-                </div>
-              )}
-            </div>
-          ))}
+                {/* Accordion Content */}
+                {isOpen && (
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 mt-1">
+                    {item.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
       </div>

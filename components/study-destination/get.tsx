@@ -50,7 +50,7 @@ export default function Get() {
       <div className="w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-lg border border-gray-100">
         
         {/* Title */}
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#3b1d5c] text-center mb-6 sm:mb-8 leading-tight">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold  text-center mb-6 sm:mb-8 leading-tight">
           Get a call-back within 24 hours
         </h2>
 
@@ -192,7 +192,7 @@ export default function Get() {
           <div className="pt-3 sm:pt-4 flex justify-center">
             <button
               type="submit"
-              className="w-full sm:w-auto bg-[#f1b317] hover:bg-[#e0a30f] text-[#3b1d5c] font-black text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-md transition-all active:scale-95"
+              className="w-full sm:w-auto bg-[#0b5cff] hover:bg-red-600 text-white font-black text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-md transition-all active:scale-95"
             >
               GET FREE CONSULTATION
             </button>

@@ -10,13 +10,11 @@ export default function Denmark() {
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-          A Danish education puts you squarely in the middle of a well-built social paradise. Since the start of the UN’s World Happiness Report in 2012, Denmark has consistently placed #1, earning them the reputation of having the happiest people in the world. Denmark offers happiness and the opportunity to pursue high-quality education in a welcoming, secure, and innovative atmosphere.
-        </p>
+Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Denmark offers an innovative, secure, and welcoming environment for international students.        </p>
 
         {/* Paragraph 2 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-          Studying abroad in Denmark will be exciting and rewarding, besides cementing a solid basis for your future profession. Moreover, the country offers cutting-edge healthcare, education, and civil freedoms and consistently appears among the safest and most livable nations.
-        </p>
+Studying in Denmark isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
 
       </div>
     </section>
