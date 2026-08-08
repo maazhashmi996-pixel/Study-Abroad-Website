@@ -40,9 +40,9 @@ export default function Update() {
     },
     {
       id: 4,
-      image: "/images/home/Untitled.png",
+      image: "/images/home/france.webp",
       date: "June 25, 2026",
-      title: "Study in UK: Complete Visa Guide 2026",
+      title: "Study in France: Complete Visa Guide 2026",
       description:
         "Everything you need to know about CAS letter, bank statement, and visa interview process.",
       link: "#",
