@@ -110,8 +110,8 @@ export default function Update() {
             <div className="relative aspect-[16/10] overflow-hidden">
 
               <Image
-                src="/images/home/ann1.png"
-                alt="Join Our Team"
+                src="/images/home/Blue.png"
+                alt="Blue"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

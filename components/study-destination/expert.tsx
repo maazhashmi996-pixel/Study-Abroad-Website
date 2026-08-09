@@ -5,8 +5,8 @@ import { FaChevronDown, FaTimes } from "react-icons/fa";
 import { CalendarCheck, ArrowRight } from "lucide-react";
 
 export default function Expert() {
-  // true = page load hote hi popup show
-  const [isOpen, setIsOpen] = useState(true);
+  // Set to false so the popup stays hidden on page load
+  const [isOpen, setIsOpen] = useState(false);
 
   const dropdownOptions = {
     cities: [
@@ -166,7 +166,7 @@ export default function Expert() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white text-center">
             Book A Meeting
             <span className="text-[#0b5cff]">
-              With An Expert
+              {" "}With An Expert
             </span>
           </h2>
 
@@ -184,7 +184,7 @@ export default function Expert() {
           <button
             type="button"
             onClick={() => setIsOpen(true)}
-            className="mt-4 group inline-flex items-center gap-3 bg-[#0b5cff] hover:bg-red-600 text-white font-bold text-sm sm:text-base py-4 px-8 rounded-full shadow-lg hover:shadow-red-500/20 transition-all duration-300 hover:-translate-y-0.5"
+            className="mt-4 group inline-flex items-center gap-3 bg-[#0b5cff] hover:bg-red-600 text-white font-bold text-sm sm:text-base py-4 px-8 rounded-full shadow-lg hover:shadow-red-500/20 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
           >
             <span>APPLY NOW</span>
 
@@ -215,7 +215,7 @@ export default function Expert() {
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-red-500 hover:text-white transition-all"
+              className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-red-500 hover:text-white transition-all cursor-pointer"
               aria-label="Close"
             >
               <FaTimes />
@@ -338,7 +338,7 @@ export default function Expert() {
 
                 <button
                   type="submit"
-                  className="w-full sm:w-auto bg-[#F5A623] hover:bg-[#E69512] text-white font-black text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-md transition-all active:scale-95"
+                  className="w-full sm:w-auto bg-[#F5A623] hover:bg-[#E69512] text-white font-black text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-md transition-all active:scale-95 cursor-pointer"
                 >
                   GET FREE CONSULTATION
                 </button>
@@ -356,7 +356,7 @@ export default function Expert() {
 
 
 /* ==================================================
-   REUSABLE SELECT BOX
+    REUSABLE SELECT BOX
 ================================================== */
 
 function SelectBox({

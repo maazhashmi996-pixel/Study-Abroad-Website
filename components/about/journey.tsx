@@ -224,8 +224,8 @@ export default function Journey() {
                 "
               >
                 <Image
-                  src="/images/about/aboutImg.png"
-                  alt="aboutImg"
+                  src="/images/about/about.png"
+                  alt="about"
                   width={420}
                   height={420}
                   className="

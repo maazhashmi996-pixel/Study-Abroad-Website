@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -95,7 +96,7 @@ export default function Hero() {
               </button>
 
               {/* Secondary Button */}
-              <button
+              <Link
                 className="
                   border-2
                   border-[#0b5cff]
@@ -111,9 +112,10 @@ export default function Hero() {
                   transition-all
                   duration-300
                 "
+                  href="/study-Destination"
               >
                 Explore Destinations
-              </button>
+              </Link>
 
             </div>
           </div>

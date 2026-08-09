@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Secure() {
   return (
@@ -81,7 +82,7 @@ export default function Secure() {
             </p>
 
             {/* Button */}
-            <button
+            <Link
               className="
                 mt-2
                 px-7
@@ -104,9 +105,10 @@ export default function Secure() {
                 hover:-translate-y-0.5
                 active:scale-95
               "
+                href="/free-consultation"
             >
               Book a Free Consultation
-            </button>
+            </Link>
 
             {/* Trust Points */}
             <div className="mt-3 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3">
