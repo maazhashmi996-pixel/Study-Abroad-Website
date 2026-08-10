@@ -18,6 +18,14 @@ interface FaqItem {
   answer: string;
 }
 
+ const openWhatsApp = (
+    phoneNumber: string = "923452066100",
+    message: string = "Hello! I need some information."
+  ) => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
 export default function EightPage() {
   const [faqTab, setFaqTab] = useState<FaqCategory>("company");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -386,12 +394,13 @@ export default function EightPage() {
 
               </div>
 
-              <a
-                href="/contact"
-                className="shrink-0 rounded-xl bg-[#1a233d] px-4 py-2.5 text-[10px] font-bold text-white transition-colors hover:bg-[#0b5cff] sm:px-5 sm:text-xs"
-              >
-                Contact Us
-              </a>
+              <button
+        type="button"
+        onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
+        className=" hover:bg-[#0b5cff] bg-[#1a233d] text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition shadow-md"
+      >
+        Contact Us
+      </button>
 
             </div>
 

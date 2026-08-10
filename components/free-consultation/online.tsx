@@ -1,41 +1,68 @@
 "use client";
 
 import Image from 'next/image';
-import { Phone } from 'lucide-react';
+import { Phone, CheckCircle2 } from 'lucide-react';
 
 export default function OnlineConsultation() {
   return (
-    <div className="min-h-screen bg-white text-slate-800 font-sans">
-    
-
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
+      
       {/* Hero Section */}
       <main className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Text Content */}
           <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#38236B] leading-tight">
-              Book an Online Consultation with Our Overseas Education Consultants
+            
+            {/* Category Tag */}
+            <div className="inline-flex items-center gap-2 bg-slate-900 text-white text-xs font-black uppercase tracking-widest px-4 py-2 border-l-4 border-[#ef4444]">
+              <span>Online Overseas Guidance</span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight uppercase tracking-tight">
+              Book an Online Consultation with Our <span className="text-[#0b5cff]">Education Consultants</span>
             </h1>
             
-            <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-              D.Education Zone's online overseas education consultants help you plan your studies abroad from wherever you are. In a one-on-one video consultation, our experienced counselors review your academic background and goals, shortlist universities and courses that genuinely fit your profile, and walk you through applications, scholarships, and the student visa process step by step. Sessions are scheduled around your availability, so you receive clear, personalized advice without the guesswork of searching alone. Book your online consultation today and take a confident first step toward studying overseas.
+            {/* Lead Paragraph */}
+            <p className="text-slate-600 leading-relaxed text-base md:text-lg font-medium">
+              D. Education Zone&apos;s online overseas education consultants help you plan your studies abroad from wherever you are. In a one-on-one video consultation, our experienced counselors review your academic background and goals, shortlist universities and courses that genuinely fit your profile, and walk you through applications, scholarships, and the student visa process step by step.
             </p>
 
-            <div className="pt-2">
-              <button className="bg-[#FAA61A] hover:bg-[#43246f] transform duration-500 text-white font-semibold px-8 py-3.5 rounded-md shadow-sm transition-all text-base">
-                Learn more
+            {/* Quick Benefits Checklist */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-slate-700 text-sm font-bold">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-[#ef4444]" />
+                <span>1-on-1 Video Session</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-[#0b5cff]" />
+                <span>Visa & Application Roadmap</span>
+              </div>
+            </div>
+
+            {/* CTA Button Group */}
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <button className="bg-[#0b5cff] hover:bg-[#ef4444] text-white font-black text-xs uppercase tracking-widest px-8 py-4 transition-all duration-300 shadow-lg shadow-blue-500/20 active:scale-95">
+                Learn More
               </button>
+              
+              <a 
+                href="tel:+923452066100" 
+                className="inline-flex items-center gap-2 text-slate-900 hover:text-[#0b5cff] font-black text-xs uppercase tracking-wider px-6 py-4 border-2 border-slate-300 hover:border-[#0b5cff] bg-white transition-all"
+              >
+                <Phone className="w-4 h-4 text-[#ef4444]" />
+                <span>Call Directly</span>
+              </a>
             </div>
           </div>
 
-          {/* Graphic / Illustration Placeholder */}
-          <div className="relative flex items-center justify-center p-6">
+          {/* Graphic / Illustration Card */}
+          <div className="relative flex items-center justify-center p-6 bg-slate-100 border-b-8 border-[#0b5cff] rounded-none shadow-sm">
             <div className="w-full max-w-lg aspect-square relative flex items-center justify-center">
-              {/* Replace src with your actual illustration asset URL */}
               <Image 
                 src="/images/steps/consultation.webp" 
-                alt="consultation" 
+                alt="Online Consultation" 
                 width={500}
                 height={500}
                 priority
@@ -47,7 +74,6 @@ export default function OnlineConsultation() {
         </div>
       </main>
 
-    
     </div>
   );
 }

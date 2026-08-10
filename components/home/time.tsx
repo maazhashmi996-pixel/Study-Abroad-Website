@@ -132,7 +132,7 @@ export default function Time() {
           {/* View All */}
 
           <Link
-            href="/events"
+            href="/view"
             className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#1a233d] px-6 py-3 text-xs font-bold text-white shadow-lg transition-all duration-300 hover:bg-[#0b5cff] hover:shadow-[#0b5cff]/20"
           >
             View All Events
@@ -143,7 +143,7 @@ export default function Time() {
           </Link>
 
         </div>
-
+ 
         {/* =====================================================
             SLIDER
         ===================================================== */}
@@ -343,15 +343,10 @@ export default function Time() {
                     ================================================= */}
 
                     <Link
-                      href={`/events/${event.id}`}
+                      href="/explore-event"
                       className="group/button mt-6 flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-extrabold text-[#1a233d] transition-all duration-300 hover:border-[#0b5cff] hover:bg-[#0b5cff] hover:text-white"
-                    >
-
-                      <span>
-                        Explore Event
-                      </span>
-
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#0b5cff] transition-transform duration-300 group-hover/button:translate-x-1">
+                    > Explore Event
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#0b5cff] transition-transform duration-300 group-hover/button:translate-x-1">
 
                         <ArrowUpRight className="h-3.5 w-3.5" />
 

@@ -24,8 +24,7 @@ function page() {
       <Time/>
       <Speak/>
    <Update/>
-
-    </div>
+</div>
   )
 }
 
