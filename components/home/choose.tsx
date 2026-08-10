@@ -382,7 +382,7 @@ function Choose() {
             </p>
 
             <Link
-              href="/study-abroad"
+              href="/explore-program"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0b5cff] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#1a233d]"
             >
               Explore Programmes

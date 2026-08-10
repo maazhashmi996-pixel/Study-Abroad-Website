@@ -77,7 +77,7 @@ export default function Admission() {
                   </div>
                   
                   {/* Title text stays original dark color */}
-                  <h4 className="font-bold text-lg sm:text-xl text-[#1a233d] mb-3">
+                  <h4 className="font-bold text-lg sm:text-xl text-[#0b5cff] mb-3">
                     {item.title}:
                   </h4>
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-medium">

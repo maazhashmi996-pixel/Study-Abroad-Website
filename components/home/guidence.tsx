@@ -76,30 +76,7 @@ export default function AdmissionGuidance() {
 
               <div className="mt-7 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 
-                <Link
-                  href="/contact"
-                  className="
-                    inline-flex
-                    items-center
-                    justify-center
-                    px-7
-                    py-3.5
-                    bg-[#0b5cff]
-                    hover:bg-[#084dcc]
-                    text-white
-                    rounded-full
-                    font-semibold
-                    text-sm
-                    sm:text-base
-                    shadow-md
-                    hover:shadow-lg
-                    transition-all
-                    duration-300
-                    hover:-translate-y-0.5
-                  "
-                >
-                  Get Admission Guidance
-                </Link>
+               
 
                 <Link
                   href="/study-Destination"
@@ -431,7 +408,7 @@ export default function AdmissionGuidance() {
           </p>
 
           <Link
-            href="/contact"
+            href="/get"
             className="
               inline-flex
               mt-7

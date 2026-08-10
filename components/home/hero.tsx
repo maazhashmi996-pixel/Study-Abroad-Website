@@ -18,6 +18,14 @@ import {
   BookOpen,
 } from "lucide-react";
 
+  const openWhatsApp = (
+    phoneNumber: string = "923452066100",
+    message: string = "Hello! I need some information."
+  ) => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
 export default function Home() {
   
 
@@ -380,17 +388,18 @@ export default function Home() {
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/free-consultation"
-              className="rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#1a233d] transition hover:bg-slate-100"
+              className="rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#1a233d]  hover:bg-[#0b5cff] hover:text-white transition duration-500"
             >
               Get Free Consultation
             </Link>
 
-            <Link
-              href="/contact"
-              className="rounded-full border border-white/40 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white/10"
-            >
-              Contact Us
-            </Link>
+             <button
+        type="button"
+        onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
+        className="bg-[#0b5cff] hover:bg-white hover:text-slate-700 text-white transition duration-500 border-white font-semibold text-sm px-7 py-3.5 rounded-full  shadow-md"
+      >
+        Contact Us
+      </button>
           </div>
         </div>
       </section>
