@@ -75,7 +75,7 @@ const events = [
   },
 ];
 
-export default function Time() {
+export default function Meet() {
   return (
     <section className="relative overflow-hidden bg-[#f7f9fc] py-16 sm:py-20 lg:py-24">
 
