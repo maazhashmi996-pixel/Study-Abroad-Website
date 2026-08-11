@@ -2,13 +2,13 @@ import OfferPage from '@/components/steps/receive/offer'
 import Hero from '@/components/steps/receive/hero'
 import Mistakes from '@/components/steps/receive/mistakes'
 import Timeline from '@/components/steps/receive/timeline'
-import Yellow from '@/components/steps/receive/yellow'
+import red from '@/components/steps/receive/red'
 
 export default function page() {
   return (
     <div>
       <Hero/>
-      <Yellow/>
+      <red/>
       <Mistakes/>
       <Timeline/>
       <OfferPage/>

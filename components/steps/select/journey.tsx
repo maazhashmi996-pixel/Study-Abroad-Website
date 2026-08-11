@@ -59,7 +59,7 @@ export default function Journey() {
   return (
     <div className="w-full font-sans">
       
-      {/* 1. YELLOW SECTION: The 8 Study Abroad Steps */}
+      {/* 1. red SECTION: The 8 Study Abroad Steps */}
       <section className="bg-[#ECA82C] text-[#3B1E54] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
 

@@ -1,94 +1,87 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  CheckCircle2, 
-  ChevronRight, 
-  PhoneCall, 
-  Calendar,
-  ArrowRight,
-  FileText
-} from 'lucide-react';
+import React from "react";
+import { CheckCircle2, ChevronRight, PhoneCall } from "lucide-react";
 
 export const metadata = {
-  title: 'How to Apply for Turkey Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on Turkey student visa requirements, Anatolia Travel Services visa filing, fees, Türkiye Bursları scholarships, and residence permit procedures for Pakistani students.',
+  title: "How to Apply for Turkey Study Visa in 2026 from Pakistan",
+  description:
+    "Complete step-by-step guide on Turkey student visa requirements, Anatolia Travel Services visa filing, fees, Türkiye Bursları scholarships, and residence permit procedures for Pakistani students.",
 };
 
 // Turkey-specific requirements data
 const requirementsData = [
   {
     title: "Valid Passport",
-    text: "Your passport must be valid for at least 6 months beyond your intended stay in Turkey, with at least two blank pages."
+    text: "Your passport must be valid for at least 6 months beyond your intended stay in Turkey, with at least two blank pages.",
   },
   {
     title: "Official University Acceptance Letter",
-    text: "Formal acceptance letter from a recognized Turkish public or foundation university, or proof of award for the Türkiye Bursları scholarship."
+    text: "Formal acceptance letter from a recognized Turkish public or foundation university, or proof of award for the Türkiye Bursları scholarship.",
   },
   {
     title: "Anatolia Visa Application Form",
-    text: "Duly filled and signed Turkish student visa application form processed through Anatolia Travel Services (the official visa agency in Pakistan)."
+    text: "Duly filled and signed Turkish student visa application form processed through Anatolia Travel Services (the official visa agency in Pakistan).",
   },
   {
     title: "Proof of Financial Funds",
-    text: "Official bank statement (personal or sponsor's) showing sufficient funds to cover tuition and living expenses in Turkey, along with an account maintenance certificate and affidavit of support."
+    text: "Official bank statement (personal or sponsor's) showing sufficient funds to cover tuition and living expenses in Turkey, along with an account maintenance certificate and affidavit of support.",
   },
   {
     title: "Attested Academic Documents",
-    text: "Matriculation, Intermediate, Bachelor's degree, and transcripts attested by IBCC, HEC, and the Ministry of Foreign Affairs (MOFA) Pakistan."
+    text: "Matriculation, Intermediate, Bachelor's degree, and transcripts attested by IBCC, HEC, and the Ministry of Foreign Affairs (MOFA) Pakistan.",
   },
   {
     title: "Language Proficiency Certificate",
-    text: "IELTS, TOEFL, or TOMER (for Turkish-taught programs) as required by the admitting university."
+    text: "IELTS, TOEFL, or TOMER (for Turkish-taught programs) as required by the admitting university.",
   },
   {
     title: "Travel & Health Insurance",
-    text: "Comprehensive travel medical insurance valid in Turkey for the duration of stay, issued by an authorized insurance provider."
+    text: "Comprehensive travel medical insurance valid in Turkey for the duration of stay, issued by an authorized insurance provider.",
   },
   {
     title: "Police Clearance Certificate",
-    text: "Recent Character Certificate issued by local police authorities in Pakistan, legally attested."
-  }
+    text: "Recent Character Certificate issued by local police authorities in Pakistan, legally attested.",
+  },
 ];
 
 const stepsData = [
   {
     number: "1",
     title: "Apply & Secure Admission",
-    text: "Research Turkish universities or apply through the Türkiye Bursları official scholarship portal. Obtain your official University Acceptance Letter."
+    text: "Research Turkish universities or apply through the Türkiye Bursları official scholarship portal. Obtain your official University Acceptance Letter.",
   },
   {
     number: "2",
     title: "Attest Educational Documents",
-    text: "Get your academic degrees and transcripts verified and attested by IBCC/HEC and MOFA Pakistan."
+    text: "Get your academic degrees and transcripts verified and attested by IBCC/HEC and MOFA Pakistan.",
   },
   {
     number: "3",
     title: "Prepare Financial & Travel Documents",
-    text: "Gather bank statements, travel health insurance, police clearance, and accommodation details in Turkey."
+    text: "Gather bank statements, travel health insurance, police clearance, and accommodation details in Turkey.",
   },
   {
     number: "4",
     title: "Book Appointment at Anatolia Travel Services",
-    text: "Schedule an appointment at the nearest Anatolia Travel Services visa application center (Islamabad, Lahore, Karachi, Peshawar, etc.)."
+    text: "Schedule an appointment at the nearest Anatolia Travel Services visa application center (Islamabad, Lahore, Karachi, Peshawar, etc.).",
   },
   {
     number: "5",
     title: "Submit Visa Application & Biometrics",
-    text: "Attend your visa appointment, submit all physical document sets, provide biometrics, and pay the visa processing fee."
+    text: "Attend your visa appointment, submit all physical document sets, provide biometrics, and pay the visa processing fee.",
   },
   {
     number: "6",
     title: "Receive Visa Stamp & Travel",
-    text: "Collect your passport with the stamped Turkish Student Entry Visa upon approval and arrange travel to Turkey."
+    text: "Collect your passport with the stamped Turkish Student Entry Visa upon approval and arrange travel to Turkey.",
   },
   {
     number: "7",
     title: "Apply for Student Residence Permit (İkamet)",
-    text: "Within 30 days of arrival in Turkey, apply online via the e-İkamet portal and submit documents to the Directorate General of Migration Management (Göç İdaresi)."
-  }
+    text: "Within 30 days of arrival in Turkey, apply online via the e-İkamet portal and submit documents to the Directorate General of Migration Management (Göç İdaresi).",
+  },
 ];
 
-export default function Turkey() {
+export default function TurkeyPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Hero Header Section */}

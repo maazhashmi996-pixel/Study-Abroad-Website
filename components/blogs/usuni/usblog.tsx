@@ -1,14 +1,16 @@
 "use client";
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 // Swiper Styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface Blog {
   id: number;
@@ -42,7 +44,7 @@ const blogs: Blog[] = [
     desc: "A step-by-step roadmap for Pakistani students applying to Dutch universities and MVV permits...",
     image: "/images/blog/neatherlands.webp",
     tags: ["Netherlands", "Visa"],
-    link: "/neatherland",
+    link: "/netherlands",
   },
   {
     id: 4,
@@ -50,7 +52,7 @@ const blogs: Blog[] = [
     desc: "Understand SDS visa processing times, DLIs, and financial proof required for study permits...",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Scholarships"],
-    link: "/china",
+    link: "/canada",
   },
   {
     id: 5,
@@ -74,7 +76,7 @@ const blogs: Blog[] = [
     desc: "Navigating CAS issuance, Graduate Route visas, and university intake deadlines in the UK...",
     image: "/images/blog/10-Tips.png",
     tags: ["United Kingdom", "Visa"],
-    link: "/ukingdom",
+    link: "/uk",
   },
   {
     id: 8,
@@ -82,7 +84,7 @@ const blogs: Blog[] = [
     desc: "Admission criteria, residence permits, and tuition details for international applicants...",
     image: "/images/blog/bunking-myths.png",
     tags: ["Denmark", "Europe"],
-    link: "/bunking-myths",
+    link: "/denmark",
   },
   {
     id: 9,
@@ -122,7 +124,7 @@ const blogs: Blog[] = [
     desc: "An affordable pathway to quality education, EMGS approval, and student pass applications...",
     image: "/images/blog/maly.webp",
     tags: ["Malaysia", "Scholarships"],
-    link: "/malysia",
+    link: "/malaysia",
   },
   {
     id: 14,
@@ -130,7 +132,7 @@ const blogs: Blog[] = [
     desc: "Discover GKS scholarship programs, D-2 visa requirements, and top universities in Korea...",
     image: "/images/blog/south-korea.webp",
     tags: ["South Korea", "Scholarships"],
-    link: "/south",
+    link: "/south-korea",
   },
 ];
 
@@ -145,7 +147,7 @@ export default function USBlogSection() {
             Latest Updates
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Study Abroad Blogs <span className="text-blue-600">— Guidance, Tips & Guides</span>
+            Study Abroad Blogs <span className="text-blue-600">— Guidance, Tips &amp; Guides</span>
           </h2>
         </div>
 
@@ -155,8 +157,8 @@ export default function USBlogSection() {
           spaceBetween={24}
           slidesPerView={1}
           navigation={{
-            prevEl: '.custom-prev',
-            nextEl: '.custom-next',
+            prevEl: ".custom-prev",
+            nextEl: ".custom-next",
           }}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -172,15 +174,17 @@ export default function USBlogSection() {
                 
                 {/* Image Container */}
                 <div className="relative w-full h-52 bg-slate-900 overflow-hidden">
-                  <img
+                  <Image
                     src={blog.image}
                     alt={blog.title}
-                    className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover opacity-90 hover:scale-105 transition-transform duration-500"
                   />
 
-                  {/* Primary Tag Overlay (Electric Blue Badge) */}
+                  {/* Primary Tag Overlay */}
                   {blog.tags.length > 0 && (
-                    <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm uppercase tracking-wider">
+                    <div className="absolute top-4 left-4 z-10 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm uppercase tracking-wider">
                       {blog.tags[0]}
                     </div>
                   )}
@@ -199,12 +203,12 @@ export default function USBlogSection() {
 
                   {/* Read More Button */}
                   <div className="mt-6">
-                    <a
+                    <Link
                       href={blog.link}
                       className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-colors duration-200 text-sm shadow-sm"
                     >
                       Read Guide <ArrowRight size={16} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

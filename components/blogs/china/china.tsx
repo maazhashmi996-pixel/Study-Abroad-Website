@@ -1,115 +1,108 @@
-"use client"
-import Link from 'next/link';
+"use client";
+
+import React from 'react';
 import { 
   CheckCircle2, 
   ChevronRight, 
-  PhoneCall, 
-  Calendar 
+  PhoneCall 
 } from 'lucide-react';
-
-export const metadata = {
-  title: 'How to Apply for China Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on China study visa requirements, fees, process, and timeline for Pakistani students.',
-};
 
 // Data structures for inline rendering
 const requirementsData = [
   {
     title: "Valid Passport",
-    text: "Your passport should remain valid throughout your intended stay in China. You cannot be granted a permit for longer than your passport is valid."
+    text: "Original passport with at least 6 months of remaining validity and at least 2 blank visa pages, along with photocopies of the personal information page."
   },
   {
-    title: "University Admission Letter",
-    text: "Official admission confirmation from a recognised China university. You count as finally admitted only once any tuition fee has been paid."
+    title: "University Admission Notice",
+    text: "Official original Admission Notice (and photocopy) issued by a recognised university or educational institution in China."
   },
   {
-    title: "Application Through universityadmissions.se",
-    text: "Programme applications go through the official national portal universityadmissions.se (the China-language version is antagning.se), run by the China Council for Higher Education. A non-EU application fee of SEK 900 applies, and you can choose up to four programmes per round."
+    title: "JW201 or JW202 Form",
+    text: "Original and photocopy of Form JW201 (for CSC scholarship students) or Form JW202/DQ (for self-funded students), issued by Chinese authorities."
   },
   {
-    title: "Proof of Funds",
-    text: "Financial evidence showing you can cover tuition fees and living expenses in China. Note: the bank statement must be issued no more than four months before your permit start date."
+    title: "Visa Application Form & Photo",
+    text: "Completed Chinese Visa Application Form submitted online (COVA), along with a recent passport-size photo (33mm x 48mm, white background, bare head)."
   },
   {
-    title: "Academic Documents",
-    text: "Matric, Intermediate, Bachelor's degree, transcripts, and other supporting certificates. All documents must be in China or English; if translated, include a certified translation together with a copy of the original."
+    title: "Police Character Certificate",
+    text: "Valid Police Clearance Certificate from Pakistan, attested by the Ministry of Foreign Affairs (MOFA) Pakistan (applicable for applicants aged 10 and above)."
   },
   {
-    title: "English Language Requirement",
-    text: "IELTS, TOEFL, or equivalent proof of English proficiency as required by the university, commonly around IELTS 6.0 to 6.5, TOEFL iBT 90 to 100, or PTE 62 and above."
+    title: "Foreigner Physical Examination Form",
+    text: "Completed medical examination form signed by a recognised doctor/hospital, including chest X-ray and lab test results (required for studies > 180 days)."
   },
   {
-    title: "Statement of Purpose (SOP)",
-    text: "An SOP explaining your academic background, study goals, and plans. Master's applications often also ask for two letters of recommendation."
+    title: "Proof of Financial Means",
+    text: "Bank statement showing a minimum closing balance of around USD 2,500 to 5,000 equivalent in PKR for self-funded students, or official CSC scholarship award letter."
   },
   {
-    title: "Health Insurance",
-    text: "If your programme lasts less than one year, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last one year or more, you register in the China population register, which gives you access to healthcare."
+    title: "Educational Attested Documents",
+    text: "Matric, Intermediate, Bachelor's degrees, and official transcripts attested by IBCC, HEC, and MOFA Pakistan."
   },
   {
-    title: "Accommodation Details",
-    text: "Proof of housing arrangements in China. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
+    title: "Language Proficiency Proof",
+    text: "IELTS/TOEFL for English-medium programs, or HSK (Chinese Proficiency Test) certificate for Chinese-taught programs."
   },
   {
-    title: "Residence Permit Documents",
-    text: "Completed online residence permit application through the Migrationsverket e-service, with passport-size photographs. Your fingerprints and photo are taken later when you present your passport."
+    title: "Identity Documents",
+    text: "Photocopies of your CNIC / Form-B and previous passports or prior Chinese visas (if applicable)."
   }
 ];
 
 const stepsData = [
   {
     number: "1",
-    title: "Choose Your Program",
-    text: "Research China universities and select a degree program that matches your academic interests. The main intake is autumn, with applications usually open from mid-October to mid-January deadline."
+    title: "Choose Program & Secure Admission",
+    text: "Apply directly to Chinese universities or through official portals (like CUCAS or university portals). Secure an admission letter."
   },
   {
     number: "2",
-    title: "Apply through admissions.se",
-    text: "Submit your university applications through the official national portal universityadmissions.se. You can apply to up to four programmes in a round, and a non-EU application fee of SEK 900 applies."
+    title: "Receive Admission Notice & JW201/JW202 Form",
+    text: "Upon acceptance, the university will issue your official Admission Notice and apply for your Form JW201 (Scholarship) or Form JW202/DQ (Self-funded)."
   },
   {
     number: "3",
-    title: "Receive Admission Offer",
-    text: "Once accepted, you'll receive your admission confirmation from the university."
+    title: "Complete Medical & Police Clearance",
+    text: "Undergo the Foreigner Physical Examination at an approved hospital and obtain your MOFA-attested Police Clearance Certificate."
   },
   {
     number: "4",
-    title: "Apply for Scholarships",
-    text: "Look for scholarships from your university and from the China Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs."
+    title: "Fill COVA Application Online",
+    text: "Complete the Chinese Online Visa Application (COVA) form, upload your photo, and print out the completed confirmation page and application form."
   },
   {
     number: "5",
-    title: "Arrange Financial Documents",
-    text: "Prepare proof of funds, tuition payment receipts, and sponsorship documents if required. Make sure your bank statement is issued no more than four months before your permit start date."
+    title: "Book Appointment & Submit Application",
+    text: "Schedule an appointment at the Chinese Visa Application Service Center (CVASC) in Islamabad, Karachi, or Lahore. Submit all original documents and biometric data."
   },
   {
     number: "6",
-    title: "Apply for a Residence Permit",
-    text: "Apply online through the China Migration Agency (Migrationsverket) e-service after you are admitted and have paid any tuition. You pay the SEK 1,500 fee by card and state which China embassy you will visit."
+    title: "Collect Visa (X1 / X2)",
+    text: "Collect your passport with the X1 Visa (studies > 180 days) or X2 Visa (studies ≤ 180 days) once processed."
   },
   {
     number: "7",
-    title: "Receive Approval & Travel",
-    text: "Once approved, prepare for your journey to China. If your studies last a year or more, register in the China population register after arrival to access healthcare."
+    title: "Travel & Apply for Temporary Residence Permit",
+    text: "After arriving in China with an X1 visa, apply for a Foreigner's Residence Permit at the local Public Security Bureau (PSB) Exit-Entry Administration within 30 days."
   }
 ];
 
-
-
-export default function China() {
+export default function ChinaStudyVisaGuide() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Top Banner / Header */}
-      <header className="bg-indigo-950 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <header className="bg-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-amber-400 text-indigo-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+          <span className="inline-block bg-red-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
             How to Apply for a China Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-            A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
+            A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures for Pakistani students.
           </p>
         </div>
       </header>
@@ -118,38 +111,50 @@ export default function China() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            China is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, China offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            China is a top destination for Pakistani students seeking quality higher education through competitive tuition fees, Chinese Government Scholarships (CSC), and world-class universities. Whether pursuing MBBS, Engineering, Business, or Chinese language courses, understanding the visa process is crucial for a smooth journey.
           </p>
 
-          <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
-            <p className="text-amber-800 text-sm mt-1">
-              China does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">China Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a China university.
+          <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+            <h4 className="font-semibold text-red-900 text-sm sm:text-base">Visa Types to Know:</h4>
+            <p className="text-red-800 text-sm mt-1">
+              For studies lasting more than 180 days, you will be issued an <strong className="font-semibold text-red-950">X1 Visa</strong>, which must be converted into a Foreigner&apos;s Residence Permit within 30 days of entering China. For studies lasting 180 days or fewer, an <strong className="font-semibold text-red-950">X2 Visa</strong> is issued.
             </p>
           </div>
 
           {/* Table of Contents */}
           <div className="mt-8 bg-slate-50 p-5 rounded-xl border border-slate-200">
             <h3 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">In this guide:</h3>
-            <ol className="space-y-2 text-sm sm:text-base font-medium text-indigo-700">
-              <li><a href="#requirements" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 1. Requirements for Pakistani Students</a></li>
-              <li><a href="#steps" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 2. Step-by-Step Application Process</a></li>
-              <li><a href="#fees" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time</a></li>
+            <ol className="space-y-2 text-sm sm:text-base font-medium text-slate-700">
+              <li>
+                <a href="#requirements" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 1. Requirements for Pakistani Students
+                </a>
+              </li>
+              <li>
+                <a href="#steps" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 2. Step-by-Step Application Process
+                </a>
+              </li>
+              <li>
+                <a href="#fees" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time
+                </a>
+              </li>
             </ol>
           </div>
         </section>
 
         {/* Section 1: Requirements */}
-        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             Requirements for Pakistani Students
           </h2>
-          <p className="text-slate-600 mb-6">To apply for a China study visa, Pakistani students need the following documents:</p>
+          <p className="text-slate-600 mb-6">To apply for a Chinese study visa (X1/X2), Pakistani applicants need to compile the following documents:</p>
 
           <ul className="space-y-4">
             {requirementsData.map((item, index) => (
               <li key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
-                <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-slate-600 shrink-0 mt-0.5" />
                 <div className="text-sm sm:text-base text-slate-700">
                   <strong className="font-semibold text-slate-900">{item.title}:</strong> {item.text}
                 </div>
@@ -159,15 +164,15 @@ export default function China() {
         </section>
 
         {/* Section 2: Step-by-step Process */}
-        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             Step-by-Step Application Process
           </h2>
 
           <div className="space-y-6">
             {stepsData.map((step) => (
               <div key={step.number} className="flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-amber-400 font-bold text-sm shrink-0">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-red-400 font-bold text-sm shrink-0">
                   {step.number}
                 </span>
                 <div>
@@ -180,8 +185,8 @@ export default function China() {
         </section>
 
         {/* Section 3: Fees & Table */}
-        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             China Study Visa Fee &amp; Processing Time
           </h2>
 
@@ -195,27 +200,33 @@ export default function China() {
               </thead>
               <tbody className="divide-y divide-slate-200 text-sm sm:text-base text-slate-700">
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Visa Fee</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Embassy Visa Fee</td>
                   <td className="p-4">
-                    There is no separate study visa fee. The residence permit for studies application fee is <strong className="font-semibold text-slate-900">SEK 1,500 for adults</strong> (SEK 750 for children under 18), paid by card in the online application. A separate university application fee of SEK 900 is paid at universityadmissions.se.
+                    <strong className="font-semibold text-slate-900">0 PKR</strong> (Visa fee is waived for Pakistani citizens under bilateral agreements).
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">CVASC Service Fee</td>
+                  <td className="p-4">
+                    The Chinese Visa Application Service Center charges a service fee of approximately <strong className="font-semibold text-slate-900">PKR 13,200 (Regular)</strong> or <strong className="font-semibold text-slate-900">PKR 19,800 (Express)</strong> inclusive of GST.
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Processing Time</td>
                   <td className="p-4">
-                    The Migration Agency does not give a fixed time, but reports that about 75 percent of recent cases were decided within <strong className="font-semibold text-slate-900">2 months</strong>. Apply as soon as you are admitted and have paid tuition.
+                    Regular processing takes about <strong className="font-semibold text-slate-900">4 to 7 working days</strong>. Express service takes approximately <strong className="font-semibold text-slate-900">2 to 3 working days</strong>.
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Fund Requirement</td>
                   <td className="p-4">
-                    The maintenance requirement is <strong className="font-semibold text-slate-900">SEK 10,656 per month for 2026</strong> (set by the Migration Agency and revised yearly), to cover living costs for each month of your studies.
+                    Self-funded students must show proof of funds equivalent to <strong className="font-semibold text-slate-900">USD 2,500 – 5,000 per academic year</strong> in a bank account. CSC scholarship holders present their award letter instead.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Dependents</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Residence Permit Fee (In China)</td>
                   <td className="p-4">
-                    Allowed. Family members can apply at the same time, showing additional maintenance of SEK 4,440 per month for a spouse and SEK 2,664 per month for each child.
+                    Upon arrival in China, converting your X1 visa into a residence permit costs approximately <strong className="font-semibold text-slate-900">RMB 400 to RMB 800</strong> per year, plus roughly RMB 400–600 for the physical exam verification.
                   </td>
                 </tr>
               </tbody>
@@ -224,33 +235,33 @@ export default function China() {
         </section>
 
         {/* CTA Contact Form */}
-        <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
+        <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your China Study Visa?</h2>
-            <p className="text-indigo-200 text-sm sm:text-base">
-              Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
+            <p className="text-slate-200 text-sm sm:text-base">
+              Get expert guidance on CSC scholarships, university applications, JW202/JW201 form processing, and embassy documentation.
             </p>
           </div>
 
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto" onSubmit={(e) => e.preventDefault()}>
+            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
+            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
+            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
             
-            <select className="w-full px-4 py-3 rounded-xl bg-indigo-900 text-indigo-100 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
+            <select className="w-full px-4 py-3 rounded-xl bg-slate-900 text-slate-100 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm">
               <option value="">Preferred Study Level</option>
               <option value="bachelors">Bachelor&apos;s Degree</option>
               <option value="masters">Master&apos;s Degree</option>
               <option value="phd">PhD / Doctorate</option>
+              <option value="language">Chinese Language Program</option>
             </select>
 
-            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
+            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-red-400 hover:bg-red-300 text-slate-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
               <PhoneCall size={18} /> Get Free Consultation
             </button>
           </form>
         </section>
 
-    
       </div>
     </main>
   );

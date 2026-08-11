@@ -12,7 +12,7 @@ export const metadata = {
   description: 'Complete step-by-step guide on Sweden study visa requirements, fees, process, and timeline for Pakistani students.',
 };
 
-// Data structures for inline rendering
+// Structured data for requirements and application steps
 const requirementsData = [
   {
     title: "Valid Passport",
@@ -28,7 +28,7 @@ const requirementsData = [
   },
   {
     title: "Proof of Funds",
-    text: "Financial evidence showing you can cover tuition fees and living expenses in Sweden. Note: the bank statement must be issued no more than four months before your permit start date."
+    text: "Financial evidence showing you can cover tuition fees and living expenses in Sweden (SEK 10,656 per month for 2026). Note: bank statements must be issued no more than four months before your permit start date."
   },
   {
     title: "Academic Documents",

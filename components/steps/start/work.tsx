@@ -117,7 +117,7 @@ export default function Work() {
   return (
     <main className="min-h-screen font-sans bg-slate-50">
       
-      {/* SECTION 1: YELLOW/ORANGE PROCESS SECTION */}
+      {/* SECTION 1: red/ORANGE PROCESS SECTION */}
       <section className="bg-[#e5a00d] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
           

@@ -1,29 +1,19 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
 import { 
   CheckCircle2, 
   ChevronRight, 
-  PhoneCall, 
-  FileText, 
-  GraduationCap, 
-  HelpCircle, 
-  Calendar 
+  PhoneCall 
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'How to Apply for South Korea Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on South Korea study visa (D-2) requirements, fees, bank statement, TB test, and application process for Pakistani students.',
-};
-
-export default function SouthKorea() {
+export default function SouthKoreaStudyVisaGuide() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Top Banner / Header */}
-      <header className="bg-indigo-950 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <header className="bg-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-amber-400 text-indigo-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+          <span className="inline-block bg-red-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
@@ -42,17 +32,17 @@ export default function SouthKorea() {
             South Korea is rapidly becoming a top destination for Pakistani students seeking world-class education, advanced technological research, and generous scholarship programs like the Global Korea Scholarship (GKS). Renowned for its globally ranked universities (such as Seoul National University, KAIST, and Yonsei), South Korea offers extensive English-taught degree programs, rich cultural immersion, and post-graduation work options.
           </p>
 
-          <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">Key Requirement Before You Apply:</h4>
-            <p className="text-amber-800 text-sm mt-1">
-              For full degree programs (Bachelor&apos;s, Master&apos;s, or PhD), Pakistani students must apply for a <strong className="font-semibold text-amber-950">D-2 Student Visa</strong>. You can only apply once you receive an official <strong className="font-semibold text-amber-950">Standard Admission Letter</strong> (issued by an IEQAS-certified Korean university) and complete mandatory medical TB screening.
+          <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+            <h4 className="font-semibold text-red-900 text-sm sm:text-base">Key Requirement Before You Apply:</h4>
+            <p className="text-red-800 text-sm mt-1">
+              For full degree programs (Bachelor&apos;s, Master&apos;s, or PhD), Pakistani students must apply for a <strong className="font-semibold text-red-950">D-2 Student Visa</strong>. You can only apply once you receive an official <strong className="font-semibold text-red-950">Standard Admission Letter</strong> (issued by an IEQAS-certified Korean university) and complete mandatory medical TB screening.
             </p>
           </div>
 
           {/* Table of Contents */}
           <div className="mt-8 bg-slate-50 p-5 rounded-xl border border-slate-200">
             <h3 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">In this guide:</h3>
-            <ol className="space-y-2 text-sm sm:text-base font-medium text-indigo-700">
+            <ol className="space-y-2 text-sm sm:text-base font-medium text-slate-700">
               <li><a href="#requirements" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 1. Requirements for Pakistani Students</a></li>
               <li><a href="#steps" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 2. Step-by-Step Application Process</a></li>
               <li><a href="#fees" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time</a></li>
@@ -61,8 +51,8 @@ export default function SouthKorea() {
         </section>
 
         {/* Section 1: Requirements */}
-        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             Requirements for Pakistani Students
           </h2>
           <p className="text-slate-600 mb-6">To apply for a South Korea D-2 study visa, Pakistani applicants must prepare the following documents:</p>
@@ -99,8 +89,8 @@ export default function SouthKorea() {
         </section>
 
         {/* Section 2: Step-by-step Process */}
-        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             Step-by-Step Application Process
           </h2>
 
@@ -136,8 +126,8 @@ export default function SouthKorea() {
         </section>
 
         {/* Section 3: Fees & Table */}
-        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             South Korea Study Visa Fee &amp; Processing Time
           </h2>
 
@@ -180,27 +170,27 @@ export default function SouthKorea() {
         </section>
 
         {/* CTA Contact Form */}
-        <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
+        <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your South Korea Study Visa?</h2>
-            <p className="text-indigo-200 text-sm sm:text-base">
+            <p className="text-slate-200 text-sm sm:text-base">
               Get expert guidance on university applications, Global Korea Scholarship (GKS), document attestation, and visa filing.
             </p>
           </div>
 
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto" onSubmit={(e) => e.preventDefault()}>
+            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
+            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
+            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
             
-            <select className="w-full px-4 py-3 rounded-xl bg-indigo-900 text-indigo-100 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
+            <select className="w-full px-4 py-3 rounded-xl bg-slate-900 text-slate-100 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm">
               <option value="">Preferred Study Level</option>
               <option value="bachelors">Bachelor&apos;s Degree</option>
               <option value="masters">Master&apos;s Degree</option>
               <option value="phd">PhD / Doctorate</option>
             </select>
 
-            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
+            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-red-400 hover:bg-red-300 text-slate-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
               <PhoneCall size={18} /> Get Free Consultation
             </button>
           </form>
@@ -214,7 +204,7 @@ export default function SouthKorea() {
 function RequirementItem({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
-      <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+      <CheckCircle2 className="w-5 h-5 text-slate-600 shrink-0 mt-0.5" />
       <div className="text-sm sm:text-base text-slate-700">
         <strong className="font-semibold text-slate-900">{title}:</strong> {children}
       </div>
@@ -225,7 +215,7 @@ function RequirementItem({ title, children }: { title: string; children: React.R
 function StepCard({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50">
-      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-amber-400 font-bold text-sm shrink-0">
+      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-red-400 font-bold text-sm shrink-0">
         {number}
       </span>
       <div>

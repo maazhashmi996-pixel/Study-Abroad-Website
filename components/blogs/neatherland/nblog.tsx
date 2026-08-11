@@ -1,19 +1,21 @@
 "use client";
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
-// Swiper Styles Import Karein
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// Swiper Styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface Blog {
   id: number;
   title: string;
-  desc:string;
+  desc: string;
   image: string;
   tags: string[];
   link: string;
@@ -23,228 +25,247 @@ const blogs: Blog[] = [
   {
     id: 1,
     title: "How to Apply for Austria Study Visa in 2026 from Pakistan",
-    desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
+    desc: "Austria is one of the most affordable options for students who want a respected European degree with excellent post-study opportunities.",
     image: "/images/blog/austria-visa.webp",
     tags: ["Austria", "Visa", "Europe"],
-    link: "/austria",
+    link: "/blogs/austria-study-visa",
   },
   {
     id: 2,
     title: "How to Apply for Europe Study Visa in 2026 from Pakistan",
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "A comprehensive guide to navigating European study visas, admission requirements, and scholarship paths for international students.",
     image: "/images/blog/MBA.png",
     tags: ["Hungary", "Visa", "Europe"],
-    link: "/europe",
+    link: "/blogs/europe-study-visa",
   },
   {
     id: 3,
     title: "How to Apply for Netherlands Study Visa in 2026 from Pakistan",
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "Explore top English-taught programs, post-study work options, and step-by-step visa guidelines for the Netherlands.",
     image: "/images/blog/neatherlands.webp",
     tags: ["Netherlands", "Visa", "Europe"],
-    link: "/neatherland",
+    link: "/blogs/netherlands-study-visa",
   },
   {
     id: 4,
     title: "Study in Canada Guide for International Students",
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "Everything you need to know about SDS visa streams, university admissions, and popular scholarships in Canada.",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Scholarships"],
-    link: "/china",
+    link: "/blogs/study-in-canada",
   },
   {
     id: 5,
     title: "Top Scholarships to Study in China",
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "Discover fully funded CSC and provincial government scholarship opportunities available for international applicants.",
     image: "/images/blog/china.webp",
-    tags: ["Europe", "Scholarships"],
-    link: "/china",
+    tags: ["China", "Scholarships"],
+    link: "/blogs/china-scholarships",
   },
   {
     id: 6,
     title: "Student Visa Interview Tips for Beginners in Turkey",
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "Master your Turkish embassy interview with essential preparation tips, sample questions, and document checklists.",
     image: "/images/blog/turkey.webp",
-    tags: ["Australia", "Visa"],
-    link: "/turkey",
+    tags: ["Turkey", "Visa"],
+    link: "/blogs/turkey-visa-tips",
   },
-    {
+  {
     id: 7,
     title: "Study Opportunities in United Kingdom for 2026",
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "Learn about intake deadlines, CAS issuance, English language waiver options, and Graduate Route policies in the UK.",
     image: "/images/blog/10-Tips.png",
     tags: ["United Kingdom", "Visa"],
-    link: "/ukingdom",
+    link: "/blogs/uk-study-opportunities",
   },
   {
     id: 8,
     title: "Understanding Denmark Higher Education Requirements",
-        desc:"Austria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "Find detailed information on Danish higher education institutions, tuition fee structure, and residence permits.",
     image: "/images/blog/bunking-myths.png",
     tags: ["Denmark", "Europe"],
-    link: "/bunking-myths",
+    link: "/blogs/denmark-education-requirements",
   },
   {
     id: 9,
     title: "United States University Admission Checklist",
-        desc:"Austria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    desc: "A practical checklist for standardized tests, SOP writing, financial documentation, and F-1 visa preparation.",
     image: "/images/blog/Exchange-programs.png",
     tags: ["United States", "Scholarships"],
-    link: "/usuni",
+    link: "/blogs/us-admission-checklist",
   },
   {
     id: 10,
-    title: "Sweden University Admission & Scholarship Guide", // Updated duplicate title
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    title: "Sweden University Admission & Scholarship Guide",
+    desc: "Complete step-by-step guidance on applying through Swedish central portals and obtaining Swedish Institute scholarships.",
     image: "/images/blog/sweden.webp",
     tags: ["Sweden", "Scholarships"],
-    link: "/sweden",
+    link: "/blogs/sweden-study-guide",
   },
-
   {
     id: 11,
-    title: "France University Admission & Scholarship Guide", // Updated duplicate title
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    title: "France University Admission & Scholarship Guide",
+    desc: "Understand Campus France procedures, public university fees, and top funding programs like the Eiffel Scholarship.",
     image: "/images/blog/france-study.webp",
-    tags: ["france", "Scholarships"],
-    link: "/france",
+    tags: ["France", "Scholarships"],
+    link: "/blogs/france-study-guide",
   },
   {
     id: 12,
-    title: "Ireland University Admission & Scholarship Guide", // Updated duplicate title
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    title: "Ireland University Admission & Scholarship Guide",
+    desc: "Discover world-class research universities, stay-back options, and entry criteria for international students in Ireland.",
     image: "/images/blog/Ireland-study.png",
-    tags: ["ireland", "Scholarships"],
-    link: "/ireland",
+    tags: ["Ireland", "Scholarships"],
+    link: "/blogs/ireland-study-guide",
   },
   {
     id: 13,
-    title: "malysia University Admission & Scholarship Guide", // Updated duplicate title
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-
+    title: "Malaysia University Admission & Scholarship Guide",
+    desc: "Explore affordable top-ranked branch campuses, lower cost of living, and streamlined student visa processing.",
     image: "/images/blog/maly.webp",
-    tags: ["malysia", "Scholarships"],
-    link: "/malysia",
+    tags: ["Malaysia", "Scholarships"],
+    link: "/blogs/malaysia-study-guide",
   },
-    {
+  {
     id: 14,
-    title: "South Korea University Admission & Scholarship Guide", // Updated duplicate title
-        desc:"Auatria is one of the most affordale options for students who want te respected Eropean degree.....",
-image: "/images/blog/south-korea.webp",
-    tags: ["south", "Scholarships"],
-    link: "/south",
+    title: "South Korea University Admission & Scholarship Guide",
+    desc: "Learn about GKS (Global Korea Scholarship) opportunities, TOPIK requirements, and top universities in South Korea.",
+    image: "/images/blog/south-korea.webp",
+    tags: ["South Korea", "Scholarships"],
+    link: "/blogs/south-korea-study-guide",
   },
 ];
 
 export default function NBlogSection() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-8 relative group">
-      {/* Title Header */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center text-[#462066] mb-10">
-        Study Abroad Blogs - Guidance, Tips & More
-      </h1>
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative group">
+      {/* Header Section */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#462066] tracking-tight">
+          Study Abroad Blogs - Guidance, Tips &amp; More
+        </h2>
+        <p className="mt-3 text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+          Explore expert insights, step-by-step visa processes, and university admission guidelines to kickstart your global education journey.
+        </p>
+      </div>
 
-      {/* Swiper Slider */}
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation={{
-          prevEl: '.custom-prev',
-          nextEl: '.custom-next',
-        }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }, // Large screens per 3 cards dikhenge
-        }}
-        className="pb-14"
-      >
-        {blogs.map((blog) => (
-          <SwiperSlide key={blog.id} className="h-auto">
-            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between overflow-hidden border border-gray-100 h-full">
-              {/* Card Top / Image Container */}
-              <div className="relative w-full h-56 bg-gray-100 overflow-hidden rounded-t-2xl">
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-full h-full object-cover"
-                />
+      {/* Swiper Carousel */}
+      <div className="relative">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={24}
+          slidesPerView={1}
+          autoplay={{
+            delay: 4500,
+            disableOnInteraction: false,
+          }}
+          navigation={{
+            prevEl: ".custom-prev-blog",
+            nextEl: ".custom-next-blog",
+          }}
+          pagination={{ clickable: true, dynamicBullets: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-14 px-1"
+        >
+          {blogs.map((blog) => (
+            <SwiperSlide key={blog.id} className="h-auto">
+              <BlogCard blog={blog} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-                {/* Purple Decorative Curve */}
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                  <svg
-                    viewBox="0 0 300 200"
-                    className="w-full h-full"
-                    preserveAspectRatio="none"
-                  >
-                    <path
-                      d="M 0,0 L 120,0 C 90,80 0,90 0,160 Z"
-                      fill="#462066"
-                    />
-                    <path
-                      d="M 300,200 L 180,200 C 210,120 300,110 300,40 Z"
-                      fill="#462066"
-                    />
-                  </svg>
-                </div>
+        {/* Carousel Navigation Buttons */}
+        <button
+          aria-label="Previous Slide"
+          className="custom-prev-blog absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-5 z-20 bg-[#462066] text-white p-3 rounded-full shadow-lg hover:bg-[#E29D12] transition-colors duration-300 focus:outline-none"
+        >
+          <ChevronLeft size={22} />
+        </button>
 
-                {/* Tag Badge Overlay */}
-                {blog.tags.length > 0 && (
-                  <div className="absolute top-8 left-4 bg-[#E29D12] text-white text-xs font-semibold px-3 py-1 rounded-sm shadow-sm">
-                    {blog.tags[0]}
-                  </div>
-                )}
-              </div>
-
-              {/* Decorative Shapes & Title */}
-              <div className="relative px-6 pt-4 flex-1">
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className="w-4 h-4 rounded-full bg-[#462066] inline-block"></span>
-                  <span className="w-8 h-3 bg-[#E29D12] rounded-full inline-block transform -rotate-45"></span>
-                  <span className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[14px] border-b-[#E29D12] inline-block transform rotate-45"></span>
-                </div>
-
-                <h2 className="text-lg font-bold text-gray-800 leading-snug min-h-[56px] hover:text-[#462066] transition-colors">
-                  {blog.title}
-                </h2>
-                <p className="text-xs  text-gray-800 leading-snug min-h-[56px] hover:text-[#462066] transition-colors">{blog.desc}</p>
-              </div>
-
-              {/* Read More Button */}
-              <div className="p-6 pt-4">
-                <a
-                  href={blog.link}
-                  className="w-full block text-center bg-[#E29D12] hover:bg-[#c8880e] text-white font-semibold py-2.5 px-4 rounded-xl transition-colors duration-200"
-                >
-                  Read More &rarr;
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* Navigation Buttons (Icons) */}
-      <button className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-[#462066] text-white p-3 rounded-full shadow-lg hover:bg-[#E29D12] transition-colors duration-300">
-        <ChevronLeft size={24} />
-      </button>
-
-      <button className="custom-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-[#462066] text-white p-3 rounded-full shadow-lg hover:bg-[#E29D12] transition-colors duration-300">
-        <ChevronRight size={24} />
-      </button>
+        <button
+          aria-label="Next Slide"
+          className="custom-next-blog absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-5 z-20 bg-[#462066] text-white p-3 rounded-full shadow-lg hover:bg-[#E29D12] transition-colors duration-300 focus:outline-none"
+        >
+          <ChevronRight size={22} />
+        </button>
+      </div>
     </section>
+  );
+}
+
+// Sub-component for individual Blog Cards to cleanly handle state (image fallbacks)
+function BlogCard({ blog }: { blog: Blog }) {
+  const [imgSrc, setImgSrc] = useState(blog.image);
+
+  return (
+    <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden border border-gray-100 h-full">
+      {/* Image Container */}
+      <div className="relative w-full h-52 bg-gray-100 overflow-hidden rounded-t-2xl">
+        <Image
+          src={imgSrc}
+          alt={blog.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          onError={() => {
+            setImgSrc("https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80");
+          }}
+        />
+
+        {/* SVG Overlay Pattern */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-85 z-10">
+          <svg
+            viewBox="0 0 300 200"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path d="M 0,0 L 120,0 C 90,80 0,90 0,160 Z" fill="#462066" />
+            <path d="M 300,200 L 180,200 C 210,120 300,110 300,40 Z" fill="#462066" />
+          </svg>
+        </div>
+
+        {/* Primary Tag Badge */}
+        {blog.tags.length > 0 && (
+          <div className="absolute top-4 left-4 bg-[#E29D12] text-white text-xs font-semibold px-3 py-1 rounded-md shadow-md z-20">
+            {blog.tags[0]}
+          </div>
+        )}
+      </div>
+
+      {/* Content Section */}
+      <div className="p-6 flex-1 flex flex-col justify-between">
+        <div>
+          {/* Geometric Decorative Accent */}
+          <div className="flex items-center space-x-2 mb-3">
+            <span className="w-3 h-3 rounded-full bg-[#462066] inline-block"></span>
+            <span className="w-6 h-2 bg-[#E29D12] rounded-full inline-block transform -rotate-45"></span>
+            <span className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-[#E29D12] inline-block transform rotate-45"></span>
+          </div>
+
+          <h3 className="text-lg font-bold text-gray-900 leading-snug hover:text-[#462066] transition-colors line-clamp-2">
+            {blog.title}
+          </h3>
+
+          <p className="text-xs text-gray-600 mt-2.5 leading-relaxed line-clamp-3">
+            {blog.desc}
+          </p>
+        </div>
+
+        {/* Read More Action Button */}
+        <div className="mt-6 pt-4 border-t border-gray-100">
+          <Link
+            href={blog.link}
+            className="w-full flex items-center justify-center space-x-2 bg-[#E29D12] hover:bg-[#c8880e] text-white font-semibold py-2.5 px-4 rounded-xl transition-colors duration-200 shadow-sm"
+          >
+            <span>Read More</span>
+            <ArrowRight size={16} />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

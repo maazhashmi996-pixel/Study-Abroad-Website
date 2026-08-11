@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { 
   CheckCircle2, 
   ChevronRight, 
@@ -94,11 +93,11 @@ const stepsData = [
   }
 ];
 
-export default function ExchangePage() {
+export default function SwedenPage() {
   return (
     <main className="min-h-screen bg-white text-slate-800 font-sans">
       
-      {/* Top Banner / Header (Black & Electric Blue with Minor Red Badge) */}
+      {/* Top Banner / Header */}
       <header className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-sm">
@@ -121,7 +120,7 @@ export default function ExchangePage() {
             Sweden is becoming a top choice for Pakistani students who want high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, Sweden offers a wide range of English-taught programs, tuition-free PhD positions, and the chance to stay for up to 12 months post-graduation to look for employment.
           </p>
 
-          {/* Minor Red Callout Box */}
+          {/* Key Requirement Callout */}
           <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-600 rounded-r-lg flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
             <div>
@@ -132,7 +131,7 @@ export default function ExchangePage() {
             </div>
           </div>
 
-          {/* Table of Contents (Slate & Electric Blue) */}
+          {/* Table of Contents */}
           <div className="mt-8 bg-slate-50 p-5 rounded-xl border border-slate-200">
             <h3 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">In this guide:</h3>
             <ol className="space-y-2 text-sm sm:text-base font-semibold text-blue-600">
@@ -241,9 +240,8 @@ export default function ExchangePage() {
           </div>
         </section>
 
-        {/* CTA Contact Form (Black Card with Electric Blue Button and Minor Red Accent) */}
+        {/* CTA Contact Form */}
         <section className="bg-slate-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border-2 border-blue-600 relative overflow-hidden">
-          {/* Subtle Accent Glow */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full blur-2xl pointer-events-none" />
 
           <div className="max-w-2xl mx-auto text-center mb-8 relative z-10">

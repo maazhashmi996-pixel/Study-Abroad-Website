@@ -48,17 +48,17 @@ export default function RelatedBlogCard({ country, title, desc, date }: { countr
   return (
     <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
       <div className="p-5">
-        <div className="bg-indigo-950 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md inline-block mb-3">
+        <div className="bg-slate-950 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md inline-block mb-3">
           {country}
         </div>
-        <h4 className="font-bold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-indigo-600 transition-colors mb-2">
+        <h4 className="font-bold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-slate-600 transition-colors mb-2">
           {title}
         </h4>
         <p className="text-slate-500 text-xs sm:text-sm line-clamp-3 mb-4">{desc}</p>
       </div>
       <div className="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
         <span className="flex items-center gap-1"><Calendar size={12} /> {date}</span>
-        <span className="font-semibold text-indigo-600 group-hover:underline">Read More →</span>
+        <span className="font-semibold text-slate-600 group-hover:underline">Read More →</span>
       </div>
     </div>
   );
