@@ -152,7 +152,7 @@ export default function Explore() {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md h-72 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
               <Image 
-                src="/images/events/Top-Study.jpg" 
+                src="/images/services/photo.jpg" 
                 alt="Top Study Destinations - D. Education Zone" 
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
