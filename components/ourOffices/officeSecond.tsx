@@ -44,23 +44,23 @@ export default function OfficeSecond() {
   };
 
   return (
-    <div className="w-full bg-black text-white font-sans relative">
+    <div className="w-full  text-slate-800 font-sans relative">
       
       {/* 1. International Support Section */}
-      <section className="bg-slate-900 max-w-7xl mx-auto text-white py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border border-slate-800 rounded-2xl my-8 shadow-2xl">
+      <section className=" max-w-7xl mx-auto text-slate-800 py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border border-slate-800 rounded-2xl my-8 shadow-2xl">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center justify-center">
           
           <div className="space-y-4 text-left">
             <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#0b5cff] bg-black px-4 py-1.5 rounded-full inline-block border border-slate-800">
               Global Support Network <span className="text-red-500">•</span>
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-snug text-white">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-snug text-slate-800">
               International Offices for On-Ground Support
             </h2>  
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Our international presence in Australia, Germany, Saudi Arabia, and Dubai sets D. Education Zone apart from other study abroad consultants. These offshore offices provide invaluable on-ground support once you arrive in your destination country. From accommodation assistance to opening bank accounts and understanding local regulations, our teams offer comprehensive student visa help and settlement services.
             </p>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Students benefit from pre-departure orientations at our Pakistan offices and continued support from our international teams, ensuring a smooth transition to student life abroad.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function OfficeSecond() {
           <div className="flex justify-center w-full">
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-700 bg-slate-950">
               <Image 
-                src="/images/offices/International.jpg"
+                src="/images/offices/community.jpg"
                 alt="International Support"
                 fill
                 sizes="(max-width: 1024px) 100vw, 500px"

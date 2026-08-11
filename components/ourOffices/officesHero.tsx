@@ -34,22 +34,22 @@ const cityDataByCountry: Record<string, CityItem[]> = {
     { name: "Sheikhupura", image: "/images/home/abbottabad.webp" },
     { name: "Sialkot", image: "/images/home/abbottabad.webp" },
   ],
-  Australia: [
-    { name: "Sydney", image: "/images/home/abbottabad.webp" },
-    { name: "Melbourne", image: "/images/home/abbottabad.webp" },
-    { name: "Brisbane", image: "/images/home/abbottabad.webp" },
-  ],
-  Germany: [
-    { name: "Berlin", image: "/images/home/abbottabad.webp" },
-    { name: "Frankfurt", image: "/images/home/abbottabad.webp" },
-  ],
-  UAE: [
-    { name: "Dubai", image: "/images/home/abbottabad.webp" },
-    { name: "Abu Dhabi", image: "/images/home/abbottabad.webp" },
-  ],
+  // Australia: [
+  //   { name: "Sydney", image: "/images/home/abbottabad.webp" },
+  //   { name: "Melbourne", image: "/images/home/abbottabad.webp" },
+  //   { name: "Brisbane", image: "/images/home/abbottabad.webp" },
+  // ],
+  // Germany: [
+  //   { name: "Berlin", image: "/images/home/abbottabad.webp" },
+  //   { name: "Frankfurt", image: "/images/home/abbottabad.webp" },
+  // ],
+  // UAE: [
+  //   { name: "Dubai", image: "/images/home/abbottabad.webp" },
+  //   { name: "Abu Dhabi", image: "/images/home/abbottabad.webp" },
+  // ],
 };
 
-const countries = ["Pakistan", "Australia", "Germany", "UAE"];
+const country = ["Pakistan"];
 
 export default function OfficesHero() {
   const [selectedCountry, setSelectedCountry] = useState<string>("Pakistan");
@@ -57,7 +57,7 @@ export default function OfficesHero() {
   const currentCities = cityDataByCountry[selectedCountry] || [];
 
   return (
-    <div className="w-full min-h-screen bg-black text-white font-sans overflow-hidden">
+    <div className="w-full min-h-screen  text-slate-800 font-sans overflow-hidden">
       
       {/* 1. HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -66,16 +66,16 @@ export default function OfficesHero() {
           <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#0b5cff] bg-slate-900 px-4 py-1.5 rounded-full inline-block border border-slate-800">
             Global Network <span className="text-red-500">•</span>
           </span>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight tracking-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-800 leading-tight tracking-tight">
             Global Presence, <span className="text-[#0b5cff]">Local Expertise</span> for Your Study Abroad Dreams
           </h1>
-          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Finding trusted study abroad consultants near you is now easier than ever. D. Education Zone operates across multiple countries with 36+ branches in Pakistan and international offices in Australia, Germany, Saudi Arabia, and Dubai, bringing expert study abroad help right to your doorstep.
           </p>
           <div>
             <button 
               type="button"
-              className="bg-[#0b5cff] hover:bg-blue-600 text-white text-xs font-bold px-8 py-3.5 rounded-xl tracking-wider uppercase transition-all cursor-pointer shadow-lg active:scale-95 border border-blue-400/20"
+              className="bg-[#0b5cff] hover:bg-white hover:text-slate-800 hover:border-[#0b5cff] text-white text-xs font-bold px-8 py-3.5 rounded-xl tracking-wider uppercase transition-all cursor-pointer shadow-lg active:scale-95 border border-blue-400/20"
             >
               Get In Touch
             </button>
@@ -84,9 +84,9 @@ export default function OfficesHero() {
 
         {/* Hero Graphic Illustration */}
         <div className="flex justify-center w-full">
-          <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/50 shadow-2xl">
+          <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/70 shadow-2xl">
             <Image 
-              src="/images/offices/Dreams.jpg"
+              src="/images/offices/aeroplan.jpg"
               alt="Study abroad dreams"
               fill
               sizes="(max-width: 768px) 100vw, 480px"
@@ -99,14 +99,14 @@ export default function OfficesHero() {
       </section>
 
       {/* 2. VISIT OFFICES SECTION */}
-      <section className="bg-slate-950 py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-900">
+      <section className=" py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-900">
         <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8">
           
           <div className="text-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff] bg-slate-900 px-3.5 py-1 rounded-full inline-block mb-3 border border-slate-800">
               Branch Locator <span className="text-red-500">•</span>
             </span>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-800 tracking-tight">
               Visit Your Nearest D. Education Zone Office Today
             </h2>
           </div>
@@ -115,7 +115,7 @@ export default function OfficesHero() {
             
             {/* Country Selector Sidebar */}
             <div className="w-full md:w-56 flex md:flex-col gap-2 overflow-x-auto pb-2 md:pb-0 shrink-0">
-              {countries.map((country) => (
+              {country.map((country) => (
                 <button
                   key={country}
                   type="button"
@@ -172,10 +172,10 @@ export default function OfficesHero() {
               Local Access
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+          <h3 className="text-xl sm:text-2xl font-black text-salte-800 tracking-tight">
             Why Our Physical Presence Matters
           </h3>
-          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             When searching for reliable study abroad consultants near you, having access to local offices makes all the difference. Our extensive network of 36+ branches across Pakistan ensures that students from Karachi, Lahore, Islamabad, Faisalabad, and beyond can receive personalized study abroad help without traveling long distances.
           </p>
         </div>
@@ -184,7 +184,7 @@ export default function OfficesHero() {
         <div className="flex justify-center w-full">
           <div className="relative w-full max-w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
             <Image 
-              src="/images/offices/Matters.jpg"
+              src="/images/offices/consultation.jpg"
               alt="Physical presence matters"
               fill
               sizes="(max-width: 768px) 100vw, 400px"
