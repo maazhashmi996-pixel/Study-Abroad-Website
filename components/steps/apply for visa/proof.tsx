@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 export default function Proof() {
@@ -11,7 +13,7 @@ export default function Proof() {
 
   const rightDocuments = [
     "Unconditional offer / CAS (UK) / CoE (Australia) / LOA (Canada)",
-    "Proof of funds (bank statement, GIC, sponsor letter, income docs) using 2025 updated amounts for Canada.",
+    "Proof of funds (bank statement, GIC, sponsor letter, income docs)",
     "Medical/TB where applicable",
     "Visa application form + payment receipt",
     "Statement of Purpose / Study Plan / GTE (Canada/Australia)",
@@ -24,7 +26,7 @@ export default function Proof() {
     },
     {
       title: "Exchange rate or fund rules may change",
-      subtitle: "(Canada 2025 did exactly this).",
+      subtitle: "(embassies update thresholds periodically).",
     },
     {
       title: "You might miss biometric/medical windows",
@@ -37,79 +39,108 @@ export default function Proof() {
   ];
 
   return (
-    <div className="w-full font-sans">
+    <div className="w-full font-sans bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 py-8">
+      
       {/* Section 1: Documents / Proof Required */}
-      <section className="bg-[#2a1a4a] text-white py-12 ">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold mb-2">
-            Documents / proof required
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mb-8 font-medium">
-            Exact list varies, but a safe master checklist looks like
-          </p>
+      <section className="bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-10 max-w-7xl mx-auto text-center shadow-2xl relative overflow-hidden mb-12">
+        
+        {/* Background Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
 
-          {/* 2-Column Checklist Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto text-left">
-            {/* Left Column */}
-            <div className="space-y-4">
-              {leftDocuments.map((doc, index) => (
-                <div
-                  key={index}
-                  className="border border-amber-500/80 rounded-lg p-3.5 bg-[#2a1a4a] text-xs sm:text-sm text-slate-100 flex items-center min-h-[52px]"
-                >
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 mr-2.5 shrink-0"></span>
-                  <span>{doc}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-4">
-              {rightDocuments.map((doc, index) => (
-                <div
-                  key={index}
-                  className="border border-amber-500/80 rounded-lg p-3.5 bg-[#2a1a4a] text-xs sm:text-sm text-slate-100 flex items-center min-h-[52px]"
-                >
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 mr-2.5 shrink-0"></span>
-                  <span>{doc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800 mb-4">
+          <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+          <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+            Master Checklist
+          </span>
         </div>
-      </section>
 
-      {/* Section 2: What happens if you delay */}
-      <section className="bg-white text-slate-900 py-12 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl text-[#2a1a4a] font-extrabold mb-2">
-            What happens if you delay
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mb-8 font-medium">
-            If you wait too long to file your visa:
-          </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 text-white tracking-tight">
+          Documents / Proof Required
+        </h2>
+        <p className="text-xs sm:text-sm text-slate-400 mb-8 font-medium max-w-xl mx-auto">
+          Exact list varies, but a safe master checklist looks like:
+        </p>
 
-          {/* Yellow Banner Grid */}
-          <div className="bg-amber-500  rounded-2xl p-8 sm:p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-5xl mx-auto mb-8 shadow-sm">
-            {delayConsequences.map((item, index) => (
-              <div key={index} className="flex flex-col p-6  text-white justify-start ">
-                <h3 className="font-extrabold  text-sm sm:text-base gap-10 leading-snug mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm  font-medium">
-                  {item.subtitle}
-                </p>
+        {/* 2-Column Checklist Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto text-left">
+          
+          {/* Left Column */}
+          <div className="space-y-3">
+            {leftDocuments.map((doc, index) => (
+              <div
+                key={index}
+                className="border border-slate-800 rounded-2xl p-4 bg-slate-900 text-xs sm:text-sm text-slate-300 flex items-center min-h-[56px] hover:border-[#0b5cff]/50 transition-all duration-200 shadow-md group"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#0b5cff] mr-3 shrink-0 group-hover:scale-125 transition-transform" />
+                <span className="group-hover:text-white transition-colors">{doc}</span>
               </div>
             ))}
           </div>
 
-          {/* Bottom Quote Box */}
-          <div className="inline-block bg-slate-50 border border-slate-200 rounded-lg px-6 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-xs">
-            So Step 7 should be treated like a deadline, not{" "}
-            <span className="italic">"I'll do it when I'm free."</span>
+          {/* Right Column */}
+          <div className="space-y-3">
+            {rightDocuments.map((doc, index) => (
+              <div
+                key={index}
+                className="border border-slate-800 rounded-2xl p-4 bg-slate-900 text-xs sm:text-sm text-slate-300 flex items-center min-h-[56px] hover:border-[#0b5cff]/50 transition-all duration-200 shadow-md group"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#0b5cff] mr-3 shrink-0 group-hover:scale-125 transition-transform" />
+                <span className="group-hover:text-white transition-colors">{doc}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="max-w-xs mx-auto border-t border-slate-900 my-8 text-center relative">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black px-3 text-[#0b5cff] text-xs font-bold">★</span>
+      </div>
+
+      {/* Section 2: What Happens If You Delay */}
+      <section className="max-w-7xl mx-auto text-center py-6">
+        
+        <div className="space-y-2 mb-8">
+          <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+            <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+              Timing Risk Factors
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+            What Happens If You Delay
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-400 font-medium">
+            If you wait too long to file your visa application:
+          </p>
+        </div>
+
+        {/* Delay Consequences Grid */}
+        <div className="bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-5xl mx-auto mb-8 shadow-2xl">
+          {delayConsequences.map((item, index) => (
+            <div 
+              key={index} 
+              className="bg-slate-900 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-center hover:border-red-500/40 transition-all duration-200 group"
+            >
+              <h3 className="font-extrabold text-sm sm:text-base text-white leading-snug mb-1 group-hover:text-red-400 transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 font-medium">
+                {item.subtitle}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Quote Box */}
+        <div className="inline-block bg-slate-900 border border-slate-800 rounded-xl px-6 py-3 text-xs sm:text-sm font-semibold text-slate-300 shadow-lg">
+          So Step 7 should be treated like a strict deadline, not{" "}
+          <span className="italic text-red-400 font-bold">"I'll do it when I'm free."</span>
+        </div>
+
+      </section>
+
     </div>
   );
 }

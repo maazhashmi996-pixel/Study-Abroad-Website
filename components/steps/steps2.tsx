@@ -57,31 +57,39 @@ export default function Steps() {
   ];
 
   return (
-    <div className="w-full font-sans text-slate-800">
+    <div className="w-full font-sans text-white bg-black">
       
-      {/* ================= SECTION 1: YELLOW SECTION (THE 8 STEPS) ================= */}
-      <section className="bg-[#f5a623] text-[#2a1747] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      {/* ================= SECTION 1: DARK SLATE SECTION (THE 8 STEPS) ================= */}
+      <section className="bg-slate-950 text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
           
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-center tracking-tight">
-            The 8 Study Abroad Steps
-          </h2>
+          <div className="text-center space-y-2">
+            <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+              <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+                Step-By-Step Process
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+              The 8 Study Abroad Steps
+            </h2>
+          </div>
 
           {/* 8 Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {steps.map((step, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-amber-200 hover:shadow-lg transition-all duration-200 flex items-start space-x-4"
+                className="bg-slate-900 rounded-2xl p-5 sm:p-6 shadow-xl border border-slate-800 hover:border-[#0b5cff]/50 transition-all duration-200 flex items-start space-x-4 relative overflow-hidden group"
               >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#2a1747] text-white flex items-center justify-center font-bold text-sm sm:text-base shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#0b5cff] text-white flex items-center justify-center font-black text-sm sm:text-base shrink-0 shadow-lg border border-blue-400/20">
                   {index + 1}
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-bold text-base sm:text-lg text-[#2a1747]">
+                  <h3 className="font-extrabold text-base sm:text-lg text-white group-hover:text-[#0b5cff] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -93,7 +101,7 @@ export default function Steps() {
           <div className="text-center pt-2">
             <button 
               type="button"
-              className="bg-white text-[#2a1747] hover:bg-slate-50 font-semibold text-xs sm:text-base px-6 sm:px-8 py-3.5 rounded-full border border-amber-200 shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 cursor-pointer focus:outline-none"
+              className="bg-[#0b5cff] hover:bg-blue-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl border border-blue-400/20 shadow-lg active:scale-95 cursor-pointer focus:outline-none transition-all duration-200"
             >
               Talk to a Study Abroad Advisor
             </button>
@@ -102,16 +110,22 @@ export default function Steps() {
         </div>
       </section>
 
-      {/* ================= SECTION 2: PURPLE SECTION (HOW WE FIT IN) ================= */}
-      <section className="bg-[#2a1747] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      {/* ================= SECTION 2: BLACK SECTION (HOW WE FIT IN) ================= */}
+      <section className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
         <div className="max-w-5xl mx-auto text-center space-y-8 sm:space-y-10">
           
           <div className="space-y-3 max-w-2xl mx-auto px-2">
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-              How D.Education Zone fits into this journey
+            <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+              <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+                Our Expertise
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
+              How D. Education Zone fits into this journey
             </h2>
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-              D.Education Zone has been guiding students since 2004 across the UK, Canada, Australia, Germany, Europe, and more. The way we work is simple:
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              D. Education Zone has been guiding students since 2004 across the UK, Canada, Australia, Germany, Europe, and more. The way we work is simple:
             </p>
           </div>
 
@@ -120,9 +134,9 @@ export default function Steps() {
             {consultantRole.map((roleText, index) => (
               <div 
                 key={index}
-                className="border border-amber-400/80 rounded-xl p-4 sm:p-5 flex items-center justify-center min-h-[80px] sm:min-h-[90px] bg-[#22123b] hover:border-amber-400 transition-all duration-200 shadow-sm"
+                className="border border-slate-800 rounded-2xl p-4 sm:p-5 flex items-center justify-center min-h-[80px] sm:min-h-[90px] bg-slate-900/80 hover:border-[#0b5cff]/50 transition-all duration-200 shadow-md group"
               >
-                <p className="text-amber-400 font-medium text-xs sm:text-sm leading-snug text-center">
+                <p className="text-slate-300 group-hover:text-white font-semibold text-xs sm:text-sm leading-snug text-center transition-colors">
                   {roleText}
                 </p>
               </div>
@@ -130,22 +144,22 @@ export default function Steps() {
           </div>
 
           {/* Action Box & Bottom CTA */}
-          <div className="space-y-6 max-w-xl mx-auto px-2">
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+          <div className="space-y-6 max-w-xl mx-auto px-2 bg-slate-900/50 border border-slate-800 p-6 rounded-2xl">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Tell us which country, which intake, and your last qualification—we'll tell you exactly which step you're on right now.
             </p>
 
             <div>
               <button 
                 type="button"
-                className="bg-[#f5a623] hover:bg-amber-400 text-[#2a1747] font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-full transition-all duration-200 shadow-lg active:scale-95 cursor-pointer focus:outline-none"
+                className="bg-[#0b5cff] hover:bg-blue-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl transition-all duration-200 shadow-lg border border-blue-400/20 active:scale-95 cursor-pointer focus:outline-none"
               >
                 Review My Study Visa Case
               </button>
             </div>
 
-            <p className="text-[11px] sm:text-xs text-amber-300/90 font-light leading-relaxed pt-2">
-              Send your offer letter or application status to D.Education Zone and we'll review what is done, what is pending, and what to do next to catch your intake.
+            <p className="text-[11px] sm:text-xs text-slate-400 font-normal leading-relaxed pt-2 border-t border-slate-800/80">
+              Send your offer letter or application status to D. Education Zone and we'll review what is done, what is pending, and what to do next to catch your intake.
             </p>
           </div>
 

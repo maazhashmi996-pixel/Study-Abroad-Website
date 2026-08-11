@@ -27,7 +27,7 @@ export default function Blogs() {
     {
       id: 3,
       title: "Test Preparation",
-      image: "/images/home/blog3.jpg",
+      image: "/images/home/prepration.jpg",
       description:
         "Prepare confidently for English language and other admission tests with proper guidance.",
     },

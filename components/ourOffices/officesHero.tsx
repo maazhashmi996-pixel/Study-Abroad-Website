@@ -57,22 +57,25 @@ export default function OfficesHero() {
   const currentCities = cityDataByCountry[selectedCountry] || [];
 
   return (
-    <div className="w-full min-h-screen bg-white text-gray-800 font-sans overflow-hidden">
+    <div className="w-full min-h-screen bg-black text-white font-sans overflow-hidden">
       
       {/* 1. HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         
         <div className="space-y-4 sm:space-y-6 text-left max-w-xl">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3b1d5c] leading-tight tracking-tight">
-            Global Presence, Local Expertise for Your Study Abroad Dreams
+          <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#0b5cff] bg-slate-900 px-4 py-1.5 rounded-full inline-block border border-slate-800">
+            Global Network <span className="text-red-500">•</span>
+          </span>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight tracking-tight">
+            Global Presence, <span className="text-[#0b5cff]">Local Expertise</span> for Your Study Abroad Dreams
           </h1>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Finding trusted study abroad consultants near me is now easier than ever. D.Education Zone operates across multiple countries with 36+ branches in Pakistan and international offices in Australia, Germany, Saudi Arabia, and Dubai, bringing expert study abroad help right to your doorstep.
+          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Finding trusted study abroad consultants near you is now easier than ever. D. Education Zone operates across multiple countries with 36+ branches in Pakistan and international offices in Australia, Germany, Saudi Arabia, and Dubai, bringing expert study abroad help right to your doorstep.
           </p>
           <div>
             <button 
               type="button"
-              className="bg-[#3b1d5c] hover:bg-[#2a1443] text-white text-xs font-bold px-6 py-3 rounded-full tracking-wider uppercase transition-colors cursor-pointer shadow-md active:scale-95"
+              className="bg-[#0b5cff] hover:bg-blue-600 text-white text-xs font-bold px-8 py-3.5 rounded-xl tracking-wider uppercase transition-all cursor-pointer shadow-lg active:scale-95 border border-blue-400/20"
             >
               Get In Touch
             </button>
@@ -81,7 +84,7 @@ export default function OfficesHero() {
 
         {/* Hero Graphic Illustration */}
         <div className="flex justify-center w-full">
-          <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden">
+          <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/50 shadow-2xl">
             <Image 
               src="/images/offices/Dreams.jpg"
               alt="Study abroad dreams"
@@ -96,12 +99,17 @@ export default function OfficesHero() {
       </section>
 
       {/* 2. VISIT OFFICES SECTION */}
-      <section className="bg-[#f1b317] py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-slate-950 py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-900">
         <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8">
           
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3b1d5c] tracking-tight">
-            Visit Your Nearest D.Education Zone Office Today
-          </h2>
+          <div className="text-center">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff] bg-slate-900 px-3.5 py-1 rounded-full inline-block mb-3 border border-slate-800">
+              Branch Locator <span className="text-red-500">•</span>
+            </span>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
+              Visit Your Nearest D. Education Zone Office Today
+            </h2>
+          </div>
 
           <div className="flex flex-col md:flex-row gap-6 items-start">
             
@@ -112,10 +120,10 @@ export default function OfficesHero() {
                   key={country}
                   type="button"
                   onClick={() => setSelectedCountry(country)}
-                  className={`flex justify-between items-center px-4 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 md:shrink ${
+                  className={`flex justify-between items-center px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 md:shrink border ${
                     selectedCountry === country
-                      ? "bg-[#3b1d5c] text-white shadow-md md:bg-white md:text-[#3b1d5c]"
-                      : "bg-white/80 text-gray-800 hover:bg-white"
+                      ? "bg-[#0b5cff] text-white shadow-md border-blue-400/30"
+                      : "bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800 hover:text-white"
                   }`}
                 >
                   <span>{country}</span>
@@ -129,10 +137,10 @@ export default function OfficesHero() {
               {currentCities.map((item) => (
                 <div
                   key={item.name}
-                  className="bg-white rounded-full px-3 py-2 flex items-center gap-2.5 shadow-sm hover:shadow-md transition-all cursor-pointer hover:-translate-y-0.5"
+                  className="bg-slate-900 border border-slate-800 rounded-full px-3 py-2 flex items-center gap-2.5 shadow-sm hover:border-[#0b5cff]/50 hover:bg-slate-800/80 transition-all cursor-pointer hover:-translate-y-0.5"
                 >
                   {/* City Image Container */}
-                  <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden shrink-0 border border-gray-200">
+                  <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden shrink-0 border border-slate-700">
                     <Image 
                       src={item.image}
                       alt={item.name}
@@ -142,7 +150,7 @@ export default function OfficesHero() {
                     />
                   </div>
 
-                  <span className="text-xs font-semibold text-gray-800 truncate">
+                  <span className="text-xs font-semibold text-slate-200 truncate">
                     {item.name}
                   </span>
                 </div>
@@ -158,17 +166,23 @@ export default function OfficesHero() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         
         <div className="space-y-3 sm:space-y-4 max-w-lg text-left">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#3b1d5c] tracking-tight">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+              Local Access
+            </span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
             Why Our Physical Presence Matters
           </h3>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-            When searching for reliable study abroad consultants near me, having access to local offices makes all the difference. Our extensive network of 36+ branches across Pakistan ensures that students from Karachi, Lahore, Islamabad, Faisalabad, and beyond can receive personalized study abroad help without traveling long distances.
+          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            When searching for reliable study abroad consultants near you, having access to local offices makes all the difference. Our extensive network of 36+ branches across Pakistan ensures that students from Karachi, Lahore, Islamabad, Faisalabad, and beyond can receive personalized study abroad help without traveling long distances.
           </p>
         </div>
 
         {/* Feature Graphic */}
         <div className="flex justify-center w-full">
-          <div className="relative w-full max-w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+          <div className="relative w-full max-w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
             <Image 
               src="/images/offices/Matters.jpg"
               alt="Physical presence matters"

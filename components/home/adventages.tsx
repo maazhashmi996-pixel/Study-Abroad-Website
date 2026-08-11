@@ -173,7 +173,7 @@ export default function Advantages() {
 
               {/* Background Image */}
               <Image
-                src="/images/home/times.jpg"
+                src="/images/home/istockphoto.jpg"
                 alt="D.Education Zone online platform"
                 fill
                 priority
