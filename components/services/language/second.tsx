@@ -112,9 +112,9 @@ export default function LanguageTestPreparationPage() {
   const pathname = usePathname();
 
   const sidebarItems = [
-    { name: "Study Abroad", icon: Globe, href: "/study-abroad" },
-    { name: "Accommodations", icon: Home, href: "/Accommodation" },
-    { name: "Languages", icon: Languages, href: "/languages" },
+    { name: "Study Abroad", icon: Globe, href: "/services/study-abroad" },
+    { name: "Accommodations", icon: Home, href: "/services/Accommodation" },
+    { name: "Languages", icon: Languages, href: "/services/languages" },
   ];
 
   return (

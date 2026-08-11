@@ -184,9 +184,9 @@ export default function StudyAbroadServices() {
   const pathname = usePathname();
 
   const sidebarItems = [
-    { name: "Study Abroad", icon: Globe, href: "/study-abroad" },
-    { name: "Accommodation", icon: Home, href: "/Accommodation" },
-    { name: "Languages", icon: Languages, href: "/languages" },
+    { name: "Study Abroad", icon: Globe, href: "/services/study-abroad" },
+    { name: "Accommodation", icon: Home, href: "/services/Accommodation" },
+    { name: "Languages", icon: Languages, href: "/services/languages" },
   ];
 
   return (

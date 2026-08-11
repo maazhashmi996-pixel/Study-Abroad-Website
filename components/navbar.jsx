@@ -43,7 +43,6 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-
             <li>
               <Link
                 href="/About"
@@ -54,47 +53,110 @@ export default function Navbar() {
                 About
               </Link>
             </li>
-
             {/* Services Dropdown */}
-            <li className="relative group">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center gap-1 transition-colors duration-200 hover:text-[#0b5cff]"
-              >
-                <span>Services</span>
-                <IoIosArrowDown
-                  className={`transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
 
+            {/* ================= SERVICES ================= */}
+            <li className="relative">
+              <div className="flex items-center gap-1">
+                {/* Services Page Link */}
+                <Link
+                  href="/services"
+                  className={`transition-colors duration-200 hover:text-[#2563EB] ${
+                    pathname === "/services"
+                      ? "text-[#2563EB]"
+                      : "text-slate-700"
+                  }`}
+                >
+                  Services
+                </Link>
+
+                {/* Dropdown Arrow */}
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((prev) => !prev)}
+                  className="p-1 text-slate-600 hover:text-[#2563EB] transition-colors"
+                  aria-label="Toggle Services dropdown"
+                >
+                  <IoIosArrowDown
+                    className={`transition-transform duration-200 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
+
+              {/* Services Dropdown */}
               {servicesOpen && (
-                <div className="absolute left-0 top-full mt-3 w-48 rounded-xl bg-white border border-slate-100 shadow-xl z-[9999] p-3 flex flex-col gap-2 text-xs font-medium text-slate-700">
+                <div
+                  className="
+        absolute
+        left-0
+        top-full
+        mt-3
+        w-52
+        rounded-xl
+        bg-white
+        border
+        border-slate-200
+        shadow-xl
+        z-[9999]
+        p-2
+        flex
+        flex-col
+        gap-1
+        text-xs
+        font-medium
+        text-slate-700
+      "
+                >
                   <Link
-                    href="/services/Accommodation"
+                    href="/services/accommodation"
                     onClick={() => setServicesOpen(false)}
-                    className="px-3 py-1.5 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
+                    className="
+          px-3
+          py-2.5
+          rounded-lg
+          hover:bg-slate-50
+          hover:text-[#2563EB]
+          transition-colors
+        "
                   >
                     Accommodation
                   </Link>
+
                   <Link
                     href="/services/study-abroad"
                     onClick={() => setServicesOpen(false)}
-                    className="px-3 py-1.5 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
+                    className="
+          px-3
+          py-2.5
+          rounded-lg
+          hover:bg-slate-50
+          hover:text-[#2563EB]
+          transition-colors
+        "
                   >
                     Study Abroad
                   </Link>
+
                   <Link
                     href="/services/languages"
                     onClick={() => setServicesOpen(false)}
-                    className="px-3 py-1.5 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
+                    className="
+          px-3
+          py-2.5
+          rounded-lg
+          hover:bg-slate-50
+          hover:text-[#2563EB]
+          transition-colors
+        "
                   >
                     Languages
                   </Link>
                 </div>
               )}
             </li>
+
             <li>
               <Link
                 href="/Blog"
@@ -105,7 +167,6 @@ export default function Navbar() {
                 Blogs
               </Link>
             </li>
-
             <li>
               <Link
                 href="/Event"
@@ -116,7 +177,6 @@ export default function Navbar() {
                 Events
               </Link>
             </li>
-
             <li>
               <Link
                 href="/our-offices"
@@ -127,7 +187,6 @@ export default function Navbar() {
                 Our Offices
               </Link>
             </li>
-
             <li>
               <Link
                 href="/study-Destination"
@@ -138,7 +197,6 @@ export default function Navbar() {
                 Study Destination
               </Link>
             </li>
-
             {/* Study Abroad Steps Dropdown */}
             <li className="relative group">
               <Link
@@ -244,54 +302,101 @@ export default function Navbar() {
               </Link>
             </li>
 
-            {/* Accordion 1: Services */}
-
-            <li>
-              <button
-                type="button"
-                onClick={() => setServicesOpen((prev) => !prev)}
-                className="flex items-center justify-between w-full py-2 hover:text-[#0b5cff] font-semibold text-slate-800 transition-colors"
-              >
-                <span>Services</span>
-                <IoIosArrowDown
-                  className={`transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180" : ""
+            {/* ================= SERVICES ================= */}
+            <li className="relative">
+              <div className="flex items-center gap-1">
+                {/* Services Page Link */}
+                <Link
+                  href="/services"
+                  className={`transition-colors duration-200 hover:text-[#2563EB] ${
+                    pathname === "/services"
+                      ? "text-[#2563EB]"
+                      : "text-slate-700"
                   }`}
-                />
-              </button>
+                >
+                  Services
+                </Link>
 
-              {/* Dropdown Menu */}
+                {/* Dropdown Arrow */}
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((prev) => !prev)}
+                  className="p-1 text-slate-600 hover:text-[#2563EB] transition-colors"
+                  aria-label="Toggle Services dropdown"
+                >
+                  <IoIosArrowDown
+                    className={`transition-transform duration-200 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
+
+              {/* Services Dropdown */}
               {servicesOpen && (
-                <div className="pl-4 my-2 flex flex-col gap-2.5 text-xs font-medium text-slate-600 border-l-2 border-[#0b5cff]">
+                <div
+                  className="
+        absolute
+        left-0
+        top-full
+        mt-3
+        w-52
+        rounded-xl
+        bg-white
+        border
+        border-slate-200
+        shadow-xl
+        z-[9999]
+        p-2
+        flex
+        flex-col
+        gap-1
+        text-xs
+        font-medium
+        text-slate-700
+      "
+                >
                   <Link
                     href="/services/accommodation"
-                    onClick={() => {
-                      setIsOpen(false);
-                      setServicesOpen(false);
-                    }}
-                    className="hover:text-[#0b5cff] transition-colors"
+                    onClick={() => setServicesOpen(false)}
+                    className="
+          px-3
+          py-2.5
+          rounded-lg
+          hover:bg-slate-50
+          hover:text-[#2563EB]
+          transition-colors
+        "
                   >
                     Accommodation
                   </Link>
 
                   <Link
                     href="/services/study-abroad"
-                    onClick={() => {
-                      setIsOpen(false);
-                      setServicesOpen(false);
-                    }}
-                    className="hover:text-[#0b5cff] transition-colors"
+                    onClick={() => setServicesOpen(false)}
+                    className="
+          px-3
+          py-2.5
+          rounded-lg
+          hover:bg-slate-50
+          hover:text-[#2563EB]
+          transition-colors
+        "
                   >
                     Study Abroad
                   </Link>
 
                   <Link
                     href="/services/languages"
-                    onClick={() => {
-                      setIsOpen(false);
-                      setServicesOpen(false);
-                    }}
-                    className="hover:text-[#0b5cff] transition-colors"
+                    onClick={() => setServicesOpen(false)}
+                    className="
+          px-3
+          py-2.5
+          rounded-lg
+          hover:bg-slate-50
+          hover:text-[#2563EB]
+          transition-colors
+        "
                   >
                     Languages
                   </Link>

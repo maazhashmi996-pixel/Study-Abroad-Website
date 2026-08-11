@@ -73,9 +73,9 @@ export default function ServicesOffer() {
   const pathname = usePathname();
 
   const sidebarItems = [
-    { name: "Study Abroad" as TabName, icon: Globe, href: "/study-abroad" },
-    { name: "Accommodation" as TabName, icon: Home, href: "/Accommodation" },
-    { name: "Languages" as TabName, icon: Languages, href: "/languages" },
+    { name: "Study Abroad" as TabName, icon: Globe, href: "/services/study-abroad" },
+    { name: "Accommodation" as TabName, icon: Home, href: "/services/Accommodation" },
+    { name: "Languages" as TabName, icon: Languages, href: "/services/languages" },
   ];
 
   const currentContent = servicesData["Accommodations"];

@@ -4,17 +4,17 @@ import Image from "next/image";
 
 function WhyChoose() {
   return (
-    <section className="bg-black text-white flex flex-col items-center gap-4 sm:gap-6 px-4 sm:px-8 md:px-16 lg:px-20 py-12 sm:py-16 border-t border-slate-900">
+    <section className=" text-slate-800 flex flex-col items-center gap-4 sm:gap-6 px-4 sm:px-8 md:px-16 lg:px-20 py-12 sm:py-16 border-t border-slate-900">
       
       {/* Badge & Headings */}
       <div className="text-center">
         <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#0b5cff] bg-slate-900 px-4 py-1.5 rounded-full inline-block mb-3 border border-slate-800">
           Testimonials <span className="text-red-500">•</span>
         </span>
-        <h2 className="font-black text-2xl sm:text-3xl md:text-4xl text-center text-white tracking-tight">
+        <h2 className="font-black text-2xl sm:text-3xl md:text-4xl text-center text-slate-800 tracking-tight">
           Client Testimonials
         </h2>
-        <p className="text-xs sm:text-sm text-slate-400 text-center mt-2">
+        <p className="text-xs sm:text-sm text-slate-700 text-center mt-2">
           What They're Saying About Us
         </p>
       </div>

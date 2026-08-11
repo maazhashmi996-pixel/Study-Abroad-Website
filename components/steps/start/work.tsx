@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -11,6 +12,7 @@ import {
   Compass,
   CheckCircle,
   AlertTriangle,
+  ArrowRight,
 } from "lucide-react";
 
 // Types
@@ -89,125 +91,320 @@ const processSteps: StepItem[] = [
 const commonMistakes: CommonMistake[] = [
   {
     title: "Traveling too late",
-    description: "Missing the university's final deadline for student registration.",
+    description:
+      "Missing the university's final deadline for student registration.",
   },
   {
     title: "Not carrying physical originals",
-    description: "Relying only on photocopies or digital screenshots at border check.",
+    description:
+      "Relying only on photocopies or digital screenshots at border check.",
   },
   {
     title: "Skipping orientation week",
-    description: "Assuming classes are all that matter while missing vital visa compliance rules.",
+    description:
+      "Assuming classes are all that matter while missing vital visa compliance rules.",
   },
   {
     title: "Working before authorized",
-    description: "Exceeding legal work limits or working before term start dates.",
+    description:
+      "Exceeding legal work limits or working before term start dates.",
   },
   {
     title: "Not updating the university on delays",
-    description: "Failing to notify the university if your flight is delayed causes automated drop reports.",
+    description:
+      "Failing to notify the university if your flight is delayed causes automated drop reports.",
   },
   {
     title: "No arrival night accommodation",
-    description: "Arriving in a new country without guaranteed night-one housing.",
+    description:
+      "Arriving in a new country without guaranteed night-one housing.",
   },
 ];
 
 export default function Work() {
   return (
-    <main className="min-h-screen font-sans bg-slate-50">
-      
-      {/* SECTION 1: red/ORANGE PROCESS SECTION */}
-      <section className="bg-[#e5a00d] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
-          
+    <main className="min-h-screen font-sans bg-white text-slate-900">
+
+      {/* =====================================================
+          SECTION 1: PROCESS / CHECKLIST
+      ====================================================== */}
+      <section className="relative overflow-hidden bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-200">
+
+        {/* Subtle Background Decorations */}
+        <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#2563EB]/5 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#2563EB]/5 blur-3xl" />
+
+        <div className="relative max-w-5xl mx-auto space-y-8 sm:space-y-10">
+
           {/* Section Header */}
           <div className="text-center space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
-              How This Step Works (Checklist & Process)
+
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#2563EB]/10 text-[#2563EB] text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+              Step-by-Step Guide
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              How This Step Works
             </h2>
-            <p className="text-[#3a1b5c]/90 text-xs sm:text-sm font-semibold max-w-xl mx-auto">
-              Here is how the &quot;Start Your Program&quot; stage should be executed properly step-by-step
+
+            <p className="text-slate-500 text-xs sm:text-sm font-medium max-w-xl mx-auto leading-relaxed">
+              Here is how the &quot;Start Your Program&quot; stage should be
+              executed properly, step-by-step.
             </p>
+
           </div>
+
 
           {/* Steps Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+
             {processSteps.map((step) => {
               const Icon = step.icon;
+
               return (
                 <div
                   key={step.id}
-                  className="bg-white rounded-2xl p-5 shadow-sm border border-amber-200/50 flex flex-col justify-between space-y-3 hover:-translate-y-0.5 transition-all duration-200"
+                  className="
+                    group
+                    bg-white
+                    rounded-2xl
+                    p-5
+                    border border-slate-200
+                    shadow-[0_4px_20px_rgba(15,23,42,0.04)]
+                    hover:border-[#2563EB]/30
+                    hover:shadow-[0_8px_25px_rgba(37,99,235,0.08)]
+                    hover:-translate-y-1
+                    transition-all duration-300
+                    flex flex-col justify-between
+                  "
                 >
-                  <div className="space-y-3">
+
+                  <div className="space-y-4">
+
+                    {/* Icon + Number */}
                     <div className="flex items-center justify-between">
-                      <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#3a1b5c] flex items-center justify-center shrink-0">
+
+                      <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 text-[#2563EB] flex items-center justify-center shrink-0 group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
+
                         <Icon className="w-5 h-5" />
+
                       </div>
-                      <span className="text-xs font-black text-amber-600/80 bg-amber-50 px-2.5 py-1 rounded-md">
-                        #{step.id}
+
+                      <span className="text-[10px] font-extrabold text-[#2563EB] bg-[#2563EB]/10 px-2.5 py-1 rounded-lg">
+                        STEP {String(step.id).padStart(2, "0")}
                       </span>
+
                     </div>
 
-                    <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                      {step.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {step.description}
-                    </p>
+
+                    {/* Content */}
+                    <div className="space-y-2">
+
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                        {step.title}
+                      </h3>
+
+                      <p className="text-xs text-slate-500 leading-relaxed">
+                        {step.description}
+                      </p>
+
+                    </div>
+
                   </div>
+
                 </div>
               );
             })}
+
           </div>
 
+
           {/* Banner Notice */}
-          <div className="bg-[#cca012] border border-amber-600/30 rounded-xl py-3.5 px-6 text-center text-xs sm:text-sm font-semibold text-slate-900 shadow-sm max-w-2xl mx-auto">
-            That&apos;s it! At this point, you are no longer an applicant—you are officially an{" "}
-            <strong className="underline decoration-2 underline-offset-2">International Student.</strong>
+          <div className="relative overflow-hidden max-w-3xl mx-auto rounded-2xl border border-[#2563EB]/15 bg-white shadow-sm">
+
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#2563EB]" />
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-5 py-4 text-center">
+
+              <CheckCircle className="w-5 h-5 text-[#2563EB] shrink-0" />
+
+              <p className="text-xs sm:text-sm font-semibold text-slate-700">
+
+                That&apos;s it! At this point, you are no longer an applicant—
+                you are officially an{" "}
+
+                <strong className="text-[#2563EB]">
+                  International Student.
+                </strong>
+
+              </p>
+
+            </div>
+
           </div>
 
         </div>
       </section>
 
-      {/* SECTION 2: DARK PURPLE COMMON MISTAKES SECTION */}
-      <section className="bg-[#3a1b5c] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+
+      {/* =====================================================
+          SECTION 2: COMMON MISTAKES
+      ====================================================== */}
+      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+
         <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
-          
+
           {/* Section Header */}
           <div className="text-center space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EF4444]/10 text-[#EF4444] text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+
+              <AlertTriangle className="w-3.5 h-3.5" />
+
+              Important
+
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               Common Post-Visa Mistakes
             </h2>
-            <p className="text-purple-200 text-xs sm:text-sm font-medium max-w-lg mx-auto">
-              Avoid these frequent pitfalls students make immediately following visa approval
+
+            <p className="text-slate-500 text-xs sm:text-sm font-medium max-w-lg mx-auto leading-relaxed">
+              Avoid these frequent pitfalls students make immediately
+              following visa approval.
             </p>
+
           </div>
+
 
           {/* Mistakes Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             {commonMistakes.map((mistake, index) => (
+
               <div
                 key={index}
-                className="bg-[#2c1249] border border-purple-800/60 rounded-2xl p-5 text-center space-y-2 hover:border-purple-500/80 transition-all duration-200 flex flex-col justify-center shadow-sm"
+                className="
+                  group
+                  bg-slate-50
+                  border border-slate-200
+                  rounded-2xl
+                  p-5
+                  text-left
+                  space-y-3
+                  hover:bg-white
+                  hover:border-[#EF4444]/25
+                  hover:shadow-[0_8px_25px_rgba(239,68,68,0.06)]
+                  hover:-translate-y-0.5
+                  transition-all duration-300
+                  flex flex-col justify-center
+                "
               >
-                <div className="flex justify-center mb-1">
-                  <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0" />
+
+                {/* Icon + Number */}
+                <div className="flex items-center justify-between">
+
+                  <div className="w-9 h-9 rounded-xl bg-[#EF4444]/10 flex items-center justify-center">
+
+                    <AlertTriangle className="w-4 h-4 text-[#EF4444]" />
+
+                  </div>
+
+                  <span className="text-[10px] font-bold text-slate-300">
+                    0{index + 1}
+                  </span>
+
                 </div>
-                <h3 className="text-xs sm:text-sm font-extrabold text-amber-400 leading-snug">
+
+
+                <h3 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
                   {mistake.title}
                 </h3>
-                <p className="text-xs text-purple-200/80 leading-relaxed">
+
+                <p className="text-xs text-slate-500 leading-relaxed">
                   {mistake.description}
                 </p>
+
               </div>
+
             ))}
+
+          </div>
+
+
+          {/* Bottom Reminder */}
+          <div className="flex items-center justify-center gap-2 pt-1 text-xs text-slate-500">
+
+            <AlertTriangle className="w-4 h-4 text-[#EF4444]" />
+
+            <span>
+              Plan carefully and stay informed throughout your arrival process.
+            </span>
+
           </div>
 
         </div>
+
+      </section>
+
+
+      {/* =====================================================
+          OPTIONAL CTA
+      ====================================================== */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-4">
+
+        <div className="max-w-4xl mx-auto">
+
+          <div className="relative overflow-hidden rounded-3xl bg-[#2563EB] px-6 sm:px-10 py-8 sm:py-10 text-center">
+
+            <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-white/10" />
+            <div className="absolute -bottom-20 -left-16 w-44 h-44 rounded-full bg-white/10" />
+
+            <div className="relative space-y-4">
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                Ready to Start Your Program?
+              </h3>
+
+              <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto leading-relaxed">
+                D.Education Zone can help you prepare for your journey and
+                make your transition to your study destination smoother.
+              </p>
+
+              <button
+                type="button"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2
+                  bg-white
+                  text-[#2563EB]
+                  hover:bg-slate-100
+                  px-5
+                  py-2.5
+                  rounded-xl
+                  text-xs sm:text-sm
+                  font-bold
+                  shadow-sm
+                  transition-all
+                  active:scale-95
+                "
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
     </main>
   );
 }
+
