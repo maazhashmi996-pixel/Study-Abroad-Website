@@ -72,21 +72,21 @@ export default function Navbar() {
               {servicesOpen && (
                 <div className="absolute left-0 top-full mt-3 w-48 rounded-xl bg-white border border-slate-100 shadow-xl z-[9999] p-3 flex flex-col gap-2 text-xs font-medium text-slate-700">
                   <Link
-                    href="/Accommodation"
+                    href="/services/Accommodation"
                     onClick={() => setServicesOpen(false)}
                     className="px-3 py-1.5 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                   >
                     Accommodation
                   </Link>
                   <Link
-                    href="/study-abroad"
+                    href="/services/study-abroad"
                     onClick={() => setServicesOpen(false)}
                     className="px-3 py-1.5 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                   >
                     Study Abroad
                   </Link>
                   <Link
-                    href="/languages"
+                    href="/services/languages"
                     onClick={() => setServicesOpen(false)}
                     className="px-3 py-1.5 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                   >
@@ -155,43 +155,43 @@ export default function Navbar() {
 
               <div className="absolute left-0 top-full mt-3 w-60 rounded-xl bg-white border border-slate-100 shadow-xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden p-2 text-xs font-medium text-slate-700">
                 <Link
-                  href="/start-your-program"
+                  href="/study-abroad-steps/start-your-program"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Start Your Program
                 </Link>
                 <Link
-                  href="/select-your-program"
+                  href="/study-abroad-steps/select-your-program"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Select Your Program
                 </Link>
                 <Link
-                  href="/receive-offer-letter"
+                  href="/study-abroad-steps/receive-offer-letter"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Receive Offer Letter
                 </Link>
                 <Link
-                  href="/apply-for-visa"
+                  href="/study-abroad-steps/apply-for-visa"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Apply For Visa
                 </Link>
                 <Link
-                  href="/fulfill-conditions"
+                  href="/study-abroad-steps/fulfill-conditions"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Fulfill Conditions
                 </Link>
                 <Link
-                  href="/submit-application"
+                  href="/study-abroad-steps/submit-application"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Submit Application
                 </Link>
                 <Link
-                  href="/pay-tution-deposit"
+                  href="/study-abroad-steps/pay-tution-deposit"
                   className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
                   Pay Tuition Deposit
@@ -210,7 +210,7 @@ export default function Navbar() {
 
           <div>
             <Link
-              href="/free-consultation"
+              href="/Home/free-consultation"
               className="inline-block rounded-full bg-[#1a233d] px-5 py-2.5 text-xs font-semibold text-white hover:bg-[#0b5cff] transition-colors whitespace-nowrap shadow-sm"
             >
               Get Free Consultation
@@ -245,10 +245,12 @@ export default function Navbar() {
             </li>
 
             {/* Accordion 1: Services */}
+
             <li>
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full py-1"
+                type="button"
+                onClick={() => setServicesOpen((prev) => !prev)}
+                className="flex items-center justify-between w-full py-2 hover:text-[#0b5cff] font-semibold text-slate-800 transition-colors"
               >
                 <span>Services</span>
                 <IoIosArrowDown
@@ -258,15 +260,39 @@ export default function Navbar() {
                 />
               </button>
 
+              {/* Dropdown Menu */}
               {servicesOpen && (
-                <div className="pl-4 my-1 flex flex-col gap-2 text-xs text-slate-600 border-l-2 border-slate-200">
-                  <Link href="/Accommodation" onClick={() => setIsOpen(false)}>
+                <div className="pl-4 my-2 flex flex-col gap-2.5 text-xs font-medium text-slate-600 border-l-2 border-[#0b5cff]">
+                  <Link
+                    href="/services/accommodation"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setServicesOpen(false);
+                    }}
+                    className="hover:text-[#0b5cff] transition-colors"
+                  >
                     Accommodation
                   </Link>
-                  <Link href="/study-abroad" onClick={() => setIsOpen(false)}>
+
+                  <Link
+                    href="/services/study-abroad"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setServicesOpen(false);
+                    }}
+                    className="hover:text-[#0b5cff] transition-colors"
+                  >
                     Study Abroad
                   </Link>
-                  <Link href="/languages" onClick={() => setIsOpen(false)}>
+
+                  <Link
+                    href="/services/languages"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setServicesOpen(false);
+                    }}
+                    className="hover:text-[#0b5cff] transition-colors"
+                  >
                     Languages
                   </Link>
                 </div>
@@ -316,40 +342,43 @@ export default function Navbar() {
               {stepsOpen && (
                 <div className="pl-4 my-1 flex flex-col gap-2 text-xs text-slate-600 border-l-2 border-slate-200">
                   <Link
-                    href="/start-your-program"
+                    href="/study-abroad-steps/start-your-program"
                     onClick={() => setIsOpen(false)}
                   >
                     Start Your Program
                   </Link>
                   <Link
-                    href="/select-your-program"
+                    href="/study-abroad-steps/select-your-program"
                     onClick={() => setIsOpen(false)}
                   >
                     Select Your Program
                   </Link>
-                  <Link href="/apply-for-visa" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/study-abroad-steps/apply-for-visa"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Apply For Visa
                   </Link>
                   <Link
-                    href="/fulfill-conditions"
+                    href="/study-abroad-steps/fulfill-conditions"
                     onClick={() => setIsOpen(false)}
                   >
                     Fulfill Conditions
                   </Link>
                   <Link
-                    href="/receive-offer-letter"
+                    href="/study-abroad-steps/receive-offer-letter"
                     onClick={() => setIsOpen(false)}
                   >
                     Receive Offer Letter
                   </Link>
                   <Link
-                    href="/submit-application"
+                    href="/study-abroad-steps/submit-application"
                     onClick={() => setIsOpen(false)}
                   >
                     Submit Application
                   </Link>
                   <Link
-                    href="/pay-tution-deposit"
+                    href="/study-abroad-steps/pay-tution-deposit"
                     onClick={() => setIsOpen(false)}
                   >
                     Pay Tuition Deposit
@@ -367,7 +396,7 @@ export default function Navbar() {
             </div>
             <div>
               <Link
-                href="/free-consultation"
+                href="/Home/free-consultation"
                 onClick={() => setIsOpen(false)}
                 className="inline-block rounded-full bg-[#1a233d] text-white px-4 py-2.5 text-xs font-semibold transition whitespace-nowrap text-center w-full"
               >

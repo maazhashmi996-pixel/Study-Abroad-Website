@@ -202,7 +202,7 @@ export default function Update() {
               </div>
 
               <Link
-                href="/blogs"
+                href="/Blog"
                 className="hidden items-center gap-1 text-xs font-bold text-[#0b5cff] sm:flex"
               >
                 View All

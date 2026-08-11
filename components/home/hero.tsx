@@ -132,7 +132,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
               <Link
-                href="/free-consultation"
+                href="/Home/free-consultation"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0b5cff] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#0b5cff]/20 transition-all hover:bg-white hover:text-[#1a233d]"
               >
                 Get Free Consultation
@@ -387,7 +387,7 @@ export default function Home() {
 
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
-              href="/free-consultation"
+              href="/Home/free-consultation"
               className="rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#1a233d]  hover:bg-[#0b5cff] hover:text-white transition duration-500"
             >
               Get Free Consultation

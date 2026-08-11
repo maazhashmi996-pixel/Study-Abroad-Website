@@ -105,7 +105,7 @@ export default function Secure() {
                 hover:-translate-y-0.5
                 active:scale-95
               "
-                href="/free-consultation"
+                href="/Home/free-consultation"
             >
               Book a Free Consultation
             </Link>

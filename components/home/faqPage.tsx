@@ -26,7 +26,7 @@ interface FaqItem {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-export default function EightPage() {
+export default function FAQPage() {
   const [faqTab, setFaqTab] = useState<FaqCategory>("company");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 

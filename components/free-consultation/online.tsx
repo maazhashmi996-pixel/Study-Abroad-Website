@@ -43,9 +43,7 @@ export default function OnlineConsultation() {
 
             {/* CTA Button Group */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
-              <button className="bg-[#0b5cff] hover:bg-[#ef4444] text-white font-black text-xs uppercase tracking-widest px-8 py-4 transition-all duration-300 shadow-lg shadow-blue-500/20 active:scale-95">
-                Learn More
-              </button>
+             
               
               <a 
                 href="tel:+923452066100" 
