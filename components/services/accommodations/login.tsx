@@ -41,7 +41,7 @@ export default function Home() {
             placeholder="Search subjects, flashcards, or topics..."
             className="w-full px-4 py-2 text-slate-700 focus:outline-none"
           />
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-slate-900 font-medium px-6 py-2.5 rounded-lg transition-colors">
             Search
           </button>
         </div>

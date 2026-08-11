@@ -3,24 +3,24 @@ import Link from 'next/link';
 import { 
   CheckCircle2, 
   ChevronRight, 
-  PhoneCall, 
-  Calendar 
+  PhoneCall,
+  AlertCircle
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How to Apply for United State Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on United State study visa requirements, fees, process, and timeline for Pakistani students.',
+  title: 'How to Apply for Sweden Study Visa in 2026 from Pakistan',
+  description: 'Complete step-by-step guide on Sweden study visa requirements, fees, process, and timeline for Pakistani students.',
 };
 
 // Data structures for inline rendering
 const requirementsData = [
   {
     title: "Valid Passport",
-    text: "Your passport should remain valid throughout your intended stay in United State. You cannot be granted a permit for longer than your passport is valid."
+    text: "Your passport should remain valid throughout your intended stay in Sweden. You cannot be granted a permit for longer than your passport validity."
   },
   {
     title: "University Admission Letter",
-    text: "Official admission confirmation from a recognised Swedish university. You count as finally admitted only once any tuition fee has been paid."
+    text: "Official admission confirmation from a recognized Swedish university. You count as finally admitted only once any required tuition fee has been paid."
   },
   {
     title: "Application Through universityadmissions.se",
@@ -28,7 +28,7 @@ const requirementsData = [
   },
   {
     title: "Proof of Funds",
-    text: "Financial evidence showing you can cover tuition fees and living expenses in United State. Note: the bank statement must be issued no more than four months before your permit start date."
+    text: "Financial evidence showing you can cover tuition fees and living expenses in Sweden. The maintenance requirement for 2026 is SEK 10,656 per month. Note: bank statements must be issued no more than four months before your permit start date."
   },
   {
     title: "Academic Documents",
@@ -48,7 +48,7 @@ const requirementsData = [
   },
   {
     title: "Accommodation Details",
-    text: "Proof of housing arrangements in United State. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
+    text: "Proof of housing arrangements in Sweden. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
   },
   {
     title: "Residence Permit Documents",
@@ -60,98 +60,116 @@ const stepsData = [
   {
     number: "1",
     title: "Choose Your Program",
-    text: "Research Swedish universities and select a degree program that matches your academic interests. The main intake is autumn, with applications usually open from mid-October to mid-January deadline."
+    text: "Research Swedish universities and select a degree program that matches your academic interests. The main intake is autumn, with applications usually open from mid-October to mid-January."
   },
   {
     number: "2",
-    title: "Apply through admissions.se",
+    title: "Apply through universityadmissions.se",
     text: "Submit your university applications through the official national portal universityadmissions.se. You can apply to up to four programmes in a round, and a non-EU application fee of SEK 900 applies."
   },
   {
     number: "3",
-    title: "Receive Admission Offer",
-    text: "Once accepted, you'll receive your admission confirmation from the university."
+    title: "Receive Admission Offer & Pay Tuition",
+    text: "Once accepted, receive your admission notification and pay your first tuition installment to confirm your seat."
   },
   {
     number: "4",
     title: "Apply for Scholarships",
-    text: "Look for scholarships from your university and from the Swedish Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs."
+    text: "Look for scholarships from your university and from the Swedish Institute (SI). Coverage ranges from partial to full tuition, and some scholarships also support living costs."
   },
   {
     number: "5",
     title: "Arrange Financial Documents",
-    text: "Prepare proof of funds, tuition payment receipts, and sponsorship documents if required. Make sure your bank statement is issued no more than four months before your permit start date."
+    text: "Prepare proof of funds (SEK 10,656/month), tuition payment receipts, and bank statements. Ensure your bank statement is issued within 4 months of your permit start date."
   },
   {
     number: "6",
     title: "Apply for a Residence Permit",
-    text: "Apply online through the Swedish Migration Agency (Migrationsverket) e-service after you are admitted and have paid any tuition. You pay the SEK 1,500 fee by card and state which Swedish embassy you will visit."
+    text: "Apply online through the Swedish Migration Agency (Migrationsverket) e-service after receiving your admission. Pay the SEK 1,500 fee by card and specify the Swedish embassy you will visit."
   },
   {
     number: "7",
     title: "Receive Approval & Travel",
-    text: "Once approved, prepare for your journey to United State. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare."
+    text: "Once approved, prepare for your journey. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare."
   }
 ];
 
-
-
 export default function ExchangePage() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
-      {/* Top Banner / Header */}
-      <header className="bg-indigo-950 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-white text-slate-800 font-sans">
+      
+      {/* Top Banner / Header (Black & Electric Blue with Minor Red Badge) */}
+      <header className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-amber-400 text-indigo-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+          <span className="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-sm">
             Guide 2026
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            How to Apply for a United State Study Visa in 2026 from Pakistan
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white">
+            How to Apply for a Sweden Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-            A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
+            A comprehensive step-by-step roadmap covering required documents, financial proof, processing timelines, and residence permit procedures.
           </p>
         </div>
       </header>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+        
         {/* Intro Section */}
-        <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            United State is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, United State offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+        <section className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
+            Sweden is becoming a top choice for Pakistani students who want high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, Sweden offers a wide range of English-taught programs, tuition-free PhD positions, and the chance to stay for up to 12 months post-graduation to look for employment.
           </p>
 
-          <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
-            <p className="text-amber-800 text-sm mt-1">
-              United State does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
-            </p>
+          {/* Minor Red Callout Box */}
+          <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-600 rounded-r-lg flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+            <div>
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">Key Requirement to Understand:</h4>
+              <p className="text-slate-700 text-sm mt-1">
+                Sweden does not issue a separate &ldquo;study visa&rdquo; for degree courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-slate-900">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies after receiving university admission.
+              </p>
+            </div>
           </div>
 
-          {/* Table of Contents */}
+          {/* Table of Contents (Slate & Electric Blue) */}
           <div className="mt-8 bg-slate-50 p-5 rounded-xl border border-slate-200">
             <h3 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">In this guide:</h3>
-            <ol className="space-y-2 text-sm sm:text-base font-medium text-indigo-700">
-              <li><a href="#requirements" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 1. Requirements for Pakistani Students</a></li>
-              <li><a href="#steps" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 2. Step-by-Step Application Process</a></li>
-              <li><a href="#fees" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time</a></li>
+            <ol className="space-y-2 text-sm sm:text-base font-semibold text-blue-600">
+              <li>
+                <a href="#requirements" className="hover:text-blue-700 hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} className="text-slate-500" /> 1. Requirements for Pakistani Students
+                </a>
+              </li>
+              <li>
+                <a href="#steps" className="hover:text-blue-700 hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} className="text-slate-500" /> 2. Step-by-Step Application Process
+                </a>
+              </li>
+              <li>
+                <a href="#fees" className="hover:text-blue-700 hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} className="text-slate-500" /> 3. Visa Fee &amp; Processing Time
+                </a>
+              </li>
             </ol>
           </div>
         </section>
 
         {/* Section 1: Requirements */}
-        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-slate-200">
             Requirements for Pakistani Students
           </h2>
-          <p className="text-slate-600 mb-6">To apply for a Swedish study visa, Pakistani students need the following documents:</p>
+          <p className="text-slate-600 mb-6">
+            To apply for a Swedish residence permit for studies, Pakistani students need the following documents:
+          </p>
 
           <ul className="space-y-4">
             {requirementsData.map((item, index) => (
-              <li key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
-                <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+              <li key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div className="text-sm sm:text-base text-slate-700">
-                  <strong className="font-semibold text-slate-900">{item.title}:</strong> {item.text}
+                  <strong className="font-bold text-slate-900">{item.title}:</strong> {item.text}
                 </div>
               </li>
             ))}
@@ -159,15 +177,15 @@ export default function ExchangePage() {
         </section>
 
         {/* Section 2: Step-by-step Process */}
-        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-slate-200">
             Step-by-Step Application Process
           </h2>
 
           <div className="space-y-6">
             {stepsData.map((step) => (
-              <div key={step.number} className="flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-amber-400 font-bold text-sm shrink-0">
+              <div key={step.number} className="flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/70 hover:border-blue-500 transition-colors">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-blue-400 font-bold text-sm shrink-0">
                   {step.number}
                 </span>
                 <div>
@@ -180,42 +198,42 @@ export default function ExchangePage() {
         </section>
 
         {/* Section 3: Fees & Table */}
-        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            United State Study Visa Fee &amp; Processing Time
+        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 pb-2 border-b-2 border-slate-200">
+            Sweden Residence Permit Fee &amp; Processing Details
           </h2>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto rounded-xl border border-slate-200">
             <table className="w-full text-left border-collapse min-w-[500px]">
               <thead>
-                <tr className="bg-slate-100 text-slate-800 font-bold border-b border-slate-300">
-                  <th className="p-4 w-1/3">Item</th>
-                  <th className="p-4 w-2/3">Details</th>
+                <tr className="bg-slate-900 text-white font-bold">
+                  <th className="p-4 w-1/3 border-b border-slate-800">Item</th>
+                  <th className="p-4 w-2/3 border-b border-slate-800">Details</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 text-sm sm:text-base text-slate-700">
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Visa Fee</td>
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50">Application Fees</td>
                   <td className="p-4">
-                    There is no separate study visa fee. The residence permit for studies application fee is <strong className="font-semibold text-slate-900">SEK 1,500 for adults</strong> (SEK 750 for children under 18), paid by card in the online application. A separate university application fee of SEK 900 is paid at universityadmissions.se.
+                    The residence permit application fee is <strong className="font-bold text-slate-900">SEK 1,500 for adults</strong> (SEK 750 for children under 18), paid online by credit card. The university portal fee is <strong className="font-bold text-slate-900">SEK 900</strong> at universityadmissions.se.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Processing Time</td>
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50">Processing Time</td>
                   <td className="p-4">
-                    The Migration Agency does not give a fixed time, but reports that about 75 percent of recent cases were decided within <strong className="font-semibold text-slate-900">2 months</strong>. Apply as soon as you are admitted and have paid tuition.
+                    The Swedish Migration Agency reports that complete online applications are generally processed within <strong className="font-bold text-slate-900">2 to 3 months</strong>.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Fund Requirement</td>
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50">Maintenance Funds (2026)</td>
                   <td className="p-4">
-                    The maintenance requirement is <strong className="font-semibold text-slate-900">SEK 10,656 per month for 2026</strong> (set by the Migration Agency and revised yearly), to cover living costs for each month of your studies.
+                    The required living expense proof is <strong className="font-bold text-slate-900">SEK 10,656 per month</strong> for each month of study in 2026.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Dependents</td>
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50">Dependents</td>
                   <td className="p-4">
-                    Allowed. Family members can apply at the same time, showing additional maintenance of SEK 4,440 per month for a spouse and SEK 2,664 per month for each child.
+                    Allowed. Family members need additional maintenance proof of <strong className="font-bold text-slate-900">SEK 4,440/month</strong> for a spouse and <strong className="font-bold text-slate-900">SEK 2,664/month</strong> per child.
                   </td>
                 </tr>
               </tbody>
@@ -223,34 +241,57 @@ export default function ExchangePage() {
           </div>
         </section>
 
-        {/* CTA Contact Form */}
-        <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
-          <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your United State Study Visa?</h2>
-            <p className="text-indigo-200 text-sm sm:text-base">
-              Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
+        {/* CTA Contact Form (Black Card with Electric Blue Button and Minor Red Accent) */}
+        <section className="bg-slate-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border-2 border-blue-600 relative overflow-hidden">
+          {/* Subtle Accent Glow */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full blur-2xl pointer-events-none" />
+
+          <div className="max-w-2xl mx-auto text-center mb-8 relative z-10">
+            <span className="inline-block text-xs font-bold text-red-500 uppercase tracking-widest mb-2">
+              Free Assistance
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 text-white">Need Help With Your Sweden Study Visa?</h2>
+            <p className="text-slate-300 text-sm sm:text-base">
+              Get expert guidance on university applications, scholarship opportunities, financial documentation, and Migrationsverket residence permit filing.
             </p>
           </div>
 
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto relative z-10">
+            <input 
+              type="text" 
+              placeholder="Full Name" 
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white placeholder-slate-400 border border-slate-700 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-sm" 
+              required 
+            />
+            <input 
+              type="email" 
+              placeholder="Email Address" 
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white placeholder-slate-400 border border-slate-700 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-sm" 
+              required 
+            />
+            <input 
+              type="tel" 
+              placeholder="Mobile Number" 
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white placeholder-slate-400 border border-slate-700 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-sm" 
+              required 
+            />
             
-            <select className="w-full px-4 py-3 rounded-xl bg-indigo-900 text-indigo-100 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
+            <select className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white border border-slate-700 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-sm">
               <option value="">Preferred Study Level</option>
               <option value="bachelors">Bachelor&apos;s Degree</option>
               <option value="masters">Master&apos;s Degree</option>
               <option value="phd">PhD / Doctorate</option>
             </select>
 
-            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
+            <button 
+              type="submit" 
+              className="sm:col-span-2 w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition-all hover:shadow-lg hover:shadow-blue-600/30 text-base flex items-center justify-center gap-2"
+            >
               <PhoneCall size={18} /> Get Free Consultation
             </button>
           </form>
         </section>
 
-      
       </div>
     </main>
   );

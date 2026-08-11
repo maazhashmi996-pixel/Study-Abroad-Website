@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function First() {
   return (
-    <section className="w-full bg-black py-6 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
+    <section className="w-full  py-6 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
       <div className="max-w-7xl mx-auto overflow-hidden rounded-2xl shadow-2xl border border-slate-800 bg-slate-900 p-2 sm:p-3 relative">
         
         {/* Accent Indicator Badge */}

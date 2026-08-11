@@ -16,6 +16,7 @@ export default function Blogs() {
       image: "/images/home/counciling.jpg",
       description:
         "Get personalized guidance to choose the right country, university, and program for your future.",
+        link:"/study-abroad-steps/select-your-program",
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ export default function Blogs() {
       image: "/images/home/visa.jpg",
       description:
         "Get expert support throughout your student visa application and documentation process.",
+          link:"/study-abroad-steps/apply-for-visa",
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ export default function Blogs() {
       image: "/images/home/prepration.jpg",
       description:
         "Prepare confidently for English language and other admission tests with proper guidance.",
+          link:"/Home/english",
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ export default function Blogs() {
       image: "/images/home/admission.jpg",
       description:
         "We guide you through applications, documents, admission requirements, and university deadlines.",
+          link:"/Home/guidance",
     },
     {
       id: 5,
@@ -44,6 +48,7 @@ export default function Blogs() {
       image: "/images/home/celebration.jpg",
       description:
         "Discover scholarship opportunities and learn how to prepare a stronger scholarship application.",
+          link:"/",
     },
     {
       id: 6,
@@ -51,6 +56,7 @@ export default function Blogs() {
       image: "/images/home/country.jpg",
       description:
         "Compare study destinations and universities according to your academic and career goals.",
+          link:"/",
     },
   ];
 
@@ -169,7 +175,7 @@ export default function Blogs() {
                   <div className="mt-auto pt-5">
 
                     <Link
-                      href={`/services/${blog.id}`}
+                      href={blog.link}
                       className="group/link inline-flex items-center gap-2 text-xs font-extrabold text-[#0b5cff] transition-colors hover:text-red-500"
                     >
                       Learn More

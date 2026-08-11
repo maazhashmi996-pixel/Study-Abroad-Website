@@ -14,7 +14,7 @@ import {
 
 export const metadata = {
   title: 'How to Apply for South Korea Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on South Korea study visa requirements, fees, process, and timeline for Pakistani students.',
+  description: 'Complete step-by-step guide on South Korea study visa (D-2) requirements, fees, bank statement, TB test, and application process for Pakistani students.',
 };
 
 export default function SouthKorea() {
@@ -30,7 +30,7 @@ export default function SouthKorea() {
             How to Apply for a South Korea Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-            A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
+            A comprehensive step-by-step roadmap covering D-2 visa requirements, bank statements, TB health checks, fees, and Alien Registration Card (ARC) procedures.
           </p>
         </div>
       </header>
@@ -39,13 +39,13 @@ export default function SouthKorea() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            South Korea is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, South Korea offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            South Korea is rapidly becoming a top destination for Pakistani students seeking world-class education, advanced technological research, and generous scholarship programs like the Global Korea Scholarship (GKS). Renowned for its globally ranked universities (such as Seoul National University, KAIST, and Yonsei), South Korea offers extensive English-taught degree programs, rich cultural immersion, and post-graduation work options.
           </p>
 
           <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
+            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">Key Requirement Before You Apply:</h4>
             <p className="text-amber-800 text-sm mt-1">
-              South Korea does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
+              For full degree programs (Bachelor&apos;s, Master&apos;s, or PhD), Pakistani students must apply for a <strong className="font-semibold text-amber-950">D-2 Student Visa</strong>. You can only apply once you receive an official <strong className="font-semibold text-amber-950">Standard Admission Letter</strong> (issued by an IEQAS-certified Korean university) and complete mandatory medical TB screening.
             </p>
           </div>
 
@@ -65,38 +65,35 @@ export default function SouthKorea() {
           <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
             Requirements for Pakistani Students
           </h2>
-          <p className="text-slate-600 mb-6">To apply for a Swedish study visa, Pakistani students need the following documents:</p>
+          <p className="text-slate-600 mb-6">To apply for a South Korea D-2 study visa, Pakistani applicants must prepare the following documents:</p>
 
           <ul className="space-y-4">
             <RequirementItem title="Valid Passport">
-              Your passport should remain valid throughout your intended stay in South Korea. You cannot be granted a permit for longer than your passport is valid.
+              Original passport valid for at least six months beyond your intended duration of stay, along with copies of current and previous visa pages.
             </RequirementItem>
-            <RequirementItem title="University Admission Letter">
-              Official admission confirmation from a recognised Swedish university. You count as finally admitted only once any tuition fee has been paid.
+            <RequirementItem title="Standard Admission Letter">
+              Official Standard Admission Letter (표준입학허가서) issued by an accredited South Korean university holding International Education Quality Assurance System (IEQAS) recognition.
             </RequirementItem>
-            <RequirementItem title="Application Through universityadmissions.se">
-              Programme applications go through the official national portal universityadmissions.se (the Swedish-language version is antagning.se), run by the Swedish Council for Higher Education. A <strong className="font-semibold text-slate-800">non-EU application fee of SEK 900</strong> applies, and you can choose up to four programmes per round.
+            <RequirementItem title="Tuberculosis (TB) Test Certificate">
+              Because Pakistan is categorized as a high-incidence country for TB, you must get tested at a hospital or diagnostic center approved by the Embassy of South Korea in Pakistan.
             </RequirementItem>
-            <RequirementItem title="Proof of Funds">
-              Financial evidence showing you can cover tuition fees and living expenses in South Korea. <em>Note: the bank statement must be issued no more than four months before your permit start date.</em>
+            <RequirementItem title="Proof of Financial Capability">
+              A official bank statement showing at least <strong className="font-semibold text-slate-800">USD $15,000 to $20,000</strong> (approx. KRW 20,000,000+) maintained for at least 28 days. If using a sponsor (parents), attach an FRC (Family Registration Certificate), sponsorship affidavit, and sponsor tax returns.
             </RequirementItem>
-            <RequirementItem title="Academic Documents">
-              Matric, Intermediate, Bachelor&apos;s degree, transcripts, and other supporting certificates. All documents must be in Swedish or English; if translated, include a certified translation together with a copy of the original.
+            <RequirementItem title="Attested Academic Certificates">
+              Matriculation, Intermediate, or Bachelor&apos;s degrees and transcripts attested by IBCC, HEC, and the Ministry of Foreign Affairs (MOFA) Pakistan.
             </RequirementItem>
-            <RequirementItem title="English Language Requirement">
-              IELTS, TOEFL, or equivalent proof of English proficiency as required by the university, commonly around <strong className="font-semibold text-slate-800">IELTS 6.0 to 6.5</strong>, TOEFL iBT 90 to 100, or PTE 62 and above.
+            <RequirementItem title="Language Proficiency Proof">
+              <strong className="font-semibold text-slate-800">IELTS (5.5 - 6.5+)</strong> or TOEFL for English-taught programs, or <strong className="font-semibold text-slate-800">TOPIK (Level 3 or higher)</strong> for Korean-taught programs.
             </RequirementItem>
             <RequirementItem title="Statement of Purpose (SOP)">
-              An SOP explaining your academic background, study goals, and plans. Master&apos;s applications often also ask for two letters of recommendation.
+              A detailed study plan and SOP describing your educational background, selection of South Korea, course goals, and post-study career plans.
             </RequirementItem>
-            <RequirementItem title="Health Insurance">
-              If your programme lasts less than <strong className="font-semibold text-slate-800">one year</strong>, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last <strong className="font-semibold text-slate-800">one year or more</strong>, you register in the Swedish population register, which gives you access to healthcare.
+            <RequirementItem title="Completed Visa Application Form">
+              Fully filled and signed Visa Application Form with recent passport-sized color photographs (3.5 x 4.5 cm with a white background).
             </RequirementItem>
             <RequirementItem title="Accommodation Details">
-              Proof of housing arrangements in South Korea. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can.
-            </RequirementItem>
-            <RequirementItem title="Residence Permit Documents">
-              Completed online residence permit application through the <strong className="font-semibold text-slate-800">Migrationsverket e-service</strong>, with passport-size photographs. Your fingerprints and photo are taken later when you present your passport.
+              Proof of university dormitory allotment or housing rental contract in South Korea.
             </RequirementItem>
           </ul>
         </section>
@@ -108,32 +105,32 @@ export default function SouthKorea() {
           </h2>
 
           <div className="space-y-6">
-            <StepCard number="1" title="Choose Your Program">
-              Research Swedish universities and select a degree program that matches your academic interests. The <strong className="font-semibold text-slate-800">main intake is autumn</strong>, with applications usually open from <strong className="font-semibold text-slate-800">mid-October to mid-January</strong> deadline.
+            <StepCard number="1" title="Select University & Program">
+              Research recognized South Korean universities (IEQAS accredited) and select your preferred degree program. Main intakes are <strong className="font-semibold text-slate-800">Spring (March)</strong> and <strong className="font-semibold text-slate-800">Autumn (September)</strong>.
             </StepCard>
 
-            <StepCard number="2" title="Apply through admissions.se">
-              Submit your university applications through the official national portal universityadmissions.se. You can apply to up to <strong className="font-semibold text-slate-800">four programmes in a round</strong>, and a non-EU application fee of <strong className="font-semibold text-slate-800">SEK 900</strong> applies.
+            <StepCard number="2" title="Submit Admission Application">
+              Apply directly through the university&apos;s online international portal, upload academic transcripts, language scores, and pay the university application fee.
             </StepCard>
 
-            <StepCard number="3" title="Receive Admission Offer">
-              Once accepted, you&apos;ll receive your admission confirmation from the university.
+            <StepCard number="3" title="Receive Standard Admission Letter">
+              Upon approval and payment of tuition fees (or scholarship award), the university issues your official Standard Admission Letter.
             </StepCard>
 
-            <StepCard number="4" title="Apply for Scholarships">
-              Look for scholarships from your university and from the Swedish Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs.
+            <StepCard number="4" title="Complete Medical TB Check & Document Attestation">
+              Undergo the mandatory TB screening at an embassy-approved clinic in Pakistan and ensure all degrees are attested by HEC and MOFA.
             </StepCard>
 
-            <StepCard number="5" title="Arrange Financial Documents">
-              Prepare proof of funds, tuition payment receipts, and sponsorship documents if required. Make sure your bank statement is issued no more than four months before your permit start date.
+            <StepCard number="5" title="Prepare Financial Evidence">
+              Secure a bank statement of USD $15,000+ (or scholarship certificate) to prove you can cover tuition and living expenses during your stay.
             </StepCard>
 
-            <StepCard number="6" title="Apply for a Residence Permit">
-              Apply online through the Swedish Migration Agency (<strong className="font-semibold text-slate-800">Migrationsverket</strong>) e-service after you are admitted and have paid any tuition. You pay the <strong className="font-semibold text-slate-800">SEK 1,500 fee by card</strong> and state which Swedish embassy you will visit.
+            <StepCard number="6" title="Submit Visa Application">
+              Submit your D-2 visa application, passport, and documents to the Embassy of the Republic of Korea in Islamabad or through the designated Korea Visa Application Center (KVAC).
             </StepCard>
 
-            <StepCard number="7" title="Receive Approval & Travel">
-              Once approved, prepare for your journey to South Korea. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare.
+            <StepCard number="7" title="Travel & Register for ARC">
+              After receiving your D-2 visa, travel to South Korea. Within 90 days of arrival, register for your <strong className="font-semibold text-slate-800">Alien Registration Card (ARC)</strong> at your local South Korean immigration office.
             </StepCard>
           </div>
         </section>
@@ -156,25 +153,25 @@ export default function SouthKorea() {
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Visa Fee</td>
                   <td className="p-4">
-                    There is no separate study visa fee. The residence permit for studies application fee is <strong className="font-semibold text-slate-900">SEK 1,500 for adults</strong> (SEK 750 for children under 18), paid by card in the online application. A separate university application fee of SEK 900 is paid at universityadmissions.se.
+                    Approximately <strong className="font-semibold text-slate-900">$60 USD</strong> for a single-entry long-stay visa (over 90 days). Additional processing fees may apply if submitting via KVAC.
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Processing Time</td>
                   <td className="p-4">
-                    The Migration Agency does not give a fixed time, but reports that about 75 percent of recent cases were decided within <strong className="font-semibold text-slate-900">2 months</strong>. Apply as soon as you are admitted and have paid tuition.
+                    Typically <strong className="font-semibold text-slate-900">2 to 4 weeks</strong>. It is recommended to apply at least 6 weeks before your program start date.
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Fund Requirement</td>
                   <td className="p-4">
-                    The maintenance requirement is <strong className="font-semibold text-slate-900">SEK 10,656 per month for 2026</strong> (set by the Migration Agency and revised yearly), to cover living costs for each month of your studies.
+                    Minimum <strong className="font-semibold text-slate-900">USD $15,000 to $20,000</strong> (KRW 20,000,000+) in a bank account maintained for at least 28 days prior to visa submission.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Dependents</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Alien Registration Card (ARC)</td>
                   <td className="p-4">
-                    Allowed. Family members can apply at the same time, showing additional maintenance of SEK 4,440 per month for a spouse and SEK 2,664 per month for each child.
+                    ₩30,000 KRW fee payable upon arrival in South Korea when registering at the local immigration office.
                   </td>
                 </tr>
               </tbody>
@@ -187,7 +184,7 @@ export default function SouthKorea() {
           <div className="max-w-2xl mx-auto text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your South Korea Study Visa?</h2>
             <p className="text-indigo-200 text-sm sm:text-base">
-              Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
+              Get expert guidance on university applications, Global Korea Scholarship (GKS), document attestation, and visa filing.
             </p>
           </div>
 
@@ -208,8 +205,6 @@ export default function SouthKorea() {
             </button>
           </form>
         </section>
-
-      
       </div>
     </main>
   );
@@ -240,4 +235,3 @@ function StepCard({ number, title, children }: { number: string; title: string; 
     </div>
   );
 }
-

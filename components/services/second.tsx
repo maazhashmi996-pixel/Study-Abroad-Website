@@ -9,7 +9,7 @@ export default function Second() {
   ];
 
   return (
-    <section className="bg-slate-950 text-white px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-14 border-y border-slate-900">
+    <section className=" text-slate-800 px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-14 border-y border-slate-900">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
         {stats.map((stat, index) => (
           <div

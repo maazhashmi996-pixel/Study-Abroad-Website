@@ -4,111 +4,104 @@ import {
   CheckCircle2, 
   ChevronRight, 
   PhoneCall, 
-  Calendar 
+  Calendar,
+  ArrowRight,
+  FileText
 } from 'lucide-react';
 
 export const metadata = {
   title: 'How to Apply for United Kingdom Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on United Kingdom study visa requirements, fees, process, and timeline for Pakistani students.',
+  description: 'Complete step-by-step guide on United Kingdom student visa requirements, fees, IHS surcharge, CAS, processing times, and financial requirements for Pakistani students.',
 };
 
-// Data structures for inline rendering
+// UK-specific requirements data
 const requirementsData = [
   {
     title: "Valid Passport",
-    text: "Your passport should remain valid throughout your intended stay in United Kingdom. You cannot be granted a permit for longer than your passport is valid."
+    text: "Your passport must be valid for the duration of your intended stay in the UK, with at least two blank visa pages."
   },
   {
-    title: "University Admission Letter",
-    text: "Official admission confirmation from a recognised Swedish university. You count as finally admitted only once any tuition fee has been paid."
+    title: "Confirmation of Acceptance for Studies (CAS)",
+    text: "An official reference number issued by a UK Licensed Student Sponsor university once you accept an offer and pay any required deposit."
   },
   {
-    title: "Application Through universityadmissions.se",
-    text: "Programme applications go through the official national portal universityadmissions.se (the Swedish-language version is antagning.se), run by the Swedish Council for Higher Education. A non-EU application fee of SEK 900 applies, and you can choose up to four programmes per round."
+    title: "Proof of Financial Support",
+    text: "Bank statements showing funds to cover tuition fees for year 1 plus living costs (£1,334/month for London or £1,023/month outside London for up to 9 months). Funds must be held continuously for at least 28 days."
   },
   {
-    title: "Proof of Funds",
-    text: "Financial evidence showing you can cover tuition fees and living expenses in United Kingdom. Note: the bank statement must be issued no more than four months before your permit start date."
+    title: "Tuberculosis (TB) Test Certificate",
+    text: "Pakistani applicants staying longer than 6 months must undergo TB screening at an approved IOM (International Organization for Migration) clinic in Pakistan."
   },
   {
-    title: "Academic Documents",
-    text: "Matric, Intermediate, Bachelor's degree, transcripts, and other supporting certificates. All documents must be in Swedish or English; if translated, include a certified translation together with a copy of the original."
+    title: "English Language Proficiency",
+    text: "Proof of English ability via SELT (IELTS UKVI, PTE Academic UKVI, or LanguageCert International ESOL SELT) or an approved university MOI waiver where applicable."
   },
   {
-    title: "English Language Requirement",
-    text: "IELTS, TOEFL, or equivalent proof of English proficiency as required by the university, commonly around IELTS 6.0 to 6.5, TOEFL iBT 90 to 100, or PTE 62 and above."
+    title: "Academic & ATAS Certificates",
+    text: "Original degrees, transcripts, and (if studying specific postgraduate STEM or tech subjects) Academic Technology Approval Scheme (ATAS) clearance."
   },
   {
     title: "Statement of Purpose (SOP)",
-    text: "An SOP explaining your academic background, study goals, and plans. Master's applications often also ask for two letters of recommendation."
+    text: "A well-written personal statement detailing your course choice, why you chose the UK, and your long-term career aspirations."
   },
   {
-    title: "Health Insurance",
-    text: "If your programme lasts less than one year, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last one year or more, you register in the Swedish population register, which gives you access to healthcare."
-  },
-  {
-    title: "Accommodation Details",
-    text: "Proof of housing arrangements in United Kingdom. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can."
-  },
-  {
-    title: "Residence Permit Documents",
-    text: "Completed online residence permit application through the Migrationsverket e-service, with passport-size photographs. Your fingerprints and photo are taken later when you present your passport."
+    title: "Immigration Health Surcharge (IHS)",
+    text: "Mandatory payment granting access to the UK National Health Service (NHS) during your studies."
   }
 ];
 
 const stepsData = [
   {
     number: "1",
-    title: "Choose Your Program",
-    text: "Research Swedish universities and select a degree program that matches your academic interests. The main intake is autumn, with applications usually open from mid-October to mid-January deadline."
+    title: "Choose Course & Apply to UK Universities",
+    text: "Select your program at a UK licensed sponsor institution through UCAS (undergraduate) or directly through university portals (postgraduate)."
   },
   {
     number: "2",
-    title: "Apply through admissions.se",
-    text: "Submit your university applications through the official national portal universityadmissions.se. You can apply to up to four programmes in a round, and a non-EU application fee of SEK 900 applies."
+    title: "Receive CAS (Confirmation of Acceptance for Studies)",
+    text: "Meet all conditional offer terms, pay the required tuition deposit, and obtain your official 14-digit CAS number from the university."
   },
   {
     number: "3",
-    title: "Receive Admission Offer",
-    text: "Once accepted, you'll receive your admission confirmation from the university."
+    title: "Complete Medical (TB) Test",
+    text: "Book and complete your TB test at an officially designated IOM clinic in Islamabad, Lahore, Karachi, or Mirpur."
   },
   {
     number: "4",
-    title: "Apply for Scholarships",
-    text: "Look for scholarships from your university and from the Swedish Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs."
+    title: "Prepare & Hold Bank Funds",
+    text: "Ensure required tuition balance and living expense funds are deposited in an eligible bank account and maintained for a minimum of 28 consecutive days."
   },
   {
     number: "5",
-    title: "Arrange Financial Documents",
-    text: "Prepare proof of funds, tuition payment receipts, and sponsorship documents if required. Make sure your bank statement is issued no more than four months before your permit start date."
+    title: "Submit GOV.UK Online Application",
+    text: "Fill out the Student Visa application form online on the UK government website, pay the visa fee and Immigration Health Surcharge (IHS)."
   },
   {
     number: "6",
-    title: "Apply for a Residence Permit",
-    text: "Apply online through the Swedish Migration Agency (Migrationsverket) e-service after you are admitted and have paid any tuition. You pay the SEK 1,500 fee by card and state which Swedish embassy you will visit."
+    title: "Book & Attend VFS Biometric Appointment",
+    text: "Schedule an appointment at a VFS Global center in Pakistan (Lahore, Islamabad, Karachi) to submit biometrics, photograph, and passport."
   },
   {
     number: "7",
-    title: "Receive Approval & Travel",
-    text: "Once approved, prepare for your journey to United Kingdom. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare."
+    title: "Receive Visa Decision & Fly",
+    text: "Collect your stamped passport with a vignette sticker, travel to the UK, and collect your Biometric Residence Permit (BRP) or digital eVisa status upon arrival."
   }
 ];
-
 
 export default function UK() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
-      {/* Top Banner / Header */}
-      <header className="bg-indigo-950 text-white py-12 px-4 sm:px-6 lg:px-8">
+      {/* Hero Header Section */}
+      <header className="bg-slate-900 text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-amber-400 text-indigo-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-            Guide 2026
+          <span className="inline-block bg-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-sm">
+            2026 Official Guide
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
             How to Apply for a United Kingdom Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-            A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
+            A complete step-by-step roadmap covering UK Student Visa requirements, CAS, IHS fee, bank statement rules, and VFS processing.
           </p>
         </div>
       </header>
@@ -117,38 +110,52 @@ export default function UK() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            United Kingdom is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, United Kingdom offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            The United Kingdom remains one of the top destinations for Pakistani students offering world-class academic institutions, 1-year Master's degree options, and the popular <strong className="font-semibold text-slate-900">Graduate Route (2-year post-study work visa)</strong>. To study in the UK for a course lasting longer than 6 months, international students must apply for a <strong className="font-semibold text-slate-900">Student Visa (formerly Tier 4)</strong>.
           </p>
 
-          <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
-            <p className="text-amber-800 text-sm mt-1">
-              United Kingdom does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
+          <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl">
+            <h4 className="font-bold text-blue-950 text-sm sm:text-base">Key Requirement Before Visa Application:</h4>
+            <p className="text-blue-900 text-sm mt-1">
+              You cannot submit a UK Student Visa application without a valid <strong className="font-semibold">CAS (Confirmation of Acceptance for Studies)</strong> issued by your university, which can be requested up to 6 months before your course start date.
             </p>
           </div>
 
           {/* Table of Contents */}
           <div className="mt-8 bg-slate-50 p-5 rounded-xl border border-slate-200">
-            <h3 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">In this guide:</h3>
-            <ol className="space-y-2 text-sm sm:text-base font-medium text-indigo-700">
-              <li><a href="#requirements" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 1. Requirements for Pakistani Students</a></li>
-              <li><a href="#steps" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 2. Step-by-Step Application Process</a></li>
-              <li><a href="#fees" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time</a></li>
+            <h3 className="font-bold text-slate-900 mb-3 text-xs uppercase tracking-wider">In this guide:</h3>
+            <ol className="space-y-2 text-sm sm:text-base font-semibold text-blue-600">
+              <li>
+                <a href="#requirements" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 1. Document Requirements for Pakistani Students
+                </a>
+              </li>
+              <li>
+                <a href="#steps" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 2. Step-by-Step UK Visa Application Process
+                </a>
+              </li>
+              <li>
+                <a href="#fees" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 3. Visa Fees, IHS & Processing Timeline
+                </a>
+              </li>
             </ol>
           </div>
         </section>
 
         {/* Section 1: Requirements */}
         <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            Requirements for Pakistani Students
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 pb-2 border-b border-slate-200">
+            Document Requirements for Pakistani Students
           </h2>
-          <p className="text-slate-600 mb-6">To apply for a Swedish study visa, Pakistani students need the following documents:</p>
+          <p className="text-slate-600 mb-6">
+            Ensure you have the following essential documents prepared before submitting your UK Student Visa application:
+          </p>
 
           <ul className="space-y-4">
             {requirementsData.map((item, index) => (
               <li key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
-                <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div className="text-sm sm:text-base text-slate-700">
                   <strong className="font-semibold text-slate-900">{item.title}:</strong> {item.text}
                 </div>
@@ -159,14 +166,14 @@ export default function UK() {
 
         {/* Section 2: Step-by-step Process */}
         <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 pb-2 border-b border-slate-200">
             Step-by-Step Application Process
           </h2>
 
           <div className="space-y-6">
             {stepsData.map((step) => (
               <div key={step.number} className="flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-amber-400 font-bold text-sm shrink-0">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white font-bold text-sm shrink-0">
                   {step.number}
                 </span>
                 <div>
@@ -180,41 +187,47 @@ export default function UK() {
 
         {/* Section 3: Fees & Table */}
         <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            United Kingdom Study Visa Fee &amp; Processing Time
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 pb-2 border-b border-slate-200">
+            UK Student Visa Fees &amp; Processing Information
           </h2>
 
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[500px]">
               <thead>
-                <tr className="bg-slate-100 text-slate-800 font-bold border-b border-slate-300">
+                <tr className="bg-slate-900 text-white font-bold">
                   <th className="p-4 w-1/3">Item</th>
                   <th className="p-4 w-2/3">Details</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 text-sm sm:text-base text-slate-700">
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Visa Fee</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Visa Application Fee</td>
                   <td className="p-4">
-                    There is no separate study visa fee. The residence permit for studies application fee is <strong className="font-semibold text-slate-900">SEK 1,500 for adults</strong> (SEK 750 for children under 18), paid by card in the online application. A separate university application fee of SEK 900 is paid at universityadmissions.se.
+                    <strong className="font-semibold text-slate-900">£516</strong> per applicant (paid online during application submission).
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Processing Time</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Immigration Health Surcharge (IHS)</td>
                   <td className="p-4">
-                    The Migration Agency does not give a fixed time, but reports that about 75 percent of recent cases were decided within <strong className="font-semibold text-slate-900">2 months</strong>. Apply as soon as you are admitted and have paid tuition.
+                    <strong className="font-semibold text-slate-900">£776 per year</strong> of study (discounted rate for students, grants full access to NHS).
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Fund Requirement</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Standard Processing Time</td>
                   <td className="p-4">
-                    The maintenance requirement is <strong className="font-semibold text-slate-900">SEK 10,656 per month for 2026</strong> (set by the Migration Agency and revised yearly), to cover living costs for each month of your studies.
+                    Typically <strong className="font-semibold text-slate-900">3 weeks</strong> following biometric submission at VFS Global in Pakistan.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Dependents</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Priority & Super Priority Visa Services</td>
                   <td className="p-4">
-                    Allowed. Family members can apply at the same time, showing additional maintenance of SEK 4,440 per month for a spouse and SEK 2,664 per month for each child.
+                    Priority service (5 working days) costs an additional ~£500; Super Priority service (24 hours) costs an additional ~£1,000.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Financial Maintenance Funds</td>
+                  <td className="p-4">
+                    <strong className="font-semibold text-slate-900">Inner London:</strong> £1,334/month | <strong className="font-semibold text-slate-900">Outer London / Rest of UK:</strong> £1,023/month (for up to 9 months) + remaining tuition fees. Must be held for 28 consecutive days.
                   </td>
                 </tr>
               </tbody>
@@ -223,33 +236,54 @@ export default function UK() {
         </section>
 
         {/* CTA Contact Form */}
-        <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
+        <section className="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your United Kingdom Study Visa?</h2>
-            <p className="text-indigo-200 text-sm sm:text-base">
-              Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
+            <span className="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+              Free Assistance
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">
+              Need Expert Advice for Your UK Student Visa?
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base">
+              Get direct assistance with university admissions, CAS processing, financial documentation, and visa filing.
             </p>
           </div>
 
           <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
+            <input 
+              type="text" 
+              placeholder="Full Name" 
+              className="w-full px-4 py-3 rounded-xl bg-slate-800 text-white placeholder-slate-400 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm" 
+              required 
+            />
+            <input 
+              type="email" 
+              placeholder="Email Address" 
+              className="w-full px-4 py-3 rounded-xl bg-slate-800 text-white placeholder-slate-400 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm" 
+              required 
+            />
+            <input 
+              type="tel" 
+              placeholder="Mobile Number" 
+              className="w-full px-4 py-3 rounded-xl bg-slate-800 text-white placeholder-slate-400 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm" 
+              required 
+            />
             
-            <select className="w-full px-4 py-3 rounded-xl bg-indigo-900 text-indigo-100 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
+            <select className="w-full px-4 py-3 rounded-xl bg-slate-800 text-slate-200 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
               <option value="">Preferred Study Level</option>
               <option value="bachelors">Bachelor&apos;s Degree</option>
               <option value="masters">Master&apos;s Degree</option>
               <option value="phd">PhD / Doctorate</option>
             </select>
 
-            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
+            <button 
+              type="submit" 
+              className="sm:col-span-2 w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2"
+            >
               <PhoneCall size={18} /> Get Free Consultation
             </button>
           </form>
         </section>
-
-      
       </div>
     </main>
   );

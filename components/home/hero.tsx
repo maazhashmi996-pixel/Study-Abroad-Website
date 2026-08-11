@@ -35,42 +35,42 @@ export default function Home() {
       title: "Study Abroad",
       description:
         "Get guidance to choose the right country, university and program according to your goals.",
-      href: "/study-abroad",
+      href: "/services/study-abroad",
     },
     {
       icon: FileCheck2,
       title: "Admission Guidance",
       description:
         "Get support throughout your university application and admission process.",
-      href: "/guidance",
+      href: "/Home/guidance",
     },
     {
       icon: ShieldCheck,
       title: "Visa Guidance",
       description:
         "Prepare your student visa application with proper documentation and guidance.",
-      href: "/apply-for-visa",
+      href: "/study-abroad-steps/apply-for-visa",
     },
     {
       icon: Building2,
       title: "Accommodation",
       description:
         "Find suitable accommodation options for your international study journey.",
-      href: "/Accommodation",
+      href: "/services/Accommodation",
     },
     {
       icon: Languages,
       title: "Language Support",
       description:
         "Improve your language skills and prepare for your international education journey.",
-      href: "/languages",
+      href: "/services/languages",
     },
     {
       icon: Plane,
       title: "Pre-Departure Support",
       description:
         "Get practical guidance before travelling and starting your studies abroad.",
-      href: "/start-your-program",
+      href: "/study-abroad-steps/start-your-program",
     },
   ];
 
