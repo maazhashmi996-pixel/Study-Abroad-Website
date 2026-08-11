@@ -48,93 +48,112 @@ export default function EndPage() {
   };
 
   return (
-    <div className="w-full bg-white font-sans text-slate-900 py-12 px-4 sm:px-6">
+    <div className="w-full bg-black font-sans text-white py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto space-y-16">
         
         {/* Section 1: How D.Education Zone Helps */}
-        <section className="text-center max-w-5xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#2a1a4a] mb-3">
-            How D.Education Zone helps at this stage
+        <section className="text-center max-w-5xl mx-auto bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+          
+          {/* Subtle Background Glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800 mb-4">
+            <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+              Professional Assistance
+            </span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">
+            How D. Education Zone helps at this stage
           </h2>
-          <p className="text-xs sm:text-sm text-black font-medium mb-8">
-            This is where D.Education Zone is most valuable, because visa refusals hurt reputation and waste intakes.
+          <p className="text-xs sm:text-sm text-slate-400 font-medium mb-8 max-w-xl mx-auto">
+            This is where D. Education Zone is most valuable, because visa refusals hurt reputation and waste intakes.
           </p>
 
-          <p className="text-xs sm:text-sm font-semibold text-black text-left  mx-auto mb-4">
-            D.Education Zone can:
+          <p className="text-xs sm:text-sm font-extrabold text-white text-left max-w-5xl mx-auto mb-4 tracking-wide uppercase">
+            D. Education Zone can:
           </p>
 
           {/* 2-Column Checklist */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left max-w-5xl mx-auto mb-8">
             {servicesList.map((item, index) => (
-              <div key={index} className="flex items-start text-black gap-2.5">
-                <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5 stroke-[3]" />
-                <span className="text-xs sm:text-sm text-black leading-snug">
+              <div key={index} className="flex items-start gap-3 bg-slate-900/60 border border-slate-800/80 p-3.5 rounded-xl">
+                <Check className="w-4 h-4 text-[#0b5cff] shrink-0 mt-0.5 stroke-[3]" />
+                <span className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
                   {item}
                 </span>
               </div>
             ))}
           </div>
 
-          {/* Golden Button 1 */}
+          {/* Primary Action Button 1 */}
           <div className="mb-8">
-            <button className="bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-xs transition duration-150">
+            <button className="bg-[#0b5cff] hover:bg-blue-600 border border-blue-400/20 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg transition duration-200 active:scale-95 cursor-pointer">
               Get My Visa File Reviewed
             </button>
           </div>
 
-          {/* Paragraph Copy */}
-          <div className="max-w-5xl mx-auto space-y-3 text-xs sm:text-sm text-black leading-relaxed mb-6">
+          {/* Paragraph Copy Box */}
+          <div className="max-w-3xl mx-auto space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-inner">
             <p>
               Share your offer letter, funds, target country and we'll tell you exactly what is missing before you apply.
             </p>
-            <p className="font-semibold text-black">
+            <p className="font-extrabold text-white text-sm">
               You've reached the most sensitive step. One small mistake here can undo months of admission work.
             </p>
-            <p>
-              Let D.Education Zone check your visa file before you submit documents, funds, SOP, and everything so you can file with confidence.
+            <p className="text-slate-400">
+              Let D. Education Zone check your visa file before you submit documents, funds, SOP, and everything so you can file with confidence.
             </p>
           </div>
 
-          {/* Golden Button 2 */}
+          {/* Primary Action Button 2 */}
           <div className="mb-6">
-            <button className="bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-xs transition duration-150">
+            <button className="bg-[#0b5cff] hover:bg-blue-600 border border-blue-400/20 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg transition duration-200 active:scale-95 cursor-pointer">
               Submit My Visa with Expert Help
             </button>
           </div>
 
           {/* Disclaimer Footer */}
-          <p className="text-[11px] sm:text-xs text-black max-w-4xl mx-auto">
-            D.Education Zone helps Pakistani and many international students apply for UK, Canada, Australia, Germany and other major destinations with updated 2025-26 visa rules and financial requirements.
+          <p className="text-[11px] sm:text-xs text-slate-500 max-w-4xl mx-auto pt-2 border-t border-slate-800/80">
+            D. Education Zone helps Pakistani and many international students apply for UK, Canada, Australia, Germany and other major destinations with updated 2025-26 visa rules and financial requirements.
           </p>
         </section>
 
         {/* Section 2: FAQ Accordion */}
-        <section className="pt-4 border-t border-slate-100">
-          <h2 className="text-xl sm:text-2xl font-extrabold text-[#2a1a4a] text-center mb-6">
-            Can’t talk? Don’t worry, we have got all the answers right here.
-          </h2>
+        <section className="pt-8 border-t border-slate-900">
+          <div className="text-center mb-8 space-y-2">
+            <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+              <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+                Got Questions?
+              </span>
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
+              Can’t talk? Don’t worry, we have got all the answers right here.
+            </h2>
+          </div>
 
           <div className="space-y-3 max-w-5xl mx-auto">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-slate-200 rounded-xl transition-all duration-150 overflow-hidden"
+                className="border border-slate-800 bg-slate-950 rounded-2xl transition-all duration-200 overflow-hidden shadow-md"
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-3.5 flex justify-between items-center text-left text-xs sm:text-sm font-semibold text-slate-800 hover:text-slate-950"
+                  className="w-full px-6 py-4 flex justify-between items-center text-left text-xs sm:text-sm font-bold text-white hover:text-[#0b5cff] transition-colors cursor-pointer"
                 >
-                  <span>{faq.question}</span>
+                  <span className="pr-4">{faq.question}</span>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-500 transition-transform duration-200 shrink-0 ml-2 ${
-                      openFaq === index ? "rotate-180" : ""
+                    className={`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 ${
+                      openFaq === index ? "rotate-180 text-[#0b5cff]" : ""
                     }`}
                   />
                 </button>
 
                 {openFaq === index && (
-                  <div className="px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <div className="px-6 pb-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-900 pt-3 bg-slate-900/50">
                     {faq.answer}
                   </div>
                 )}

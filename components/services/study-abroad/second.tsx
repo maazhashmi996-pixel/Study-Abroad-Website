@@ -190,36 +190,38 @@ export default function StudyAbroadServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-6 sm:py-10 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
       <div className="max-w-7xl mx-auto space-y-6 sm:space-y-10">
         
         {/* Main Title */}
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3B1E54] tracking-tight text-center md:text-left">
-          Our Study Abroad Services
-        </h1>
+        <div className="flex items-center gap-3 justify-center md:justify-start">
+          <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+            Our Study Abroad Services
+          </h1>
+        </div>
 
         {/* Main Grid: Navigation + Content */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           
           {/* NAVIGATION SIDEBAR */}
           <div className="lg:col-span-1 w-full sticky top-4 sm:top-6 z-20">
-            <div className="bg-[#3B1E54] p-2.5 sm:p-4 rounded-2xl shadow-md flex lg:flex-col gap-2 overflow-x-auto">
+            <div className="bg-slate-900 p-2.5 sm:p-4 rounded-2xl shadow-xl border border-slate-800 flex lg:flex-col gap-2 overflow-x-auto no-scrollbar">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
-                // Pathname match logic to keep dynamic active states
                 const isActive = pathname === item.href;
 
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full focus:outline-none ${
+                    className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer border ${
                       isActive
-                        ? "bg-[#ECA82C] text-[#3B1E54] shadow-md"
-                        : "bg-white/10 lg:bg-white text-white lg:text-[#3B1E54] hover:bg-white/20 lg:hover:bg-slate-100"
+                        ? "bg-[#0b5cff] text-white border-blue-400/30 shadow-lg"
+                        : "bg-slate-950/60 text-slate-300 border-slate-800/80 hover:bg-slate-800 hover:text-white"
                     }`}
                   >
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                    <Icon className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 ${isActive ? "text-white" : "text-[#0b5cff]"}`} />
                     <span>{item.name}</span>
                   </Link>
                 );
@@ -235,20 +237,20 @@ export default function StudyAbroadServices() {
                 return (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 flex flex-col justify-between"
+                    className="bg-slate-900 rounded-2xl border border-slate-800 hover:border-[#0b5cff]/50 shadow-xl transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between group"
                   >
                     <div>
                       {/* Card Header Box */}
-                      <div className="bg-[#3B1E54] text-white p-3.5 rounded-xl flex items-center space-x-3 mb-4">
-                        <IconComponent className="w-5 h-5 text-[#ECA82C] shrink-0" />
-                        <h2 className="text-sm sm:text-base font-bold tracking-wide">
+                      <div className="bg-slate-950 border border-slate-800 p-3.5 rounded-xl flex items-center space-x-3 mb-4 group-hover:border-[#0b5cff]/30 transition-colors">
+                        <IconComponent className="w-5 h-5 text-[#0b5cff] shrink-0" />
+                        <h2 className="text-sm sm:text-base font-bold tracking-wide text-white">
                           {service.title}
                         </h2>
                       </div>
 
                       {/* Optional Description */}
                       {service.description && (
-                        <p className="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                        <p className="text-slate-400 text-xs sm:text-sm mb-4 leading-relaxed">
                           {service.description}
                         </p>
                       )}
@@ -257,13 +259,13 @@ export default function StudyAbroadServices() {
                       <ul className="space-y-3">
                         {service.features.map((feature, fIndex) => (
                           <li key={fIndex} className="flex items-start space-x-2.5">
-                            <CheckCircle2 className="w-4 h-4 text-[#3B1E54] shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-4 h-4 text-[#0b5cff] shrink-0 mt-0.5" />
                             <div className="text-xs sm:text-sm">
-                              <span className="font-bold text-slate-800">
+                              <span className="font-bold text-slate-200">
                                 {feature.title}
                               </span>
                               {feature.description && (
-                                <span className="text-slate-600">
+                                <span className="text-slate-400">
                                   {" "}{feature.description}
                                 </span>
                               )}
@@ -278,31 +280,31 @@ export default function StudyAbroadServices() {
             </div>
 
             {/* LOWER CONTENT SECTION */}
-            <div className="pt-4 space-y-6 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-200">
-              <p className="font-medium text-slate-900">
+            <div className="pt-6 space-y-6 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-900">
+              <p className="font-medium text-slate-200">
                 Our study visa consultants will explain the entire procedure and guide you through the document needs following the most recent immigration legislation.
               </p>
 
-              <div className="space-y-3">
-                <h2 className="text-lg sm:text-xl font-bold text-[#3B1E54]">
-                  Why Choose D.Education Zone for Your Student Visa Requirements?
+              <div className="space-y-3 bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                <h2 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                  <span className="text-[#0b5cff]">#</span> Why Choose D. Education Zone for Your Student Visa Requirements?
                 </h2>
 
-                <p>
-                  With <strong className="font-semibold text-slate-900">over 22 years</strong> of experience in study visa services in Pakistan, we have a proven track record of success. Our expertise guarantees a high acceptance percentage for student visa applications.
+                <p className="text-slate-400">
+                  With <strong className="font-bold text-white">over 22 years</strong> of experience in study visa services in Pakistan, we have a proven track record of success. Our expertise guarantees a high acceptance percentage for student visa applications.
                 </p>
 
-                <p>
-                  Thousands of students have trusted D.Education Zone for their study visa applications. Our solid track record for dependability and success makes us the top choice for students looking to study abroad.
+                <p className="text-slate-400">
+                  Thousands of students have trusted D. Education Zone for their study visa applications. Our solid track record for dependability and success makes us the top choice for students looking to study abroad.
                 </p>
 
-                <p>
+                <p className="text-slate-400">
                   We acknowledge that each student is unique and offer customized help matching your needs. Our study visa consultants are committed to your success and ready to answer any queries you may have.
                 </p>
 
-                <p>
+                <p className="text-slate-400">
                   To enhance your visa application success, consider improving your language proficiency through our{" "}
-                  <Link href="/languages" className="text-blue-600 underline font-medium hover:text-blue-800 transition-colors">
+                  <Link href="/languages" className="text-[#0b5cff] underline font-semibold hover:text-blue-400 transition-colors">
                     Language Test Preparation
                   </Link>
                   , tailored to help you meet the requirements of your study abroad program.
@@ -310,11 +312,12 @@ export default function StudyAbroadServices() {
               </div>
 
               <div className="space-y-1.5 pt-2">
-                <h3 className="text-sm sm:text-base font-bold text-[#3B1E54]">
+                <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500" />
                   Take the First Step Towards Your International Education Today!
                 </h3>
-                <p>
-                  Do not let the complexities of the student visa process hold you back from achieving your academic dreams. Contact D.Education Zone now to schedule your consultation and start your journey to studying abroad with confidence.
+                <p className="text-slate-400">
+                  Do not let the complexities of the student visa process hold you back from achieving your academic dreams. Contact D. Education Zone now to schedule your consultation and start your journey to studying abroad with confidence.
                 </p>
               </div>
             </div>
