@@ -4,6 +4,14 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
+ const openWhatsApp = (
+    phoneNumber: string = "923452066100",
+    message: string = "Hello! I need some information."
+  ) => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
 export default function Journey() {
   const stepsCards = [
     {
@@ -209,8 +217,9 @@ export default function Journey() {
           ====================================================== */}
           <div className="mt-10 sm:mt-12 flex justify-center">
 
-            <Link
-              href="/contact"
+            <button
+               type="button"
+        onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
               className="
                 group
                 inline-flex
@@ -243,9 +252,7 @@ export default function Journey() {
                   transition-transform
                 "
               />
-            </Link>
-
-          </div>
+            </button> </div>
         </div>
       </section>
 

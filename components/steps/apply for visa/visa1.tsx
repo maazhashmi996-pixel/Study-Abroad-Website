@@ -154,7 +154,7 @@ export default function ApplyForVisaPage() {
               {boxes.map((box, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-3 p-5 rounded-2xl border bg-slate-800 border-slate-800 hover:bg-slate-100  text-xs sm:text-sm font-medium hover:border-[#0b5cff]/50 transition-all duration-200 shadow-lg group"
+                  className="flex flex-col gap-3 p-5 rounded-2xl border-2 bg-slate-800 border-slate-800 hover:bg-slate-100  text-xs sm:text-sm font-medium hover:border-[#0b5cff]/50 transition-all duration-200 shadow-lg group"
                 >
                   <div className="p-2  rounded-xl w-fit border  border-red-500">
                     <Image
