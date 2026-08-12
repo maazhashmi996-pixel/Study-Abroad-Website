@@ -14,6 +14,12 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [stepsOpen, setStepsOpen] = useState(false);
 
+  const closeAllMenus = () => {
+    setIsOpen(false);
+    setServicesOpen(false);
+    setStepsOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
       <div className="max-w-8xl mx-auto h-20 flex items-center px-4 sm:px-6 justify-between">
@@ -53,12 +59,10 @@ export default function Navbar() {
                 About
               </Link>
             </li>
-            {/* Services Dropdown */}
 
-            {/* ================= SERVICES ================= */}
+            {/* Services Dropdown */}
             <li className="relative">
               <div className="flex items-center gap-1">
-                {/* Services Page Link */}
                 <Link
                   href="/services"
                   className={`transition-colors duration-200 hover:text-[#2563EB] ${
@@ -69,8 +73,6 @@ export default function Navbar() {
                 >
                   Services
                 </Link>
-
-                {/* Dropdown Arrow */}
                 <button
                   type="button"
                   onClick={() => setServicesOpen((prev) => !prev)}
@@ -85,41 +87,12 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Services Dropdown */}
               {servicesOpen && (
-                <div
-                  className="
-        absolute
-        left-0
-        top-full
-        mt-3
-        w-52
-        rounded-xl
-        bg-white
-        border
-        border-slate-200
-        shadow-xl
-        z-[9999]
-        p-2
-        flex
-        flex-col
-        gap-1
-        text-xs
-        font-medium
-        text-slate-700
-      "
-                >
+                <div className="absolute left-0 top-full mt-3 w-52 rounded-xl bg-white border border-slate-200 shadow-xl z-[9999] p-2 flex flex-col gap-1 text-xs font-medium text-slate-700">
                   <Link
-                    href="/services/accommodation"
+                    href="/services/Accommodation"
                     onClick={() => setServicesOpen(false)}
-                    className="
-          px-3
-          py-2.5
-          rounded-lg
-          hover:bg-slate-50
-          hover:text-[#2563EB]
-          transition-colors
-        "
+                    className="px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-[#2563EB] transition-colors"
                   >
                     Accommodation
                   </Link>
@@ -127,14 +100,7 @@ export default function Navbar() {
                   <Link
                     href="/services/study-abroad"
                     onClick={() => setServicesOpen(false)}
-                    className="
-          px-3
-          py-2.5
-          rounded-lg
-          hover:bg-slate-50
-          hover:text-[#2563EB]
-          transition-colors
-        "
+                    className="px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-[#2563EB] transition-colors"
                   >
                     Study Abroad
                   </Link>
@@ -142,14 +108,7 @@ export default function Navbar() {
                   <Link
                     href="/services/languages"
                     onClick={() => setServicesOpen(false)}
-                    className="
-          px-3
-          py-2.5
-          rounded-lg
-          hover:bg-slate-50
-          hover:text-[#2563EB]
-          transition-colors
-        "
+                    className="px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-[#2563EB] transition-colors"
                   >
                     Languages
                   </Link>
@@ -197,6 +156,7 @@ export default function Navbar() {
                 Study Destination
               </Link>
             </li>
+
             {/* Study Abroad Steps Dropdown */}
             <li className="relative group">
               <Link
@@ -292,37 +252,26 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-t border-slate-100 shadow-xl px-6 py-5 transition-all">
           <ul className="flex flex-col gap-3 text-sm font-medium text-slate-700">
             <li>
-              <Link href="/Home" onClick={() => setIsOpen(false)}>
+              <Link href="/Home" onClick={closeAllMenus}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/About" onClick={() => setIsOpen(false)}>
+              <Link href="/About" onClick={closeAllMenus}>
                 About
               </Link>
             </li>
 
-            {/* ================= SERVICES ================= */}
+            {/* Mobile Services Accordion */}
             <li className="relative">
-              <div className="flex items-center gap-1">
-                {/* Services Page Link */}
-                <Link
-                  href="/services"
-                  className={`transition-colors duration-200 hover:text-[#2563EB] ${
-                    pathname === "/services"
-                      ? "text-[#2563EB]"
-                      : "text-slate-700"
-                  }`}
-                >
+              <div className="flex items-center justify-between py-1">
+                <Link href="/services" onClick={closeAllMenus}>
                   Services
                 </Link>
-
-                {/* Dropdown Arrow */}
                 <button
                   type="button"
                   onClick={() => setServicesOpen((prev) => !prev)}
-                  className="p-1 text-slate-600 hover:text-[#2563EB] transition-colors"
-                  aria-label="Toggle Services dropdown"
+                  className="p-1 text-slate-600"
                 >
                   <IoIosArrowDown
                     className={`transition-transform duration-200 ${
@@ -332,72 +281,15 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Services Dropdown */}
               {servicesOpen && (
-                <div
-                  className="
-        absolute
-        left-0
-        top-full
-        mt-3
-        w-52
-        rounded-xl
-        bg-white
-        border
-        border-slate-200
-        shadow-xl
-        z-[9999]
-        p-2
-        flex
-        flex-col
-        gap-1
-        text-xs
-        font-medium
-        text-slate-700
-      "
-                >
-                  <Link
-                    href="/services/accommodation"
-                    onClick={() => setServicesOpen(false)}
-                    className="
-          px-3
-          py-2.5
-          rounded-lg
-          hover:bg-slate-50
-          hover:text-[#2563EB]
-          transition-colors
-        "
-                  >
+                <div className="pl-4 my-1 flex flex-col gap-2 text-xs text-slate-600 border-l-2 border-slate-200">
+                  <Link href="/services/Accommodation" onClick={closeAllMenus}>
                     Accommodation
                   </Link>
-
-                  <Link
-                    href="/services/study-abroad"
-                    onClick={() => setServicesOpen(false)}
-                    className="
-          px-3
-          py-2.5
-          rounded-lg
-          hover:bg-slate-50
-          hover:text-[#2563EB]
-          transition-colors
-        "
-                  >
+                  <Link href="/services/study-abroad" onClick={closeAllMenus}>
                     Study Abroad
                   </Link>
-
-                  <Link
-                    href="/services/languages"
-                    onClick={() => setServicesOpen(false)}
-                    className="
-          px-3
-          py-2.5
-          rounded-lg
-          hover:bg-slate-50
-          hover:text-[#2563EB]
-          transition-colors
-        "
-                  >
+                  <Link href="/services/languages" onClick={closeAllMenus}>
                     Languages
                   </Link>
                 </div>
@@ -405,36 +297,33 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/Blog" onClick={() => setIsOpen(false)}>
+              <Link href="/Blog" onClick={closeAllMenus}>
                 Blogs
               </Link>
             </li>
             <li>
-              <Link href="/Event" onClick={() => setIsOpen(false)}>
+              <Link href="/Event" onClick={closeAllMenus}>
                 Events
               </Link>
             </li>
             <li>
-              <Link href="/our-offices" onClick={() => setIsOpen(false)}>
+              <Link href="/our-offices" onClick={closeAllMenus}>
                 Our Offices
               </Link>
             </li>
             <li>
-              <Link href="/study-Destination" onClick={() => setIsOpen(false)}>
+              <Link href="/study-Destination" onClick={closeAllMenus}>
                 Study Destination
               </Link>
             </li>
 
-            {/* Accordion 2: Steps */}
+            {/* Mobile Steps Accordion */}
             <li>
               <div
                 onClick={() => setStepsOpen(!stepsOpen)}
                 className="flex items-center justify-between w-full py-1 cursor-pointer"
               >
-                <Link
-                  href="/study-abroad-steps"
-                  onClick={() => setIsOpen(false)}
-                >
+                <Link href="/study-abroad-steps" onClick={closeAllMenus}>
                   Study Abroad Steps
                 </Link>
                 <IoIosArrowDown
@@ -448,43 +337,43 @@ export default function Navbar() {
                 <div className="pl-4 my-1 flex flex-col gap-2 text-xs text-slate-600 border-l-2 border-slate-200">
                   <Link
                     href="/study-abroad-steps/start-your-program"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Start Your Program
                   </Link>
                   <Link
                     href="/study-abroad-steps/select-your-program"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Select Your Program
                   </Link>
                   <Link
                     href="/study-abroad-steps/apply-for-visa"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Apply For Visa
                   </Link>
                   <Link
                     href="/study-abroad-steps/fulfill-conditions"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Fulfill Conditions
                   </Link>
                   <Link
                     href="/study-abroad-steps/receive-offer-letter"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Receive Offer Letter
                   </Link>
                   <Link
                     href="/study-abroad-steps/submit-application"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Submit Application
                   </Link>
                   <Link
                     href="/study-abroad-steps/pay-tution-deposit"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeAllMenus}
                   >
                     Pay Tuition Deposit
                   </Link>
@@ -493,7 +382,6 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Mobile Bottom Contact Section */}
           <div className="mt-5 pt-4 border-t border-slate-100 flex flex-col gap-3">
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-800">
               <FaPhoneAlt className="text-[#0b5cff]" />
@@ -502,7 +390,7 @@ export default function Navbar() {
             <div>
               <Link
                 href="/Home/free-consultation"
-                onClick={() => setIsOpen(false)}
+                onClick={closeAllMenus}
                 className="inline-block rounded-full bg-[#1a233d] text-white px-4 py-2.5 text-xs font-semibold transition whitespace-nowrap text-center w-full"
               >
                 Get Free Consultation

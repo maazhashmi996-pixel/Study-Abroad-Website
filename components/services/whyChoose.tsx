@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 
+
+
+
 function WhyChoose() {
   return (
     <section className=" text-slate-800 flex flex-col items-center gap-4 sm:gap-6 px-4 sm:px-8 md:px-16 lg:px-20 py-12 sm:py-16 border-t border-slate-900">
@@ -25,7 +28,7 @@ function WhyChoose() {
         {/* Image Container */}
         <div className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto md:h-80 rounded-2xl overflow-hidden shrink-0 border border-slate-800 bg-slate-900 shadow-2xl p-2">
           <Image 
-            src="/images/services/services.png" 
+            src="/images/services/iconsultation.jpg" 
             alt="Client Testimonial"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

@@ -167,7 +167,7 @@ export default function Update() {
               {/* Button */}
 
               <Link
-                href="/Blog"
+                href="/current-jobs"
                 className="group/button mt-6 inline-flex items-center gap-2 rounded-xl bg-[#1a233d] px-6 py-3 text-xs font-bold text-white transition-all duration-300 hover:bg-[#0b5cff]"
               >
                 Read More
