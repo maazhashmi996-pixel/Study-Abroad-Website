@@ -1,10 +1,6 @@
 "use client";
 
-
-
 function Mistakes() {
-
-     // Common Mistakes (Purple Section)
   const mistakes = [
     {
       title: "Not reading offer conditions carefully",
@@ -20,58 +16,73 @@ function Mistakes() {
     },
     {
       title: "Delaying submission of pending documents",
-      desc: "Waiting too long to submit final transcripts or IELTS results loses valuable processing time.",
+      desc: "Waiting too long to submit final transcripts or IELTS results can cause unnecessary delays.",
     },
     {
       title: "Not checking email regularly",
-      desc: "Missing important updates or clarifications sent by the admissions team.",
+      desc: "Missing important updates or clarifications sent by the admissions team can affect your application.",
     },
   ];
-  return (
-    <>
-       {/* 4. COMMON MISTAKES (PURPLE BACKGROUND) */}
-      <section className="bg-[#3B1E54] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
-          <div className="text-center space-y-2">
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-              Common Mistakes
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-300 opacity-90">
-              Avoid these pitfalls after receiving your offer letter
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto">
-            {mistakes.slice(0, 4).map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-[#2E1643] border border-purple-900/60 rounded-2xl p-5 sm:p-6 shadow-lg space-y-2"
-              >
-                <h3 className="text-base sm:text-lg font-bold text-[#ECA82C]">
+  return (
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
+
+        {/* Section Heading */}
+        <div className="text-center space-y-2">
+          <span className="inline-block text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider">
+            Important
+          </span>
+
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-800">
+            Common Mistakes to Avoid
+          </h2>
+
+          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+            Avoid these common mistakes after receiving your offer letter.
+          </p>
+        </div>
+
+        {/* Mistakes Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto">
+          {mistakes.map((item, idx) => (
+            <div
+              key={idx}
+              className={`
+                bg-slate-50
+                border border-slate-200
+                rounded-2xl
+                p-5 sm:p-6
+                shadow-sm
+                hover:shadow-md
+                hover:border-red-400
+                hover:-translate-y-1
+                transition-all duration-300
+                ${idx === 4 ? "sm:col-span-2 sm:max-w-xl sm:w-full sm:mx-auto" : ""}
+              `}
+            >
+              <div className="flex items-start gap-3">
+
+                {/* Number */}
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center">
+                  {idx + 1}
+                </span>
+
+                <h3 className="text-base sm:text-lg font-bold text-slate-800 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  {item.desc}
-                </p>
               </div>
-            ))}
-          </div>
 
-          {/* Centered 5th Item */}
-          <div className="max-w-xl mx-auto">
-            <div className="bg-[#2E1643] border border-purple-900/60 rounded-2xl p-5 sm:p-6 shadow-lg space-y-2 text-center sm:text-left">
-              <h3 className="text-base sm:text-lg font-bold text-[#ECA82C]">
-                {mistakes[4].title}
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                {mistakes[4].desc}
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-11 mt-3">
+                {item.desc}
               </p>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
-</>
-  )
+
+      </div>
+    </section>
+  );
 }
 
-export default Mistakes
+export default Mistakes;

@@ -1,80 +1,96 @@
+
 "use client";
 
 import Image from "next/image";
-import {
-  CheckCircle,
- 
-} from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
-function hero() {
-      // Prerequisites Data
+function Hero() {
+  // What students need before receiving their offer letter
   const prerequisites = [
     {
-      title: "Your submitted university application",
-      desc: "Step 2 completed and submitted to the university portal.",
+      title: "Complete University Application",
+      desc: "Make sure your application has been submitted successfully with all required documents.",
     },
     {
-      title: "Your application reference number",
-      desc: "Keep your student portal login or reference code ready to track status.",
+      title: "Valid Application Reference",
+      desc: "Keep your university application number or student portal details available for tracking.",
     },
     {
-      title: "Active email monitoring",
-      desc: "Check your inbox and spam folder daily for offer updates or requests.",
+      title: "Regular Email Monitoring",
+      desc: "Check your email and spam folder regularly for admission updates, offer letters, or document requests.",
     },
     {
-      title: "Understanding of entry requirements",
-      desc: "Know what pending grades or language scores you still need to provide.",
+      title: "Meet Admission Requirements",
+      desc: "Ensure your academic qualifications, English language scores, and other requirements are fulfilled.",
     },
     {
-      title: "Clear timeline awareness",
-      desc: "Be prepared to act fast on offer deadlines to secure your seat.",
+      title: "Be Ready for the Next Step",
+      desc: "Once your offer arrives, D.Education Zone will guide you through the next admission and visa steps.",
     },
     {
-      title: "Financial planning in progress",
-      desc: "Have a plan ready for how you will pay the tuition deposit when requested.",
+      title: "Plan Your Finances",
+      desc: "Prepare for tuition deposits, application-related payments, and other study-abroad expenses.",
     },
   ];
+
   return (
     <>
-        {/* 1. HERO & WHY THIS STEP MATTERS */}
+      {/* ================= HERO SECTION ================= */}
       <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-8 sm:space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           {/* Left Content */}
           <div className="lg:col-span-7 space-y-4 text-center sm:text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3B1E54] tracking-tight">
-              Receive Offer Letter
+
+            <span className="inline-block text-xs sm:text-sm font-bold text-[#2563EB] uppercase tracking-wider">
+              Step 3 • Admission Process
+            </span>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2563EB] tracking-tight">
+              Receive Your Offer Letter
             </h1>
 
             <div className="space-y-3 pt-1">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#3B1E54]">
+
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-800">
                 Why this step matters
               </h2>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Your offer letter is the university saying, “We are willing to give you a place if you meet our conditions.”
+                Receiving your offer letter is an important milestone in your
+                study-abroad journey. It means the university has reviewed your
+                application and is ready to offer you a place, subject to any
+                remaining conditions.
               </p>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                This is the first official confirmation from the university after you submit your application. Most students receive a conditional offer letter first, which means you’re not fully approved yet, but you’re on track.
+                Most students initially receive a conditional offer. This means
+                you may still need to provide documents, meet academic
+                requirements, submit an English language score, or complete
+                another university requirement.
               </p>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                You cannot move forward to deposit payment, visa, or travel without an offer letter. It’s the document that proves the university wants you.
+                At D.Education Zone, our counsellors help you understand your
+                offer letter, explain its conditions, and guide you on what needs
+                to be completed before moving towards the next stage.
               </p>
 
-              <p className="text-xs sm:text-sm text-[#3B1E54] font-semibold pt-1">
-                In short: Step 3 is the point where your application stops being “maybe” and becomes “yes, if...”
+              <p className="text-xs sm:text-sm text-[#2563EB] font-semibold pt-1">
+                In short: Your offer letter confirms that your study-abroad
+                journey is moving forward — and D.Education Zone is here to
+                guide you through every next step.
               </p>
+
             </div>
           </div>
 
-          {/* Right Hero Image Container */}
+          {/* Right Hero Image */}
           <div className="lg:col-span-5 flex justify-center items-center">
             <div className="relative w-full max-w-md lg:max-w-full aspect-[4/3]">
-              <Image 
-                src="/images/steps/3-1.png"
-                alt="Receive Offer Letter Illustration"  
+              <Image
+                src="/images/steps/offer-letter.jpg"
+                alt="D.Education Zone offer letter guidance"
                 fill
                 sizes="(max-width: 1024px) 100vw, 450px"
                 className="object-contain"
@@ -85,64 +101,101 @@ function hero() {
 
         </div>
 
-        {/* DIVIDER WITH STAR */}
+        {/* ================= DIVIDER ================= */}
         <div className="relative flex py-2 items-center">
           <div className="flex-grow border-t border-slate-200"></div>
-          <span className="flex-shrink mx-4 text-[#3B1E54] text-xs sm:text-sm">★</span>
+
+          <span className="flex-shrink mx-4 text-[#DC2626] text-xs sm:text-sm">
+            ★
+          </span>
+
           <div className="flex-grow border-t border-slate-200"></div>
         </div>
 
-        {/* 2. WHAT YOU NEED BEFORE STARTING */}
+        {/* ================= REQUIREMENTS SECTION ================= */}
         <div className="space-y-6 sm:space-y-8">
+
           <div className="text-center sm:text-left">
-            <h2 className="text-xl sm:text-3xl font-extrabold text-[#3B1E54] tracking-tight">
-              What you need before starting
+
+            <span className="text-xs sm:text-sm font-bold text-[#DC2626] uppercase tracking-wider">
+              Get Ready
+            </span>
+
+            <h2 className="text-xl sm:text-3xl font-extrabold text-[#2563EB] tracking-tight mt-1">
+              What You Need Before Receiving Your Offer
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Before receiving and processing your offer letter, ensure you have:
+
+            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+              To make the admission process smooth, make sure you have the
+              following ready:
             </p>
+
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left Grid Cards */}
+
+            {/* Left Cards */}
             <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
               {prerequisites.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border-2 border-[#3B1E54] p-4 sm:p-5 rounded-2xl shadow-sm space-y-2 flex flex-col justify-between hover:shadow-md transition-shadow"
+                  className="
+                    bg-white
+                    border border-slate-200
+                    p-4 sm:p-5
+                    rounded-2xl
+                    shadow-sm
+                    space-y-2
+                    flex flex-col
+                    justify-between
+                    hover:border-[#2563EB]/40
+                    hover:shadow-md
+                    transition-all
+                    duration-300
+                  "
                 >
+
                   <div className="space-y-2">
-                    <CheckCircle className="w-5 h-5 text-[#3B1E54] shrink-0" />
-                    <h3 className="font-extrabold text-xs sm:text-sm text-[#3B1E54] leading-snug">
+
+                    <CheckCircle className="w-5 h-5 text-[#DC2626] shrink-0" />
+
+                    <h3 className="font-extrabold text-xs sm:text-sm text-slate-800 leading-snug">
                       {item.title}
                     </h3>
+
                     <p className="text-xs text-slate-600 leading-relaxed">
                       {item.desc}
                     </p>
+
                   </div>
+
                 </div>
               ))}
+
             </div>
 
-            {/* Right Prerequisites Image Container */}
+            {/* Right Image */}
             <div className="lg:col-span-4 flex justify-center items-center">
+
               <div className="relative w-full max-w-xs sm:max-w-sm aspect-square">
-                <Image 
-                  src="/images/steps/3.png"
-                  alt="Prerequisites Illustration"
+                <Image
+                  src="/images/steps/receive.jpg"
+                  alt="D.Education Zone admission guidance"
                   fill
                   sizes="(max-width: 1024px) 100vw, 320px"
                   className="object-contain"
                 />
               </div>
+
             </div>
 
           </div>
         </div>
       </section>
-      </>
-  )
+    </>
+  );
 }
 
-export default hero
+export default Hero;
+

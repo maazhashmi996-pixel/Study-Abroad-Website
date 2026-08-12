@@ -30,17 +30,17 @@ const mistakes: CommonMistake[] = [
   },
 ];
 
-export default function Blue() {
+export default function MistakesSection() {
   return (
-    <section className="bg-[#3B1E54] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="bg-white text-slate-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
         
         {/* Header Title & Subtitle */}
         <div className="text-center space-y-2 max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-            Common  Mistakes
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-blue-600">
+            Common Mistakes
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 opacity-90 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Most application delays and rejections happen because of these easily avoidable issues.
           </p>
         </div>
@@ -50,18 +50,18 @@ export default function Blue() {
           {mistakes.map((item, idx) => (
             <div
               key={idx}
-              className={`bg-[#2E1643] border border-purple-900/60 rounded-2xl p-5 sm:p-6 shadow-lg flex flex-col justify-between space-y-3 hover:border-purple-500/80 hover:-translate-y-0.5 transition-all duration-200 ${
+              className={`bg-slate-50/50 border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm flex flex-col justify-between space-y-3 hover:border-red-500/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group ${
                 idx === mistakes.length - 1 ? "md:col-span-2 lg:col-span-1" : ""
               }`}
             >
               <div className="space-y-2.5">
-                <div className="w-8 h-8 rounded-lg bg-amber-400/10 text-[#ECA82C] flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white flex items-center justify-center shrink-0 transition-colors duration-200">
                   <AlertTriangle className="w-4 h-4" />
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-[#ECA82C] leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-red-600 transition-colors leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed opacity-90">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -71,9 +71,9 @@ export default function Blue() {
 
         {/* Bottom Banner Container */}
         <div className="max-w-2xl mx-auto pt-2">
-          <div className="bg-[#2E1643]/70 border border-purple-800/50 rounded-xl p-4 text-center shadow-sm">
-            <p className="text-xs sm:text-sm font-medium text-slate-200 leading-relaxed">
-              A clean file saves time. A rushed file causes unnecessary stress all the way to the visa stage.
+          <div className="bg-white border border-slate-200 border-l-4 border-l-blue-600 rounded-r-xl rounded-l-md p-4 text-center shadow-sm">
+            <p className="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed">
+              A clean file saves time. A rushed file causes unnecessary stress all the way to the <span className="text-blue-600 font-semibold">visa stage</span>.
             </p>
           </div>
         </div>

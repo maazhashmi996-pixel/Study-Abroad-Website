@@ -44,7 +44,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-slate-950 border-y border-slate-900 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans text-white relative overflow-hidden">
+    <section className=" border-y border-slate-900 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-0 right-1/4 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
@@ -59,10 +59,10 @@ export default function ProcessSection() {
               Execution Phase
             </span>
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight">
             How This Step Works
           </h2>
-          <p className="text-slate-400 font-medium text-xs sm:text-base lg:text-lg">
+          <p className="text-slate-600 font-medium text-xs sm:text-base lg:text-lg">
             Here's how the "Fulfill Conditions" stage should be completed.
           </p>
         </div>

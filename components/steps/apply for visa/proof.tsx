@@ -39,10 +39,10 @@ export default function Proof() {
   ];
 
   return (
-    <div className="w-full font-sans bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 py-8">
+    <div className="w-full font-sans  text-slate-800 px-4 sm:px-6 md:px-8 lg:px-12 py-8">
       
       {/* Section 1: Documents / Proof Required */}
-      <section className="bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-10 max-w-7xl mx-auto text-center shadow-2xl relative overflow-hidden mb-12">
+      <section className="  rounded-3xl p-6 sm:p-10 max-w-7xl mx-auto text-center shadow-2xl relative overflow-hidden mb-12">
         
         {/* Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
@@ -54,10 +54,10 @@ export default function Proof() {
           </span>
         </div>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 text-slate-900 tracking-tight">
           Documents / Proof Required
         </h2>
-        <p className="text-xs sm:text-sm text-slate-400 mb-8 font-medium max-w-xl mx-auto">
+        <p className="text-xs sm:text-sm text-slate-700 mb-8 font-medium max-w-xl mx-auto">
           Exact list varies, but a safe master checklist looks like:
         </p>
 
@@ -108,10 +108,10 @@ export default function Proof() {
               Timing Risk Factors
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-800 tracking-tight">
             What Happens If You Delay
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 font-medium">
+          <p className="text-xs sm:text-sm text-slate-600 font-medium">
             If you wait too long to file your visa application:
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function Proof() {
         </div>
 
         {/* Bottom Quote Box */}
-        <div className="inline-block bg-slate-900 border border-slate-800 rounded-xl px-6 py-3 text-xs sm:text-sm font-semibold text-slate-300 shadow-lg">
+        <div className="inline-block bg-slate-900 border border-slate-800 rounded-xl px-6 py-3 text-xs sm:text-sm font-semibold text-slate-500 shadow-lg">
           So Step 7 should be treated like a strict deadline, not{" "}
           <span className="italic text-red-400 font-bold">"I'll do it when I'm free."</span>
         </div>

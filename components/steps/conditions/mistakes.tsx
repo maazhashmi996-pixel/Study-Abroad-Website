@@ -52,10 +52,10 @@ const requiredDocs = [
 
 export default function Mistakes() {
   return (
-    <div className="w-full font-sans bg-black text-white">
-      
+    <div className="w-full font-sans  text-slate-800">
+      5
       {/* 1. MISTAKES SECTION */}
-      <section className="bg-slate-950 border-y border-slate-900 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className=" border-y border-slate-900 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         
         {/* Glow Effects */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -70,10 +70,10 @@ export default function Mistakes() {
                 Pitfalls to Avoid
               </span>
             </div>
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight">
               Common Mistakes
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base lg:text-lg font-medium leading-relaxed">
+            <p className="text-slate-600 text-sm sm:text-base lg:text-lg font-medium leading-relaxed">
               This is where many students lose time and, in some cases, lose the entire intake.
             </p>
           </div>
@@ -83,15 +83,15 @@ export default function Mistakes() {
             {mistakes.slice(0, 4).map((item, index) => (
               <div
                 key={index}
-                className="bg-slate-900 border border-slate-800/80 hover:border-red-500/40 rounded-2xl p-6 sm:p-8 shadow-xl transition-all duration-300 flex flex-col justify-start group"
+                className="bg-slate-900 border hover:bg-slate-100  border-slate-800/80 hover:border-red-500/70 rounded-2xl p-6 sm:p-8 shadow-xl transition-all duration-300 flex flex-col justify-start group"
               >
                 <div className="mb-4 shrink-0 transition-transform group-hover:scale-110">
                   {item.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white group-hover:text-red-400 transition-colors mb-3">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white group-hover:text-blue-700 transition-colors mb-3">
                   {item.title}
                 </h3>
-                <p className="text-slate-400 text-xs sm:text-sm lg:text-base leading-relaxed font-medium">
+                <p className="text-slate-400 hover:text-slate-700 text-xs sm:text-sm lg:text-base leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>
@@ -100,14 +100,14 @@ export default function Mistakes() {
 
           {/* 5th Centered Card */}
           <div className="max-w-2xl mx-auto">
-            <div className="bg-slate-900 border border-slate-800/80 hover:border-red-500/40 rounded-2xl p-6 sm:p-8 shadow-xl transition-all duration-300 group">
+            <div className="bg-slate-900 border border-slate-800/80 hover:border-red-500/70 hover:bg-slate-100 rounded-2xl p-6 sm:p-8 shadow-xl transition-all duration-300 group">
               <div className="mb-4 transition-transform group-hover:scale-110">
                 {mistakes[4].icon}
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white group-hover:text-red-400 transition-colors mb-3">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white group-hover:text-blue-700 transition-colors mb-3">
                 {mistakes[4].title}
               </h3>
-              <p className="text-slate-400 text-xs sm:text-sm lg:text-base leading-relaxed font-medium">
+              <p className="text-slate-600 hover:text-slate-700 text-xs sm:text-sm lg:text-base leading-relaxed font-medium">
                 {mistakes[4].desc}
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function Mistakes() {
               Expectations
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight">
             Timeline
           </h2>
         </div>
@@ -183,13 +183,13 @@ export default function Mistakes() {
       </section>
 
       {/* 3. DOCUMENTS REQUIRED SECTION */}
-      <section className="bg-slate-950 border-t border-slate-900 text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className=" border-t border-slate-900 text-slate py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8">
           <div className="text-center space-y-2">
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate">
               Documents / Proof Required
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 font-medium">
+            <p className="text-xs sm:text-sm text-slate-600 font-medium">
               Key documents involved during the offer letter acceptance phase
             </p>
           </div>

@@ -55,7 +55,7 @@ export default function ApplyForVisaPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white py-8 sm:py-14 sm:px-6 lg:px-8 font-sans">
+    <main className="min-h-screen  text-slate-600 py-8 sm:py-14 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-5xl mx-auto space-y-12">
         
         {/* Header Section */}
@@ -66,28 +66,28 @@ export default function ApplyForVisaPage() {
               Step 7 Guide
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-800 leading-tight tracking-tight">
             Apply for Visa
           </h1>
-          <p className="text-slate-400 mt-2 text-sm sm:text-base lg:text-lg font-medium">
+          <p className="text-slate-600 mt-2 text-sm sm:text-base lg:text-lg font-medium">
             How to Apply for a Student Visa - Updated Rules Guide
           </p>
         </header>
 
         {/* Section 1: Why this step matters */}
-        <section className="bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        <section className=" rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
           
           {/* Subtle Background Glow */}
           <div className="absolute top-0 right-0 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-3 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-800 mb-3 tracking-tight">
                 Why This Step Matters
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-medium">
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-medium">
                 This is the part where everything becomes real. You already have
-                your <span className="font-bold text-white">unconditional offer</span>{" "}
+                your <span className="font-bold text-slate-800">unconditional offer</span>{" "}
                 (or CAS/CoE/LOA depending on country), but you{" "}
                 <span className="font-bold text-red-400">cannot travel</span> or start
                 classes until the embassy/high commission approves your{" "}
@@ -124,8 +124,8 @@ export default function ApplyForVisaPage() {
             <div className="flex justify-center">
               <div className="relative w-full max-w-sm aspect-[4/5] bg-slate-900 rounded-2xl p-3 border border-slate-800 shadow-2xl">
                 <Image
-                  src="/images/steps/8-2.png"
-                  alt="Visa overview diagram"
+                  src="/images/steps/visaapp.jpg"
+                  alt="Visaapp"
                   fill
                   priority
                   className="w-full h-auto rounded-xl object-contain opacity-90"
@@ -138,13 +138,13 @@ export default function ApplyForVisaPage() {
         {/* Section 2: Checklist */}
         <section>
           <div className="space-y-2 mb-6">
-            <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+            <div className="inline-flex items-center gap-2  px-3.5 py-1.5 rounded-full">
               <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
                 Requirements
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-800 tracking-tight">
               What You Need Before Starting
             </h2>
           </div>
@@ -154,9 +154,9 @@ export default function ApplyForVisaPage() {
               {boxes.map((box, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-3 p-5 rounded-2xl border border-slate-800 bg-slate-950 text-xs sm:text-sm font-medium hover:border-[#0b5cff]/50 transition-all duration-200 shadow-lg group"
+                  className="flex flex-col gap-3 p-5 rounded-2xl border bg-slate-800 border-slate-800 hover:bg-slate-100  text-xs sm:text-sm font-medium hover:border-[#0b5cff]/50 transition-all duration-200 shadow-lg group"
                 >
-                  <div className="p-2 bg-slate-900 rounded-xl w-fit border border-slate-800">
+                  <div className="p-2  rounded-xl w-fit border  border-red-500">
                     <Image
                       src={box.icon}
                       alt="icon"
@@ -165,10 +165,10 @@ export default function ApplyForVisaPage() {
                       className="object-contain"
                     />
                   </div>
-                  <h4 className="text-white font-extrabold text-sm sm:text-base group-hover:text-[#0b5cff] transition-colors">
+                  <h4 className=" hover:text-slate-800 text-slate-100 font-extrabold text-sm sm:text-base group-hover:text-[#0b5cff] transition-colors">
                     {box.title}
                   </h4>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-white hover:text-slate-800">
                     {box.description}
                   </p>
                 </div>
@@ -178,7 +178,7 @@ export default function ApplyForVisaPage() {
             <div className="flex justify-center lg:sticky lg:top-6">
               <div className="relative w-full max-w-xs aspect-[3/4] bg-slate-950 rounded-2xl p-3 border border-slate-900 shadow-2xl">
                 <Image
-                  src="/images/steps/offer.png"
+                  src="/images/steps/iapply.jpg"
                   alt="Offer letter checklist"
                   fill
                   className="w-full h-auto object-contain rounded-xl opacity-90"
@@ -189,7 +189,7 @@ export default function ApplyForVisaPage() {
         </section>
 
         {/* Section 3: Process */}
-        <section className="bg-slate-950 border border-slate-900 text-white py-10 px-6 sm:px-8 rounded-3xl shadow-2xl relative overflow-hidden">
+        <section className=" text-slate-800 py-10 px-6 sm:px-8 rounded-3xl shadow-2xl relative overflow-hidden">
           
           <div className="pb-8 text-center max-w-2xl mx-auto space-y-2">
             <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
@@ -198,10 +198,10 @@ export default function ApplyForVisaPage() {
                 Step-By-Step Flow
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-800">
               How This Step Works (Checklist / Process)
             </h2>
-            <p className="text-slate-400 text-xs sm:text-sm font-medium">
+            <p className="text-slate-600 text-xs sm:text-sm font-medium">
               We can generalize the student-visa flow across UK / Canada / Australia like this:
             </p>
           </div>
