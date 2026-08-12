@@ -14,6 +14,10 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [stepsOpen, setStepsOpen] = useState(false);
 
+  const isActive = (href) => {
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   const closeAllMenus = () => {
     setIsOpen(false);
     setServicesOpen(false);
@@ -42,8 +46,10 @@ export default function Navbar() {
             <li>
               <Link
                 href="/Home"
-                className={`transition-colors duration-200 hover:text-[#0b5cff] ${
-                  pathname === "/Home" ? "text-[#0b5cff]" : ""
+                className={`transition-colors duration-200 ${
+                  isActive("/Home")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 Home
@@ -52,8 +58,10 @@ export default function Navbar() {
             <li>
               <Link
                 href="/About"
-                className={`transition-colors duration-200 hover:text-[#0b5cff] ${
-                  pathname === "/About" ? "text-[#0b5cff]" : ""
+                className={`transition-colors duration-200 ${
+                  isActive("/About")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 About
@@ -65,10 +73,10 @@ export default function Navbar() {
               <div className="flex items-center gap-1">
                 <Link
                   href="/services"
-                  className={`transition-colors duration-200 hover:text-[#2563EB] ${
-                    pathname === "/services"
-                      ? "text-[#2563EB]"
-                      : "text-slate-700"
+                  className={`transition-colors duration-200 ${
+                    isActive("/services")
+                      ? "text-[#0b5cff]"
+                      : "text-slate-700 hover:text-[#0b5cff]"
                   }`}
                 >
                   Services
@@ -88,7 +96,7 @@ export default function Navbar() {
               </div>
 
               {servicesOpen && (
-                <div className="absolute left-0 top-full mt-3 w-52 rounded-xl bg-white border border-slate-200 shadow-xl z-[9999] p-2 flex flex-col gap-1 text-xs font-medium text-slate-700">
+                <div className="absolute left-0 top-full mt-3 w-52 rounded-xl bg-white border border-slate-200 shadow-xl  p-2 flex flex-col gap-1 text-xs font-medium text-slate-700  opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
                   <Link
                     href="/services/Accommodation"
                     onClick={() => setServicesOpen(false)}
@@ -119,8 +127,10 @@ export default function Navbar() {
             <li>
               <Link
                 href="/Blog"
-                className={`transition-colors duration-200 hover:text-[#0b5cff] ${
-                  pathname === "/Blog" ? "text-[#0b5cff]" : ""
+                className={`transition-colors duration-200 ${
+                  isActive("/Blog")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 Blogs
@@ -129,8 +139,10 @@ export default function Navbar() {
             <li>
               <Link
                 href="/Event"
-                className={`transition-colors duration-200 hover:text-[#0b5cff] ${
-                  pathname === "/Event" ? "text-[#0b5cff]" : ""
+                className={`transition-colors duration-200 ${
+                  isActive("/Event")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 Events
@@ -139,8 +151,10 @@ export default function Navbar() {
             <li>
               <Link
                 href="/our-offices"
-                className={`transition-colors duration-200 hover:text-[#0b5cff] ${
-                  pathname === "/our-offices" ? "text-[#0b5cff]" : ""
+                className={`transition-colors duration-200 ${
+                  isActive("/our-offices")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 Our Offices
@@ -149,8 +163,10 @@ export default function Navbar() {
             <li>
               <Link
                 href="/study-Destination"
-                className={`transition-colors duration-200 hover:text-[#0b5cff] ${
-                  pathname === "/study-Destination" ? "text-[#0b5cff]" : ""
+                className={`transition-colors duration-200 ${
+                  isActive("/study-Destination")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 Study Destination
@@ -162,13 +178,17 @@ export default function Navbar() {
               <Link
                 href="/study-abroad-steps"
                 className={`flex items-center gap-1 transition-colors duration-200 ${
-                  pathname === "/study-abroad-steps"
+                  isActive("/study-abroad-steps")
                     ? "text-[#0b5cff]"
-                    : "hover:text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
                 }`}
               >
                 <span>Study Abroad Steps</span>
-                <IoIosArrowDown className="transition-transform duration-200 group-hover:rotate-180" />
+                <IoIosArrowDown
+                  className={`transition-transform duration-200 ${
+                    stepsOpen ? "rotate-180" : ""
+                  }`}
+                />
               </Link>
 
               <div className="absolute left-0 top-full mt-3 w-60 rounded-xl bg-white border border-slate-100 shadow-xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden p-2 text-xs font-medium text-slate-700">
@@ -384,8 +404,13 @@ export default function Navbar() {
 
           <div className="mt-5 pt-4 border-t border-slate-100 flex flex-col gap-3">
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-              <FaPhoneAlt className="text-[#0b5cff]" />
-              +92 345 2066 100
+              <a
+                href="tel:+923452066100"
+                className="flex items-center gap-2 text-sm font-semibold text-slate-800 hover:text-[#0b5cff] transition-colors"
+              >
+                <FaPhoneAlt className="text-[#0b5cff]" />
+                <span>+92 345 2066 100</span>
+              </a>
             </div>
             <div>
               <Link

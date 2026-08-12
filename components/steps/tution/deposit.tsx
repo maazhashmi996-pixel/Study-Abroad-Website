@@ -174,7 +174,7 @@ export default function PayDeposit() {
               <ShieldAlert className="w-5 h-5" />
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Common Mistakes to <span className="text-red-600">Avoid</span>
+              Common Mistakes to <span className="text-blue-600">Avoid</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
               Prevent processing holds and seat forfeitures by avoiding these frequent tuition deposit pitfalls
@@ -195,7 +195,7 @@ export default function PayDeposit() {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 mb-1">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0" />
-                    <h3 className="text-xs sm:text-sm font-extrabold text-red-600 leading-snug">
+                    <h3 className="text-xs sm:text-sm font-extrabold text-blue-600 leading-snug">
                       {mistake.title}
                     </h3>
                   </div>

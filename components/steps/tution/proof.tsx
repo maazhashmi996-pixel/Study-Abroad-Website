@@ -178,7 +178,7 @@ export default function ProofPage() {
               <AlertTriangle className="w-5 h-5" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Consequences of <span className="text-red-500">Payment Delays</span>
+              Consequences of <span className="text-blue-500">Payment Delays</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
               Risks associated with missing tuition deposit submission deadlines
@@ -191,7 +191,7 @@ export default function ProofPage() {
                 key={idx}
                 className="bg-slate-800 text-white p-5 rounded-2xl space-y-1.5 shadow-md border-l-4 border-l-red-500 border-y border-r border-slate-700/60 flex flex-col justify-between"
               >
-                <h3 className="font-extrabold text-sm sm:text-base leading-snug text-red-400">
+                <h3 className="font-extrabold text-sm sm:text-base leading-snug text-blue-400">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">

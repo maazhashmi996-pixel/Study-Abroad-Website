@@ -7,7 +7,7 @@ import {
   PhoneCall 
 } from 'lucide-react';
 
-export default function France() {
+export default function Hungary() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Top Banner / Header */}
@@ -17,10 +17,10 @@ export default function France() {
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            How to Apply for a France Study Visa in 2026 from Pakistan
+            How to Apply for a Hungary Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-            A comprehensive step-by-step roadmap covering Etudes en France (EEF) registration, France-Visas portal, fees, processing timelines, and VLS-TS validation.
+            A comprehensive step-by-step roadmap covering Etudes en Hungary (EEF) registration, Hungary-Visas portal, fees, processing timelines, and VLS-TS validation.
           </p>
         </div>
       </header>
@@ -29,13 +29,13 @@ export default function France() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            France is a premier destination for Pakistani students seeking world-class academic institutions, low public tuition fees, and rich post-study career opportunities across Europe. Known for its top business schools, engineering faculties, and research universities, France offers a vast selection of English-taught and French-taught programs, as well as a 2-year post-study work visa (APS) for Master&apos;s graduates.
+            Hungary is a premier destination for Pakistani students seeking world-class academic institutions, low public tuition fees, and rich post-study career opportunities across Europe. Known for its top business schools, engineering faculties, and research universities, Hungary offers a vast selection of English-taught and French-taught programs, as well as a 2-year post-study work visa (APS) for Master&apos;s graduates.
           </p>
 
           <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
             <h4 className="font-semibold text-red-600 text-sm sm:text-base">Key Process to Understand:</h4>
             <p className="text-red-6600 text-sm mt-1">
-              For studies exceeding 90 days, Pakistani students must complete the mandatory procedure via <strong className="font-semibold text-red-950">Campus France Pakistan</strong> using the <strong className="font-semibold text-red-950">Etudes en France (EEF)</strong> portal before submitting their <strong className="font-semibold text-red-950">VLS-TS (Long-Stay Visa equivalent to Residence Permit)</strong> application at VFS Global.
+              For studies exceeding 90 days, Pakistani students must complete the mandatory procedure via <strong className="font-semibold text-red-950">Campus Hungary Pakistan</strong> using the <strong className="font-semibold text-red-950">Etudes en Hungary (EEF)</strong> portal before submitting their <strong className="font-semibold text-red-950">VLS-TS (Long-Stay Visa equivalent to Residence Permit)</strong> application at VFS Global.
             </p>
           </div>
 
@@ -61,8 +61,8 @@ export default function France() {
             <RequirementItem title="Valid Passport">
               Original passport valid for at least 15 months, issued within the last 10 years, with at least two blank visa pages.
             </RequirementItem>
-            <RequirementItem title="Campus France Attestation">
-              Official Campus France Authorization/Certificate obtained after completing the Etudes en France (EEF) interview process in Pakistan.
+            <RequirementItem title="Campus Hungary Attestation">
+              Official Campus Hungary Authorization/Certificate obtained after completing the Etudes en Hungary (EEF) interview process in Pakistan.
             </RequirementItem>
             <RequirementItem title="University Enrollment / Admission Letter">
               Unconditional acceptance letter from a French higher education institution (via EEF or direct university portal) specifying program details, duration, and tuition fee structure.
@@ -77,16 +77,16 @@ export default function France() {
               IELTS/TOEFL for English-taught courses (typically <strong className="font-semibold text-slate-800">IELTS 6.0 to 6.5</strong>) or DELF/DALF (B2 level or higher) for French-taught programs.
             </RequirementItem>
             <RequirementItem title="Statement of Purpose (SOP) & CV">
-              An SOP detailing your academic background, career objectives, reason for choosing France, and a professional Europass-style CV.
+              An SOP detailing your academic background, career objectives, reason for choosing Hungary, and a professional Europass-style CV.
             </RequirementItem>
             <RequirementItem title="Accommodation Proof">
-              Proof of housing for at least the first 3 months in France (CROUS university dormitory allocation, hotel booking, lease agreement, or host declaration).
+              Proof of housing for at least the first 3 months in Hungary (CROUS university dormitory allocation, hotel booking, lease agreement, or host declaration).
             </RequirementItem>
             <RequirementItem title="Medical Travel Insurance">
               Schengen travel health insurance with a minimum coverage of €30,000 for emergency medical care and repatriation for the initial travel period.
             </RequirementItem>
-            <RequirementItem title="France-Visas Form">
-              Completed and signed Long-Stay Visa Application Form downloaded from the official <strong className="font-semibold text-slate-800">France-Visas</strong> portal, along with the application receipt and biometric photos.
+            <RequirementItem title="Hungary-Visas Form">
+              Completed and signed Long-Stay Visa Application Form downloaded from the official <strong className="font-semibold text-slate-800">Hungary-Visas</strong> portal, along with the application receipt and biometric photos.
             </RequirementItem>
           </ul>
         </section>
@@ -99,23 +99,23 @@ export default function France() {
 
           <div className="space-y-6">
             <StepCard number="1" title="Program Selection & University Application">
-              Choose your university and program. Applications are submitted either directly to the university or through the <strong className="font-semibold text-slate-800">Etudes en France (EEF)</strong> platform during the admission campaign window.
+              Choose your university and program. Applications are submitted either directly to the university or through the <strong className="font-semibold text-slate-800">Etudes en Hungary (EEF)</strong> platform during the admission campaign window.
             </StepCard>
 
-            <StepCard number="2" title="Campus France Pakistan Registration">
-              Create an account on the Etudes en France portal. Upload your academic documents, CV, SOP, and university offer letter, then pay the mandatory Campus France processing fee.
+            <StepCard number="2" title="Campus Hungary Pakistan Registration">
+              Create an account on the Etudes en Hungary portal. Upload your academic documents, CV, SOP, and university offer letter, then pay the mandatory Campus Hungary processing fee.
             </StepCard>
 
-            <StepCard number="3" title="Campus France Academic Interview">
-              Attend your in-person or online interview with Campus France Pakistan officers in Islamabad, Lahore, or Karachi to discuss your study plans and academic background.
+            <StepCard number="3" title="Campus Hungary Academic Interview">
+              Attend your in-person or online interview with Campus Hungary Pakistan officers in Islamabad, Lahore, or Karachi to discuss your study plans and academic background.
             </StepCard>
 
-            <StepCard number="4" title="Complete France-Visas Application">
-              Once you receive the Campus France attestation, fill out your visa application on the official <strong className="font-semibold text-slate-800">France-Visas</strong> portal to generate your registration summary sheet.
+            <StepCard number="4" title="Complete Hungary-Visas Application">
+              Once you receive the Campus Hungary attestation, fill out your visa application on the official <strong className="font-semibold text-slate-800">Hungary-Visas</strong> portal to generate your registration summary sheet.
             </StepCard>
 
             <StepCard number="5" title="Book & Attend VFS Global Appointment">
-              Schedule a visa submission appointment at the VFS Global France Visa Application Center in Pakistan (Islamabad, Lahore, or Karachi). Submit your physical document dossier and provide biometric data.
+              Schedule a visa submission appointment at the VFS Global Hungary Visa Application Center in Pakistan (Islamabad, Lahore, or Karachi). Submit your physical document dossier and provide biometric data.
             </StepCard>
 
             <StepCard number="6" title="Visa Decision & Passport Collection">
@@ -123,7 +123,7 @@ export default function France() {
             </StepCard>
 
             <StepCard number="7" title="Arrival & VLS-TS Online Validation">
-              Upon arriving in France, pay the CVEC student contribution (€105) and validate your VLS-TS visa online on the ANEF portal within 3 months to make it equivalent to a formal Residence Permit (Titre de Séjour).
+              Upon arriving in Hungary, pay the CVEC student contribution (€105) and validate your VLS-TS visa online on the ANEF portal within 3 months to make it equivalent to a formal Residence Permit (Titre de Séjour).
             </StepCard>
           </div>
         </section>
@@ -131,7 +131,7 @@ export default function France() {
         {/* Section 3: Fees & Table */}
         <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
-            France Study Visa Fee &amp; Processing Time
+            Hungary Study Visa Fee &amp; Processing Time
           </h2>
 
           <div className="overflow-x-auto">
@@ -144,9 +144,9 @@ export default function France() {
               </thead>
               <tbody className="divide-y divide-slate-200 text-sm sm:text-base text-slate-700">
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Campus France Fee</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Campus Hungary Fee</td>
                   <td className="p-4">
-                    The Campus France Etudes en France (EEF) application processing fee is <strong className="font-semibold text-slate-900">PKR 30,000</strong>, payable prior to scheduling your Campus France interview.
+                    The Campus Hungary Etudes en Hungary (EEF) application processing fee is <strong className="font-semibold text-slate-900">PKR 30,000</strong>, payable prior to scheduling your Campus Hungary interview.
                   </td>
                 </tr>
                 <tr>
@@ -158,7 +158,7 @@ export default function France() {
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Processing Time</td>
                   <td className="p-4">
-                    Standard visa processing at the French Embassy takes between <strong className="font-semibold text-slate-900">3 to 6 weeks</strong> after your VFS appointment. Total duration including Campus France procedures is roughly 2 to 3 months.
+                    Standard visa processing at the French Embassy takes between <strong className="font-semibold text-slate-900">3 to 6 weeks</strong> after your VFS appointment. Total duration including Campus Hungary procedures is roughly 2 to 3 months.
                   </td>
                 </tr>
                 <tr>
@@ -170,7 +170,7 @@ export default function France() {
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Work Rights</td>
                   <td className="p-4">
-                    International students in France holding a valid VLS-TS visa are legally allowed to work part-time up to <strong className="font-semibold text-slate-900">964 hours per year</strong> (60% of full-time annual work).
+                    International students in Hungary holding a valid VLS-TS visa are legally allowed to work part-time up to <strong className="font-semibold text-slate-900">964 hours per year</strong> (60% of full-time annual work).
                   </td>
                 </tr>
               </tbody>
@@ -181,9 +181,9 @@ export default function France() {
         {/* CTA Contact Form */}
         <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your France Study Visa?</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your Hungary Study Visa?</h2>
             <p className="text-slate-200 text-sm sm:text-base">
-              Get expert guidance on Campus France registration, EEF interview preparation, financial documentation, and visa submission.
+              Get expert guidance on Campus Hungary registration, EEF interview preparation, financial documentation, and visa submission.
             </p>
           </div>
 

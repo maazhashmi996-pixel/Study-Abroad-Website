@@ -75,8 +75,8 @@ export default function FulfillConditionsPage() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
               
               <Image
-                src="/images/steps/3-1.png"
-                alt="Fulfill Conditions Illustration"
+                src="/images/steps/condition.jpg"
+                alt=" Conditions "
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
