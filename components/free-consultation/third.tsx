@@ -59,7 +59,7 @@ function Third() {
             {/* IMAGE 1 */}
             <div className="relative h-[240px] sm:h-[300px] w-full border-b-8 border-[#0b5cff] shadow-md overflow-hidden bg-black">
               <Image
-                src="/images/events/Top-Study.jpg"
+                src="/images/events/ievent.jpg"
                 alt="Top Study Abroad Guidance"
                 fill
                 className="object-cover"
@@ -73,7 +73,7 @@ function Third() {
             {/* IMAGE 2 */}
             <div className="relative h-[220px] sm:h-[280px] w-full border-4 border-slate-800 overflow-hidden order-2 md:order-1 bg-black">
               <Image
-                src="/images/events/Provide.jpg"
+                src="/images/events/laptop.jpg"
                 alt="Trusted Consultant Support"
                 fill
                 className="object-cover"
