@@ -34,10 +34,10 @@ export default function Common() {
   ];
 
   return (
-    <div className="w-full font-sans bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12">
+    <div className="w-full font-sans  text-slate-800 px-4 sm:px-6 md:px-8 lg:px-12">
       
       {/* Section 1: Common Mistakes */}
-      <section className="py-10 sm:py-14 mx-auto bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-10 max-w-7xl text-center shadow-2xl relative overflow-hidden">
+      <section className="py-10 sm:py-14 mx-auto   rounded-3xl p-6 sm:p-10 max-w-7xl text-center shadow-2xl relative overflow-hidden">
         
         {/* Subtle Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
@@ -49,10 +49,10 @@ export default function Common() {
           </span>
         </div>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 text-slate-800 tracking-tight">
           Common Mistakes
         </h2>
-        <p className="text-xs sm:text-sm text-slate-400 mb-8 font-medium max-w-xl mx-auto">
+        <p className="text-xs sm:text-sm text-slate-600 mb-8 font-medium max-w-xl mx-auto">
           This is a high-refusal step. Here are the most frequent reasons applications get rejected:
         </p>
 
@@ -61,12 +61,12 @@ export default function Common() {
           {commonMistakes.map((mistake, index) => (
             <div
               key={index}
-              className="bg-slate-900 border border-slate-800 hover:border-[#0b5cff]/50 transition-all duration-200 rounded-2xl p-5 text-center flex flex-col justify-center min-h-[100px] shadow-lg group"
+              className="bg-slate-900 border hover:bg-slate-100 border-slate-900 hover:border-[#0b5cff]/50 transition-all duration-200 rounded-2xl p-5 text-center flex flex-col justify-center min-h-[100px] shadow-lg group"
             >
-              <h3 className="text-white group-hover:text-[#0b5cff] transition-colors font-extrabold text-sm sm:text-base mb-1">
+              <h3 className="text-white hover:text-slate-700 group-hover:text-[#0b5cff] transition-colors font-extrabold text-sm sm:text-base mb-1">
                 {mistake.title}
               </h3>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 {mistake.description}
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function Common() {
         </div>
 
         {/* Small Notice Bar */}
-        <div className="bg-slate-900/80 border border-slate-800 rounded-xl max-w-xl mx-auto py-2.5 px-4 text-xs text-slate-400 shadow-inner">
+        <div className="bg-slate-900/80 border border-slate-800 rounded-xl max-w-xl mx-auto py-2.5 px-4 text-xs text-slate-100 shadow-inner">
           Most of these are fixable <strong className="text-white">before</strong> submission—that's where D. Education Zone should be involved.
         </div>
       </section>
@@ -87,13 +87,13 @@ export default function Common() {
       {/* Section 2: Timeline */}
       <section className="py-6 px-4 max-w-7xl mx-auto text-center">
         <div className="space-y-2 mb-8">
-          <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+          <div className="inline-flex items-center gap-2  px-3.5 py-1.5 rounded-full border border-slate-800">
             <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
               Key Deadlines
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-800 tracking-tight">
             Timeline (When This Happens in the Journey)
           </h2>
         </div>

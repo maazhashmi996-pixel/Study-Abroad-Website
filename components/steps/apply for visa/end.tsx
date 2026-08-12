@@ -48,11 +48,11 @@ export default function EndPage() {
   };
 
   return (
-    <div className="w-full bg-black font-sans text-white py-12 px-4 sm:px-6">
+    <div className="w-full  font-sans text-slate-800 py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto space-y-16">
         
         {/* Section 1: How D.Education Zone Helps */}
-        <section className="text-center max-w-5xl mx-auto bg-slate-950 border border-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        <section className="text-center max-w-5xl mx-auto  rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
           
           {/* Subtle Background Glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#0b5cff]/10 rounded-full blur-3xl pointer-events-none" />
@@ -64,23 +64,23 @@ export default function EndPage() {
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-800 mb-3 tracking-tight">
             How D. Education Zone helps at this stage
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 font-medium mb-8 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-600 font-medium mb-8 max-w-xl mx-auto">
             This is where D. Education Zone is most valuable, because visa refusals hurt reputation and waste intakes.
           </p>
 
-          <p className="text-xs sm:text-sm font-extrabold text-white text-left max-w-5xl mx-auto mb-4 tracking-wide uppercase">
+          <p className="text-xs sm:text-sm font-extrabold text-slate-800 text-left max-w-5xl mx-auto mb-4 tracking-wide uppercase">
             D. Education Zone can:
           </p>
 
           {/* 2-Column Checklist */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left max-w-5xl mx-auto mb-8">
             {servicesList.map((item, index) => (
-              <div key={index} className="flex items-start gap-3 bg-slate-900/60 border border-slate-800/80 p-3.5 rounded-xl">
+              <div key={index} className="flex items-start gap-3 bg-slate-900 border border-slate-800/80 p-3.5 rounded-xl">
                 <Check className="w-4 h-4 text-[#0b5cff] shrink-0 mt-0.5 stroke-[3]" />
-                <span className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+                <span className="text-xs sm:text-sm text-slate-100 leading-relaxed font-medium">
                   {item}
                 </span>
               </div>
@@ -129,7 +129,7 @@ export default function EndPage() {
                 Got Questions?
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
               Can’t talk? Don’t worry, we have got all the answers right here.
             </h2>
           </div>
@@ -153,7 +153,7 @@ export default function EndPage() {
                 </button>
 
                 {openFaq === index && (
-                  <div className="px-6 pb-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-900 pt-3 bg-slate-900/50">
+                  <div className="px-6 pb-4 text-xs sm:text-sm text-slate-00 leading-relaxed border-t border-slate-900 pt-3 bg-slate-900/50">
                     {faq.answer}
                   </div>
                 )}

@@ -190,8 +190,8 @@ export default function Selection() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[520px] aspect-[4/3]">
               <Image
-                src="/images/steps/2-1.png"
-                alt="Study abroad application steps"
+                src="/images/steps/iselection.jpg"
+                alt="iselection"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 520px"
@@ -364,8 +364,8 @@ export default function Selection() {
             <div className="lg:col-span-4 flex justify-center">
               <div className="relative w-full max-w-[300px] aspect-[4/5]">
                 <Image
-                  src="/images/steps/1.png"
-                  alt="Study abroad decision illustration"
+                  src="/images/steps/ibooks.jpg"
+                  alt="ibooks"
                   fill
                   sizes="(max-width: 1024px) 100vw, 300px"
                   className="object-contain"

@@ -162,7 +162,7 @@ export default function ProgrammePage() {
               <div className="relative w-full max-w-xs sm:max-w-md aspect-square">
 
                 <Image
-                  src="/images/steps/9-1.png"
+                  src="/images/steps/isvisa.jpg"
                   alt="Start your program illustration"
                   fill
                   priority
@@ -334,8 +334,8 @@ export default function ProgrammePage() {
                 <div className="absolute inset-8 rounded-full bg-[#2563EB]/5" />
 
                 <Image
-                  src="/images/steps/8.png"
-                  alt="Pre-departure checklist illustration"
+                  src="/images/steps/ihardworking.jpg"
+                  alt="ihardworking"
                   fill
                   sizes="(max-width: 1024px) 100vw, 320px"
                   className="object-contain relative z-10"

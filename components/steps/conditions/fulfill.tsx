@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FulfillConditionsPage() {
   return (
-    <div className="w-full bg-black font-sans text-white">
+    <div className="w-full font-sans text-slate-800">
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -21,7 +21,7 @@ export default function FulfillConditionsPage() {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight">
               Fulfill Conditions
             </h1>
 
@@ -38,13 +38,13 @@ export default function FulfillConditionsPage() {
                 </span>
               </p>
 
-              <p>
+              <p className="text-slate-800">
                 In this step, you submit whatever the university is still asking
                 for such as final transcripts, updated IELTS/PTE score,
                 financial evidence, passport copy, etc.
               </p>
 
-              <p>
+              <p className="text-slate-800">
                 Once all conditions are met and approved, the university can move
                 you to an{" "}
                 <span className="font-bold text-[#0b5cff]">
