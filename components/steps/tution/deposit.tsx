@@ -9,6 +9,7 @@ import {
   Receipt,
   MailCheck,
   AlertTriangle,
+  ShieldAlert,
 } from "lucide-react";
 
 // Types
@@ -100,18 +101,21 @@ const commonMistakes: CommonMistake[] = [
 
 export default function PayDeposit() {
   return (
-    <main className="min-h-screen font-sans bg-slate-50">
+    <main className="min-h-screen font-sans bg-white text-slate-900 pb-16 sm:pb-20">
       
-      {/* SECTION 1: red/ORANGE PROCESS SECTION */}
-      <section className="bg-[#e5a00d] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      {/* SECTION 1: PROCESS CHECKLIST */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Section Header */}
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
-              How This Step Works (Checklist & Process)
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100 rounded-full mb-1">
+              Checklist & Process
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              How This Step <span className="text-blue-600">Works</span>
             </h2>
-            <p className="text-xs sm:text-sm font-semibold text-[#3a1b5c]/90 leading-relaxed">
+            <p className="text-xs sm:text-sm font-medium text-slate-600 leading-relaxed">
               Step-by-step guidance on securing your university seat with your initial tuition deposit
             </p>
           </div>
@@ -123,19 +127,19 @@ export default function PayDeposit() {
               return (
                 <div
                   key={step.id}
-                  className="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-amber-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                  className="group relative bg-slate-50/70 border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-2xs hover:shadow-md hover:border-blue-400/80 hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between space-y-4"
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#3a1b5c] flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <span className="text-xs font-black text-amber-700/80 bg-amber-50 px-2.5 py-1 rounded-md">
-                        #{step.id}
+                      <span className="text-xs font-black text-blue-600 bg-blue-100/60 border border-blue-200/50 px-2.5 py-1 rounded-md">
+                        Step 0{step.id}
                       </span>
                     </div>
 
-                    <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
                       {step.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -149,9 +153,9 @@ export default function PayDeposit() {
 
           {/* Bottom Confirmation Tag */}
           <div className="flex justify-center pt-2">
-            <div className="bg-[#cca012] border border-amber-600/40 rounded-xl py-3 px-6 text-center text-xs sm:text-sm font-semibold text-slate-900 shadow-sm max-w-xl">
+            <div className="bg-blue-50/80 border border-blue-200/80 rounded-xl py-3.5 px-6 text-center text-xs sm:text-sm font-medium text-slate-800 shadow-2xs max-w-2xl">
               At the completion of this step, the university confirms:{" "}
-              <span className="font-extrabold underline decoration-2 underline-offset-2">
+              <span className="font-bold text-blue-600 underline decoration-2 underline-offset-2">
                 &quot;This applicant has secured their placement.&quot;
               </span>
             </div>
@@ -160,16 +164,19 @@ export default function PayDeposit() {
         </div>
       </section>
 
-      {/* SECTION 2: DARK PURPLE COMMON MISTAKES SECTION */}
-      <section className="bg-[#3a1b5c] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      {/* SECTION 2: COMMON MISTAKES TO AVOID */}
+      <section className="bg-slate-50/60 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200/60">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Section Header */}
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
-              Common Mistakes to Avoid
+            <div className="w-10 h-10 bg-red-50 text-red-600 border border-red-100 rounded-xl mx-auto flex items-center justify-center mb-2">
+              <ShieldAlert className="w-5 h-5" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Common Mistakes to <span className="text-red-600">Avoid</span>
             </h2>
-            <p className="text-purple-200 text-xs sm:text-sm font-medium leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
               Prevent processing holds and seat forfeitures by avoiding these frequent tuition deposit pitfalls
             </p>
           </div>
@@ -179,22 +186,20 @@ export default function PayDeposit() {
             {commonMistakes.map((mistake, index) => (
               <div
                 key={index}
-                className={`bg-[#2c1249] border border-purple-800/60 rounded-2xl p-5 sm:p-6 text-center space-y-3 hover:border-purple-500/80 hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between shadow-sm ${
+                className={`bg-white border-l-4 border-l-red-500 border-y border-r border-slate-200 rounded-2xl p-5 sm:p-6 space-y-3 hover:shadow-sm transition-all duration-200 flex flex-col justify-between shadow-2xs ${
                   index === commonMistakes.length - 1
                     ? "md:col-span-2 lg:col-span-1"
                     : ""
                 }`}
               >
                 <div className="space-y-2">
-                  <div className="flex justify-center mb-1">
-                    <div className="w-8 h-8 rounded-lg bg-amber-400/10 text-amber-400 flex items-center justify-center shrink-0">
-                      <AlertTriangle className="w-4 h-4" />
-                    </div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <AlertTriangle className="w-4 h-4 text-red-500 shrink-0" />
+                    <h3 className="text-xs sm:text-sm font-extrabold text-red-600 leading-snug">
+                      {mistake.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xs sm:text-sm font-extrabold text-amber-400 leading-snug">
-                    {mistake.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
                     {mistake.description}
                   </p>
                 </div>

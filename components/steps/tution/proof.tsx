@@ -57,14 +57,14 @@ const delayConsequences: DelayConsequence[] = [
 
 export default function ProofPage() {
   return (
-    <main className="min-h-screen font-sans bg-slate-50 text-slate-900 pb-16 sm:pb-20">
+    <main className="min-h-screen font-sans  text-slate-100 pb-16 sm:pb-20">
 
       {/* SECTION 1: TIMELINE */}
-      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+      <section className=" py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 text-center">
           <div className="space-y-2 max-w-xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
-              Timeline & Sequence
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-800 tracking-tight">
+              Timeline & <span className="text-blue-500">Sequence</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
               Where this deposit step sits within your overall university admission journey
@@ -73,46 +73,46 @@ export default function ProofPage() {
 
           {/* Timeline Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-            <div className="bg-[#3a1b5c] text-white p-5 rounded-2xl space-y-2 shadow-xs border border-purple-900/50">
-              <div className="flex items-center space-x-2 text-amber-400 font-bold text-xs sm:text-sm">
-                <Clock className="w-4 h-4 shrink-0" />
+            <div className="bg-slate-800 p-5 rounded-2xl space-y-2 shadow-lg border border-slate-700/60">
+              <div className="flex items-center space-x-2 text-blue-400 font-bold text-xs sm:text-sm">
+                <Clock className="w-4 h-4 shrink-0 text-red-500" />
                 <span>Process Placement</span>
               </div>
-              <div className="text-xs sm:text-sm text-slate-200 space-y-1 pt-1">
+              <div className="text-xs sm:text-sm text-slate-300 space-y-1 pt-1">
                 <p>
-                  <strong className="text-purple-300">After:</strong> Step 4 (Fulfill Conditions)
+                  <strong className="text-white">After:</strong> Step 4 (Fulfill Conditions)
                 </p>
                 <p>
-                  <strong className="text-purple-300">Before:</strong> Step 6 (Unconditional Offer & Visa)
+                  <strong className="text-white">Before:</strong> Step 6 (Unconditional Offer & Visa)
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#3a1b5c] text-white p-5 rounded-2xl space-y-2 shadow-xs border border-purple-900/50">
-              <div className="flex items-center space-x-2 text-amber-400 font-bold text-xs sm:text-sm">
-                <Calendar className="w-4 h-4 shrink-0" />
+            <div className="bg-slate-800 p-5 rounded-2xl space-y-2 shadow-lg border border-slate-700/60">
+              <div className="flex items-center space-x-2 text-blue-400 font-bold text-xs sm:text-sm">
+                <Calendar className="w-4 h-4 shrink-0 text-red-500" />
                 <span>Typical September Intake Schedule</span>
               </div>
-              <div className="text-xs sm:text-sm text-slate-200 space-y-1 pt-1">
+              <div className="text-xs sm:text-sm text-slate-300 space-y-1 pt-1">
                 <p>
-                  <strong className="text-purple-300">Conditional Offer:</strong> March–June
+                  <strong className="text-white">Conditional Offer:</strong> March–June
                 </p>
                 <p>
-                  <strong className="text-purple-300">Fulfill Conditions:</strong> April–July
+                  <strong className="text-white">Fulfill Conditions:</strong> April–July
                 </p>
               </div>
             </div>
           </div>
 
           {/* Full Width Timing Box */}
-          <div className="bg-[#3a1b5c]/95 text-white p-4 rounded-xl text-xs sm:text-sm font-semibold text-center border border-purple-800/50 shadow-xs leading-relaxed">
-            <span className="text-amber-400">Payment Window:</span> Submit tuition deposit promptly after meeting conditions, typically within 1–4 weeks of offer issuance depending on institutional deadlines.
+          <div className="bg-blue-950/60 border border-blue-500/30 text-slate-200 p-4 rounded-xl text-xs sm:text-sm font-medium text-center shadow-md leading-relaxed">
+            <span className="text-blue-400 font-bold">Payment Window:</span> Submit tuition deposit promptly after meeting conditions, typically within 1–4 weeks of offer issuance depending on institutional deadlines.
           </div>
 
           {/* Full Width Outcome Box */}
-          <div className="bg-amber-500/10 border border-amber-500/30 text-[#3a1b5c] p-4 rounded-xl text-xs sm:text-sm font-bold text-center flex items-center justify-center space-x-2">
-            <span>Next Milestone:</span>
-            <span className="text-amber-700 font-extrabold">
+          <div className="bg-red-500/10 border border-red-500/30 text-white p-4 rounded-xl text-xs sm:text-sm font-bold text-center flex items-center justify-center space-x-2">
+            <span className="text-slate-400">Next Milestone:</span>
+            <span className="text-red-400 font-extrabold">
               University Issues Unconditional Offer / CAS / CoE → Proceed to Visa Filing
             </span>
           </div>
@@ -121,14 +121,14 @@ export default function ProofPage() {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               type="button"
-              className="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 active:scale-98 text-slate-900 text-xs font-bold py-2.5 px-5 rounded-full transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white text-xs font-bold py-2.5 px-5 rounded-full transition-all shadow-md cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
               <span>Step 4: Fulfill Conditions</span>
             </button>
             <button
               type="button"
-              className="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 active:scale-98 text-slate-900 text-xs font-bold py-2.5 px-5 rounded-full transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white text-xs font-bold py-2.5 px-5 rounded-full transition-all shadow-md cursor-pointer"
             >
               <span>Step 6: Get Unconditional Offer</span>
               <ChevronRight className="w-4 h-4" />
@@ -138,16 +138,16 @@ export default function ProofPage() {
       </section>
 
       {/* SECTION 2: DOCUMENTS / PROOF REQUIRED */}
-      <section className="bg-[#3a1b5c] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className=" text-slate-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 text-center">
           <div className="space-y-2 max-w-xl mx-auto">
-            <div className="w-10 h-10 bg-purple-900/80 text-amber-400 rounded-xl mx-auto flex items-center justify-center mb-2">
-              <FileCheck className="w-5 h-5" />
+            <div className="w-10 h-10 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-xl mx-auto flex items-center justify-center mb-2">
+              <FileCheck className="w-5 h-5 text-blue-500" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Required Documents & Proof
+              Required Documents & <span className="text-blue-500">Proof</span>
             </h2>
-            <p className="text-xs sm:text-sm text-purple-200">
+            <p className="text-xs sm:text-sm text-slate-400">
               Have these details ready when submitting your tuition deposit:
             </p>
           </div>
@@ -156,31 +156,31 @@ export default function ProofPage() {
             {requiredDocs.map((doc, idx) => (
               <div
                 key={idx}
-                className="border border-purple-800/60 rounded-xl p-4 bg-[#2c1249] text-xs sm:text-sm leading-snug flex items-start space-x-3 hover:border-purple-600 transition-colors"
+                className="border border-slate-800 rounded-xl p-4 bg-slate-900/80 text-xs sm:text-sm leading-snug flex items-start space-x-3 hover:border-blue-500/50 transition-colors"
               >
-                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <span className="text-purple-100 font-medium">{doc.text}</span>
+                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                <span className="text-slate-200 font-medium">{doc.text}</span>
               </div>
             ))}
           </div>
 
-          <p className="text-xs text-purple-300/80 italic pt-2 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs text-slate-600 italic pt-2 max-w-2xl mx-auto leading-relaxed">
             Note: Payment receipts form an essential component of your official visa application package for consular review.
           </p>
         </div>
       </section>
 
       {/* SECTION 3: WHAT HAPPENS IF YOU DELAY */}
-      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-slate-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 text-center">
           <div className="space-y-2 max-w-xl mx-auto">
-            <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl mx-auto flex items-center justify-center mb-2">
+            <div className="w-10 h-10 bg-red-500/10 text-red-500 border border-red-500/20 rounded-xl mx-auto flex items-center justify-center mb-2">
               <AlertTriangle className="w-5 h-5" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Consequences of Payment Delays
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Consequences of <span className="text-red-500">Payment Delays</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600">
+            <p className="text-xs sm:text-sm text-slate-400">
               Risks associated with missing tuition deposit submission deadlines
             </p>
           </div>
@@ -189,12 +189,12 @@ export default function ProofPage() {
             {delayConsequences.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-amber-500 text-slate-900 p-5 rounded-2xl space-y-1.5 shadow-xs border border-amber-600/30 flex flex-col justify-between"
+                className="bg-slate-800 text-white p-5 rounded-2xl space-y-1.5 shadow-md border-l-4 border-l-red-500 border-y border-r border-slate-700/60 flex flex-col justify-between"
               >
-                <h3 className="font-extrabold text-sm sm:text-base leading-snug">
+                <h3 className="font-extrabold text-sm sm:text-base leading-snug text-red-400">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-900/90 leading-relaxed font-medium">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
                   {item.description}
                 </p>
               </div>
@@ -202,8 +202,8 @@ export default function ProofPage() {
           </div>
 
           <div className="pt-2">
-            <span className="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold py-2 px-6 rounded-xl shadow-2xs">
-              <ArrowRight className="w-4 h-4 text-amber-600" />
+            <span className="inline-flex items-center space-x-2 bg-slate-800 border border-slate-700 text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-xl shadow-md">
+              <ArrowRight className="w-4 h-4 text-blue-400" />
               <span>Key Takeaway: Timely Deposit = Reserved Seat = Fast-Track Visa</span>
             </span>
           </div>

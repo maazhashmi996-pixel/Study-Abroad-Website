@@ -62,8 +62,11 @@ export default function EndPage() {
           
           {/* Section Header */}
           <div className="space-y-2 max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3a1b5c] tracking-tight">
-              How D.Education Zone Helps at This Stage
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100 rounded-full mb-1">
+              Expert Guidance
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              How D.Education Zone <span className="text-blue-600">Helps at This Stage</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Here is how D.Education Zone makes this step safer, faster, and stress-free for you:
@@ -75,9 +78,9 @@ export default function EndPage() {
             {helpPoints.map((point, idx) => (
               <div
                 key={idx}
-                className="flex items-start space-x-3 bg-slate-50/80 border border-slate-100 p-4 rounded-xl shadow-xs"
+                className="flex items-start space-x-3 bg-slate-50 border border-slate-200/80 p-4 rounded-xl shadow-2xs hover:border-blue-300 transition-colors"
               >
-                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                   {point}
                 </span>
@@ -86,15 +89,17 @@ export default function EndPage() {
           </div>
 
           {/* Call-to-Action Card */}
-          <div className="pt-4 space-y-4 max-w-xl mx-auto bg-amber-50/60 border border-amber-200/60 rounded-2xl p-6 shadow-xs">
-            <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
+          <div className="pt-4 space-y-4 max-w-xl mx-auto bg-red-50/50 border border-red-200/60 rounded-2xl p-6 shadow-2xs relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-red-500" />
+            
+            <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed pl-2">
               Don&apos;t risk your intake over a missed deadline or unclear bank transfer. Let our experts verify your offer and confirm deposit status.
             </p>
 
             <div className="pt-2">
               <button
                 type="button"
-                className="w-full sm:w-auto bg-[#e5a00d] hover:bg-[#d99723] active:scale-98 text-slate-900 font-extrabold text-xs sm:text-sm py-3.5 px-8 rounded-full shadow-sm transition-all cursor-pointer"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 active:scale-98 text-white font-extrabold text-xs sm:text-sm py-3.5 px-8 rounded-full shadow-md transition-all cursor-pointer"
               >
                 Confirm My Deposit with D.Education Zone
               </button>
@@ -109,15 +114,15 @@ export default function EndPage() {
       </section>
 
       {/* SECTION 2: FAQ ACCORDION */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-slate-50/50">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-slate-50/60">
         <div className="max-w-3xl mx-auto space-y-8">
           
           <div className="text-center space-y-2 max-w-xl mx-auto">
-            <div className="w-10 h-10 bg-purple-50 text-[#3a1b5c] rounded-xl mx-auto flex items-center justify-center mb-2">
+            <div className="w-10 h-10 bg-blue-50 text-blue-600 border border-blue-100 rounded-xl mx-auto flex items-center justify-center mb-2">
               <HelpCircle className="w-5 h-5" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Frequently Asked Questions
+              Frequently Asked <span className="text-blue-600">Questions</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
               Find quick answers to common questions regarding tuition deposits and payment confirmation.
@@ -130,19 +135,21 @@ export default function EndPage() {
               return (
                 <div
                   key={idx}
-                  className="border border-slate-200 bg-white rounded-xl overflow-hidden shadow-xs transition-all duration-200"
+                  className={`border transition-all duration-200 bg-white rounded-xl overflow-hidden shadow-2xs ${
+                    isOpen ? "border-blue-500 ring-1 ring-blue-500/20" : "border-slate-200"
+                  }`}
                 >
                   <button
                     type="button"
                     onClick={() => toggleFaq(idx)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${idx}`}
-                    className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-slate-800 text-xs sm:text-sm hover:bg-slate-50 transition-colors focus:outline-hidden"
+                    className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-slate-800 text-xs sm:text-sm hover:bg-slate-50/80 transition-colors focus:outline-hidden"
                   >
                     <span className="pr-4 leading-snug">{faq.question}</span>
                     <ChevronDown
                       className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                        isOpen ? "rotate-180 text-amber-500" : ""
+                        isOpen ? "rotate-180 text-blue-600" : ""
                       }`}
                     />
                   </button>
@@ -150,7 +157,7 @@ export default function EndPage() {
                   {isOpen && (
                     <div
                       id={`faq-answer-${idx}`}
-                      className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 bg-slate-50/30"
+                      className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 bg-slate-50/40"
                     >
                       {faq.answer}
                     </div>

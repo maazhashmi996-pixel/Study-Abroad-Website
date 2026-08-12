@@ -54,7 +54,7 @@ export default function FulfillConditionsPage() {
                 for your student visa.
               </p>
 
-              <p className="text-slate-400 text-xs sm:text-sm border-l-2 border-red-500 pl-4 py-1">
+              <p className="text-slate-500 text-xs sm:text-sm border-l-2 border-red-500 pl-4 py-1">
                 If you do not clear these conditions on time, you risk losing
                 your place in the intake even after receiving an offer.
               </p>

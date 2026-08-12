@@ -44,17 +44,17 @@ const requirements = [
 
 export default function Requirements() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white font-sans text-slate-800">
+    <section className="py-12 sm:py-16 lg:py-20 bg-slate-50 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-10">
-
+          
           {/* Section Header */}
           <div className="text-center sm:text-left space-y-2">
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#3B1E54] tracking-tight">
-              What You Need Before Starting
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              What You Need <span className="text-blue-600">Before Starting</span>
             </h2>
 
-            <p className="text-gray-600 text-sm sm:text-lg">
+            <p className="text-slate-600 text-sm sm:text-lg">
               To work on this stage properly, you must already have:
             </p>
           </div>
@@ -67,18 +67,18 @@ export default function Requirements() {
               return (
                 <div
                   key={index}
-                  className="border border-[#3B1E54]/30 hover:border-[#3B1E54] rounded-2xl p-5 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full bg-white"
+                  className="border border-slate-200 hover:border-blue-500 rounded-2xl p-5 sm:p-6 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full bg-white group"
                 >
                   <div>
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#F4EEFF] flex items-center justify-center text-[#3B1E54] mb-4 sm:mb-5 shrink-0">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-slate-100 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 mb-4 sm:mb-5 shrink-0">
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-[#3B1E54] mb-2 sm:mb-3 leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 leading-snug group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">
+                    <p className="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -88,15 +88,15 @@ export default function Requirements() {
           </div>
 
           {/* Bottom Banner Callout */}
-          <div className="bg-[#F8F5FF] border border-[#E5D9F2] rounded-2xl p-6 sm:p-8 text-center space-y-3 shadow-sm">
-            <p className="text-[#3B1E54] font-bold text-base sm:text-lg leading-snug">
+          <div className="bg-white border border-slate-200 border-l-4 border-l-red-600 rounded-r-2xl rounded-l-md p-6 sm:p-8 text-center sm:text-left space-y-3 shadow-sm">
+            <p className="text-red-600 font-bold text-base sm:text-lg leading-snug">
               You must know how many weeks are left before visa filing deadlines.
             </p>
 
-            <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
               If you don't have these answers yet, you're not late. This is
               exactly{" "}
-              <span className="font-semibold text-[#3B1E54]">
+              <span className="font-semibold text-blue-600 underline decoration-blue-500/30 underline-offset-4">
                 what D.Education Zone helps you define
               </span>{" "}
               during your first session.

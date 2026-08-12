@@ -10,6 +10,7 @@ import {
   Receipt,
   CalendarClock,
   AlertCircle,
+  ArrowRight,
 } from "lucide-react";
 
 interface RequirementCardProps {
@@ -22,157 +23,232 @@ const requirementItems: RequirementCardProps[] = [
   {
     title: "Your latest offer letter",
     description:
-      "(Conditional or almost cleared). It should clearly specify the deposit amount and submission deadline.",
+      "Conditional or almost cleared. It should clearly specify the deposit amount and submission deadline.",
     icon: FileText,
   },
   {
     title: "Confirmation of conditions",
     description:
-      'If your offer states "pay deposit after sending X documents," ensure those have been submitted. Some institutions require conditions to be satisfied prior to payment.',
+      'If your offer states "pay deposit after sending X documents," ensure those documents have been submitted before payment.',
     icon: CheckCircle2,
   },
   {
     title: "Exact deposit amount & currency",
     description:
-      "Institutions either specify a fixed fee (e.g., £2,000 / CAD $5,000 / AUD $5,000) or a percentage of first-year tuition.",
+      "Universities may specify a fixed fee such as £2,000, CAD $5,000, or AUD $5,000, or a percentage of first-year tuition.",
     icon: Coins,
   },
   {
     title: "Official payment portal instructions",
     description:
-      "Official bank accounts, online student portals, Flywire, or Convera. Never send payments to unverified individual accounts.",
+      "Use official university bank accounts, student portals, Flywire, or Convera. Never transfer funds to an unverified account.",
     icon: Building2,
   },
   {
-    title: "Ability to retain proof of payment",
+    title: "Proof of payment",
     description:
-      "You will require a bank receipt or transaction confirmation for subsequent processing (Unconditional Offer / CAS / Visa).",
+      "Keep your bank receipt or transaction confirmation. You may need it for your unconditional offer, CAS, CoE, or visa processing.",
     icon: Receipt,
   },
   {
     title: "Intake processing timeline",
     description:
-      "Submitting payments close to deadlines can result in administrative delays that jeopardize your visa processing schedule.",
+      "Payments made close to deadlines can cause administrative delays and may affect your visa processing schedule.",
     icon: CalendarClock,
   },
 ];
 
 export default function PayTuition() {
   return (
-    <main className="min-h-screen bg-white text-slate-800 font-sans pb-16 sm:pb-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12 sm:space-y-16">
-        
-        {/* SECTION 1: HERO & WHY THIS STEP MATTERS */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Text Content */}
-          <div className="space-y-5 sm:space-y-6">
-            <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/60 inline-block">
+    <main className="min-h-screen bg-white text-slate-800 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+
+        {/* =========================================================
+            HERO SECTION
+        ========================================================== */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+          {/* LEFT CONTENT */}
+          <div className="space-y-6">
+
+            {/* Small Label */}
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                 Tuition & Enrollment
               </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-                Pay Tuition Deposit
-              </h1>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-700">
-              Why this step matters
-            </h2>
+            {/* Heading */}
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                Pay Tuition Deposit
+              </h1>
 
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Paying the tuition deposit is how you{" "}
-              <strong className="font-semibold text-slate-900">secure your seat</strong> in the
-              university. Up to this point, the institution has issued an offer, but they will only{" "}
-              <strong className="font-semibold text-slate-900">reserve your placement</strong> once
-              the required deposit is received.
-            </p>
+              <div className="w-16 h-1 rounded-full bg-blue-600" />
+            </div>
 
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              In major study destinations (UK, Australia, Canada, Europe), the deposit triggers essential next steps, such as obtaining your{" "}
-              <strong className="font-semibold text-slate-900">CAS, CoE, or Unconditional Acceptance</strong>. Delaying payment can result in:
-            </p>
+            {/* Why This Matters */}
+            <div className="space-y-3">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                Why this step matters
+              </h2>
 
-            {/* List of Consequences */}
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-medium pt-1">
-              <li className="flex items-start space-x-2.5">
-                <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  1
-                </span>
-                <span>Delays in obtaining your unconditional offer letter</span>
-              </li>
-              <li className="flex items-start space-x-2.5">
-                <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  2
-                </span>
-                <span>Delays in generating official visa documentation</span>
-              </li>
-              <li className="flex items-start space-x-2.5">
-                <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  3
-                </span>
-                <span>Forfeiture of your seat to waitlisted applicants</span>
-              </li>
-            </ul>
+              <p className="text-sm sm:text-base text-slate-600 leading-7">
+                Paying the tuition deposit is how you{" "}
+                <strong className="font-semibold text-slate-900">
+                  secure your seat
+                </strong>{" "}
+                at the university. The institution may have already issued
+                your offer, but your placement is generally reserved only
+                after the required deposit has been received.
+              </p>
 
-            <p className="text-xs sm:text-sm text-slate-700 font-medium pt-2">
-              This milestone goes beyond financial clearance—it officially{" "}
-              <span className="font-extrabold text-slate-900 underline decoration-amber-400 decoration-2 underline-offset-2">
-                locks in your intake
-              </span>.
-            </p>
+              <p className="text-sm sm:text-base text-slate-600 leading-7">
+                In major study destinations such as the UK, Australia, Canada
+                and Europe, payment can trigger important next steps including
+                your{" "}
+                <strong className="font-semibold text-blue-700">
+                  CAS, CoE, or Unconditional Acceptance
+                </strong>
+                .
+              </p>
+            </div>
+
+            {/* Consequences */}
+            <div className="space-y-3 pt-1">
+              <p className="text-sm font-bold text-slate-900">
+                Delaying your payment may result in:
+              </p>
+
+              <ul className="space-y-3">
+                {[
+                  "Delays in obtaining your unconditional offer letter",
+                  "Delays in generating official visa documentation",
+                  "Risk of losing your seat to waitlisted applicants",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-sm text-slate-600"
+                  >
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-red-50 border border-red-100 text-red-600 font-bold text-xs shrink-0">
+                      {index + 1}
+                    </span>
+
+                    <span className="pt-0.5 leading-6">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Final Statement */}
+            <div className="border-l-4 border-blue-600 pl-4 py-1">
+              <p className="text-sm sm:text-base text-slate-700 leading-7">
+                This milestone goes beyond financial clearance — it helps
+                officially{" "}
+                <span className="font-bold text-blue-700">
+                  secure your intake
+                </span>{" "}
+                and move your application toward the next stage.
+              </p>
+            </div>
           </div>
 
-          {/* Right Column: Hero Illustration */}
-          <div className="flex justify-center items-center">
-            <div className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-2xl bg-slate-50/50 p-4">
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-lg aspect-square rounded-3xl bg-slate-50 border border-slate-100 overflow-hidden">
               <Image
-                src="/images/steps/6-2.png"
-                alt="Tuition deposit illustration"
+                src="/images/steps/tuition.jpg"
+                alt="Tuition deposit"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                className="object-contain p-2"
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-contain p-6 sm:p-8"
               />
+
+              {/* Blue Decorative Element */}
+              <div className="absolute top-5 right-5 w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-100" />
+
+              <div className="absolute bottom-5 left-5 w-20 h-2 rounded-full bg-blue-600/20" />
             </div>
           </div>
         </section>
 
-        {/* STAR DIVIDER */}
-        <div className="flex items-center justify-center">
-          <div className="h-px bg-amber-300 w-full max-w-md" />
-          <span className="px-4 text-amber-500 font-bold text-lg">★</span>
-          <div className="h-px bg-amber-300 w-full max-w-md" />
+        {/* =========================================================
+            DIVIDER
+        ========================================================== */}
+        <div className="flex items-center gap-4 my-14 sm:my-20">
+          <div className="h-px flex-1 bg-slate-200" />
+
+          <div className="flex items-center justify-center w-9 h-9 rounded-full bg-blue-50 border border-blue-100">
+            <span className="text-blue-600 font-bold text-sm">01</span>
+          </div>
+
+          <div className="h-px flex-1 bg-slate-200" />
         </div>
 
-        {/* SECTION 2: WHAT YOU NEED BEFORE STARTING */}
-        <section className="space-y-8">
-          <div className="space-y-1">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+        {/* =========================================================
+            REQUIREMENTS SECTION
+        ========================================================== */}
+        <section>
+
+          {/* Section Heading */}
+          <div className="max-w-3xl mb-10">
+            <span className="text-sm font-bold text-blue-600 uppercase tracking-wider">
+              Before You Pay
+            </span>
+
+            <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               What You Need Before Starting
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500">
-              Ensure you have verified the following items prior to transferring funds:
+
+            <p className="mt-3 text-sm sm:text-base text-slate-500 leading-7">
+              Make sure the following information has been checked and
+              verified before transferring any tuition funds.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            {/* Checklist Grid (2 Columns on Medium+) */}
+          {/* Main Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+
+            {/* REQUIREMENT CARDS */}
             <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
               {requirementItems.map((item, index) => {
                 const Icon = item.icon;
+
                 return (
                   <div
                     key={index}
-                    className="p-5 border border-slate-200 rounded-2xl bg-white shadow-xs hover:shadow-md hover:border-amber-300 transition-all duration-200 flex flex-col justify-start space-y-3"
+                    className="
+                      group
+                      bg-white
+                      border border-slate-200
+                      rounded-2xl
+                      p-5 sm:p-6
+                      transition-all duration-300
+                      hover:border-blue-200
+                      hover:shadow-[0_10px_30px_rgba(15,23,42,0.06)]
+                    "
                   >
-                    <div className="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5" />
+                    {/* Icon */}
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                        <Icon className="w-5 h-5" />
+                      </div>
+
+                      <span className="text-xs font-bold text-slate-300">
+                        0{index + 1}
+                      </span>
                     </div>
-                    <div className="space-y-1">
-                      <h3 className="font-bold text-slate-900 text-sm leading-snug">
+
+                    {/* Content */}
+                    <div className="space-y-2">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-slate-600 leading-relaxed">
+
+                      <p className="text-xs sm:text-sm text-slate-500 leading-6">
                         {item.description}
                       </p>
                     </div>
@@ -181,30 +257,131 @@ export default function PayTuition() {
               })}
             </div>
 
-            {/* Right Side Illustration */}
-            <div className="flex justify-center items-center lg:sticky lg:top-8">
-              <div className="relative w-full max-w-xs aspect-square rounded-2xl bg-slate-50/50 p-4">
+            {/* IMAGE */}
+            <div className="flex justify-center items-start">
+              <div className="relative w-full max-w-sm aspect-square rounded-3xl bg-slate-50 border border-slate-100 overflow-hidden lg:sticky lg:top-8">
                 <Image
-                  src="/images/steps/7-2.png"
-                  alt="Requirements verification illustration"
+                  src="/images/steps/isfinance.jpg"
+                  alt="Financial requirements verification"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 320px"
-                  className="object-contain p-2"
+                  sizes="(max-width: 1024px) 100vw, 380px"
+                  className="object-contain p-6"
                 />
+
+                {/* Decorative Blue Circle */}
+                <div className="absolute top-5 right-5 w-14 h-14 rounded-full border-8 border-blue-100" />
+
+                {/* Decorative Red Accent */}
+                <div className="absolute bottom-6 left-6 w-10 h-10 rounded-xl bg-red-50 border border-red-100" />
               </div>
             </div>
           </div>
 
-          {/* Bottom Callout Notice */}
-          <div className="bg-amber-50/80 border border-amber-200/80 rounded-xl p-4 sm:p-5 text-xs sm:text-sm text-slate-700 space-y-2 flex items-start space-x-3 shadow-xs">
-            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-            <div className="space-y-1">
-              <p className="font-semibold text-slate-800 leading-relaxed">
-                Need verification before transferring funds?
-              </p>
-              <p className="text-slate-600 leading-relaxed">
-                D.Education Zone can verify your offer letter and official payment channels before you initiate an international transfer. Book a free consultation to ensure a smooth transition.
-              </p>
+          {/* =========================================================
+              VERIFICATION NOTICE
+          ========================================================== */}
+          <div className="mt-10 rounded-2xl border border-blue-100 bg-blue-50/60 p-5 sm:p-6">
+
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+
+              {/* Icon */}
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-white border border-blue-100 text-blue-600 shrink-0">
+                <AlertCircle className="w-5 h-5" />
+              </div>
+
+              {/* Text */}
+              <div className="flex-1 space-y-1">
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  Need verification before transferring funds?
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-6">
+                  D.Education Zone can help verify your offer letter, deposit
+                  amount and official payment channels before you initiate an
+                  international transfer.
+                </p>
+              </div>
+
+              {/* CTA */}
+              <button
+                type="button"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  px-4
+                  py-2.5
+                  rounded-xl
+                  bg-blue-600
+                  text-white
+                  text-xs
+                  sm:text-sm
+                  font-bold
+                  whitespace-nowrap
+                  hover:bg-blue-700
+                  transition-colors
+                "
+              >
+                Get Assistance
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================
+            BOTTOM TRUST STRIP
+        ========================================================== */}
+        <section className="mt-14 sm:mt-20">
+
+          <div className="border-t border-slate-200 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+
+                <div>
+                  <p className="text-sm font-bold text-slate-900">
+                    Verify First
+                  </p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Confirm payment details before transferring funds.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <Receipt className="w-4 h-4" />
+                </div>
+
+                <div>
+                  <p className="text-sm font-bold text-slate-900">
+                    Keep Your Receipt
+                  </p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Save every payment confirmation for future processing.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+                  <CalendarClock className="w-4 h-4" />
+                </div>
+
+                <div>
+                  <p className="text-sm font-bold text-slate-900">
+                    Watch Deadlines
+                  </p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Avoid unnecessary delays in your intake processing.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
