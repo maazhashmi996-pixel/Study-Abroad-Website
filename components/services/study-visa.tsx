@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function StudyVisa() {
   const study = [
@@ -8,16 +9,19 @@ export default function StudyVisa() {
       image: "/images/services/istudy.jpg",
       title: "Study Abroad",
       button: "Read More",
+      link:"/services/study-abroad"
     },
     {
       image: "/images/services/iaccommodation.jpg",
       title: "Accommodation",
       button: "Read More",
+       link:"/services/Accommodation"
     },
     {
       image: "/images/services/ilanguage.jpg",
       title: "Languages",
       button: "Read More",
+       link:"/services/languages"
     },
   ];
 
@@ -40,7 +44,7 @@ export default function StudyVisa() {
           {study.map((item, index) => (
             <div
               key={index}
-              className="bg-slate-900 border border-slate-800 hover:border-[#0b5cff]/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-center items-center gap-5 shadow-xl transition-all duration-300 group hover:-translate-y-1"
+              className="bg-slate-900  hover:bg-slate-100 border border-slate-800  rounded-2xl p-6 sm:p-8 flex flex-col justify-center items-center gap-5 shadow-xl transition-all duration-300 group hover:-translate-y-1"
             >
               {/* Round Icon Wrapper */}
               <div className="relative w-20 h-20 rounded-full border-2 border-[#0b5cff] p-1 overflow-hidden flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
@@ -59,9 +63,11 @@ export default function StudyVisa() {
                 {item.title}
               </h3>
 
-              <button className="bg-[#0b5cff] hover:bg-white   hover:text-slate-950 text-white font-bold rounded-xl px-6 py-2.5 text-xs sm:text-sm transition-all duration-500 cursor-pointer border border-blue-400/20 shadow-md active:scale-95 uppercase tracking-wider mt-auto">
-                {item.button}
-              </button>
+              <Link
+              href={item.link}
+              className="bg-[#0b5cff] hover:bg-white hover:border-slate-950   hover:text-slate-950 text-white font-bold rounded-xl px-6 py-2.5 text-xs sm:text-sm transition-all duration-500 cursor-pointer border border-blue-400/20 shadow-md active:scale-95 uppercase tracking-wider mt-auto">
+                Read More
+              </Link>
             </div>
           ))}
         </div>
