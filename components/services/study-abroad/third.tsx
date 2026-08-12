@@ -46,7 +46,7 @@ export default function StudyAbroadBannerAndFAQ() {
   };
 
   return (
-    <div className="w-full bg-black min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
+    <div className="w-full  min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
       <div className="max-w-6xl mx-auto space-y-10 sm:space-y-16">
         
         {/* HERO BANNER SECTION */}

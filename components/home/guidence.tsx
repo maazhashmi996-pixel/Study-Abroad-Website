@@ -139,7 +139,7 @@ export default function AdmissionGuidance() {
                 "
               >
                 <Image
-                  src="/images/about/Academic-Journey.jpg"
+                  src="/images/home/guidance1.jpg"
                   alt="University Admission Guidance"
                   width={700}
                   height={550}
@@ -318,7 +318,7 @@ export default function AdmissionGuidance() {
               />
 
               <Image
-                src="/images/about/Empowering.jpg"
+                src="/images/home/guidance2.jpg"
                 alt="D.Education Zone Admission Support"
                 width={700}
                 height={550}

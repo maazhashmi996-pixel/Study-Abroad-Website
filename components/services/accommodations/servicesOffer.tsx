@@ -81,7 +81,7 @@ export default function ServicesOffer() {
   const currentContent = servicesData["Accommodations"];
 
   return (
-    <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
+    <div className="min-h-screen  text-slate-800 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           
@@ -97,7 +97,7 @@ export default function ServicesOffer() {
                     href={item.href}
                     className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer border ${
                       isActive
-                        ? "bg-[#0b5cff] text-white border-blue-400/30 shadow-lg"
+                        ? "bg-[#0b5cff] text-slate-800 border-blue-400/30 shadow-lg"
                         : "bg-slate-950/60 text-slate-300 border-slate-800/80 hover:bg-slate-800 hover:text-white"
                     }`}
                   >

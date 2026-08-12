@@ -190,13 +190,13 @@ export default function StudyAbroadServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
+    <div className="min-h-screen  text-slate-800 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
       <div className="max-w-7xl mx-auto space-y-6 sm:space-y-10">
         
         {/* Main Title */}
         <div className="flex items-center gap-3 justify-center md:justify-start">
           <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-800 tracking-tight">
             Our Study Abroad Services
           </h1>
         </div>
@@ -281,7 +281,7 @@ export default function StudyAbroadServices() {
 
             {/* LOWER CONTENT SECTION */}
             <div className="pt-6 space-y-6 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-900">
-              <p className="font-medium text-slate-200">
+              <p className="font-medium text-slate-700">
                 Our study visa consultants will explain the entire procedure and guide you through the document needs following the most recent immigration legislation.
               </p>
 
@@ -316,7 +316,7 @@ export default function StudyAbroadServices() {
                   <span className="w-2 h-2 rounded-full bg-red-500" />
                   Take the First Step Towards Your International Education Today!
                 </h3>
-                <p className="text-slate-400">
+                <p className="text-slate-700">
                   Do not let the complexities of the student visa process hold you back from achieving your academic dreams. Contact D. Education Zone now to schedule your consultation and start your journey to studying abroad with confidence.
                 </p>
               </div>

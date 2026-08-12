@@ -23,12 +23,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
-        <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+        <span className="inline-block bg-slate-100 text-slate-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
           🚀 Smarter Learning for Everyone
         </span>
         <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
           Master Any Subject with <br />
-          <span className="text-indigo-600">Interactive Study Tools</span>
+          <span className="text-slate-600">Interactive Study Tools</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10">
           Access thousands of interactive flashcards, practice quizzes, and collaborative study groups all in one organized space.
@@ -41,7 +41,7 @@ export default function Home() {
             placeholder="Search subjects, flashcards, or topics..."
             className="w-full px-4 py-2 text-slate-700 focus:outline-none"
           />
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
+          <button className="bg-slate-600 hover:bg-slate-700 text-slate-900 font-medium px-6 py-2.5 rounded-lg transition-colors">
             Search
           </button>
         </div>
@@ -54,7 +54,7 @@ export default function Home() {
           
           {/* Card 1 */}
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
+            <div className="w-12 h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
               🎴
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Smart Flashcards</h3>
@@ -65,7 +65,7 @@ export default function Home() {
 
           {/* Card 2 */}
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
+            <div className="w-12 h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
               📝
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Practice Quizzes</h3>
@@ -76,7 +76,7 @@ export default function Home() {
 
           {/* Card 3 */}
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
+            <div className="w-12 h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
               👥
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Study Groups</h3>
@@ -89,14 +89,14 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-indigo-600 text-white my-16 max-w-6xl mx-auto rounded-3xl p-12 text-center shadow-xl">
+      <section className="bg-slate-600 text-white my-16 max-w-6xl mx-auto rounded-3xl p-12 text-center shadow-xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to boost your grades?</h2>
-        <p className="text-indigo-100 max-w-lg mx-auto mb-8">
+        <p className="text-slate-100 max-w-lg mx-auto mb-8">
           Join thousands of students who study smarter, not harder. Free forever for individuals.
         </p>
         <button 
           onClick={openSignUp}
-          className="bg-white text-indigo-600 font-bold px-8 py-3 rounded-xl hover:bg-slate-100 transition-colors shadow-md"
+          className="bg-white text-slate-600 font-bold px-8 py-3 rounded-xl hover:bg-slate-100 transition-colors shadow-md"
         >
           Create Free Account
         </button>
@@ -138,7 +138,7 @@ export default function Home() {
                 onClick={() => setAuthMethod('email')}
                 className={`flex-1 pb-3 text-sm font-semibold transition-colors border-b-2 ${
                   authMethod === 'email'
-                    ? 'border-indigo-600 text-indigo-600'
+                    ? 'border-slate-600 text-slate-600'
                     : 'border-transparent text-slate-400 hover:text-slate-600'
                 }`}
               >
@@ -148,7 +148,7 @@ export default function Home() {
                 onClick={() => setAuthMethod('phone')}
                 className={`flex-1 pb-3 text-sm font-semibold transition-colors border-b-2 ${
                   authMethod === 'phone'
-                    ? 'border-indigo-600 text-indigo-600'
+                    ? 'border-slate-600 text-slate-600'
                     : 'border-transparent text-slate-400 hover:text-slate-600'
                 }`}
               >
@@ -167,7 +167,7 @@ export default function Home() {
                   <input
                     type="text"
                     placeholder="Alex Morgan"
-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
                     required
                   />
                 </div>
@@ -182,7 +182,7 @@ export default function Home() {
                   <input
                     type="email"
                     placeholder="student@university.edu"
-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
                     required
                   />
                 </div>
@@ -194,7 +194,7 @@ export default function Home() {
                   <input
                     type="tel"
                     placeholder="+1 (555) 000-0000"
-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
                     required
                   />
                 </div>
@@ -208,7 +208,7 @@ export default function Home() {
                 <input
                   type="password"
                   placeholder="••••••••"
-                  className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                  className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
                   required
                 />
               </div>
@@ -217,17 +217,17 @@ export default function Home() {
               {modalMode === 'login' && (
                 <div className="flex justify-between items-center text-xs">
                   <label className="flex items-center text-slate-600 cursor-pointer">
-                    <input type="checkbox" className="mr-2 rounded border-slate-300 text-indigo-600 focus:ring-indigo-600" />
+                    <input type="checkbox" className="mr-2 rounded border-slate-300 text-slate-600 focus:ring-slate-600" />
                     Remember me
                   </label>
-                  <a href="#" className="text-indigo-600 hover:underline">Forgot password?</a>
+                  <a href="#" className="text-slate-600 hover:underline">Forgot password?</a>
                 </div>
               )}
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg transition-colors mt-2"
+                className="w-full bg-slate-600 hover:bg-slate-700 text-white font-medium py-2.5 rounded-lg transition-colors mt-2"
               >
                 {modalMode === 'signup' ? 'Create Account' : 'Sign In'}
               </button>
@@ -240,7 +240,7 @@ export default function Home() {
                   Already have an account?{' '}
                   <button 
                     onClick={() => setModalMode('login')}
-                    className="text-indigo-600 font-semibold hover:underline bg-transparent border-0 cursor-pointer p-0"
+                    className="text-slate-600 font-semibold hover:underline bg-transparent border-0 cursor-pointer p-0"
                   >
                     Log in
                   </button>
@@ -250,7 +250,7 @@ export default function Home() {
                   Don't have an account?{' '}
                   <button 
                     onClick={() => setModalMode('signup')}
-                    className="text-indigo-600 font-semibold hover:underline bg-transparent border-0 cursor-pointer p-0"
+                    className="text-slate-600 font-semibold hover:underline bg-transparent border-0 cursor-pointer p-0"
                   >
                     Sign up free
                   </button>

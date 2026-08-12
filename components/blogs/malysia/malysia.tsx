@@ -1,36 +1,30 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 import { 
   CheckCircle2, 
   ChevronRight, 
-  PhoneCall, 
-  FileText, 
-  GraduationCap, 
-  HelpCircle, 
-  Calendar 
+  PhoneCall 
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How to Apply for Malysia Study Visa in 2026 from Pakistan',
-  description: 'Complete step-by-step guide on Malysia study visa requirements, fees, process, and timeline for Pakistani students.',
+  title: 'How to Apply for Malaysia Study Visa in 2026 from Pakistan',
+  description: 'Complete step-by-step guide on Malaysia study visa requirements, fees, process, and timeline for Pakistani students.',
 };
 
-export default function Malysia() {
+export default function MalaysiaStudyVisaGuide() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Top Banner / Header */}
-      <header className="bg-indigo-950 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <header className="bg-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-amber-400 text-indigo-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+          <span className="inline-block bg-red-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
             Guide 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            How to Apply for a Malysia Study Visa in 2026 from Pakistan
+            How to Apply for a Malaysia Study Visa in 2026 from Pakistan
           </h1>
           <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-            A comprehensive step-by-step roadmap covering required documents, fees, processing timelines, and residence permit procedures.
+            A comprehensive step-by-step roadmap covering required documents, fees, EMGS processing timelines, and eVAL procedures.
           </p>
         </div>
       </header>
@@ -39,109 +33,111 @@ export default function Malysia() {
         {/* Intro Section */}
         <section className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
           <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-            Malysia is becoming a popular choice for Pakistani students who want a high-quality international education in a safe, modern, and student-friendly environment. Known for its innovative teaching style and globally recognised universities, Malysia offers a wide range of English-taught programs, free PhD study, and the chance to stay for up to 12 months after graduation to look for work.
+            Malaysia is a top destination for Pakistani students seeking affordable, world-class education in a safe and multicultural environment. Home to renowned public institutions and branch campuses of top UK and Australian universities, Malaysia offers top-tier English-taught degree programs with lower tuition and living costs.
           </p>
 
-          <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h4 className="font-semibold text-amber-900 text-sm sm:text-base">One point to understand from the start:</h4>
-            <p className="text-amber-800 text-sm mt-1">
-              Malysia does not issue a separate &ldquo;study visa&rdquo; for longer courses. For studies of more than three months, Pakistani students apply online to the <strong className="font-semibold text-amber-950">Swedish Migration Agency (Migrationsverket)</strong> for a residence permit for studies, after being admitted to a Swedish university.
+          <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+            <h4 className="font-semibold text-red-900 text-sm sm:text-base">Key process to understand:</h4>
+            <p className="text-red-800 text-sm mt-1">
+              Pakistani students must first obtain a Visa Approval Letter (<strong className="font-semibold text-red-950">eVAL</strong>) online through <strong className="font-semibold text-red-950">Education Malaysia Global Services (EMGS)</strong> before applying for a Single Entry Visa (SEV) to enter Malaysia.
             </p>
           </div>
 
           {/* Table of Contents */}
           <div className="mt-8 bg-slate-50 p-5 rounded-xl border border-slate-200">
             <h3 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">In this guide:</h3>
-            <ol className="space-y-2 text-sm sm:text-base font-medium text-indigo-700">
-              <li><a href="#requirements" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 1. Requirements for Pakistani Students</a></li>
-              <li><a href="#steps" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 2. Step-by-Step Application Process</a></li>
-              <li><a href="#fees" className="hover:underline flex items-center gap-2"><ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time</a></li>
+            <ol className="space-y-2 text-sm sm:text-base font-medium text-slate-700">
+              <li>
+                <Link href="#requirements" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 1. Requirements for Pakistani Students
+                </Link>
+              </li>
+              <li>
+                <Link href="#steps" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 2. Step-by-Step Application Process
+                </Link>
+              </li>
+              <li>
+                <Link href="#fees" className="hover:underline flex items-center gap-2">
+                  <ChevronRight size={16} /> 3. Visa Fee &amp; Processing Time
+                </Link>
+              </li>
             </ol>
           </div>
         </section>
 
         {/* Section 1: Requirements */}
-        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="requirements" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             Requirements for Pakistani Students
           </h2>
-          <p className="text-slate-600 mb-6">To apply for a Swedish study visa, Pakistani students need the following documents:</p>
+          <p className="text-slate-600 mb-6">To apply for a Malaysian student pass via EMGS, you will need the following documents:</p>
 
           <ul className="space-y-4">
             <RequirementItem title="Valid Passport">
-              Your passport should remain valid throughout your intended stay in Malysia. You cannot be granted a permit for longer than your passport is valid.
+              Your passport must be valid for at least 18 months from the date of application and have multiple blank pages.
             </RequirementItem>
-            <RequirementItem title="University Admission Letter">
-              Official admission confirmation from a recognised Swedish university. You count as finally admitted only once any tuition fee has been paid.
+            <RequirementItem title="University Offer Letter">
+              An official letter of acceptance from a recognized Malaysian higher education institution or university.
             </RequirementItem>
-            <RequirementItem title="Application Through universityadmissions.se">
-              Programme applications go through the official national portal universityadmissions.se (the Swedish-language version is antagning.se), run by the Swedish Council for Higher Education. A <strong className="font-semibold text-slate-800">non-EU application fee of SEK 900</strong> applies, and you can choose up to four programmes per round.
+            <RequirementItem title="EMGS Application via Website">
+              Applications for Student Visa approval are submitted directly through the official <strong className="font-semibold text-slate-800">EMGS Portal (educationmalaysia.gov.my)</strong> or through your university.
             </RequirementItem>
-            <RequirementItem title="Proof of Funds">
-              Financial evidence showing you can cover tuition fees and living expenses in Malysia. <em>Note: the bank statement must be issued no more than four months before your permit start date.</em>
+            <RequirementItem title="Academic Credentials">
+              Attested Matric, Intermediate, Bachelor&apos;s degree certificates and transcripts (attested by IBCC/HEC and MOFA Pakistan).
             </RequirementItem>
-            <RequirementItem title="Academic Documents">
-              Matric, Intermediate, Bachelor&apos;s degree, transcripts, and other supporting certificates. All documents must be in Swedish or English; if translated, include a certified translation together with a copy of the original.
+            <RequirementItem title="Proof of Financial Funds">
+              Bank statement showing sufficient balance to cover tuition and living costs in Malaysia (typically around MYR 15,000–20,000 equivalent).
             </RequirementItem>
-            <RequirementItem title="English Language Requirement">
-              IELTS, TOEFL, or equivalent proof of English proficiency as required by the university, commonly around <strong className="font-semibold text-slate-800">IELTS 6.0 to 6.5</strong>, TOEFL iBT 90 to 100, or PTE 62 and above.
+            <RequirementItem title="Medical Health Declaration">
+              Pre-arrival health examination form completed at an accredited medical panel in Pakistan, along with required vaccination records.
             </RequirementItem>
-            <RequirementItem title="Statement of Purpose (SOP)">
-              An SOP explaining your academic background, study goals, and plans. Master&apos;s applications often also ask for two letters of recommendation.
+            <RequirementItem title="Passport Size Photographs">
+              Passport-sized photos with a white background adhering strictly to EMGS photo guidelines.
             </RequirementItem>
-            <RequirementItem title="Health Insurance">
-              If your programme lasts less than <strong className="font-semibold text-slate-800">one year</strong>, you need comprehensive health insurance covering medical care, hospitalisation, emergency dental care, and medical repatriation. If your studies last <strong className="font-semibold text-slate-800">one year or more</strong>, you register in the Swedish population register, which gives you access to healthcare.
-            </RequirementItem>
-            <RequirementItem title="Accommodation Details">
-              Proof of housing arrangements in Malysia. Student housing is limited in cities like Stockholm, Gothenburg, and Lund, so arrange a place as early as you can.
-            </RequirementItem>
-            <RequirementItem title="Residence Permit Documents">
-              Completed online residence permit application through the <strong className="font-semibold text-slate-800">Migrationsverket e-service</strong>, with passport-size photographs. Your fingerprints and photo are taken later when you present your passport.
+            <RequirementItem title="English Proficiency Proof">
+              IELTS (5.0 to 6.0 minimum depending on course level), TOEFL, or equivalent recognized test scores.
             </RequirementItem>
           </ul>
         </section>
 
         {/* Section 2: Step-by-step Process */}
-        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
+        <section id="steps" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
             Step-by-Step Application Process
           </h2>
 
           <div className="space-y-6">
-            <StepCard number="1" title="Choose Your Program">
-              Research Swedish universities and select a degree program that matches your academic interests. The <strong className="font-semibold text-slate-800">main intake is autumn</strong>, with applications usually open from <strong className="font-semibold text-slate-800">mid-October to mid-January</strong> deadline.
+            <StepCard number="1" title="Choose Course & Get Offer Letter">
+              Apply to your chosen Malaysian university. Once accepted, you will receive an official Offer Letter.
             </StepCard>
 
-            <StepCard number="2" title="Apply through admissions.se">
-              Submit your university applications through the official national portal universityadmissions.se. You can apply to up to <strong className="font-semibold text-slate-800">four programmes in a round</strong>, and a non-EU application fee of <strong className="font-semibold text-slate-800">SEK 900</strong> applies.
+            <StepCard number="2" title="Submit EMGS Visa Application">
+              Submit your document set and visa fee online through the EMGS portal (either directly or via your university&apos;s international office).
             </StepCard>
 
-            <StepCard number="3" title="Receive Admission Offer">
-              Once accepted, you&apos;ll receive your admission confirmation from the university.
+            <StepCard number="3" title="Pre-Arrival Medical Screening">
+              Complete the required medical health screening at an approved panel clinic in Pakistan and upload the report to EMGS.
             </StepCard>
 
-            <StepCard number="4" title="Apply for Scholarships">
-              Look for scholarships from your university and from the Swedish Institute. Coverage ranges from partial to full tuition, and some scholarships also support living costs.
+            <StepCard number="4" title="Receive Electronic Visa Approval Letter (eVAL)">
+              Once EMGS and Malaysian Immigration review and approve your application (EMGS status reaches 35%–70%), your eVAL will be issued.
             </StepCard>
 
-            <StepCard number="5" title="Arrange Financial Documents">
-              Prepare proof of funds, tuition payment receipts, and sponsorship documents if required. Make sure your bank statement is issued no more than four months before your permit start date.
+            <StepCard number="5" title="Apply for Single Entry Visa (SEV)">
+              Apply for a Single Entry Visa (SEV) online (eVisa) or at the Malaysian High Commission / Embassy in Islamabad / Karachi using your eVAL.
             </StepCard>
 
-            <StepCard number="6" title="Apply for a Residence Permit">
-              Apply online through the Swedish Migration Agency (<strong className="font-semibold text-slate-800">Migrationsverket</strong>) e-service after you are admitted and have paid any tuition. You pay the <strong className="font-semibold text-slate-800">SEK 1,500 fee by card</strong> and state which Swedish embassy you will visit.
-            </StepCard>
-
-            <StepCard number="7" title="Receive Approval & Travel">
-              Once approved, prepare for your journey to Malysia. If your studies last a year or more, register in the Swedish population register after arrival to access healthcare.
+            <StepCard number="6" title="Travel to Malaysia & Post-Arrival Medical Check">
+              Fly to Malaysia, undergo a mandatory post-arrival medical checkup within 7 days, and complete registration at your university to receive your Student Pass sticker / i-Kad.
             </StepCard>
           </div>
         </section>
 
         {/* Section 3: Fees & Table */}
-        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-          <h2 className="text-2xl sm:text-3xl font-bold text-indigo-950 mb-6 pb-2 border-b border-slate-200">
-            Malysia Study Visa Fee &amp; Processing Time
+        <section id="fees" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 scroll-mt-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 mb-6 pb-2 border-b border-slate-200">
+            Malaysia Study Visa Fee &amp; Processing Time
           </h2>
 
           <div className="overflow-x-auto">
@@ -154,27 +150,27 @@ export default function Malysia() {
               </thead>
               <tbody className="divide-y divide-slate-200 text-sm sm:text-base text-slate-700">
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Visa Fee</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">EMGS Processing Fee</td>
                   <td className="p-4">
-                    There is no separate study visa fee. The residence permit for studies application fee is <strong className="font-semibold text-slate-900">SEK 1,500 for adults</strong> (SEK 750 for children under 18), paid by card in the online application. A separate university application fee of SEK 900 is paid at universityadmissions.se.
+                    The total EMGS fee ranges approximately from <strong className="font-semibold text-slate-900">MYR 2,000 to MYR 3,000</strong> (varies depending on institution and insurance package), covering application processing, medical insurance, and student pass fees.
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Processing Time</td>
                   <td className="p-4">
-                    The Migration Agency does not give a fixed time, but reports that about 75 percent of recent cases were decided within <strong className="font-semibold text-slate-900">2 months</strong>. Apply as soon as you are admitted and have paid tuition.
+                    eVAL approval usually takes between <strong className="font-semibold text-slate-900">14 to 21 working days</strong> once complete documents are submitted to EMGS.
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Fund Requirement</td>
+                  <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Living Cost Requirement</td>
                   <td className="p-4">
-                    The maintenance requirement is <strong className="font-semibold text-slate-900">SEK 10,656 per month for 2026</strong> (set by the Migration Agency and revised yearly), to cover living costs for each month of your studies.
+                    Average living expenses in Malaysia range from <strong className="font-semibold text-slate-900">MYR 1,500 to MYR 2,500 per month</strong> (approx. USD 350 to USD 600) covering accommodation, food, and transport.
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Dependents</td>
                   <td className="p-4">
-                    Allowed. Family members can apply at the same time, showing additional maintenance of SEK 4,440 per month for a spouse and SEK 2,664 per month for each child.
+                    Dependents (spouse &amp; children) are generally allowed for postgraduate students (Master&apos;s by Research &amp; PhD programs) through Dependent Passes.
                   </td>
                 </tr>
               </tbody>
@@ -183,33 +179,31 @@ export default function Malysia() {
         </section>
 
         {/* CTA Contact Form */}
-        <section className="bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-indigo-800">
+        <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your Malysia Study Visa?</h2>
-            <p className="text-indigo-200 text-sm sm:text-base">
-              Get expert guidance on scholarship applications, financial documentation, and residence permit procedures.
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need Help With Your Malaysia Study Visa?</h2>
+            <p className="text-slate-200 text-sm sm:text-base">
+              Get expert guidance on university applications, EMGS submission, eVAL processing, and scholarship options.
             </p>
           </div>
 
           <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
-            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-indigo-300 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm" required />
+            <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
+            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
+            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-slate-300 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" required />
             
-            <select className="w-full px-4 py-3 rounded-xl bg-indigo-900 text-indigo-100 border border-indigo-700 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
-              <option value="">Preferred Study Level</option>
+            <select className="w-full px-4 py-3 rounded-xl bg-slate-900 text-slate-100 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm" defaultValue="">
+              <option value="" disabled>Preferred Study Level</option>
               <option value="bachelors">Bachelor&apos;s Degree</option>
               <option value="masters">Master&apos;s Degree</option>
               <option value="phd">PhD / Doctorate</option>
             </select>
 
-            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
+            <button type="submit" className="sm:col-span-2 w-full py-3.5 bg-red-400 hover:bg-red-300 text-slate-950 font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
               <PhoneCall size={18} /> Get Free Consultation
             </button>
           </form>
         </section>
-
-   
       </div>
     </main>
   );
@@ -219,7 +213,7 @@ export default function Malysia() {
 function RequirementItem({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
-      <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+      <CheckCircle2 className="w-5 h-5 text-slate-600 shrink-0 mt-0.5" />
       <div className="text-sm sm:text-base text-slate-700">
         <strong className="font-semibold text-slate-900">{title}:</strong> {children}
       </div>
@@ -230,7 +224,7 @@ function RequirementItem({ title, children }: { title: string; children: React.R
 function StepCard({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50">
-      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-amber-400 font-bold text-sm shrink-0">
+      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-red-400 font-bold text-sm shrink-0">
         {number}
       </span>
       <div>

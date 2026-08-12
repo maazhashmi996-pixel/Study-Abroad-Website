@@ -9,7 +9,7 @@ interface ProcessStep {
   desc: string;
 }
 
-export default function Yellow() {
+export default function red() {
   const processSteps: ProcessStep[] = [
     {
       image: "/images/steps/resume.png",

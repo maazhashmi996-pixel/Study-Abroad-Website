@@ -5,9 +5,9 @@ import {
 
 } from "lucide-react";
 
-function Yellow() {
+function red() {
 
-     // Process Steps (Yellow Section)
+     // Process Steps (red Section)
   const processSteps = [
     {
       title: "University reviews your file",
@@ -37,7 +37,7 @@ function Yellow() {
   return (
     <>
    
-      {/* 3. HOW THIS STEP WORKS (YELLOW BACKGROUND) */}
+      {/* 3. HOW THIS STEP WORKS (red BACKGROUND) */}
       <section className="bg-[#ECA82C] text-[#3B1E54] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-2">
@@ -85,4 +85,4 @@ function Yellow() {
   )
 }
 
-export default Yellow
+export default red

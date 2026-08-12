@@ -118,7 +118,7 @@ export default function LanguageTestPreparationPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
+    <div className="min-h-screen  text-slate-800 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-900">
       <div className="max-w-7xl mx-auto">
         
         {/* Main Section Grid Layout */}
@@ -136,7 +136,7 @@ export default function LanguageTestPreparationPage() {
                     href={item.href}
                     className={`flex items-center space-x-2.5 sm:space-x-3 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 text-left whitespace-nowrap shrink-0 lg:shrink lg:w-full cursor-pointer border ${
                       isActive
-                        ? "bg-[#0b5cff] text-white border-blue-400/30 shadow-lg"
+                        ? "bg-[#0b5cff] text-slate-900 border-blue-400/30 shadow-lg"
                         : "bg-slate-950/60 text-slate-300 border-slate-800/80 hover:bg-slate-800 hover:text-white"
                     }`}
                   >
@@ -159,7 +159,7 @@ export default function LanguageTestPreparationPage() {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
                 Language Test Preparation
               </h1>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed pt-1">
+              <p className="text-slate-700 text-xs sm:text-sm leading-relaxed pt-1">
                 Whether you are planning to study, work, or live abroad, mastering the local language can significantly enhance your experience and opportunities.
               </p>
             </div>
@@ -170,7 +170,7 @@ export default function LanguageTestPreparationPage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
                 We Are Here to Help You With
               </h2>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
                 Take the first step to your career with D. Education Zone. Looking for solutions? We have got everything covered for you from visa services to career development.
               </p>
 
@@ -192,7 +192,7 @@ export default function LanguageTestPreparationPage() {
                 <h2 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
                   <span className="text-[#0b5cff]">#</span> Language Courses
                 </h2>
-                <p className="text-slate-400 text-xs sm:text-sm mt-1">
+                <p className="text-slate-700 text-xs sm:text-sm mt-1">
                   We offer comprehensive language courses in Pakistan to help you master new languages and achieve your goals. Our offerings include:
                 </p>
               </div>
@@ -327,7 +327,7 @@ export default function LanguageTestPreparationPage() {
                 <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
                   <span className="text-[#0b5cff]">#</span> Test Preparation
                 </h2>
-                <p className="text-slate-400">
+                <p className="text-slate-700">
                   Get structured coaching for language tests like IELTS and PTE with D. Education Zone. Our trainers focus on all test modules, share proven strategies, and provide regular mock tests so you understand the format, manage time better, and aim for your target score with confidence.
                 </p>
               </div>
@@ -336,7 +336,7 @@ export default function LanguageTestPreparationPage() {
                 <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
                   <span className="text-[#0b5cff]">#</span> Conversation Practices
                 </h2>
-                <p className="text-slate-400">
+                <p className="text-slate-700">
                   Build real speaking confidence with guided conversation practice sessions. We help you improve pronunciation, fluency, and everyday vocabulary through one-to-one and group speaking activities, so you feel prepared for the speaking section of exams and real-life communication abroad.
                 </p>
               </div>
@@ -379,7 +379,7 @@ export default function LanguageTestPreparationPage() {
             </div>
 
             {/* Footer Text */}
-            <div className="space-y-2 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-slate-900 pt-6">
+            <div className="space-y-2 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-900 pt-6">
               <h3 className="font-bold text-white text-base">
                 Start Your Language Learning Journey Today!
               </h3>

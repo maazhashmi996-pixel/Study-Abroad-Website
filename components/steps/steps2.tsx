@@ -57,20 +57,20 @@ export default function Steps() {
   ];
 
   return (
-    <div className="w-full font-sans text-white bg-black">
+    <div className="w-full font-sans text-white ">
       
       {/* ================= SECTION 1: DARK SLATE SECTION (THE 8 STEPS) ================= */}
-      <section className="bg-slate-950 text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
+      <section className=" text-slate-800 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
           
           <div className="text-center space-y-2">
-            <div className="inline-flex items-center gap-2 bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-800">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-800">
               <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
                 Step-By-Step Process
               </span>
             </div>
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-">
               The 8 Study Abroad Steps
             </h2>
           </div>
@@ -82,7 +82,7 @@ export default function Steps() {
                 key={index}
                 className="bg-slate-900 rounded-2xl p-5 sm:p-6 shadow-xl border border-slate-800 hover:border-[#0b5cff]/50 transition-all duration-200 flex items-start space-x-4 relative overflow-hidden group"
               >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#0b5cff] text-white flex items-center justify-center font-black text-sm sm:text-base shrink-0 shadow-lg border border-blue-400/20">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#0b5cff] text-slate-800 flex items-center justify-center font-black text-sm sm:text-base shrink-0 shadow-lg border border-blue-400/20">
                   {index + 1}
                 </div>
                 <div className="space-y-1">
@@ -101,7 +101,7 @@ export default function Steps() {
           <div className="text-center pt-2">
             <button 
               type="button"
-              className="bg-[#0b5cff] hover:bg-blue-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl border border-blue-400/20 shadow-lg active:scale-95 cursor-pointer focus:outline-none transition-all duration-200"
+              className="bg-[#0b5cff] hover:bg-blue-600 text-slate-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl border border-blue-400/20 shadow-lg active:scale-95 cursor-pointer focus:outline-none transition-all duration-200"
             >
               Talk to a Study Abroad Advisor
             </button>
@@ -111,7 +111,7 @@ export default function Steps() {
       </section>
 
       {/* ================= SECTION 2: BLACK SECTION (HOW WE FIT IN) ================= */}
-      <section className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
+      <section className=" text-slate-800 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
         <div className="max-w-5xl mx-auto text-center space-y-8 sm:space-y-10">
           
           <div className="space-y-3 max-w-2xl mx-auto px-2">
@@ -121,7 +121,7 @@ export default function Steps() {
                 Our Expertise
               </span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-800">
               How D. Education Zone fits into this journey
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
@@ -152,7 +152,7 @@ export default function Steps() {
             <div>
               <button 
                 type="button"
-                className="bg-[#0b5cff] hover:bg-blue-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl transition-all duration-200 shadow-lg border border-blue-400/20 active:scale-95 cursor-pointer focus:outline-none"
+                className="bg-[#0b5cff] hover:bg-blue-600 text-slate-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl transition-all duration-200 shadow-lg border border-blue-400/20 active:scale-95 cursor-pointer focus:outline-none"
               >
                 Review My Study Visa Case
               </button>

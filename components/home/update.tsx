@@ -18,7 +18,7 @@ export default function Update() {
       title: "How to Apply for a Hungary Study Visa in 2026 from Pakistan",
       description:
         "Hungary has become a popular study destination for international students offering high quality education.",
-      link: "#",
+      link: "/Blog/hungary",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function Update() {
       title: "How to Apply for Netherlands Study Visa in 2026 from Pakistan",
       description:
         "The Netherlands is becoming a preferred study destination with top ranked universities.",
-      link: "#",
+      link: "/Blog/neatherland",
     },
     {
       id: 3,
@@ -36,16 +36,16 @@ export default function Update() {
       title: "How to Apply for Turkey Study Visa in 2026 from Pakistan",
       description:
         "Turkey offers affordable tuition fees and rich culture for Pakistani students.",
-      link: "#",
+      link: "/Blog/turkey",
     },
     {
       id: 4,
-      image: "/images/home/france.webp",
+      image: "/images/blog/france.webp",
       date: "June 25, 2026",
       title: "Study in France: Complete Visa Guide 2026",
       description:
         "Everything you need to know about CAS letter, bank statement, and visa interview process.",
-      link: "#",
+      link: "/Blog/france",
     },
   ];
 
@@ -167,7 +167,7 @@ export default function Update() {
               {/* Button */}
 
               <Link
-                href="/careers"
+                href="/Blog"
                 className="group/button mt-6 inline-flex items-center gap-2 rounded-xl bg-[#1a233d] px-6 py-3 text-xs font-bold text-white transition-all duration-300 hover:bg-[#0b5cff]"
               >
                 Read More
@@ -287,10 +287,11 @@ export default function Update() {
 
                         {/* Read More */}
 
-                        <div className="mt-auto flex items-center gap-1 pt-2 text-[10px] font-black text-[#0b5cff]">
+                        <Link 
+                        href={item.link} className="mt-auto flex items-center gap-1 pt-2 text-[10px] font-black text-[#0b5cff]">
                           Read More
                           <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-                        </div>
+                        </Link>
 
                       </div>
 
