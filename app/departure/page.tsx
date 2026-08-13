@@ -1,11 +1,12 @@
-"use client"
-import AdmissionGuidance from '@/components/home/guidence'
+"use client";
+
+import DeparturePage from '@/components/steps/start/departure'
 import React from 'react'
 
 function page() {
   return (
     <div>
-      <AdmissionGuidance/>
+      <DeparturePage/>
     </div>
   )
 }

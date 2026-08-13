@@ -45,7 +45,7 @@ export default function Navbar() {
           <ul className="flex items-center gap-5 text-xs font-semibold text-slate-700 px-4">
             <li>
               <Link
-                href="/Home"
+                href="/"
                 className={`transition-colors duration-200 ${
                   isActive("/Home")
                     ? "text-[#0b5cff]"
@@ -272,7 +272,7 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-t border-slate-100 shadow-xl px-6 py-5 transition-all">
           <ul className="flex flex-col gap-3 text-sm font-medium text-slate-700">
             <li>
-              <Link href="/Home" onClick={closeAllMenus}>
+              <Link href="/" onClick={closeAllMenus}>
                 Home
               </Link>
             </li>

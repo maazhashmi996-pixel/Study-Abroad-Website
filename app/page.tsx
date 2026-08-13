@@ -1,37 +1,31 @@
-"use client"
+"use client";
 
-import Admission from "@/components/study-destination/admission";
-import Courses from "@/components/study-destination/courses";
-import Denmark from "@/components/study-destination/denmark";
-import Expert from "@/components/study-destination/expert";
-import Hero from "@/components/study-destination/hero";
-import Post from "@/components/study-destination/post";
-import Talk from "@/components/study-destination/talk";
-import Visa from "@/components/study-destination/visa";
-import Content from "@/components/study-destination/content";
-import Cost from "@/components/study-destination/cost";
-import Internship from "@/components/study-destination/internship";
-import Application from "@/components/study-destination/application";
-import Get from "@/components/study-destination/get";
+import Adventages from '@/components/home/adventages'
+import Blogs from '@/components/home/blogs'
+import Choose from '@/components/home/choose'
+import FAQPage from '@/components/home/faqPage';
+import HeroSection from '@/components/home/hero'
+import Meet from '@/components/home/meet';
+import Popular from '@/components/home/popular'
+import Share from '@/components/home/share'
+import Speak from '@/components/home/speak'
+import Update from '@/components/home/update'
 
-
-
-export default function StudyDestinations() {
+function page() {
   return (
-    <main>
-<Hero/>
-           <Denmark/>
-           <Content/>
-           <Internship/>
-           <Admission/>
-          <Get/>
-           <Application/>
-           <Cost/>
-           <Courses/>
-           <Visa/>
-           <Post/>
-           <Expert/>
-           <Talk/>
-    </main>
-  );    
+    <div>
+      <HeroSection/>
+      <Blogs/>
+      <Share/>
+      <Adventages/>
+      <Choose/>
+      <FAQPage/>
+      <Popular/>
+      <Meet/>
+      <Speak/>
+   <Update/>
+</div>
+  )
 }
+
+export default page

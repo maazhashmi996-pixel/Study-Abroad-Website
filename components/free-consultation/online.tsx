@@ -59,7 +59,7 @@ export default function OnlineConsultation() {
           <div className="relative flex items-center justify-center p-6 bg-slate-100 border-b-8 border-[#0b5cff] rounded-none shadow-sm">
             <div className="w-full max-w-lg aspect-square relative flex items-center justify-center">
               <Image 
-                src="/images/steps/consultation.webp" 
+                src="/images/home/online.jpg" 
                 alt="Online Consultation" 
                 width={500}
                 height={500}
