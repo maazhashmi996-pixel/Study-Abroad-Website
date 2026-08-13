@@ -79,11 +79,11 @@ const blogs: Blog[] = [
   },
   {
     id: 8,
-    title: "Understanding Denmark Higher Education Requirements",
-    desc: "Higher education standards, tuition fees, residence permit applications, and post-graduation stay options in Denmark.",
+    title: "Understanding Hungary Higher Education Requirements",
+    desc: "Higher education standards, tuition fees, residence permit applications, and post-graduation stay options in Hungary.",
     image: "/images/blog/bunking-myths.png",
-    tags: ["Denmark", "Europe"],
-    link: "/denmark",
+    tags: ["Hungary", "Europe"],
+    link: "/Hungary",
   },
   {
     id: 9,

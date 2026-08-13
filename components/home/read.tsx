@@ -46,7 +46,7 @@ export default function ReadPage() {
 
             {/* Apply Now Button */}
             <Link
-            href="/dedicated-jobs"
+            href="/login"
               className="bg-blue-600 hover:bg-red-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow transition inline-block text-center"
             >
               Apply Now

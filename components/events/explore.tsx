@@ -22,7 +22,7 @@ export default function Explore() {
           Explore Our Upcoming Events: <span className="text-[#0b5cff]">Your Guide to What's Next</span>
         </h1>
         <Link 
-          href="/Event/view"
+          href="/view-all-events"
           className="bg-[#0b5cff] hover:bg-blue-600 text-white font-bold px-8 py-3 rounded-xl text-xs sm:text-sm transition-all shadow-md hover:shadow-lg inline-block mb-10 uppercase tracking-wider border border-blue-400/20"
         >
           View All Events
@@ -140,7 +140,7 @@ export default function Explore() {
             {/* CTA Button */}
             <div className="mt-8 text-left">
               <Link 
-                href="/get" 
+                href="/form" 
                 className="bg-[#0b5cff] hover:bg-blue-600 text-white font-bold text-xs sm:text-sm px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95 inline-block uppercase tracking-wider border border-blue-400/20"
               >
                 Reserve Your Seat Now

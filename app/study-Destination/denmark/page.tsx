@@ -1,16 +1,18 @@
-import Admission from "@/components/study-destination/admission";
-import Courses from "@/components/study-destination/courses";
-import Denmark from "@/components/study-destination/denmark";
-import Expert from "@/components/study-destination/expert";
-import Hero from "@/components/study-destination/hero";
-import Post from "@/components/study-destination/post";
-import Talk from "@/components/study-destination/talk";
-import Visa from "@/components/study-destination/visa";
-import Content from "@/components/study-destination/content";
-import Cost from "@/components/study-destination/cost";
-import Internship from "@/components/study-destination/internship";
-import Application from "@/components/study-destination/application";
-import Get from "@/components/study-destination/get";
+"use client";
+
+import Admission from "@/components/study-destination/denmark/admission";
+import Courses from "@/components/study-destination/denmark/courses";
+import Expert from "@/components/study-destination/denmark/expert";
+import Hero from "@/components/study-destination/denmark/hero";
+import Post from "@/components/study-destination/denmark/post";
+import Talk from "@/components/study-destination/denmark/talk";
+import Visa from "@/components/study-destination/denmark/visa";
+import Content from "@/components/study-destination/denmark/content";
+import Cost from "@/components/study-destination/denmark/cost";
+import Internship from "@/components/study-destination/denmark/internship";
+import Application from "@/components/study-destination/denmark/application";
+import Get from "@/components/study-destination/denmark/get";
+import Denmark from "@/components/study-destination/denmark/denmark";
 
 
 

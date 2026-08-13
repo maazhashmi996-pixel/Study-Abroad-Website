@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 interface CityItem {
   name: string;
@@ -52,6 +53,14 @@ const cityDataByCountry: Record<string, CityItem[]> = {
 const country = ["Pakistan"];
 
 export default function OfficesHero() {
+
+   const openWhatsApp = (
+    phoneNumber: string = "923452066100",
+    message: string = "Hello! I need some information."
+  ) => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   const [selectedCountry, setSelectedCountry] = useState<string>("Pakistan");
 
   const currentCities = cityDataByCountry[selectedCountry] || [];
@@ -75,6 +84,7 @@ export default function OfficesHero() {
           <div>
             <button 
               type="button"
+               onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
               className="bg-[#0b5cff] hover:bg-white hover:text-slate-800 hover:border-[#0b5cff] text-white text-xs font-bold px-8 py-3.5 rounded-xl tracking-wider uppercase transition-all cursor-pointer shadow-lg active:scale-95 border border-blue-400/20"
             >
               Get In Touch

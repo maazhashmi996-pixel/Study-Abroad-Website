@@ -69,59 +69,46 @@ export default function Navbar() {
             </li>
 
             {/* Services Dropdown */}
-            <li className="relative">
-              <div className="flex items-center gap-1">
-                <Link
-                  href="/services"
-                  className={`transition-colors duration-200 ${
-                    isActive("/services")
-                      ? "text-[#0b5cff]"
-                      : "text-slate-700 hover:text-[#0b5cff]"
+            <li className="relative group">
+              <Link
+                href="/services"
+                className={`flex items-center gap-1 transition-colors duration-200 ${
+                  isActive("/services")
+                    ? "text-[#0b5cff]"
+                    : "text-slate-700 hover:text-[#0b5cff]"
+                }`}
+              >
+                <span>Services</span>
+
+                <IoIosArrowDown
+                  className={`transition-transform duration-200 ${
+                    stepsOpen ? "rotate-180" : ""
                   }`}
+                />
+              </Link>
+
+              <div className="absolute left-0 top-full mt-3 w-60 rounded-xl bg-white border border-slate-100 shadow-xl z-[9999] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden p-2 text-xs font-medium text-slate-700">
+                <Link
+                  href="/services/Accommodation"
+                  className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
-                  Services
+                  Accommodation
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => setServicesOpen((prev) => !prev)}
-                  className="p-1 text-slate-600 hover:text-[#2563EB] transition-colors"
-                  aria-label="Toggle Services dropdown"
+
+                <Link
+                  href="/services/study-abroad"
+                  className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
                 >
-                  <IoIosArrowDown
-                    className={`transition-transform duration-200 ${
-                      servicesOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                  Study Abroad
+                </Link>
+
+                <Link
+                  href="/services/languages"
+                  className="block px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0b5cff] transition-colors"
+                >
+                  Languages
+                </Link>
               </div>
-
-              {servicesOpen && (
-                <div className="absolute left-0 top-full mt-3 w-52 rounded-xl bg-white border border-slate-200 shadow-xl  p-2 flex flex-col gap-1 text-xs font-medium text-slate-700  opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible overflow-hidden">
-                  <Link
-                    href="/services/Accommodation"
-                    onClick={() => setServicesOpen(false)}
-                    className="px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-[#2563EB] transition-colors"
-                  >
-                    Accommodation
-                  </Link>
-
-                  <Link
-                    href="/services/study-abroad"
-                    onClick={() => setServicesOpen(false)}
-                    className="px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-[#2563EB] transition-colors"
-                  >
-                    Study Abroad
-                  </Link>
-
-                  <Link
-                    href="/services/languages"
-                    onClick={() => setServicesOpen(false)}
-                    className="px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-[#2563EB] transition-colors"
-                  >
-                    Languages
-                  </Link>
-                </div>
-              )}
             </li>
 
             <li>
