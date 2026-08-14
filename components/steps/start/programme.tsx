@@ -293,7 +293,7 @@ export default function ProgrammePage() {
 
                   <Link
 
-                  href="/Home/free-consultation"
+                  href="/free-consultation"
                     type="button"
                     className="
                       inline-flex

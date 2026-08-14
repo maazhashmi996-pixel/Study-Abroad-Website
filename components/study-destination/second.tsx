@@ -113,11 +113,15 @@ export default function StudySecond() {
       <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* IMAGE PLACEHOLDER 2 */}
         <div className="order-2 lg:order-1 relative h-96 w-full bg-slate-900 border-2 border-dashed border-slate-800 rounded-3xl overflow-hidden flex flex-col items-center justify-center p-6 text-center group">
-          <FaBriefcase className="text-6xl text-slate-800 group-hover:text-[#ef4444] transition-colors mb-3" />
-          <span className="text-slate-500 font-bold text-sm uppercase tracking-wider">
-          <Image src="/images/study-dest/unlock.jpg" alt="Destination Banner" fill className="object-cover" />
-          </span>
-          <span className="text-slate-600 text-xs mt-1">Insert Career & Growth Graphic</span>
+         {/* Add 'relative' and a defined width/height to the parent wrapper */}
+<div className="relative w-full h-64">
+  <Image 
+    src="/images/study-dest/unlock.jpg" 
+    fill 
+    sizes="100vw"
+    alt="Unlock" 
+  />
+</div>
         </div>
 
         <div className="order-1 lg:order-2 space-y-6">

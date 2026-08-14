@@ -4,19 +4,19 @@ import Image from "next/image";
 
 export default function First() {
   return (
-    <section className="w-full  py-6 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
+    <section className="w-full bg-slate-900  py-6 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
       <div className="max-w-7xl mx-auto overflow-hidden rounded-2xl shadow-2xl border border-slate-800 bg-slate-900 p-2 sm:p-3 relative">
         
         {/* Accent Indicator Badge */}
-        <div className="absolute top-5 left-5 z-10 flex items-center gap-2 bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-800">
+        <div className= " bg-slate-900 absolute top-5 left-5 z-10 flex items-center gap-2  backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-800">
           <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
-          <span className="text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
+          <span className=" text-xs font-extrabold uppercase tracking-widest text-[#0b5cff]">
             Language Training
           </span>
         </div>
 
         {/* Responsive Aspect-Ratio Container */}
-        <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-xl overflow-hidden">
+        <div className=" relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-xl overflow-hidden">
           <Image
             src="/images/services/ilanguage.jpg"
             alt="Study Abroad Services"

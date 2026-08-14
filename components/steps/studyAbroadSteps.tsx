@@ -74,7 +74,7 @@ export default function StudyAbroadSteps() {
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md aspect-square bg-slate-900/50 rounded-2xl p-4 border border-slate-800 shadow-2xl">
             <Image
-              src="/images/steps/selection.jpg"
+              src="/images/steps/issteps.jpg"
               alt="Course and Program Selection Illustration"
               fill
               priority
@@ -136,7 +136,7 @@ export default function StudyAbroadSteps() {
           <div className="w-full lg:w-1/3 flex justify-center">
             <div className="relative w-full max-w-[220px] sm:max-w-[260px] aspect-square bg-slate-900/50 rounded-2xl p-3 border border-slate-800 shadow-2xl">
               <Image
-                src="/images/steps/Why-follow.jpg"
+                src="/images/steps/isfollow.jpg"
                 alt="Why follow process steps illustration"
                 fill
                 sizes="(max-width: 1024px) 100vw, 260px"

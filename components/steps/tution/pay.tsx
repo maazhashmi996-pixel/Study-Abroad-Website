@@ -12,6 +12,7 @@ import {
   AlertCircle,
   ArrowRight,
 } from "lucide-react";
+import { FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 
 interface RequirementCardProps {
   title: string;
@@ -280,52 +281,43 @@ export default function PayTuition() {
           {/* =========================================================
               VERIFICATION NOTICE
           ========================================================== */}
-          <div className="mt-10 rounded-2xl border border-blue-100 bg-blue-50/60 p-5 sm:p-6">
+          <div className="mt-10 rounded-2xl border border-slate-500 bg-slate-50/60 p-5 sm:p-6">
 
-            <div className="flex flex-col sm:flex-row items-start gap-4">
+           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        
+        {/* Left Content */}
+        <div className="space-y-4 text-center md:text-left">
+          <div className="inline-flex items-center gap-2 bg-blue-500 px-3 py-1 rounded-full text-xs font-semibold text-slate-600 border border-slate-900">
+            <FaCheckCircle className="text-slate-200" />
+            <span className="text-slate-200" >Secure International Transfers</span>
+          </div>
+          
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-600 tracking-tight">
+            Need verification before transferring funds?
+          </h2>
+          
+          <p className=" text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
+            <strong className="text-slate-900">D.Education Zone</strong> can help verify your offer letter, deposit amount, and official payment channels before you initiate an international transfer.
+          </p>
+        </div>
 
-              {/* Icon */}
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-white border border-blue-100 text-blue-600 shrink-0">
-                <AlertCircle className="w-5 h-5" />
-              </div>
-
-              {/* Text */}
-              <div className="flex-1 space-y-1">
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  Need verification before transferring funds?
-                </h3>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-6">
-                  D.Education Zone can help verify your offer letter, deposit
-                  amount and official payment channels before you initiate an
-                  international transfer.
-                </p>
-              </div>
-
-              {/* CTA */}
-              <button
-                type="button"
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  px-4
-                  py-2.5
-                  rounded-xl
-                  bg-blue-600
-                  text-white
-                  text-xs
-                  sm:text-sm
-                  font-bold
-                  whitespace-nowrap
-                  hover:bg-blue-700
-                  transition-colors
-                "
-              >
-                Get Assistance
-                <ArrowRight className="w-4 h-4" />
-              </button>
+        {/* Right CTA Button */}
+        <div className="shrink-0">
+          <a
+            href="tel:+923000000000" // Apna Contact Number yahan replace karein
+            className="group flex items-center gap-3 bg-blue-500 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <div className="p-2 bg-white/20 rounded-full group-hover:rotate-12 transition-transform">
+              <FaPhoneAlt className="w-5 h-5 text-white" />
             </div>
+            <div className="text-left">
+              <span className="block text-xs text-green-100 uppercase tracking-wider font-semibold">Get Instant Assistance</span>
+              <span className="text-lg leading-none">Call Us Now</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
           </div>
         </section>
 

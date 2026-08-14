@@ -25,6 +25,7 @@ export default function Turkey1() {
           alt="learn"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center "
         />
       </div>
