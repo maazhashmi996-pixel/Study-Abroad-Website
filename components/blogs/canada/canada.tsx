@@ -4,11 +4,7 @@ import {
   CheckCircle2, 
   ChevronRight, 
   PhoneCall, 
-  FileText, 
-  GraduationCap, 
-  HelpCircle, 
-  Calendar,
-  ArrowRight
+
 } from 'lucide-react';
 
 export const metadata = {

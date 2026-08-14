@@ -2,12 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  CheckCircle2, 
-  ChevronRight, 
-  PhoneCall, 
-  FileText, 
-  GraduationCap, 
-  HelpCircle, 
+  
   Calendar 
 } from 'lucide-react'; 
  

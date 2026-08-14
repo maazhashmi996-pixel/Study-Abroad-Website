@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, MapPin, GradCap } from "lucide-react";
 import Link from "next/link";
 
 interface CityItem {
@@ -13,48 +13,37 @@ interface CityItem {
 // City Lists by Country
 const cityDataByCountry: Record<string, CityItem[]> = {
   Pakistan: [
-    { name: "Abbottabad", image: "/images/home/abbottabad.webp" },
-    { name: "Bahawalpur", image: "/images/events/bahawalpur.webp" },
-    { name: "Faisalabad", image: "/images/events/faisalaabad.webp" },
-    { name: "Gujranwala", image: "/images/events/gujranwala.webp" },
-    { name: "Gujrat", image: "/images/events/gujrat.webp" },
-    { name: "Hyderabad", image: "/images/events/hyderabad.webp" },
-    { name: "Islamabad", image: "/images/home/abbottabad.webp" },
-    { name: "Jhelum", image: "/images/home/abbottabad.webp" },
-    { name: "Karachi", image: "/images/home/abbottabad.webp" },
-    { name: "Kharian", image: "/images/home/abbottabad.webp" },
-    { name: "Kotli", image: "/images/home/abbottabad.webp" },
-    { name: "Lahore", image: "/images/home/abbottabad.webp" },
-    { name: "Mardan", image: "/images/steps/mardan.webp" },
-    { name: "Mirpur", image: "/images/steps/mirpur.webp" },
-    { name: "Multan", image: "/images/home/abbottabad.webp" },
-    { name: "Peshawar", image: "/images/home/peshawar.png" },
-    { name: "Rawalpindi", image: "/images/steps/rawalpindi.webp" },
-    { name: "Sahiwal", image: "/images/steps/sahiwal.webp" },
-    { name: "Sargodha", image: "/images/home/abbottabad.webp" },
-    { name: "Sheikhupura", image: "/images/home/abbottabad.webp" },
-    { name: "Sialkot", image: "/images/home/abbottabad.webp" },
+    { name: "Lahore Lums University", image: "/images/offices/lums-uni.jpg" },
+    { name: "Forman Christian Collage ", image: "/images/offices/forman-col.jpg" },
+    { name: "BeaconHouse University", image: "/images/offices/beaconhouse-uni.jpg" },
+    { name: "Government Collage University ", image: "/images/offices/government-col.jpg" },
+    { name: "Hajvery University", image: "/images/offices/hajvery.jpg" },
+    { name: "Information Technology University", image: "/images/offices/it-uni.jpg" },
+    { name: "King Edward University", image: "/images/offices/king-edward.jpg" },
+    { name: "Kinnaired Collage", image: "/images/offices/kinnaired-col.jpg" },
+    { name: "Lahore Collage For Women  University", image: "/images/offices/lahore-col.jpg" },
+    { name: "Lahore University", image: "/images/offices/lahore-uni.jpg" },
+    { name: "University Of Punjab", image: "/images/offices/uni-of-punjab.jpg" },
+    { name: "Lahore Leads University", image: "/images/offices/leads-uni.jpg" },
+    { name: "Lahore Garrision Universty", image: "/images/offices/lgu-uni.jpg" },
+    { name: "Minhaj University", image: "/images/offices/minhaj-uni.jpg" },
+    { name: "Natinal Collage Of Arts", image: "/images/offices/national-col-arts.jpg" },
+    { name: "Lahore University Of Mediacal Sciences", image: "/images/offices/lums-uni.jpg" },
+    { name: "South Asia University", image: "/images/offices/south-uni.jpg" },
+    { name: "Superior University", image: "/images/offices/superior-uni.jpg" },
+    { name: "University Of Engeeniering & Technology", image: "/images/offices/uet-uni.jpg" },
+    { name: "University Of Central Punjab", image: "/images/offices/ucp-uni.jpg" },
+    { name: "University Of Medical & Technology", image: "/images/offices/umt-uni.jpg" },
+    { name: "University Of Education", image: "/images/offices/uni-of-education.jpg" },
+    { name: "Virtual University", image: "/images/offices/virtual-uni.jpg" },
   ],
-  // Australia: [
-  //   { name: "Sydney", image: "/images/home/abbottabad.webp" },
-  //   { name: "Melbourne", image: "/images/home/abbottabad.webp" },
-  //   { name: "Brisbane", image: "/images/home/abbottabad.webp" },
-  // ],
-  // Germany: [
-  //   { name: "Berlin", image: "/images/home/abbottabad.webp" },
-  //   { name: "Frankfurt", image: "/images/home/abbottabad.webp" },
-  // ],
-  // UAE: [
-  //   { name: "Dubai", image: "/images/home/abbottabad.webp" },
-  //   { name: "Abu Dhabi", image: "/images/home/abbottabad.webp" },
-  // ],
 };
 
-const country = ["Pakistan"];
+const country = ["Pakistan", "Punjab", "Lahore"];
 
 export default function OfficesHero() {
 
-   const openWhatsApp = (
+  const openWhatsApp = (
     phoneNumber: string = "923452066100",
     message: string = "Hello! I need some information."
   ) => {
@@ -66,7 +55,7 @@ export default function OfficesHero() {
   const currentCities = cityDataByCountry[selectedCountry] || [];
 
   return (
-    <div className="w-full min-h-screen  text-slate-800 font-sans overflow-hidden">
+    <div className="w-full min-h-screen text-slate-800 font-sans overflow-hidden">
       
       {/* 1. HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -84,7 +73,7 @@ export default function OfficesHero() {
           <div>
             <button 
               type="button"
-               onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
+              onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
               className="bg-[#0b5cff] hover:bg-white hover:text-slate-800 hover:border-[#0b5cff] text-white text-xs font-bold px-8 py-3.5 rounded-xl tracking-wider uppercase transition-all cursor-pointer shadow-lg active:scale-95 border border-blue-400/20"
             >
               Get In Touch
@@ -109,7 +98,7 @@ export default function OfficesHero() {
       </section>
 
       {/* 2. VISIT OFFICES SECTION */}
-      <section className=" py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-900">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-900">
         <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8">
           
           <div className="text-center">
@@ -125,18 +114,18 @@ export default function OfficesHero() {
             
             {/* Country Selector Sidebar */}
             <div className="w-full md:w-56 flex md:flex-col gap-2 overflow-x-auto pb-2 md:pb-0 shrink-0">
-              {country.map((country) => (
+              {country.map((countryName) => (
                 <button
-                  key={country}
+                  key={countryName}
                   type="button"
-                  onClick={() => setSelectedCountry(country)}
+                  onClick={() => setSelectedCountry(countryName)}
                   className={`flex justify-between items-center px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 md:shrink border ${
-                    selectedCountry === country
+                    selectedCountry === countryName
                       ? "bg-[#0b5cff] text-white shadow-md border-blue-400/30"
                       : "bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800 hover:text-white"
                   }`}
                 >
-                  <span>{country}</span>
+                  <span>{countryName}</span>
                   <ChevronRight className="w-4 h-4 hidden md:block" />
                 </button>
               ))}
@@ -169,6 +158,34 @@ export default function OfficesHero() {
 
           </div>
 
+          {/* 📍 LAHORE UNIVERSITIES MAP SECTION */}
+          <div className="mt-12 text-left bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-xl">
+            <div className="flex items-center gap-2 mb-3">
+              <MapPin className="w-5 h-5 text-[#0b5cff]" />
+              <h3 className="text-lg font-bold text-white">
+                All Major Universities in Lahore
+              </h3>
+            </div>
+            <p className="text-xs sm:text-sm text-slate-400 mb-4">
+              Explore locations of LUMS, Punjab University, GCU, UET, LGU, and other major universities across Lahore.
+            </p>
+            
+            {/* Google Maps iFrame Search Query for Universities in Lahore */}
+            <div className="w-full h-80 sm:h-[450px] rounded-xl overflow-hidden border border-slate-800 relative shadow-inner">
+              <iframe
+                title="Universities in Lahore Google Map"
+                src="https://maps.google.com/maps?q=Universities%20in%20Lahore&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full filter contrast-105 brightness-95"
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -182,7 +199,7 @@ export default function OfficesHero() {
               Local Access
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-black text-salte-800 tracking-tight">
+          <h3 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight">
             Why Our Physical Presence Matters
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
