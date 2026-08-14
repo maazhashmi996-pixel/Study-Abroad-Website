@@ -3,6 +3,13 @@
 import React from "react";
 
 export default function Steps() {
+   const openWhatsApp = (
+    phoneNumber: string = "923452066100",
+    message: string = "Hello! I need some information."
+  ) => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   const steps = [
     {
       title: "Select Your Program",
@@ -100,7 +107,8 @@ export default function Steps() {
           {/* CTA Button */}
           <div className="text-center pt-2">
             <button 
-              type="button"
+               type="button"
+        onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
               className="bg-[#0b5cff] hover:bg-blue-600 text-slate-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl border border-blue-400/20 shadow-lg active:scale-95 cursor-pointer focus:outline-none transition-all duration-200"
             >
               Talk to a Study Abroad Advisor
@@ -124,7 +132,7 @@ export default function Steps() {
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-800">
               How D. Education Zone fits into this journey
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               D. Education Zone has been guiding students since 2004 across the UK, Canada, Australia, Germany, Europe, and more. The way we work is simple:
             </p>
           </div>
@@ -144,24 +152,10 @@ export default function Steps() {
           </div>
 
           {/* Action Box & Bottom CTA */}
-          <div className="space-y-6 max-w-xl mx-auto px-2 bg-slate-900/50 border border-slate-800 p-6 rounded-2xl">
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <div className="space-y-6 max-w-xl mx-auto px-2 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl">
+            <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
               Tell us which country, which intake, and your last qualification—we'll tell you exactly which step you're on right now.
-            </p>
-
-            <div>
-              <button 
-                type="button"
-                className="bg-[#0b5cff] hover:bg-blue-600 text-slate-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 rounded-xl transition-all duration-200 shadow-lg border border-blue-400/20 active:scale-95 cursor-pointer focus:outline-none"
-              >
-                Review My Study Visa Case
-              </button>
-            </div>
-
-            <p className="text-[11px] sm:text-xs text-slate-400 font-normal leading-relaxed pt-2 border-t border-slate-800/80">
-              Send your offer letter or application status to D. Education Zone and we'll review what is done, what is pending, and what to do next to catch your intake.
-            </p>
-          </div>
+            </p></div>
 
         </div>
       </section>

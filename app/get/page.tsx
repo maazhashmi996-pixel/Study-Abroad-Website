@@ -1,4 +1,7 @@
-import Get from '@/components/study-destination/get'
+"use client";
+
+
+import Get from '@/components/study-destination/denmark/get';
 import React from 'react'
 
 function page() {

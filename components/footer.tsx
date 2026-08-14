@@ -44,19 +44,19 @@ export default function Footer() {
             </h2>
             <ul className="flex flex-col gap-3 text-sm">
               <li>
-                <Link href="/study-abroad" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
+                <Link href="/services/study-abroad" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
                   <ArrowRight className="w-4 h-4 text-red-500 group-hover:translate-x-1 transition-transform shrink-0" />
                   <span>Study Abroad</span>
                 </Link>
               </li>
               <li>
-                <Link href="/Accommodation" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
+                <Link href="/services/Accommodation" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
                   <ArrowRight className="w-4 h-4 text-red-500 group-hover:translate-x-1 transition-transform shrink-0" />
                   <span>Accommodations</span>
                 </Link>
               </li>
               <li>
-                <Link href="/languages" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
+                <Link href="/services/languages" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
                   <ArrowRight className="w-4 h-4 text-red-500 group-hover:translate-x-1 transition-transform shrink-0" />
                   <span>Languages</span>
                 </Link>
@@ -95,7 +95,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/study-abroad-steps" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
+                <Link href="/guidance" className="group flex items-center gap-2 text-slate-300 hover:text-[#0b5cff] transition-colors">
                   <ArrowRight className="w-4 h-4 text-red-500 group-hover:translate-x-1 transition-transform shrink-0" />
                   <span>Student Guide</span>
                 </Link>
@@ -163,22 +163,22 @@ export default function Footer() {
           {/* Partner & Certification Badges Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-items-center pt-2">
             <div className="bg-white/5 border border-white/10 p-2 rounded-xl w-full flex justify-center hover:border-white/20 transition-colors">
-              <Image src="/logos/f.png" alt="AQF Logo 1" width={120} height={60} className="h-10 object-contain" />
+              <Image src="/logos/gemini-1.svg" alt="AQF Logo 1" width={120} height={60} className="h-10 object-contain" />
             </div>
             <div className="bg-white/5 border border-white/10 p-2 rounded-xl w-full flex justify-center hover:border-white/20 transition-colors">
-              <Image src="/logos/l.png" alt="AQF Logo 2" width={120} height={60} className="h-10 object-contain" />
+              <Image src="/logos/gemini-2.svg" alt="AQF Logo 2" width={120} height={60} className="h-10 object-contain" />
             </div>
             <div className="bg-white/5 border border-white/10 p-2 rounded-xl w-full flex justify-center hover:border-white/20 transition-colors">
-              <Image src="/logos/m.png" alt="AQF Logo 3" width={120} height={60} className="h-10 object-contain" />
+              <Image src="/logos/gemini-3.svg" alt="AQF Logo 3" width={120} height={60} className="h-10 object-contain" />
             </div>
             <div className="bg-white/5 border border-white/10 p-2 rounded-xl w-full flex justify-center hover:border-white/20 transition-colors">
-              <Image src="/logos/v.png" alt="AQF Logo 4" width={120} height={60} className="h-10 object-contain" />
+              <Image src="/logos/gemini-4.svg" alt="AQF Logo 4" width={120} height={60} className="h-10 object-contain" />
             </div>
             <div className="bg-white/5 border border-white/10 p-2 rounded-xl w-full flex justify-center hover:border-white/20 transition-colors">
-              <Image src="/logos/award.png" alt="Award Logo" width={120} height={60} className="h-10 object-contain" />
+              <Image src="/logos/gemini-5.svg" alt="Award Logo" width={120} height={60} className="h-10 object-contain" />
             </div>
             <div className="bg-white/5 border border-white/10 p-2 rounded-xl w-full flex justify-center hover:border-white/20 transition-colors">
-              <Image src="/logos/Worlds-No1-Partner.png" alt="World's No 1 Partner Logo" width={120} height={60} className="h-10 object-contain" />
+              <Image src="/logos/gemini-6.svg" alt="World's No 1 Partner Logo" width={120} height={60} className="h-10 object-contain" />
             </div>
           </div>
         </div>

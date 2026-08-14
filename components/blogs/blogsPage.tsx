@@ -37,7 +37,7 @@ const blogs: Blog[] = [
   },
   {
     id: 3,
-    title: "How to Apply for Neatherlands Study Visa in 2026 from Pakistan",
+    title: "How to Apply for Netherlands Study Visa in 2026 from Pakistan",
     image: "/images/blog/neatherlands.webp",
     tags: ["Netherlands", "Visa", "Europe"],
     link: "/Blog/neatherland",

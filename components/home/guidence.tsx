@@ -408,7 +408,7 @@ export default function AdmissionGuidance() {
           </p>
 
           <Link
-            href="/get"
+            href="/book-free-consultation"
             className="
               inline-flex
               mt-7
