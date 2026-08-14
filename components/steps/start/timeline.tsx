@@ -9,6 +9,7 @@ import {
   AlertCircle,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 
 // Types
 interface FAQItem {
@@ -428,7 +429,8 @@ export default function Timeline() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row justify-center gap-3 pt-1">
 
-            <button
+            <Link
+            href="/departure"
               type="button"
               className="
                 inline-flex
@@ -451,9 +453,10 @@ export default function Timeline() {
             >
               Get Pre-Departure Guidance
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
 
-            <button
+            <Link
+            href="/arriving"
               type="button"
               className="
                 inline-flex
@@ -474,7 +477,7 @@ export default function Timeline() {
               "
             >
               Stay Supported After Arrival
-            </button>
+            </Link>
 
           </div>
 

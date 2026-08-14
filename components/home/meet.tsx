@@ -132,7 +132,7 @@ export default function Meet() {
           {/* View All */}
 
           <Link
-            href="/view"
+            href="/view-all-events"
             className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#1a233d] px-6 py-3 text-xs font-bold text-white shadow-lg transition-all duration-300 hover:bg-[#0b5cff] hover:shadow-[#0b5cff]/20"
           >
             View All Events

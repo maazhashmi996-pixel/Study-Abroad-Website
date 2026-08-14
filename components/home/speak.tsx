@@ -65,42 +65,42 @@ const journeySteps = [
   {
     title: "Select Your Program",
     image: "/images/home/study1.webp",
-    link: "/select",
+    link: "/study-abroad-steps/select-your-program",
     description:
       "Explore thousands of courses and find the right match for your career goals.",
   },
   {
     title: "Submit Application",
     image: "/images/home/study2.webp",
-    link: "/apply",
+    link: "/study-abroad-steps/submit-application",
     description:
       "Fill in your details and upload required documents effortlessly through our portal.",
   },
   {
-    title: "Receive Offer Letter",
+    title: "Get Unconditional Offer",
     image: "/images/home/study3.webp",
-    link: "/receive",
+    link: "/study-abroad-steps/receive-offer-letter",
     description:
       "Get conditional or unconditional offers from top-ranked global institutions.",
   },
   {
     title: "Fulfill Conditions",
     image: "/images/home/study4.webp",
-    link: "/condition",
+    link: "/study-abroad-steps/fulfill-conditions",
     description:
       "Meet language requirements and upload final academic credentials.",
   },
   {
     title: "Pay Tuition Deposit",
     image: "/images/home/study5.webp",
-    link: "/tution",
+    link: "/study-abroad-steps/pay-tution-deposit",
     description:
       "Secure your seat by submitting tuition deposits via secure payment gateways.",
   },
   {
-    title: "Get Unconditional Offer",
+    title: "Receive Offer Letter",
     image: "/images/home/study6.webp",
-    link: "/start",
+    link: "/study-abroad-steps/apply-for-visa",
     description:
       "Receive final acceptance and start your visa application process smoothly.",
   },

@@ -188,7 +188,7 @@ export default function City() {
           </div>
 
           <Link
-            href="/Event/view"
+            href="/view-all-events"
             className="bg-[#0b5cff] hover:bg-blue-600 text-white font-bold text-xs px-8 py-3 rounded-xl transition-all shadow-md uppercase tracking-wider border border-blue-400/20"
           >
             View All Events

@@ -13,13 +13,14 @@ function Choose() {
 
   const destinations = [
     {
-      country: "Copenhagen",
-      flag: "/images/home/copenhagen.webp",
+      country: "USA",
+      flag: "/images/study-Destination/usa.webp",
       details: [
         "10+ Universities",
         "€2,000 – €5,000 Annual Tuition",
         "Post-Study Work Options",
       ],
+      link:"/study-Destination/usa"
     },
     {
       country: "Canada",
@@ -29,6 +30,7 @@ function Choose() {
         "CAD 15,000+ Annual Tuition",
         "PGWP Available",
       ],
+       link:"/study-destination/canada"
     },
     {
       country: "Cyprus",
@@ -38,24 +40,27 @@ function Choose() {
         "€4,000 – €9,000 Annual Tuition Fee",
         "Limited Post Study Work Options",
       ],
+        link:"/study-destination/cyprus"
     },
     {
       country: "Finland",
-      flag: "/images/home/Finland.webp",
+      flag: "/images/home/finland.webp",
       details: [
         "8+ Universities",
         "€6,000 – €16,000 Annual Tuition",
         "Post-Study Work Permits",
       ],
+        link:"/study-destination/finland"
     },
     {
-      country: "Europe",
-      flag: "/images/home/europe.webp",
+      country: "France",
+      flag: "/images/study-Destination/france.webp",
       details: [
         "500+ Universities",
         "Varies by Country",
         "Schengen Area Access",
       ],
+        link:"/study-destination/france"
     },
     {
       country: "Germany",
@@ -65,6 +70,7 @@ function Choose() {
         "AUD 20,000+ Annual Tuition",
         "Subclass 485 Visa Options",
       ],
+        link:"/study-destination/germany"
     },
     {
       country: "Hungary",
@@ -74,15 +80,17 @@ function Choose() {
         "£12,000+ Annual Tuition",
         "2-Year Graduate Route",
       ],
+        link:"/study-destination/hungary"
     },
     {
-      country: "Paris",
-      flag: "/images/home/Paris.webp",
+      country: "Australia",
+      flag: "/images/home/australia.webp",
       details: [
         "1000+ Universities",
         "$20,000+ Annual Tuition",
         "OPT STEM Extension Options",
       ],
+        link:"/study-destination/australia"
     },
   ];
 

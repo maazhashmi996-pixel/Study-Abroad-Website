@@ -4,17 +4,13 @@ import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-  const openWhatsApp = (
-    phoneNumber: string = "923452066100",
-    message: string = "Hello! I need some information."
-  ) => {
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-// NEW BRAND COLORS:
-// Primary Blue: #0b5cff
-// Accent Red: #ef4444 (Tailwind red-500)
-// Base Black: #000000
+const openWhatsApp = (
+  phoneNumber: string = "923452066100",
+  message: string = "Hello! I need some information regarding study abroad."
+) => {
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+};
 
 interface Blog {
   id: number;
@@ -216,7 +212,7 @@ export default function BlogsPage() {
                           href={blogPath}
                           className="inline-flex items-center gap-2 font-black text-xs uppercase tracking-widest text-[#ef4444] hover:text-[#0b5cff] transition-colors"
                         >
-                          Read Guide <i className="fa-solid fa-arrow-right"></i>
+                          Read Guide <span>&rarr;</span>
                         </Link>
                       </div>
                     </div>
@@ -229,7 +225,7 @@ export default function BlogsPage() {
           {/* SIDEBAR AREA */}
           <div className="space-y-10 order-1 lg:order-2">
             
-            {/* SEARCH - BLACK THEME */}
+            {/* SEARCH */}
             <div className="bg-black text-white p-8 rounded-none">
               <h2 className="text-xl font-black mb-6 flex items-center gap-3">
                 <span className="w-2 h-8 bg-[#ef4444]"></span> SEARCH
@@ -245,7 +241,7 @@ export default function BlogsPage() {
               </div>
             </div>
 
-            {/* TAGS - ELECTRIC BLUE THEME */}
+            {/* TAGS */}
             <div className="bg-[#0b5cff] text-white p-8 rounded-none shadow-2xl">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-black uppercase">Destinations</h2>
@@ -277,17 +273,20 @@ export default function BlogsPage() {
               </div>
             </div>
 
-            {/* CALL TO ACTION */}
+            {/* CALL TO ACTION (FIXED WHATSAPP HANDLER) */}
             <div className="border-4 border-[#ef4444] p-8 text-center">
-                <p className="text-black font-black text-xl mb-4 leading-none">READY TO START YOUR JOURNEY?</p>
-                <button     onClick={() =>
-                      openWhatsApp(
-                        "923452066100",
-                        `Hi D.Education Zone, I want to register for: ${event.title} in ${event.city}.`
-                      )
-                    } className="block w-full bg-[#0b5cff] text-white py-4 font-black uppercase hover:bg-black transition-colors">
-                    Consult Experts
-                </button>
+              <p className="text-black font-black text-xl mb-4 leading-none">READY TO START YOUR JOURNEY?</p>
+              <button
+                onClick={() =>
+                  openWhatsApp(
+                    "923452066100",
+                    "Hi Education Zone, I am interested in Study Abroad options for 2026. Please guide me."
+                  )
+                }
+                className="block w-full bg-[#0b5cff] text-white py-4 font-black uppercase hover:bg-black transition-colors"
+              >
+                Consult Experts
+              </button>
             </div>
 
           </div>
@@ -296,4 +295,3 @@ export default function BlogsPage() {
     </section>
   );
 }
-

@@ -32,7 +32,7 @@ export default function Blogs() {
       image: "/images/home/prepration.jpg",
       description:
         "Prepare confidently for English language and other admission tests with proper guidance.",
-          link:"/Home/english",
+          link:"/test-prepration",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ export default function Blogs() {
       image: "/images/home/admission.jpg",
       description:
         "We guide you through applications, documents, admission requirements, and university deadlines.",
-          link:"/Home/guidance",
+          link:"/guidance",
     },
     {
       id: 5,
@@ -56,7 +56,7 @@ export default function Blogs() {
       image: "/images/home/country.jpg",
       description:
         "Compare study destinations and universities according to your academic and career goals.",
-          link:"/",
+          link:"/study-Destination",
     },
   ];
 
@@ -143,7 +143,7 @@ export default function Blogs() {
                   <div className="absolute inset-0 flex items-center justify-center bg-[#0b5cff]/70 opacity-0 backdrop-blur-[2px] transition-all duration-300 group-hover:opacity-100">
 
                     <Link
-                      href={`/services/${blog.id}`}
+                      href={blog.link}
                       className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-bold text-[#0b5cff] shadow-xl transition-all duration-300 hover:bg-red-500 hover:text-white"
                     >
                       Explore Service
