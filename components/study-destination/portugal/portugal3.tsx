@@ -58,47 +58,47 @@ export default function Portugal3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Portugal?",
+      question: "How much does it cost to study in Portugal?",
       answer:
         "To study in Portugal, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
     },
     {
-      question: "Is it possible to study in Portugal without IELTS?",
+      question: "Do we need IELTS for Portugal?",
       answer:
         "Yes, some universities in Portugal may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
     },
     {
-      question: "How to get PR in Portugal after study?",
+      question: "Can I work while studying in Portugal?",
       answer:
         "To qualify for permanent residency in Portugal after studying, you must have lived in Portugal for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
     },
     {
-      question: "How to study in Portugal for free?",
+      question: "Which course is best to study in Portugal?",
       answer:
         "Students from the EU/EEA and Switzerland can study for free at public universities in Portugal. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
     },
     {
-      question: "Can Pakistani students work while studying in Portugal?",
+      question: "Can I get PR in Portugal after study?",
       answer:
         "Yes. Portugal allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
     },
     {
-      question: "Why do Portugal student visas get rejected from Pakistan?",
+      question: "Can I stay in Portugal after graduation?",
       answer:
         "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
     },
     {
-      question: "Which are the top universities in Portugal for international students?",
+      question: "Is a Portugal student visa easy?",
       answer:
         "Top choices: Technical University of Portugal (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
     },
     {
-      question: "What is a CPR number and how do students get it in Portugal?",
+      question: "Which universities in Portugal are best for Pakistani students?",
       answer:
         "CPR (Det Centrale Personregister) is Portugal’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Portugal. Without a CPR number, daily student life in Portugal is extremely difficult.",
     },
     {
-      question: "Portugal vs Germany, which is better for Pakistani students?",
+      question: "Can I bring my family to Portugal on a student visa?",
       answer:
         "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Portugal teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Portugal suits those prioritising English-medium study and a high quality of life.",
     },
@@ -283,9 +283,11 @@ export default function Portugal3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+At Times Consultant, we help students explore Portugal with clarity and realistic expectations. Portugal is ideal for those who are looking for European education, affordable living, and a balanced lifestyle, but choosing the right program and university is key.          </p>
 
+          <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
+If Portugal fits your academic goals and budget, we guide you through admissions, documentation, and the visa process. If another destination suits you better, we’ll advise you honestly. Contact us today or book a free online consultation today!
+</p>
           <button
             type="button"
             onClick={() => setIsOpen(true)}

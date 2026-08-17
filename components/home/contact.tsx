@@ -16,7 +16,7 @@ export default function Contact() {
       <button
         type="button"
         onClick={() => openWhatsApp("923452066100", "Hi, I clicked Contact Us!")}
-        className="bg-green-600 hover:bg-green-700 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition shadow-md"
+        className="bg-blue-400 hover:bg-blue-600 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition shadow-md"
       >
         Contact Us
       </button>

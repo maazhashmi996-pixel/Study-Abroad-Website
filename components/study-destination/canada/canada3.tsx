@@ -12,10 +12,10 @@ import {
   Building2,
   CalendarCheck,
   ArrowRight,
+  ChevronDown,
+  HelpCircle,
 } from "lucide-react";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
-
-import { ChevronDown, HelpCircle } from "lucide-react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -41,7 +41,7 @@ function SelectBox({
           {placeholder}
         </option>
         {options.map((opt, idx) => (
-          <option key={idx} value={opt}>
+          <option key={`${opt}-${idx}`} value={opt}>
             {opt}
           </option>
         ))}
@@ -52,55 +52,49 @@ function SelectBox({
 }
 
 export default function Canada3() {
-     const [open, setOpen] = useState<number | null>(0);
-       const [isOpen, setIsOpen] = useState(false);
-
+  const [open, setOpen] = useState<number | null>(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   const faqData = [
     {
       question: "How much IELTS band required to study in Canada?",
       answer:
-        "To study in Canada, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "To study in Canada, non-native English speakers generally need a minimum IELTS overall score of 6.5 (with no band less than 6.0 for SDS category). Requirements can vary by university and level of study.",
     },
     {
       question: "Is it possible to study in Canada without IELTS?",
       answer:
-        "Yes, some universities in Canada may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "Yes, some universities in Canada accept alternative English proficiency tests such as TOEFL, PTE Academic, or Duolingo English Test (DET). Others may offer conditional admission if previous instruction was in English.",
     },
     {
       question: "How to get PR in Canada after study?",
       answer:
-        "To qualify for permanent residency in Canada after studying, you must have lived in Canada for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "Graduates can apply for a Post-Graduation Work Permit (PGWP) to gain Canadian work experience. This experience adds points to your Express Entry (Canadian Experience Class) or Provincial Nominee Program (PNP) profile to pathway into Permanent Residency.",
     },
     {
-      question: "How to study in Canada for free?",
+      question: "How to study in Canada on scholarships?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Canada. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "International students can apply for merit-based scholarships provided directly by Canadian universities, provincial governments, or national funding schemes like Vanier Canada Graduate Scholarships.",
     },
     {
       question: "Can Pakistani students work while studying in Canada?",
       answer:
-        "Yes. Canada allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "Yes. International students holding a valid study permit can work off-campus up to 20 hours per week during regular academic sessions and full-time during scheduled breaks like summer or winter holidays.",
     },
     {
       question: "Why do Canada student visas get rejected from Pakistan?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "Common reasons include insufficient proof of financial funds, unclear study plan or purpose of visit, lack of strong ties to the home country, or missing documentation.",
     },
     {
       question: "Which are the top universities in Canada for international students?",
       answer:
-        "Top choices: Technical University of Canada (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
-    },
-    {
-      question: "What is a CPR number and how do students get it in Canada?",
-      answer:
-        "CPR (Det Centrale Personregister) is Canada’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Canada. Without a CPR number, daily student life in Canada is extremely difficult.",
+        "Top institutions include University of Toronto, University of British Columbia, McGill University, University of Waterloo, and University of Alberta.",
     },
     {
       question: "Canada vs Germany, which is better for Pakistani students?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Canada teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Canada suits those prioritising English-medium study and a high quality of life.",
+        "Germany offers lower tuition fees but requires German proficiency for most programs and daily life. Canada offers English-medium instruction, easy post-study work authorization (PGWP), and direct immigration pathways.",
     },
   ];
 
@@ -120,11 +114,11 @@ export default function Canada3() {
       "05:00 PM", "05:30 PM", "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM",
     ],
     countries: [
-      "Australia", "Canada", "Canada", "Finland", "France",
-      "Germany", "Hungary", "Ireland", "Italy", "Malaysia",
-      "Malta", "Netherlands", "New Zealand", "Norway", "Poland",
-      "Portugal", "Spain", "Sweden", "Switzerland", "Turkey",
-      "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)",
+      "Australia", "Canada", "Finland", "France", "Germany",
+      "Hungary", "Ireland", "Italy", "Malaysia", "Malta",
+      "Netherlands", "New Zealand", "Norway", "Poland", "Portugal",
+      "Spain", "Sweden", "Switzerland", "Turkey", "United Arab Emirates (UAE)",
+      "United Kingdom (UK)", "United States (USA)",
     ],
     modeOfCounseling: ["Online", "Phone", "In Person"],
     fieldsOfInterest: [
@@ -151,31 +145,31 @@ export default function Canada3() {
     {
       title: "Business & Economics",
       description:
-        "Well-known universities with business programs include Aalborg University, Aarhus University, and Copenhagen Business School.",
+        "Leading business programs in Canada are offered by Rotman School of Management, Schulich School of Business, and Sauder School of Business.",
       icon: <Briefcase className="w-5 h-5" />,
     },
     {
       title: "Engineering",
       description:
-        "Aarhus University, Aalborg University, and Technical University of Canada (DTU) are all excellent in different engineering fields.",
+        "University of Toronto, University of Waterloo, and UBC offer globally acclaimed engineering and technology disciplines.",
       icon: <Cpu className="w-5 h-5" />,
     },
     {
       title: "Renewable Energy & Sustainability",
       description:
-        "Pioneers in sustainability teaching and research are DTU, University of Copenhagen, and Aarhus University.",
+        "Programs focused on clean energy and environmental management at University of Alberta and McGill University.",
       icon: <Leaf className="w-5 h-5" />,
     },
     {
       title: "Medical & Life Sciences",
       description:
-        "Prestigious medical and life science programs are available at University of Copenhagen, Aarhus University, and Southern Canada University.",
+        "Top life science and medical programs available at McMaster University, McGill University, and U of T.",
       icon: <Stethoscope className="w-5 h-5" />,
     },
     {
       title: "Design & Creative Industries",
       description:
-        "Well-known organizations include Royal Danish Academy of Fine Arts, KEA (Copenhagen School of Design & Technology), and Kolding School of Design.",
+        "OCAD University, Emily Carr University of Art + Design, and Seneca College excel in modern design and arts.",
       icon: <Palette className="w-5 h-5" />,
     },
   ];
@@ -235,6 +229,9 @@ export default function Canada3() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
               Post-Study <span className="text-[#0b5cff]">Work Opportunities</span>
             </h2>
+            <p className="mt-2 text-sm sm:text-base text-slate-600">
+              Graduates from Canadian institutions are eligible for a Post-Graduation Work Permit (PGWP) of up to 3 years, depending on the length of the study program.
+            </p>
           </div>
 
           <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
@@ -244,23 +241,23 @@ export default function Canada3() {
 
             <div className="flex flex-col gap-4">
               <p className="text-sm sm:text-base leading-relaxed text-slate-600 font-normal">
-                After completing a Bachelor’s, Master’s, or PhD in Canada, non-EU/EEA students can apply for a{" "}
-                <strong className="text-[#1a233d] font-semibold">3-year job search permit</strong> through the Danish Agency for International Recruitment and Integration (SIRI).
+                After completing an eligible program in Canada, international students can apply for an open work permit under the{" "}
+                <strong className="text-[#1a233d] font-semibold">Post-Graduation Work Permit (PGWP) Program</strong>.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100">
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-[#0b5cff] shrink-0" />
-                  <span>3-Year Extension Available</span>
+                  <span>Up to 3-Year PGWP Available</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
                   <Building2 className="w-4 h-4 text-[#0b5cff] shrink-0" />
-                  <span>Path to Permanent Residency</span>
+                  <span>Path to Canadian Permanent Residency</span>
                 </div>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-500 italic bg-blue-50/50 p-3 rounded-xl border border-blue-100/50">
-                <strong className="text-[#0b5cff] font-semibold not-italic">High Demand Sectors:</strong> Technology, Engineering, and Life Sciences offer the highest job availability for international graduates.
+                <strong className="text-[#0b5cff] font-semibold not-italic">High Demand Sectors:</strong> Technology, Engineering, Healthcare, and Finance offer top career prospects for international graduates in Canada.
               </p>
             </div>
           </div>
@@ -283,7 +280,7 @@ export default function Canada3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
+            Times Consultant, a trusted name in Canada student visa consultancy in Pakistan since 2004, has helped thousands of students achieve their dream of studying abroad. With 32+ offices across major cities, we offer personalized guidance on university selection, visa documentation, SOP writing, and scholarship support.
           </p>
 
           <button
@@ -373,73 +370,65 @@ export default function Canada3() {
           </div>
         </div>
       )}
-         <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20">
-            {/* Container aligned with all other sections (max-w-7xl) */}
-            <div className="max-w-7xl mx-auto flex flex-col gap-10">
-              
-              {/* Header Section */}
-              <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                  <span className="w-8 h-[2px] bg-red-500" />
-                  <span className="text-red-600 text-xs uppercase tracking-widest font-bold">
-                    Frequently Asked Questions
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
-                  Can’t talk? Don’t worry, <span className="text-[#0b5cff]">we have got all answers right here.</span>
-                </h2>
-              </div>
-      
-              {/* Accordion FAQ Grid */}
-              <div className="space-y-4 max-w-5xl">
-                {faqData.map((item, index) => {
-                  const isOpen = open === index;
-                  return (
+
+      {/* FAQ Section */}
+      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto flex flex-col gap-10">
+          <div className="text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
+              <span className="w-8 h-[2px] bg-red-500" />
+              <span className="text-red-600 text-xs uppercase tracking-widest font-bold">
+                Frequently Asked Questions
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
+              Can’t talk? Don’t worry, <span className="text-[#0b5cff]">we have got all answers right here.</span>
+            </h2>
+          </div>
+
+          <div className="space-y-4 max-w-5xl">
+            {faqData.map((item, index) => {
+              const isOpenFaq = open === index;
+              return (
+                <div
+                  key={index}
+                  className={`border rounded-2xl bg-white shadow-2xs overflow-hidden transition-all duration-200 ${
+                    isOpenFaq ? "border-[#0b5cff] shadow-md" : "border-slate-200/80 hover:border-slate-300"
+                  }`}
+                >
+                  <button
+                    onClick={() => setOpen(isOpenFaq ? null : index)}
+                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left transition-colors cursor-pointer"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="shrink-0 w-8 h-8 bg-red-50 border border-red-100 text-red-600 rounded-xl flex items-center justify-center">
+                        <HelpCircle className="w-4 h-4" />
+                      </div>
+                      <span className="text-base sm:text-lg font-bold text-[#1a233d] leading-snug">
+                        {item.question}
+                      </span>
+                    </div>
+
                     <div
-                      key={index}
-                      className={`border rounded-2xl bg-white shadow-2xs overflow-hidden transition-all duration-200 ${
-                        isOpen ? "border-[#0b5cff] shadow-md" : "border-slate-200/80 hover:border-slate-300"
+                      className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                        isOpenFaq ? "bg-[#0b5cff] text-white rotate-180" : "bg-slate-100 text-slate-500"
                       }`}
                     >
-                      {/* Accordion Toggle Button */}
-                      <button
-                        onClick={() => setOpen(isOpen ? null : index)}
-                        className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left transition-colors cursor-pointer"
-                      >
-                        <div className="flex items-center gap-3">
-                          {/* Red Accent Icon Container */}
-                          <div className="shrink-0 w-8 h-8 bg-red-50 border border-red-100 text-red-600 rounded-xl flex items-center justify-center">
-                            <HelpCircle className="w-4 h-4" />
-                          </div>
-                          <span className="text-base sm:text-lg font-bold text-[#1a233d] leading-snug">
-                            {item.question}
-                          </span>
-                        </div>
-      
-                        {/* Toggle Arrow */}
-                        <div
-                          className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${
-                            isOpen ? "bg-[#0b5cff] text-white rotate-180" : "bg-slate-100 text-slate-500"
-                          }`}
-                        >
-                          <ChevronDown className="w-4 h-4" />
-                        </div>
-                      </button>
-      
-                      {/* Accordion Content */}
-                      {isOpen && (
-                        <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 mt-1">
-                          {item.answer}
-                        </div>
-                      )}
+                      <ChevronDown className="w-4 h-4" />
                     </div>
-                  );
-                })}
-              </div>
-      
-            </div>
-          </section>
-    </div>
+                  </button>
 
+                  {isOpenFaq && (
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 mt-1">
+                      {item.answer}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -283,8 +283,7 @@ export default function Sweden3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+Schedule a consultation with our experienced Sweden Study Visa advisors to discuss your educational goals, from selecting the perfect program to crafting a winning application. Whether you seek undergraduate studies, postgraduate pursuits, or exam preparation guidance, Times Consultant offers personalized support to help you unlock your academic potential.          </p>
 
           <button
             type="button"

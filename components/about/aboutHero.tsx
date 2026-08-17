@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="mt-7 flex flex-col sm:flex-row gap-4">
 
               {/* Primary Button */}
-              <button
+              {/* <button
                 className="
                   bg-[#E53935]
                   hover:bg-white
@@ -93,7 +93,7 @@ export default function Hero() {
                 "
               >
                 Get Started
-              </button>
+              </button> */}
 
               {/* Secondary Button */}
               <Link

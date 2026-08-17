@@ -3,188 +3,214 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Calendar, Clock, MapPin, ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 // Perfectly Matched Event Data
 const eventsData = [
   {
     id: 1,
     title: "Abbottabad Study Abroad Expo 2026",
-    image: "/images/events/expo-abbottabad.webp",
+    image: "/images/events/abbottabad.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 10 August 2026",
     location: "Hotel One - Abbottabad",
     category: "Khyber Pakhtunkhwa",
+    link:"/Event/abbottabad",
   },
   {
     id: 2,
     title: "Bahawalpur Study Abroad Expo 2026",
-    image: "/images/events/bahawalpur.webp",
+    image: "/images/events/bahawalpur.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Thursday, 06 August 2026",
     location: "Times Office - Bahawalpur",
     category: "Punjab",
+    link:"/Event/bahawalpur",
   },
   {
     id: 3,
     title: "Faisalabad Study Abroad Expo 2026",
-    image: "/images/events/faisalabad.webp",
+    image: "/images/events/faisalabad.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Tuesday, 11 August 2026",
     location: "Serena Hotel - Faisalabad",
     category: "Punjab",
+    link:"/Event/faisalabad",
   },
   {
     id: 4,
     title: "Gujranwala Study Abroad Expo 2026",
-    image: "/images/events/gujranwala.webp",
+    image: "/images/events/gujranwala.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Saturday, 15 August 2026",
     location: "Times Office Near GIFT University - Gujranwala",
     category: "Punjab",
+    link:"/Event/gujranwala",
   },
   {
     id: 5,
     title: "Gujrat Study Abroad Expo 2026",
-    image: "/images/events/gujrat.webp",
+    image: "/images/events/gujrat.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Wednesday, 12 August 2026",
     location: "Times Office - Gujrat",
     category: "Punjab",
+    link:"/Event/gujrat",
   },
   {
     id: 6,
     title: "Hyderabad Study Abroad Expo 2026",
-    image: "/images/events/hyderabad.webp",
+    image: "/images/events/hyderabad.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Friday, 07 August 2026",
     location: "Indus Hotel - Hyderabad",
     category: "Sindh",
+    link:"/Event/hyderabad",
   },
   {
     id: 7,
     title: "Mirpur Study Abroad Expo 2026",
-    image: "/images/events/mirpur.webp",
+    image: "/images/events/mirpur.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Sunday, 09 August 2026",
     location: "Times Office - Mirpur",
     category: "Azad Kashmir",
+    link:"/Event/mirpur",
   },
   {
     id: 8,
     title: "Multan Study Abroad Expo 2026",
-    image: "/images/events/multan.webp",
+    image: "/images/events/multan.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Wednesday, 05 August 2026",
     location: "Ramada Hotel - Multan",
     category: "Punjab",
+    link:"/Event/multan",
   },
   {
     id: 9,
     title: "Peshawar Study Abroad Expo 2026",
-    image: "/images/events/peshawar.png",
+    image: "/images/events/peshawar.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Sunday, 09 August 2026",
     location: "Pearl Continental - Peshawar",
     category: "Khyber Pakhtunkhwa",
+    link:"/Event/peshawar",
   },
   {
     id: 10,
     title: "Rawalpindi Study Abroad Expo 2026",
-    image: "/images/events/rawalpindi.webp",
+    image: "/images/events/rawalpindi.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Saturday, 08 August 2026",
     location: "Times Office - Rawalpindi",
     category: "Islamabad and Rawalpindi",
+    link:"/Event/rawalpindi",
   },
   {
     id: 11,
     title: "Sahiwal Study Abroad Expo 2026",
-    image: "/images/events/sahiwal.webp",
+    image: "/images/events/sahiwal.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Thursday, 13 August 2026",
     location: "Times Office - Sahiwal",
     category: "Punjab",
+    link:"/Event/sahiwal",
   },
   {
     id: 12,
     title: "Sargodha Study Abroad Expo 2026",
-    image: "/images/events/sargodha.webp",
+    image: "/images/events/sarghoda.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Friday, 14 August 2026",
     location: "Times Office - Sargodha",
     category: "Punjab",
+    link:"/Event/sarghoda",
   },
   {
     id: 13,
     title: "Sheikhupura Study Abroad Expo 2026",
-    image: "/images/events/sheikhupura.webp",
+    image: "/images/events/sheikhupura.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Sunday, 16 August 2026",
     location: "Times Office - Sheikhupura",
     category: "Punjab",
+    link:"/Event/sheikhupura",
   },
   {
     id: 14,
     title: "Sialkot Study Abroad Expo 2026",
-    image: "/images/events/sialkot.webp",
+    image: "/images/events/sialkot.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Sialkot",
     category: "Punjab",
+    link:"/Event/sialkot",
   },
   {
     id: 15,
     title: "Lahore Study Abroad Expo 2026",
-    image: "/images/events/lahore.webp",
+    image: "/images/events/lahore.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Lahore",
     category: "Punjab",
-  },
+        link:"/Event/lahore",
+      },
   {
     id: 16,
     title: "Mardan Study Abroad Expo 2026",
-    image: "/images/events/mardan.webp",
+    image: "/images/events/mardan.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Mardan",
     category: "Khyber Pakhtunkhwa",
+        link:"/Event/mardan",
+
   },
   {
     id: 17,
     title: "Kharian Study Abroad Expo 2026",
-    image: "/images/events/kharian.webp",
+    image: "/images/events/kharian.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Kharian",
     category: "Punjab",
+        link:"/Event/kharian",
+
   },
   {
     id: 18,
     title: "Mirpur Study Abroad Expo 2026",
-    image: "/images/events/mirpur.webp",
+    image: "/images/events/mirpur.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Mirpur",
     category: "Azad Kashmir",
+        link:"/Event/mirpur",
+
   },
   {
     id: 19,
     title: "Multan Study Abroad Expo 2026",
-    image: "/images/events/multan.webp",
+    image: "/images/events/multan.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Multan",
     category: "Punjab",
+        link:"/Event/multan",
+
   },
   {
     id: 20,
     title: "Rawalpindi Study Abroad Expo 2026",
-    image: "/images/events/rawalpindi.webp",
+    image: "/images/events/rawalpindi.jpg",
     time: "12:00 PM TO 07:00 PM",
     date: "Monday, 17 August 2026",
     location: "Times Office - Rawalpindi",
     category: "Islamabad and Rawalpindi",
+        link:"/Event/rawalpindi",
+
   },
 ];
 
@@ -295,10 +321,13 @@ export default function View() {
                     </div>
                   </div>
 
-                  <button className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0b5cff] py-2.5 text-xs font-bold text-white shadow-md shadow-[#0b5cff]/20 transition-all duration-300 hover:bg-[#1a233d] hover:ring-1 hover:ring-[#0b5cff]">
+                  <Link 
+                  href={event.link}
+                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0b5cff] py-2.5 text-xs font-bold text-white shadow-md shadow-[#0b5cff]/20 transition-all duration-300 hover:bg-[#1a233d] hover:ring-1 hover:ring-[#0b5cff]">
+                  
                     <span>More Details</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

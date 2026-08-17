@@ -39,9 +39,9 @@ export default function Turkey1() {
       <div className=" inset-0 flex items-end pb-2 sm:pb-6 md:pb-8 px-3 sm:px-88 md:px-10 z-20">
         <div className="absolute max-w-7xl mx-auto w-full">
           <ul className="relative list-disc text-xs b-0.5 l-6 pl-12 sm:ml-6 underline  sm:space-y-3 text-white sm:text-base md:text-xs lg:text-xl drop-shadow-md">
-            <li>15+ University and Colleges</li>
-            <li>DKK 80,000 Annual Tuition Fee</li>
-            <li>3 Year Post Study Visa</li>
+            <li>74 Universities</li>
+            <li>US $1500+ Annual Tuition Fee</li>
+            <li>1 to 2 Years Post Study Work Visa</li>
           </ul>
         </div>
       </div>
@@ -56,12 +56,9 @@ export default function Turkey1() {
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Turkey offers an innovative, secure, and welcoming environment for international students.        </p>
-
+Turkey’s excellent programs, affordable costs, and rich cultural and historical background make it an increasingly popular choice for international students. Its transportation and city-specific physical attributes make it a global hub for student travel. Moreover, there has been a notable increase in international students opting to pursue their studies in Turkey since the academic year 2015-16. The country’s almost 650,000 foreign student population reflects Turkey’s growing popularity as a location for higher education. Besides, you may work in Turkey to further your profession and continue your education in Turkish, English, or another language at colleges that offer top-notch instruction on a worldwide scale.
         {/* Paragraph 2 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-Studying in Turkey isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
-
+       </p>
       </div>
     </section>
      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">
@@ -110,14 +107,15 @@ Studying in Turkey isn't just about gaining a globally recognized degree—it's 
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
-          Since Turkey lacks significant natural resources, its main export is knowledge. Its focus on education indicates that Danish education is excellent and emphasizes creativity, innovation, analysis, and critical thinking. Additionally, their universities specialize in sustainability, innovation, entrepreneurship, and global perspectives, and their teaching is grounded in the most recent research. Their daring methodology permeates the educational system as well. By fusing conventional lectures with industry internships, Danish universities encourage self-motivation and problem-based learning, enabling students to apply their knowledge practically and equipping them for the demands of the global labor market.
-        </p>
+Turkey’s public and private colleges follow the Bologna Agreement, which harmonizes degree programs throughout Europe. Additionally, several Turkish institutions participate in the Erasmus+ program, facilitating exchanges of students from other countries. According to the most current QS Higher Education System Strength Rankings, Turkey’s higher education system is ranked 43rd in the world. Furthermore, it is home to over 200 universities, several state-owned.        </p>
         
         {/* Paragraph 2 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
-          Turkey has several very prestigious universities, such as the University of Copenhagen and the University of Southern Turkey, which are important reasons to study there. Additionally, universities like Roskilde University and Aarhus University are options for students.
-        </p>
-
+In the 2019 QS University Rankings Index: EECA, a ranking of the top institutions in Emerging Europe and Central Asia, there are 45 Turkish universities listed, in addition to 10 Turkish higher educational institutes in the QS University Rankings 2019.        </p>
+        {/* Paragraph 3 */}
+        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
+In Turkey, there are more than 200 universities. Also, it is a student-friendly nation, with universities in nearly every city! Social clubs, athletic teams, and extracurricular activities allow students to socialize and help them overcome geographic barriers at every school.
+</p>
       </div>
     </section>
     </div>

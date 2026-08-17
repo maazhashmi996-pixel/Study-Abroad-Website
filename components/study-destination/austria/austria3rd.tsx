@@ -58,49 +58,49 @@ export default function Austria3rdPage() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Denmark?",
+      question: "How much bank balance is required for an Austria student visa from Pakistan?",
       answer:
         "To study in Denmark, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
     },
     {
-      question: "Is it possible to study in Denmark without IELTS?",
+      question: "Can Pakistani students study in Austria without IELTS?",
       answer:
         "Yes, some universities in Denmark may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
     },
     {
-      question: "How to get PR in Denmark after study?",
+      question: "How long does the Austria student visa take from Pakistan?",
       answer:
         "To qualify for permanent residency in Denmark after studying, you must have lived in Denmark for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
     },
     {
-      question: "How to study in Denmark for free?",
+      question: "Can international students work while studying in Austria?",
       answer:
         "Students from the EU/EEA and Switzerland can study for free at public universities in Denmark. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
     },
     {
-      question: "Can Pakistani students work while studying in Denmark?",
+      question: "What kind of job offer qualifies a graduate for Austria's Red White Red Card?",
       answer:
         "Yes. Denmark allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
     },
     {
-      question: "Why do Denmark student visas get rejected from Pakistan?",
+      question: "What happens if I take longer than expected to finish my degree in Austria?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "Non EU students already pay tuition from their first semester, so exceeding the standard duration doesn’t change their fee status. EU/EEA students, by contrast, study free only within the standard duration plus two tolerance semesters, after which they begin paying the standard €363.36 per semester rate. Planning your course load early helps you avoid unnecessary extra semesters either way.",
     },
     {
-      question: "Which are the top universities in Denmark for international students?",
+      question: "What documents need attestation before applying for an Austrian student visa in Pakistan?",
       answer:
-        "Top choices: Technical University of Denmark (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "Academic documents must first be attested by HEC, then legalised by Pakistan’s Ministry of Foreign Affairs before the Austrian Embassy will accept them. Skipping either step is one of the most common causes of delay. Starting attestation one to two months before your planned application date is recommended.",
     },
     {
-      question: "What is a CPR number and how do students get it in Denmark?",
+      question: "How do I apply for the Ernst Mach Grant from Pakistan?",
       answer:
-        "CPR (Det Centrale Personregister) is Denmark’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Denmark. Without a CPR number, daily student life in Denmark is extremely difficult.",
+        "You apply online through OeAD’s official scholarship portal, with the annual deadline set for February 1 for stays beginning the following academic year. Applications go through a formal review followed by expert evaluation, with results typically published around July. Our Austria study visa consultants can guide you on this properly.",
     },
     {
-      question: "Denmark vs Germany, which is better for Pakistani students?",
+      question: "Which is better for Pakistani students, Austria or Germany?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Denmark teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Denmark suits those prioritising English-medium study and a high quality of life.",
+        "Both offer low or no tuition at public universities, but Austria has a somewhat less saturated international student pool and a more straightforward path from student visa to graduate work permit. Germany has a larger English taught programme selection overall. The right choice depends on your field, budget, and language plans, which is exactly what a consultation can map out.",
     },
   ];
 

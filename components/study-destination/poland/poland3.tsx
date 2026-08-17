@@ -283,9 +283,10 @@ export default function Poland3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
-
+At Times Consultant, we handle Netherlands applications because the process, while centralized through Studielink, confuses first-time applicants. The system works well once you understand it, but the learning curve is steep. Document requirements vary by program, equivalency evaluations aren’t always transparent, and housing requires starting early. Twenty years in this business taught us that successful outcomes come from realistic planning, not optimistic assumptions. We’d rather tell you hard truths during consultation than have you struggle mid-degree when changing course becomes expensive and complicated.          </p>
+          <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
+Contact us today and let’s discuss whether Netherlands’ combination of academic quality, reasonable costs, and strong post-study work opportunities aligns with your goals. If it does, we’ll map out the entire process from application through arrival. If it doesn’t, we’ll explain why and suggest alternatives that might work better for your situation.
+</p>
           <button
             type="button"
             onClick={() => setIsOpen(true)}

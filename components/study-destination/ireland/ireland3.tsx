@@ -58,24 +58,23 @@ export default function Ireland3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Ireland?",
+      question: "How much does it cost to study in Ireland?",
       answer:
         "To study in Ireland, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
     },
     {
-      question: "Is it possible to study in Ireland without IELTS?",
+      question: "How much study gap is acceptable in Ireland?",
       answer:
-        "Yes, some universities in Ireland may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+"Yes, some universities in Ireland may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
     },
     {
       question: "How to get PR in Ireland after study?",
       answer:
-        "To qualify for permanent residency in Ireland after studying, you must have lived in Ireland for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "To qualify for permanent residency in Ireland after studies, graduates need to initially secure a work permit, gain critical skills employment, or enter professions where shortages exist. After legally working in Ireland for 5 years, you may apply for PR status.",
     },
     {
-      question: "How to study in Ireland for free?",
-      answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Ireland. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+      question: "Can dependents study in Ireland?",
+      answer:"Dependents of non-EU/EEA students studying in Ireland can also study, but they must either enroll in a full-time course on a Dependent/Partner/Spouse Employment Permit or apply for their own student visa if required.",
     },
     {
       question: "Can Pakistani students work while studying in Ireland?",
@@ -83,24 +82,34 @@ export default function Ireland3() {
         "Yes. Ireland allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
     },
     {
-      question: "Why do Ireland student visas get rejected from Pakistan?",
+      question: "Is a Euro bond required for study in Ireland?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "Yes, students from certain non-EU/EEA countries are required to purchase a Euro bond, which typically amounts to €7,000. This bond serves as proof of sufficient funds to cover living expenses while studying in Ireland.",
     },
     {
-      question: "Which are the top universities in Ireland for international students?",
+      question: "Do I need a visa to study in Ireland?",
       answer:
-        "Top choices: Technical University of Ireland (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "Whether you need a visa to study in Ireland depends on your nationality. EU/EEA and Swiss citizens do not require a visa, while most others, including students from the United States, Canada, and numerous other countries, will need to apply for a student visa",
     },
     {
-      question: "What is a CPR number and how do students get it in Ireland?",
+      question: "Is IELTS required to study in Ireland?",
       answer:
-        "CPR (Det Centrale Personregister) is Ireland’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Ireland. Without a CPR number, daily student life in Ireland is extremely difficult.",
+        "Most Irish universities require IELTS 6.0-6.5 for undergraduate and 6.5 for postgraduate programmes. Some accept PTE or TOEFL instead. Pakistani students from English-medium schools sometimes qualify for conditional waivers. Requirements vary significantly between institutions and programmes.",
     },
     {
-      question: "Ireland vs Germany, which is better for Pakistani students?",
+      question: "Can Pakistani students work in Ireland while studying?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Ireland teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Ireland suits those prioritising English-medium study and a high quality of life.",
+        "Yes. On Stamp 2 permission, you can work 20 hours per week during term time and 40 hours per week during summer (June–September) and Christmas holidays. No separate work permit is needed. Dublin has a strong part-time job market in hospitality, retail, and tech support.",
+    },
+    {
+      question: "What is Stamp 2 and how does it work?",
+      answer:
+        "Stamp 2 is Ireland’s official immigration permission for international students. It allows full-time study, 20 hours of work per week during term, and 40 hours during holidays. It renews annually with your enrollment proof. Without a valid Stamp 2, you cannot legally work or remain in Ireland between academic years.",
+    },
+    {
+      question: "Which universities in Ireland are best for Pakistani students?",
+      answer:
+        "Top choices: Trinity College Dublin, University College Dublin, University of Galway, University College Cork, and Dublin City University. Trinity and UCD are globally ranked and most recognised by employers. Dublin City University is popular for business and computing.",
     },
   ];
 
@@ -121,7 +130,7 @@ export default function Ireland3() {
     ],
     countries: [
       "Australia", "Canada", "Ireland", "Finland", "France",
-      "Germany", "Hungary", "Ireland", "Italy", "Malaysia",
+      "Germany", "Ireland", "Ireland", "Italy", "Malaysia",
       "Malta", "Netherlands", "New Zealand", "Norway", "Poland",
       "Portugal", "Spain", "Sweden", "Switzerland", "Turkey",
       "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)",

@@ -1,13 +1,13 @@
-// "use client"
+"use client"
 
-// import Signup from "@/components/services/accommodations/signup"
+import LoginPage from "@/components/services/accommodations/login"
 
-// function page() {
-//   return (
-//     <div>
-//       <Signup/>
-//     </div>
-//   )
-// }
+function page() {
+  return (
+    <div>
+      <LoginPage/>
+    </div>
+  )
+}
 
-// export default page
+export default page

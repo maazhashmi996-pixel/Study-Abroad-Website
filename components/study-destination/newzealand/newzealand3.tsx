@@ -58,47 +58,52 @@ export default function Newzealand3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in New Zealand?",
+      question: "Is studying in New Zealand worth it?",
       answer:
-        "To study in New Zealand, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
-    },
-    {
-      question: "Is it possible to study in New Zealand without IELTS?",
-      answer:
-        "Yes, some universities in New Zealand may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "Yes, studying in New Zealand is worth it for many students due to its high-quality education system, diverse programs, and strong international reputation. Additionally, New Zealand offers a safe, friendly environment with stunning natural scenery, making it an ideal place for personal and academic growth..",
     },
     {
       question: "How to get PR in New Zealand after study?",
       answer:
-        "To qualify for permanent residency in New Zealand after studying, you must have lived in New Zealand for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "After completing your studies in New Zealand, you may be eligible to apply for a post-study work visa, which can last up to three years. Gaining skilled work experience during this time can help qualify you for a resident visa under the Skilled Migrant Category..",
     },
     {
-      question: "How to study in New Zealand for free?",
+      question: "How much is it to study in New Zealand?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in New Zealand. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "The cost of studying in New Zealand varies by institution and study level. On average, international students can expect to pay between NZ$22,000 and NZ$35,000 per year for undergraduate courses and more for postgraduate studies. Additional living expenses can range from NZ$15,000 to NZ$18,000 per year. For expert guidance on managing your budget and understanding visa requirements, consider consulting with Times Consultant, a specialized study visa consultant.",
     },
     {
-      question: "Can Pakistani students work while studying in New Zealand?",
+      question: "Can I study in New Zealand without IELTS?",
       answer:
-        "Yes. New Zealand allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "Yes, some universities in New Zealand offer alternatives to IELTS, such as TOEFL, PTE, or Cambridge tests. Additionally, universities might accept proof of having studied in English-medium institutions for a specified number of years as evidence of English proficiency.",
     },
     {
-      question: "Why do New Zealand student visas get rejected from Pakistan?",
+      question: "How much study gap is acceptable in New Zealand?",
+      answer:
+        "New Zealand universities generally accept a study gap of up to 2-3 years for undergraduate programs and longer for postgraduate programs. The gap must be justifiably filled with work experience, training, or education related to the intended field of study.",
+    },
+    {
+      question: "Can I apply for PR while studying in New Zealand?",
       answer:
         "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
     },
     {
-      question: "Which are the top universities in New Zealand for international students?",
+      question: "How much money is required to study in New Zealand?",
       answer:
         "Top choices: Technical University of New Zealand (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
     },
     {
-      question: "What is a CPR number and how do students get it in New Zealand?",
+      question: "Does English proficiency enough to study in New Zealand?",
       answer:
-        "CPR (Det Centrale Personregister) is New Zealand’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in New Zealand. Without a CPR number, daily student life in New Zealand is extremely difficult.",
+        "English proficiency is crucial for studying in New Zealand. Most universities require a minimum score on an English proficiency test like IELTS, TOEFL, or PTE. Some institutions may also accept significant prior education in English as proof of proficiency.",
     },
     {
-      question: "New Zealand vs Germany, which is better for Pakistani students?",
+      question: "Can I bring my family to New Zealand on a student visa?",
+      answer:
+        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. New Zealand teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. New Zealand suits those prioritising English-medium study and a high quality of life.",
+    },
+    {
+      question: "Is health insurance compulsory for students in New Zealand?",
       answer:
         "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. New Zealand teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. New Zealand suits those prioritising English-medium study and a high quality of life.",
     },

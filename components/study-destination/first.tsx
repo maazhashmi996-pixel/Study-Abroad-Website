@@ -9,7 +9,7 @@ interface Country {
   id: number;
   name: string;
   flagCode: string;
-  imagePlaceholder: string; // Image path or placeholder
+  imagePlaceholder: string;
   bulletPoints: string[];
   link: string;
 }
@@ -19,7 +19,7 @@ const destinations: Country[] = [
     id: 1,
     name: "Australia",
     flagCode: "au",
-    imagePlaceholder: "/images/study-dest/australia.webp", // Replace with your image
+    imagePlaceholder: "/images/study-dest/australia.webp",
     bulletPoints: [
       "Top 100 Universities",
       "Post-Study Work Visa (2-4 Yrs)",
@@ -200,7 +200,7 @@ const destinations: Country[] = [
   {
     id: 15,
     name: "United Kingdom",
-    flagCode: "UK",
+    flagCode: "gb",
     imagePlaceholder: "/images/study-dest/united-kingdom.webp",
     bulletPoints: [
       "1-Year Master Programs",
@@ -226,145 +226,132 @@ const destinations: Country[] = [
   {
     id: 17,
     name: "Latvia",
-    flagCode: "us",
+    flagCode: "lv",
     imagePlaceholder: "/images/study-dest/latvia.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Affordable Tuition Fees",
+      "Schengen Residence Permit",
+      "High English Proficiency",
+      "Growing Tech Hub",
     ],
     link: "/study-Destination/latvia",
   },
   {
     id: 18,
     name: "Lithuania",
-    flagCode: "us",
+    flagCode: "lt",
     imagePlaceholder: "/images/study-dest/lithuania.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth", 
+      "Low Cost of Living",
+      "EU Recognized Degrees",
+      "Fast Visa Processing",
+      "Fintech & Biotech Focus",
     ],
-    link: "/study-Destination/lithounia",
+    link: "/study-Destination/lithuania",
   },
   {
     id: 19,
-    name: "Luxemboura",
-    flagCode: "us",
+    name: "Luxembourg",
+    flagCode: "lu",
     imagePlaceholder: "/images/study-dest/luxembourg.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Highest GDP Per Capita",
+      "Multilingual Education",
+      "Financial Hub of Europe",
+      "Free Public Transport",
     ],
-    link: "/study-Destination/luxemboura",
+    link: "/study-Destination/luxembourg",
   },
   {
     id: 20,
     name: "New Zealand",
-    flagCode: "us",
+    flagCode: "nz",
     imagePlaceholder: "/images/study-dest/new-zealand.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Safe & Peaceful Environment",
+      "3-Year Post Study Visa",
+      "Practical Learning System",
+      "Scenic Natural Beauty",
     ],
-    link: "/study-Destination/newzealand",
+    link: "/study-Destination/new-zealand",
   },
   {
     id: 21,
     name: "Poland",
-    flagCode: "PL",
+    flagCode: "pl",
     imagePlaceholder: "/images/study-dest/poland.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Very Low Living Cost",
+      "Rich University Tradition",
+      "Easy Schengen Travel",
+      "Strong Job Market",
     ],
     link: "/study-Destination/poland",
   },
   {
     id: 22,
     name: "Portugal",
-    flagCode: "us",
+    flagCode: "pt",
     imagePlaceholder: "/images/study-dest/portugal.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Affordable EU Education",
+      "Great Climate & Beaches",
+      "Post-Study Visa Options",
+      "Welcoming Environment",
     ],
     link: "/study-Destination/portugal",
   },
   {
     id: 23,
     name: "Spain",
-    flagCode: "us",
+    flagCode: "es",
     imagePlaceholder: "/images/study-dest/spain.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Top Business Schools",
+      "Rich Cultural Experience",
+      "Low Cost of Living",
+      "Language Opportunities",
     ],
     link: "/study-Destination/spain",
   },
   {
     id: 24,
     name: "Sweden",
-    flagCode: "us",
+    flagCode: "se",
     imagePlaceholder: "/images/study-dest/sweden.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Focus on Innovation",
+      "High Standard of Living",
+      "Generous Work Rights",
+      "Sustainability Leader",
     ],
     link: "/study-Destination/sweden",
   },
   {
     id: 25,
     name: "Turkey",
-    flagCode: "us",
+    flagCode: "tr",
     imagePlaceholder: "/images/study-dest/turkey.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Turkiye Burslari Scholarship",
+      "Bridge Between East & West",
+      "Budget-Friendly Education",
+      "Modern Campus Facilities",
     ],
     link: "/study-Destination/turkey",
   },
   {
     id: 26,
     name: "UAE",
-    flagCode: "us",
+    flagCode: "ae",
     imagePlaceholder: "/images/study-dest/united.webp",
     bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
+      "Global Business Hub",
+      "Tax-Free Work Income",
+      "Branch Campuses of Top Unis",
+      "Safe & Modern Infrastructure",
     ],
     link: "/study-Destination/uae",
-  },
-  {
-    id: 27,
-    name: "USA",
-    flagCode: "us",
-    imagePlaceholder: "/images/study-dest/usa.webp",
-    bulletPoints: [
-      "Ivy League & Top STEM",
-      "3-Year OPT for STEM",
-      "Massive Scholarships",
-      "Global Career Growth",
-    ],
-    link: "/study-Destination/usa",
   },
 ];
 
@@ -376,7 +363,7 @@ export default function StudyFirst() {
   );
 
   return (
-    <div className=" text-slate-800 min-h-screen py-12 px-4 sm:px-8 lg:px-12 font-sans">
+    <div className="text-slate-800 min-h-screen py-12 px-4 sm:px-8 lg:px-12 font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* HEADER SECTION */}
@@ -388,7 +375,7 @@ export default function StudyFirst() {
             Top Study <span className="text-[#0b5cff]">Destinations</span> In 2026
           </h1>
           <p className="text-slate-700 text-sm sm:text-base max-w-2xl mx-auto font-medium">
-            Explore comprehensive information on top study destinations around the globe. Click on any country to get detailed guide.
+            Explore comprehensive information on top study destinations around the globe. Click on any country to get a detailed guide.
           </p>
 
           {/* SEARCH INPUT */}
@@ -413,7 +400,7 @@ export default function StudyFirst() {
               {/* IMAGE / PLACEHOLDER CONTAINER */}
               <div className="relative h-60 w-full bg-slate-800 overflow-hidden">
                 
-                {/* 1. Placeholder Background (Displays if image path is empty/loading) */}
+                {/* Placeholder Background */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 text-slate-700 p-4 text-center">
                   <FaGraduationCap className="text-4xl mb-2 text-slate-800" />
                   <span className="text-xs font-bold uppercase tracking-wider">
@@ -421,7 +408,7 @@ export default function StudyFirst() {
                   </span>
                 </div>
 
-                {/* 2. Real Image (Will render if available) */}
+                {/* Real Image */}
                 {country.imagePlaceholder && (
                   <Image
                     src={country.imagePlaceholder}
@@ -429,7 +416,6 @@ export default function StudyFirst() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      // Hides broken image icon if image file doesn't exist yet
                       (e.target as HTMLElement).style.display = "none";
                     }}
                   />
@@ -447,7 +433,7 @@ export default function StudyFirst() {
                   </span>
                 </div>
 
-                {/* HOVER OVERLAY (Appears on Hover with Red Accent and Electric Blue Highlights) */}
+                {/* HOVER OVERLAY */}
                 <div className="absolute inset-0 bg-slate-950/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-between border-b-4 border-[#ef4444] z-20">
                   <div>
                     <h3 className="text-sm font-black uppercase text-[#ef4444] tracking-wider mb-3 border-b border-slate-800 pb-2">
@@ -475,7 +461,7 @@ export default function StudyFirst() {
                 </div>
               </div>
 
-              {/* FOOTER TITLE (Visible when not hovering) */}
+              {/* FOOTER TITLE */}
               <div className="p-4 bg-slate-900 border-t border-slate-800/80 flex justify-between items-center group-hover:bg-slate-850 transition-colors">
                 <span className="text-sm font-black text-white uppercase tracking-wide group-hover:text-[#0b5cff] transition-colors">
                   {country.name}
