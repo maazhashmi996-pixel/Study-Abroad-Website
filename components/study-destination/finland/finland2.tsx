@@ -7,32 +7,7 @@ import { FaChevronDown } from "react-icons/fa";
 export default function Finland2() {
     
   
-      const scholarships = [
-        {
-          name: "Danish Government Scholarship",
-          desc: "Covers full tuition and monthly stipend for non-EU/EEA students with outstanding academic records.",
-        },
-        {
-          name: "DTU Scholarship",
-          desc: "Partial tuition waiver for high-achieving non-EU/EEA Master’s students.",
-        },
-        {
-          name: "Aarhus University Scholarship",
-          desc: "Covers 50%-100% tuition for exceptional international students.",
-        },
-        {
-          name: "Erasmus+ Scholarship",
-          desc: "EU-funded, covers tuition, travel, and living allowance for exchange students.",
-        },
-        {
-          name: "Novo Nordisk Foundation Scholarship",
-          desc: "Covers full tuition and stipend for students in life sciences and health programs.",
-        },
-        {
-          name: "HEC Finland Scholarship (For Pakistanis)",
-          desc: "Higher Education Commission Pakistan offers funded programs for Danish universities.",
-        },
-      ];
+     
 
   const requirements = [
     {
@@ -83,7 +58,7 @@ export default function Finland2() {
     ],
     countries: [
       "Australia", "Canada", "Finland", "Finland", "France", "Germany",
-      "Hungary", "Ireland", "Italy", "Malaysia", "Malta", "Netherlands",
+      "Finland", "Ireland", "Italy", "Malaysia", "Malta", "Netherlands",
       "New Zealand", "Norway", "Poland", "Portugal", "Spain", "Sweden",
       "Switzerland", "Turkey", "United Arab Emirates (UAE)",
       "United Kingdom (UK)", "United States (USA)",
@@ -420,15 +395,18 @@ export default function Finland2() {
             </div>
 
             <div className="flex flex-col gap-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <h2 className="text-xl text-blue-500 font-bold">Tuition Fee</h2>
               <p>
-                In general, living expenses in Finland can be high. While the suggested monthly budget for smaller towns like Aalborg is about <span className="font-semibold text-[#1a233d]">EUR 1,000</span>, living in Copenhagen typically ranges from <span className="font-semibold text-[#1a233d]">EUR 1,280 to 1,800</span> per month.
-              </p>
+Tuition costs for overseas students in undergraduate programs typically range from €5,000 to €18,000 per year. For master’s programs, the usual range is €11,000 to €20,000. There are several notable outliers, with some prestigious programs costing significantly more.              </p>
+            
+              <h2 className="text-xl text-blue-500 font-bold">Living Cost</h2>
               <p>
-                However, students from Switzerland and the EU/EEA benefit from tuition-free education at Danish institutions, saving a significant amount.
-              </p>
+Living expenditures are depending on your lifestyle preferences and the city in which you reside, living expenses might vary from €8,000 to €12,000 annually.            
+</p>
+              <h2 className="text-xl text-blue-500 font-bold">Accommodation</h2>
               <p>
-                Many international students opt for off-campus residence halls as public transport makes commuting simple. Dorms offer an affordable way to settle in—expect to pay between <span className="font-semibold text-[#0b5cff]">EUR 240 and EUR 460</span> monthly for residence hall accommodation.
-              </p>
+Usually, the largest portion of your living costs goes towards this. While, compared to private rents, student living and shared flats may be more economical.            
+</p>
             </div>
           </div>
 
@@ -444,26 +422,15 @@ export default function Finland2() {
                 Scholarships For International Students
               </h3>
             </div>
-
-            <p className="text-xs sm:text-sm text-slate-500 font-medium mb-6 italic">
-              Merit-based financial aid covering partial to full tuition for international Master’s students:
-            </p>
-
             {/* List of Scholarships */}
-            <ul className="flex flex-col gap-4">
-              {scholarships.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200/60 shadow-2xs">
-                  <CheckCircle2 className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
-                  <div className="text-sm sm:text-base leading-snug">
-                    <strong className="text-[#1a233d] font-bold block mb-0.5">
-                      {item.name}:
-                    </strong>
-                    <span className="text-slate-600 text-xs sm:text-sm">
-                      {item.desc}
-                    </span>
-                  </div>
-                </li>
-              ))}
+            <ul className="list-disc pl-5 space-y-2 text-slate-800 text-base sm:text-lg font-medium">
+             <li>Finnish Government Scholarship Pool: Covers travel, accommodation, and monthly allowance for postgraduate students</li>
+             <li>University of Helsinki Scholarship: Covers 50%-100% tuition for outstanding Master’s students (non-EU/EEA)</li>
+             <li>Aalto University Scholarship: Merit-based, covers partial to full tuition for international Master’s students</li>
+             <li>Tampere University Scholarship: 50%-100% tuition waiver for high-achieving non-EU/EEA students</li>
+             <li>EDUFI Fellowship: Finnish National Agency scholarship for doctoral and postdoctoral researchers</li>
+             <li>HEC Finland Scholarship (For Pakistanis): Higher Education Commission Pakistan offers funded programs for Finnish universities</li>
+             <li>CIMO Fellowships: Covers monthly stipend for postgraduate students studying or researching in Finland</li>
             </ul>
 
           </div>

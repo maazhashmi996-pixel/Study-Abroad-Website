@@ -212,7 +212,7 @@ export default function Belgium3() {
                   <h3 className="text-lg font-bold text-[#1a233d] mb-2">
                     {course.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
                     {course.description}
                   </p>
                 </div>
@@ -243,9 +243,8 @@ export default function Belgium3() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <p className="text-sm sm:text-base leading-relaxed text-slate-600 font-normal">
-                After completing a Bachelor’s, Master’s, or PhD in , non-EU/EEA students can apply for a{" "}
-                <strong className="text-[#1a233d] font-semibold">3-year job search permit</strong> through the Danish Agency for International Recruitment and Integration (SIRI).
+              <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+               Belgium’s post-study work situation improved significantly with 2018 immigration reforms, but it’s still not as straightforward as Canada or Australia’s graduate visa programs.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100">
@@ -260,10 +259,29 @@ export default function Belgium3() {
               </div>
 
               <p className="text-xs sm:text-sm text-slate-500 italic bg-blue-50/50 p-3 rounded-xl border border-blue-100/50">
-                <strong className="text-[#0b5cff] font-semibold not-italic">High Demand Sectors:</strong> Technology, Engineering, and Life Sciences offer the highest job availability for international graduates.
+                <strong className="text-[#0b5cff] font-semibold not-italic">A Once employed, students can transition to a work permit or EU Blue Card.</strong>
+
+Belgium’s central location and connection to European institutions make it ideal for careers in international organizations, consulting, research, and multinational companies.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="relative overflow-hidden  py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto flex flex-col gap-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">Top Universities <strong className="text-[#0b5cff]"> in Belgium</strong></h1>
+          <p >When Pakistani students ask about “good” Belgian universities, they’re usually checking whether their degree will be respected by employers back home or when applying for jobs elsewhere in Europe. These Belgian institutions consistently rank in global university lists and carry recognition:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-800 text-base sm:text-lg font-medium">
+            <li>KU Leuven (Catholic University of Leuven)</li>
+            <li>Ghent University</li>
+            <li>Université catholique de Louvain (UCLouvain)</li>
+            <li>Université libre de Bruxelles (ULB)</li>
+            <li>University of Antwerp</li>
+<li>University of Liège</li>
+            <li>Hasselt University</li>
+            <li>University of Mons</li>
+            <li>University of Namur</li>
+          </ul>
         </div>
       </section>
 
@@ -283,8 +301,9 @@ export default function Belgium3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+Belgium doesn’t attract attention the way UK or Canada does. No one grows up dreaming of studying in Brussels. But over 20 years at Times Consultant, we’ve learned that the best educational decisions aren’t always the obvious ones. We start with an honest assessment of whether Belgium makes sense for your situation. There’s no pressure, no obligation to proceed with our services after this initial meeting.          </p>
+          <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
+Let’s discuss whether Belgium’s combination of affordability, quality, and European access aligns with your educational goals and family budget. If it does, we’ll map out the entire process from application to arrival. If it doesn’t, we’ll explain why and suggest alternatives that might work better. Twenty years in this business has taught us one thing: the right education decision isn’t always the popular one. Sometimes it’s the one that makes sense on paper, delivers quality, and doesn’t leave your family financially strained.</p>
 
           <button
             type="button"
@@ -428,7 +447,7 @@ export default function Belgium3() {
       
                       {/* Accordion Content */}
                       {isOpen && (
-                        <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 mt-1">
+                        <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-800 leading-relaxed border-t border-slate-100 mt-1">
                           {item.answer}
                         </div>
                       )}

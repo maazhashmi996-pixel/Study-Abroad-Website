@@ -58,49 +58,49 @@ export default function Spain3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Spain?",
+      question: "How much does it cost to study in Spain?",
       answer:
-        "To study in Spain, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "For most international students, the total cost to study in Spain is around €8,000-€15,000 per year, depending on the city and university. Public universities usually charge €750-€2,500/year for bachelors and €1,000-€4,000/year for masters, plus €900-€1,200/month for living expenses.",
     },
     {
-      question: "Is it possible to study in Spain without IELTS?",
+      question: "Is €1000 enough to live in Spain?",
       answer:
-        "Yes, some universities in Spain may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "€1,000 per month can be enough for a student in Spain, especially in smaller or mid-sized cities. In Madrid or Barcelona, it is on the lower side, so you may need to share accommodation and budget carefully for rent, food, transport, and other costs.",
     },
     {
-      question: "How to get PR in Spain after study?",
+      question: "How to get a Spain study visa from Pakistan?",
       answer:
-        "To qualify for permanent residency in Spain after studying, you must have lived in Spain for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "You do not always need IELTS to study in Spain, but many English-taught programs ask for proof of English, often around IELTS 6.0-6.5 or an equivalent test. IELTS is not always compulsory to study in Spain, but many English-taught programs will ask for proof of English at about B2 level (often IELTS 6.0-6.5 or equivalent). Some universities accept alternatives like TOEFL, PTE, or a Medium of Instruction (MOI) letter, so you must check the requirements for each course.",
     },
     {
-      question: "How to study in Spain for free?",
+      question: "Can I work while studying in Spain?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Spain. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "To get a Spain study visa from Pakistan, you must: Get an offer letter from a recognised Spanish university or institute. Prepare documents: passport, forms, photos, financial proof, health insurance, police and medical certificates, and accommodation proof. Book an appointment at the visa centre, submit biometrics, and attend an interview if required. Times Consultant helps Pakistani students with university admission, complete document checking, and visa file preparation as per the latest Spanish embassy guidelines.",
     },
     {
-      question: "Can Pakistani students work while studying in Spain?",
+      question: "How much bank balance is required for a Spain student visa?",
       answer:
-        "Yes. Spain allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "Yes, international students in Spain can usually work up to 30 hours per week on a valid student residence permit, as long as the work does not interfere with their studies and complies with Spanish labour rules. Part-time work can support daily expenses, but you still need to show enough funds in advance for your visa.",
     },
     {
-      question: "Why do Spain student visas get rejected from Pakistan?",
+      question: "Can I settle in Spain after study?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "For a Spain student visa in 2025, you generally need to show at least 100% of the IPREM, which is around €600 per month, for the full length of your course (about €7,200 for one academic year, excluding tuition), plus proof of tuition payment or funding. If family members accompany you, you must show extra funds (about 75% IPREM for the first dependent and 50% for each additional one).",
     },
     {
-      question: "Which are the top universities in Spain for international students?",
+      question: "Can I bring my family to Spain on a student visa?",
       answer:
-        "Top choices: Technical University of Spain (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "TA Spanish student visa is temporary, but it can lead to a longer stay. After graduation, many students apply for a post-study job-search permit and then move to a work residence permit once they find a suitable job. With continuous legal stay (usually around 5 years on qualifying permits), you may apply for long-term residence.",
     },
     {
-      question: "What is a CPR number and how do students get it in Spain?",
+      question: "Top-rated Spain study visa consultant in Pakistan?",
       answer:
-        "CPR (Det Centrale Personregister) is Spain’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Spain. Without a CPR number, daily student life in Spain is extremely difficult.",
+        "There is no single “official” ranking for Spain study visa consultants, but Times Consultant is widely recognised as one of the top-rated Spain study visa consultants in Pakistan. Our teams help students with course and university selection, documentation, visa file preparation, and pre-departure support for Spain and other European destinations.",
     },
     {
-      question: "Spain vs Germany, which is better for Pakistani students?",
+      question: "What is the success rate of student visa in Spain 2025?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Spain teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Spain suits those prioritising English-medium study and a high quality of life.",
+        "Recent data and expert reports indicate that the Spain student visa success rate is very high, around 95-97%, when applicants meet all requirements and submit genuine, complete documents. Most refusals happen due to weak financial proof, missing documents, unclear study plans, or doubts about the student’s intention, so a well-prepared file has a good chance.",
     },
   ];
 

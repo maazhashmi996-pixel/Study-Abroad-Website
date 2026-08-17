@@ -2,37 +2,11 @@
 
 import {  BookOpen, Star } from "lucide-react";
 import { Wallet, Award, CheckCircle2 ,GraduationCap,FileText} from "lucide-react";
-
+import { FaEuroSign, FaCalendarAlt, FaGraduationCap, FaHome } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 export default function UK2() {
     
   
-      const scholarships = [
-        {
-          name: "Danish Government Scholarship",
-          desc: "Covers full tuition and monthly stipend for non-EU/EEA students with outstanding academic records.",
-        },
-        {
-          name: "DTU Scholarship",
-          desc: "Partial tuition waiver for high-achieving non-EU/EEA Master’s students.",
-        },
-        {
-          name: "Aarhus University Scholarship",
-          desc: "Covers 50%-100% tuition for exceptional international students.",
-        },
-        {
-          name: "Erasmus+ Scholarship",
-          desc: "EU-funded, covers tuition, travel, and living allowance for exchange students.",
-        },
-        {
-          name: "Novo Nordisk Foundation Scholarship",
-          desc: "Covers full tuition and stipend for students in life sciences and health programs.",
-        },
-        {
-          name: "HEC United Kingdom Scholarship (For Pakistanis)",
-          desc: "Higher Education Commission Pakistan offers funded programs for Danish universities.",
-        },
-      ];
 
   const requirements = [
     {
@@ -83,7 +57,7 @@ export default function UK2() {
     ],
     countries: [
       "Australia", "Canada", "United Kingdom", "Finland", "France", "Germany",
-      "Hungary", "Ireland", "Italy", "Malaysia", "Malta", "Netherlands",
+      "United Kingdom ", "Ireland", "Italy", "Malaysia", "Malta", "Netherlands",
       "New Zealand", "Norway", "Poland", "Portugal", "Spain", "Sweden",
       "Switzerland", "Turkey", "United Arab Emirates (UAE)",
       "United Kingdom (UK)", "United States (USA)",
@@ -387,91 +361,170 @@ export default function UK2() {
 
       </div>
     </section>
-      <section className="bg-white px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="mb-10 md:mb-14 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-            <span className="w-8 h-[2px] bg-red-500" />
-            <span className="text-red-600 text-xs uppercase tracking-widest font-bold">
-              Financial Information
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
-            Cost & <span className="text-[#0b5cff]">Scholarships</span>
-          </h2>
-        </div>
-
-        {/* Two-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          
-          {/* Left Card: Cost of Studying */}
-          <div className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+     <section className="bg-slate-50/80 text-slate-900 py-12 sm:py-16 px-4 sm:px-8 md:px-12 lg:px-20 border-y border-slate-200/60">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
             
-            {/* Header with Red Accent Icon */}
-            <div className="flex items-center gap-4 mb-6 pb-4 border-b border-slate-200/80">
-              <div className="w-12 h-12 bg-red-50 border border-red-100 text-red-600 rounded-2xl flex items-center justify-center shrink-0">
-                <Wallet className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1a233d]">
-                Cost of Studying In United Kingdom
-              </h3>
-            </div>
-
-            <div className="flex flex-col gap-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-              <p>
-                In general, living expenses in United Kingdom can be high. While the suggested monthly budget for smaller towns like Aalborg is about <span className="font-semibold text-[#1a233d]">EUR 1,000</span>, living in Copenhagen typically ranges from <span className="font-semibold text-[#1a233d]">EUR 1,280 to 1,800</span> per month.
-              </p>
-              <p>
-                However, students from Switzerland and the EU/EEA benefit from tuition-free education at Danish institutions, saving a significant amount.
-              </p>
-              <p>
-                Many international students opt for off-campus residence halls as public transport makes commuting simple. Dorms offer an affordable way to settle in—expect to pay between <span className="font-semibold text-[#0b5cff]">EUR 240 and EUR 460</span> monthly for residence hall accommodation.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Card: Scholarships */}
-          <div className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            
-            {/* Header with Red Accent Icon */}
-            <div className="flex items-center gap-4 mb-4 pb-4 border-b border-slate-200/80">
-              <div className="w-12 h-12 bg-red-50 border border-red-100 text-red-600 rounded-2xl flex items-center justify-center shrink-0">
-                <Award className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1a233d]">
-                Scholarships For International Students
-              </h3>
-            </div>
-
-            <p className="text-xs sm:text-sm text-slate-500 font-medium mb-6 italic">
-              Merit-based financial aid covering partial to full tuition for international Master’s students:
-            </p>
-
-            {/* List of Scholarships */}
-            <ul className="flex flex-col gap-4">
-              {scholarships.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200/60 shadow-2xs">
-                  <CheckCircle2 className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
-                  <div className="text-sm sm:text-base leading-snug">
-                    <strong className="text-[#1a233d] font-bold block mb-0.5">
-                      {item.name}:
-                    </strong>
-                    <span className="text-slate-600 text-xs sm:text-sm">
-                      {item.desc}
+            {/* Left Column: Cost of Studying */}
+            <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm border-l-4 border-l-[#0b5cff] flex flex-col justify-between">
+              <div>
+                {/* Header */}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-xl bg-blue-50 text-[#0b5cff] border border-blue-100">
+                    <FaEuroSign className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Cost of Studying in <span className="text-[#0b5cff]">United Kingdom </span>
+                  </h2>
+                </div>
+    
+                {/* Tuition Fees */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+                    Tuition Fees
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4">
+                    United Kingdom  remains one of the most budget-friendly EU countries for international students.
+                  </p>
+                  <ul className="space-y-2 bg-slate-50 border border-slate-200/60 rounded-xl p-4 text-sm text-slate-700 font-medium">
+                    <li className="flex justify-between items-center border-b border-slate-200/50 pb-2">
+                      <span>Bachelor’s Programs</span>
+                      <span className="font-bold text-slate-900"> £10,000 and £24,000 / year</span>
+                    </li>
+                    <li className="flex justify-between items-center border-b border-slate-200/50 py-2">
+                      <span>Master’s Programs</span>
+                      <span className="font-bold text-slate-900"> £12,000 and £28,000  / year</span>
+                    </li>
+                    <li className="flex justify-between items-center pt-2">
+                      <span>Medical & Dentistry Programs</span>
+                      <span className="font-bold text-slate-900">£15,000 to £24,000  / year</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-slate-500 mt-2 italic">
+                    Tuition fees depend on the university and program, but overall costs are significantly lower than in Western Europe.
+                  </p>
+                </div>
+    
+                {/* Living Costs */}
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-slate-700 inline-block" />
+                    Living Costs
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4">
+                    Living in United Kingdom  is affordable by European standards, especially outside Budapest.
+                  </p>
+                  
+                  <div className="bg-slate-50 border border-slate-200/60 rounded-xl p-4 text-sm text-slate-700 space-y-2">
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
+                      Estimated Monthly Expenses
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+                      <div className="flex justify-between bg-white p-2.5 rounded-lg border border-slate-200/50">
+                        <span className="text-slate-600">Accommodation</span>
+                        <span className="font-semibold text-slate-900">€300 – €500</span>
+                      </div>
+                      <div className="flex justify-between bg-white p-2.5 rounded-lg border border-slate-200/50">
+                        <span className="text-slate-600">Food & Groceries</span>
+                        <span className="font-semibold text-slate-900">€180 – €250</span>
+                      </div>
+                      <div className="flex justify-between bg-white p-2.5 rounded-lg border border-slate-200/50">
+                        <span className="text-slate-600">Transportation</span>
+                        <span className="font-semibold text-slate-900">€30 – €50</span>
+                      </div>
+                      <div className="flex justify-between bg-white p-2.5 rounded-lg border border-slate-200/50">
+                        <span className="text-slate-600">Utilities & Internet</span>
+                        <span className="font-semibold text-slate-900">€80 – €120</span>
+                      </div>
+                      <div className="flex justify-between bg-white p-2.5 rounded-lg border border-slate-200/50 sm:col-span-2">
+                        <span className="text-slate-600">Personal Expenses</span>
+                        <span className="font-semibold text-slate-900">€80 – €150</span>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div className="mt-4 p-3.5 bg-blue-50/60 border border-blue-100 rounded-xl flex items-center justify-between">
+                    <span className="text-xs sm:text-sm font-semibold text-slate-700">
+                      Approximate Monthly Total
+                    </span>
+                    <span className="text-sm sm:text-base font-extrabold text-[#0b5cff]">
+                      €700 – €1,000
                     </span>
                   </div>
-                </li>
-              ))}
-            </ul>
-
+                </div>
+              </div>
+            </div>
+    
+            {/* Right Column: Intakes & Scholarships */}
+            <div className="space-y-8 flex flex-col justify-between">
+              
+              {/* Study Intakes */}
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm border-l-4 border-l-red-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-xl bg-red-50 text-red-600 border border-red-100">
+                    <FaCalendarAlt className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Study Intakes in <span className="text-red-500">United Kingdom </span>
+                  </h2>
+                </div>
+                <p className="text-sm text-slate-600 mb-4">
+                  Hungarian universities usually offer two main intakes:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                  <div className="p-3.5 bg-slate-50 border border-slate-200/60 rounded-xl">
+                    <p className="text-xs font-bold text-red-500 uppercase tracking-wider">Fall Intake</p>
+                    <p className="text-sm font-bold text-slate-900 mt-1">September</p>
+                    <p className="text-xs text-slate-500">Main intake for most programs</p>
+                  </div>
+                  <div className="p-3.5 bg-slate-50 border border-slate-200/60 rounded-xl">
+                    <p className="text-xs font-bold text-[#0b5cff] uppercase tracking-wider">Spring Intake</p>
+                    <p className="text-sm font-bold text-slate-900 mt-1">From September until December</p>
+                    <p className="text-xs text-slate-500">Available for selected courses</p>
+                  </div>
+                </div>
+                <p className="text-xs text-slate-500 italic">
+                  Students can apply early to have sufficient time for documentation and visa processing.
+                </p>
+              </div>
+    
+              {/* Scholarships */}
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm border-l-4 border-l-slate-700 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-xl bg-slate-100 text-slate-700 border border-slate-200">
+                      <FaGraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                      Scholarships for <span className="text-slate-700">Students</span>
+                    </h2>
+                  </div>
+                  <p className="text-sm text-slate-600 mb-4">
+                    United Kingdom  offers well-known scholarship opportunities for international students:
+                  </p>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-4">
+                    <li className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/50 rounded-lg">
+                      <span className="w-2 h-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                      <span><strong>Stipendium Hungaricum Scholarship</strong> (Very popular among international students)</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/50 rounded-lg">
+                      <span className="w-2 h-2 rounded-full bg-[#0b5cff] mt-1.5 shrink-0" />
+                      <span><strong>University-specific merit scholarships</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/50 rounded-lg">
+                      <span className="w-2 h-2 rounded-full bg-slate-700 mt-1.5 shrink-0" />
+                      <span><strong>Above all, international students can apply for merit-based undergraduate and graduate scholarships from several UK universities. While, these scholarships come in different amounts and might pay for all or only a portion of the tuition. Make sure to look at the scholarships available on the school websites you selected. Moreover, book a meeting session with us where we assist both undergraduate and graduate students seeking scholarships to study in the UK.</strong></span>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-xs text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-200/60">
+Moreover, with the help of our online resources and our extensive relationships with UK universities, all qualified applicants can choose the scholarship that will most benefit their future.                </p>
+              </div>
+    
+            </div>
+    
           </div>
-
-        </div>
-
-      </div>
-    </section>
+        </section>
     </div>
   );
 }

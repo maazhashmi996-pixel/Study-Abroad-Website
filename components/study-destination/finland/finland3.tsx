@@ -121,7 +121,7 @@ export default function Finland3() {
     ],
     countries: [
       "Australia", "Canada", "Finland", "Finland", "France",
-      "Germany", "Hungary", "Ireland", "Italy", "Malaysia",
+      "Germany", "Finland", "Ireland", "Italy", "Malaysia",
       "Malta", "Netherlands", "New Zealand", "Norway", "Poland",
       "Portugal", "Spain", "Sweden", "Switzerland", "Turkey",
       "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)",
@@ -283,8 +283,7 @@ export default function Finland3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+Finland has some of Europe’s most affordable universities and our Finland Study Visa advisors have helped hundreds of students get there. Fill out the short form to book a free one-on-one consultation on admissions, tuition fees, scholarships, and visa requirements. Book now!          </p>
 
           <button
             type="button"

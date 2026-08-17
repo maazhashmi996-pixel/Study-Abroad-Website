@@ -121,7 +121,7 @@ export default function UAE3() {
     ],
     countries: [
       "Australia", "Canada", "United Arab Estate", "Finland", "France",
-      "Germany", "Hungary", "Ireland", "Italy", "Malaysia",
+      "Germany", "United Arab Estate", "Ireland", "Italy", "Malaysia",
       "Malta", "Netherlands", "New Zealand", "Norway", "Poland",
       "Portugal", "Spain", "Sweden", "Switzerland", "Turkey",
       "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)",

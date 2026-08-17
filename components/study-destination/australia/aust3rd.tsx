@@ -58,49 +58,49 @@ export default function Australia3rdPage() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Denmark?",
+      question: "How much IELTS band required to study in Australia?",
       answer:
-        "To study in Denmark, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "To study in Australia, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
     },
     {
-      question: "Is it possible to study in Denmark without IELTS?",
+      question: "Is it possible to study in Australia without IELTS?",
       answer:
-        "Yes, some universities in Denmark may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "Yes, some universities in Australia may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
     },
     {
-      question: "How to get PR in Denmark after study?",
+      question: "How to get PR in Australia after study?",
       answer:
-        "To qualify for permanent residency in Denmark after studying, you must have lived in Denmark for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "To qualify for permanent residency in Australia after studying, you must have lived in Australia for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
     },
     {
-      question: "How to study in Denmark for free?",
+      question: "How to study in Australia for free?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Denmark. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "Students from the EU/EEA and Switzerland can study for free at public universities in Australia. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
     },
     {
-      question: "Can Pakistani students work while studying in Denmark?",
+      question: "Can Pakistani students work while studying in Australia?",
       answer:
-        "Yes. Denmark allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "Yes. Australia allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
     },
     {
-      question: "Why do Denmark student visas get rejected from Pakistan?",
+      question: "Why do Australia student visas get rejected from Pakistan?",
       answer:
         "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
     },
     {
-      question: "Which are the top universities in Denmark for international students?",
+      question: "Which are the top universities in Australia for international students?",
       answer:
-        "Top choices: Technical University of Denmark (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "Top choices: Technical University of Australia (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
     },
     {
-      question: "What is a CPR number and how do students get it in Denmark?",
+      question: "What is a CPR number and how do students get it in Australia?",
       answer:
-        "CPR (Det Centrale Personregister) is Denmark’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Denmark. Without a CPR number, daily student life in Denmark is extremely difficult.",
+        "CPR (Det Centrale Personregister) is Australia’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Australia. Without a CPR number, daily student life in Australia is extremely difficult.",
     },
     {
-      question: "Denmark vs Germany, which is better for Pakistani students?",
+      question: "Australia vs Germany, which is better for Pakistani students?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Denmark teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Denmark suits those prioritising English-medium study and a high quality of life.",
+        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Australia teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Australia suits those prioritising English-medium study and a high quality of life.",
     },
   ];
 
@@ -120,7 +120,7 @@ export default function Australia3rdPage() {
       "05:00 PM", "05:30 PM", "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM",
     ],
     countries: [
-      "Australia", "Canada", "Denmark", "Finland", "France",
+      "Australia", "Canada", "Australia", "Finland", "France",
       "Germany", "Hungary", "Ireland", "Italy", "Malaysia",
       "Malta", "Netherlands", "New Zealand", "Norway", "Poland",
       "Portugal", "Spain", "Sweden", "Switzerland", "Turkey",
@@ -157,7 +157,7 @@ export default function Australia3rdPage() {
     {
       title: "Engineering",
       description:
-        "Aarhus University, Aalborg University, and Technical University of Denmark (DTU) are all excellent in different engineering fields.",
+        "Aarhus University, Aalborg University, and Technical University of Australia (DTU) are all excellent in different engineering fields.",
       icon: <Cpu className="w-5 h-5" />,
     },
     {
@@ -169,7 +169,7 @@ export default function Australia3rdPage() {
     {
       title: "Medical & Life Sciences",
       description:
-        "Prestigious medical and life science programs are available at University of Copenhagen, Aarhus University, and Southern Denmark University.",
+        "Prestigious medical and life science programs are available at University of Copenhagen, Aarhus University, and Southern Australia University.",
       icon: <Stethoscope className="w-5 h-5" />,
     },
     {
@@ -193,7 +193,7 @@ export default function Australia3rdPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a233d] tracking-tight">
-              Popular Courses <span className="text-[#0b5cff]">In Denmark</span>
+              Popular Courses <span className="text-[#0b5cff]">In Australia</span>
             </h2>
           </div>
 
@@ -212,7 +212,7 @@ export default function Australia3rdPage() {
                   <h3 className="text-lg font-bold text-[#1a233d] mb-2">
                     {course.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
                     {course.description}
                   </p>
                 </div>
@@ -243,8 +243,8 @@ export default function Australia3rdPage() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <p className="text-sm sm:text-base leading-relaxed text-slate-600 font-normal">
-                After completing a Bachelor’s, Master’s, or PhD in Denmark, non-EU/EEA students can apply for a{" "}
+              <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+                After completing a Bachelor’s, Master’s, or PhD in Australia, non-EU/EEA students can apply for a{" "}
                 <strong className="text-[#1a233d] font-semibold">3-year job search permit</strong> through the Danish Agency for International Recruitment and Integration (SIRI).
               </p>
 
@@ -283,8 +283,17 @@ export default function Australia3rdPage() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+Austria does not have a separate “post study work visa,” but it does give international graduates a genuine, structured path to stay and work.
+
+    After completing your degree, you can extend your student residence permit for 12 months to search for a job or start a business
+    During this period you must still show sufficient funds and valid health insurance
+    Once you receive a qualifying job offer at the appropriate salary level for your qualification, you can apply directly for a Red White Red Card for graduates, without going through Austria’s general points based system
+    Holding a Red White Red Card for at least 21 months within a 24 month period opens the path to the Red White Red Card Plus, which allows unlimited access to the Austrian labour market</p>
+<p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
+If Austria aligns with your academic profile and future plans, we guide you through admissions, documentation, and visa processes. If not, we’ll help you find better alternatives before you invest time and resources.
+</p>
+<p >
+Contact us today and let’s map out your study abroad strategy with confidence.          </p>
 
           <button
             type="button"
@@ -428,7 +437,7 @@ export default function Australia3rdPage() {
       
                       {/* Accordion Content */}
                       {isOpen && (
-                        <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 mt-1">
+                        <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-800 leading-relaxed border-t border-slate-100 mt-1">
                           {item.answer}
                         </div>
                       )}

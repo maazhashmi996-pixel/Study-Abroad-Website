@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 
+import {  FaGlobeEurope, FaGraduationCap, FaShieldAlt, FaWallet } from "react-icons/fa";
+
 export default function Sweden1() {
      const tableOfContents = [
     { title: "Admission requirements in Sweden", id: "admission-requirements" },
@@ -14,6 +16,41 @@ export default function Sweden1() {
     { title: "Cost of living in Sweden", id: "cost-of-living" },
     { title: "Book a meeting with an expert", id: "book-meeting" },
   ];
+
+   const reasons = [
+      {
+        title: "For Most Students In Europe, It Is Free",
+        description:
+          "Yes, it is correct! In Sweden, public institutions do not charge tuition for students who are citizens of the European Union (EU) or the European Economic Area (EEA). Whether, you may use the money you save to pay for living expenses, which are higher than the average for Europe.",
+        icon: FaGraduationCap,
+        accentBorder: "border-l-red-500",
+        iconBg: "bg-red-50 text-red-600 border-red-100",
+      },
+      {
+        title: "World-Class Reputation",
+        description:
+          "Moreover, Swedish universities consistently rank highly in international rankings, strongly focusing on research and quality education.",
+        icon: FaWallet,
+        accentBorder: "border-l-[#0b5cff]",
+        iconBg: "bg-blue-50 text-[#0b5cff] border-blue-100",
+      },
+      {
+        title: "Environmentally Friendly Country",
+        description:
+          "You’ll appreciate living here if you care about the environment. Sweden has always made investments to promote environmental protection and well-being. Moreover, it illustrates what any country can achieve with effort and dedication. Sweden, for example, wants to produce all of its energy from renewable sources by 2040.",
+        icon: FaGlobeEurope,
+        accentBorder: "border-l-slate-700",
+        iconBg: "bg-slate-100 text-slate-700 border-slate-200",
+      },
+      {
+        title: "Many People Speak English",
+        description:
+          "Since more than 80% of Swedes are English-speaking, interacting with locals and finding degrees taught in the language is simple in Sweden. However, we advise acquiring at least the most essential vocabulary in Swedish for those rare occasions when you encounter someone who doesn’t speak English.",
+        icon: FaShieldAlt,
+        accentBorder: "border-l-red-500",
+        iconBg: "bg-red-50 text-red-600 border-red-100",
+      },
+    ];
   return (
     <div>
         {/* hero section */}
@@ -38,9 +75,10 @@ export default function Sweden1() {
       <div className=" inset-0 flex items-end pb-2 sm:pb-6 md:pb-8 px-3 sm:px-88 md:px-10 z-20">
         <div className="absolute max-w-7xl mx-auto w-full">
           <ul className="relative list-disc text-xs b-0.5 l-6 pl-12 sm:ml-6 underline  sm:space-y-3 text-white sm:text-base md:text-xs lg:text-xl drop-shadow-md">
-            <li>15+ University and Colleges</li>
-            <li>DKK 80,000 Annual Tuition Fee</li>
-            <li>3 Year Post Study Visa</li>
+            <li>32 Universities</li>
+            <li>SEK 80,000 to SEK 295,000 Annual Tuition Fee</li>
+
+            <li>Up to 12 Months Post Study Work Visa</li>
           </ul>
         </div>
       </div>
@@ -55,12 +93,9 @@ export default function Sweden1() {
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Sweden offers an innovative, secure, and welcoming environment for international students.        </p>
-
+Sweden is known for being inclusive of all people, particularly its educational system. However, English-language degree programs are available in Sweden, drawing many international students to enroll. Unlike many other nations, Sweden permits international students to work while enrolled in classes. Additionally, after graduating, you can ask for an extension to look for work in Sweden, even if you’re not from the EU or EEA. Above all, Sweden, the center of innovation in Europe, is the ideal place to continue your studies and launch your career!
         {/* Paragraph 2 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-Studying in Sweden isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
-
+  </p>
       </div>
     </section>
      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">
@@ -99,23 +134,46 @@ Studying in Sweden isn't just about gaining a globally recognized degree—it's 
     
           </div>
         </section>
-         <section className="bg-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-14 ">
-      <div className="max-w-7xl mx-auto flex flex-col gap-4 sm:gap-6 md:gap-7">
+      <section className="bg-slate-50/80 text-slate-900 py-12 sm:py-16 px-4 sm:px-8 md:px-12 lg:px-20 border-y border-slate-200/60">
+      <div className="max-w-7xl mx-auto">
         
-        {/* Main Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl  font-bold text-[#1a233d] border-b-2  pb-3">
-          Why Study <span className="text-[#0b5cff]">In Sweden</span>
-        </h1>
+        {/* Header Section */}
+        <div className="mb-10 text-center md:text-left">
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-[#0b5cff] px-3.5 py-1 rounded-full text-xs uppercase tracking-widest font-semibold mb-3">
+            <span className="w-2 h-2 rounded-full bg-red-500 inline-block animate-pulse" />
+            Destination Guide
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Why Study in <span className="text-[#0b5cff]">Sweden?</span>
+          </h2>
+        </div>
 
-        {/* Paragraph 1 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
-          Since Sweden lacks significant natural resources, its main export is knowledge. Its focus on education indicates that Danish education is excellent and emphasizes creativity, innovation, analysis, and critical thinking. Additionally, their universities specialize in sustainability, innovation, entrepreneurship, and global perspectives, and their teaching is grounded in the most recent research. Their daring methodology permeates the educational system as well. By fusing conventional lectures with industry internships, Danish universities encourage self-motivation and problem-based learning, enabling students to apply their knowledge practically and equipping them for the demands of the global labor market.
-        </p>
-        
-        {/* Paragraph 2 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
-          Sweden has several very prestigious universities, such as the University of Copenhagen and the University of Southern Sweden, which are important reasons to study there. Additionally, universities like Roskilde University and Aarhus University are options for students.
-        </p>
+        {/* Structured Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {reasons.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={index}
+                className={`bg-white border border-slate-200/80 border-l-4 ${item.accentBorder} rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between`}
+              >
+                <div>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`p-3 rounded-xl border ${item.iconBg} shrink-0`}>
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
       </div>
     </section>

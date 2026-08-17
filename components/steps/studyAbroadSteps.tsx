@@ -2,22 +2,46 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function StudyAbroadSteps() {
-  const stepsList = [
+  const stepsList = [{
+    title:
     "Select Your Program",
-    "Submit Application",
+    link:"/study-abroad-steps/select-your-program"
+  },{
+    title:
+   "Submit Application",
+    link:"/study-abroad-steps/submit-application"
+  },{
+    title:
     "Receive Offer Letter",
+    link:"/study-abroad-steps/receive-offer-letter"
+  },{
+    title:
     "Fulfill Conditions",
+    link:"/study-abroad-steps/fulfill-conditions"
+  },{
+    title:
     "Pay Tuition Deposit",
-    "Get Unconditional Offer",
+    link:"/study-abroad-steps/pay-tuition-deposit"
+  },{
+    title:
     "Apply for Visa",
+    link:"/study-abroad-steps/apply-for-visa"
+  },
+  {
+    title:
     "Start Your Program",
+    link:"/study-abroad-steps/start-your-program"
+  },
+    
   ];
 
   const whyStepsCards = [
     {
       text: "University can't issue an offer if you don't apply.",
+
     },
     {
       text: "University won't make it unconditional if you don't clear conditions.",
@@ -57,13 +81,31 @@ export default function StudyAbroadSteps() {
             Every successful student basically follows these 8 stages:
           </p>
 
-          <ol className="list-decimal list-inside space-y-2 text-xs sm:text-sm text-[#0b5cff] font-bold pt-2 text-left max-w-xs mx-auto md:mx-0">
+          {/* <ol className="list-decimal list-inside space-y-2 text-xs sm:text-sm text-[#0b5cff] font-bold pt-2 text-left max-w-xs mx-auto md:mx-0">
             {stepsList.map((step, index) => (
               <li key={index} className="cursor-pointer hover:text-red-400 transition-colors">
                 <span className="text-slate-700 hover:text-[#0b5cff] hover:underline transition-colors">{step}</span>
               </li>
             ))}
-          </ol>
+          </ol> */}
+
+          <div className="list-decimal list-inside space-y-2 text-xs sm:text-sm text-[#0b5cff] font-bold pt-2 text-left max-w-xs mx-auto md:mx-0">
+  {stepsList.map((step, idx) => (
+    <div
+      key={idx}
+      className="cursor-pointer hover:text-red-400 transition-colors"
+    >
+      <Link
+        href={step.link}
+        className="block"
+      >
+        <h4 className="text-slate-700 hover:text-[#0b5cff] hover:underline transition-colors">
+          {step.title}
+        </h4>
+      </Link>
+    </div>
+  ))}
+</div>
 
           <p className="text-[11px] sm:text-xs text-slate-700 italic pt-2">
             Miss one step or do it late and you can lose the intake.
@@ -75,7 +117,7 @@ export default function StudyAbroadSteps() {
           <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md aspect-square bg-slate-900/50 rounded-2xl p-4 border border-slate-800 shadow-2xl">
             <Image
               src="/images/steps/issteps.jpg"
-              alt="Course and Program Selection Illustration"
+              alt="issteps"
               fill
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"

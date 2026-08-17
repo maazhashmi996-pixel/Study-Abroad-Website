@@ -145,7 +145,7 @@ export default function EventHero() {
         </div>
         
         <Link
-          href="#register"
+          href="/signup"
           className="bg-[#0b5cff] hover:bg-blue-600 text-white font-black text-xs sm:text-sm px-8 py-3.5 rounded-xl uppercase tracking-wider shadow-lg transition-all active:scale-95 whitespace-nowrap border border-blue-400/20"
         >
           Register For Free Expo
