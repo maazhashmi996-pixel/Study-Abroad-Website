@@ -60,10 +60,10 @@ export default function Netherland3() {
     {
       question: "How much IELTS band required to study in Netherland?",
       answer:
-        "To study in Netherland, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "IELTS is not legally mandatory for the Netherlands, but most English-taught bachelor’s and master’s programs require proof of English, usually around IELTS 6.0-6.5 overall. Many Dutch universities accept equivalent tests like TOEFL or PTE, and some set higher scores (for example, certain universities expect at least IELTS 6.5-7.0 for competitive programs), so you must always check the exact English requirement on the official page of your chosen course",
     },
     {
-      question: "Is it possible to study in Netherland without IELTS?",
+      question: "How much money is required for a Netherlands student visa?",
       answer:
         "Yes, some universities in Netherland may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
     },

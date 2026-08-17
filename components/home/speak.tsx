@@ -20,27 +20,27 @@ const studentTestimonials = [
   {
     id: 1,
     name: "Abdul Mueed",
-    image: "/images/testimonials/abdul.webp",
+    image: "/images/testimonials",
   },
   {
     id: 2,
     name: "Kapil Dev",
-    image: "/images/testimonials/kapil.webp",
+    image: "/images/testimonials",
   },
   {
     id: 3,
     name: "Ahsan Bin Waheed",
-    image: "/images/testimonials/ahsan.webp",
+    image: "/images/testimonials",
   },
   {
     id: 4,
     name: "Mavia",
-    image: "/images/testimonials/mavia.webp",
+    image: "/images/testimonials",
   },
   {
     id: 5,
     name: "Abdullah",
-    image: "/images/testimonials/abdullah.webp",
+    image: "/images/testimonials/",
   },
 ];
 

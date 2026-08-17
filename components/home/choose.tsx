@@ -14,7 +14,7 @@ function Choose() {
   const destinations = [
     {
       country: "USA",
-      flag: "/images/study-Destination/usa.webp",
+      flag: "/images/study-Dest/usa.webp",
       details: [
         "10+ Universities",
         "€2,000 – €5,000 Annual Tuition",
@@ -30,7 +30,7 @@ function Choose() {
         "CAD 15,000+ Annual Tuition",
         "PGWP Available",
       ],
-       link:"/study-destination/canada"
+       link:"/study-Destination/canada"
     },
     {
       country: "Cyprus",
@@ -40,7 +40,7 @@ function Choose() {
         "€4,000 – €9,000 Annual Tuition Fee",
         "Limited Post Study Work Options",
       ],
-        link:"/study-destination/cyprus"
+        link:"/study-Destination/cyprus"
     },
     {
       country: "Finland",
@@ -50,17 +50,17 @@ function Choose() {
         "€6,000 – €16,000 Annual Tuition",
         "Post-Study Work Permits",
       ],
-        link:"/study-destination/finland"
+        link:"/study-Destination/finland"
     },
     {
       country: "France",
-      flag: "/images/study-Destination/france.webp",
+      flag: "/images/study-Dest/france.webp",
       details: [
         "500+ Universities",
         "Varies by Country",
         "Schengen Area Access",
       ],
-        link:"/study-destination/france"
+        link:"/study-Destination/france"
     },
     {
       country: "Germany",
@@ -70,27 +70,27 @@ function Choose() {
         "AUD 20,000+ Annual Tuition",
         "Subclass 485 Visa Options",
       ],
-        link:"/study-destination/germany"
+        link:"/study-Destination/germany"
     },
     {
       country: "Hungary",
-      flag: "/images/home/hungary.webp",
+      flag: "/images/study-Dest/hungary.webp",
       details: [
         "130+ Universities",
         "£12,000+ Annual Tuition",
         "2-Year Graduate Route",
       ],
-        link:"/study-destination/hungary"
+        link:"/study-Destination/hungary"
     },
     {
       country: "Australia",
-      flag: "/images/home/australia.webp",
+      flag: "/images/home/austria.webp",
       details: [
         "1000+ Universities",
         "$20,000+ Annual Tuition",
         "OPT STEM Extension Options",
       ],
-        link:"/study-destination/australia"
+        link:"/study-Destination/australia"
     },
   ];
 
@@ -288,14 +288,17 @@ function Choose() {
                       </div>
 
                       {/* Bottom */}
-                      <div className="flex items-center justify-between border-t border-white/10 pt-3">
+                      <button 
+                      // href={destinations.link}
+                      className="flex items-center justify-between border-t border-white/10 pt-3">
+
                         <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
                           Study Abroad
                         </span>
 
                         <ArrowRight className="h-4 w-4 text-[#0b5cff]" />
+                    </button>
                       </div>
-                    </div>
                   </div>
 
                   {/* Country Title */}

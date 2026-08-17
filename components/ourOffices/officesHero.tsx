@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronRight, MapPin, GradCap } from "lucide-react";
+import { ChevronRight, MapPin} from "lucide-react";
 import Link from "next/link";
 
 interface CityItem {
@@ -39,7 +39,7 @@ const cityDataByCountry: Record<string, CityItem[]> = {
   ],
 };
 
-const country = ["Pakistan", "Punjab", "Lahore"];
+const country = ["Pakistan", "Lahore"];
 
 export default function OfficesHero() {
 

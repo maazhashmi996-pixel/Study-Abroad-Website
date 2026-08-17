@@ -268,6 +268,24 @@ export default function Cyprus3() {
           </div>
         </div>
       </section>
+     <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">
+  <div className="max-w-7xl mx-auto">
+    <h1 className="text-3xl sm:text-4xl text-blue-700 font-bold mb-6">
+      Top Universities in Cyprus
+    </h1>
+    
+    {/* Added list-disc and pl-5 for bullet dots */}
+    <ul className="list-disc pl-5 space-y-2 text-slate-800 text-base sm:text-lg font-medium">
+      <li>University of Cyprus</li>
+      <li>Cyprus University of Technology</li>
+      <li>European University Cyprus</li>
+      <li>University of Nicosia</li>
+      <li>Neapolis University Pafos</li>
+      <li>Frederick University</li>
+      <li>Cyprus International University</li>
+    </ul>
+  </div>
+</section>
 
       {/* Book Meeting Banner & Modal */}
       <section className="relative overflow-hidden bg-[#020617] py-16 sm:py-20">
@@ -285,8 +303,9 @@ export default function Cyprus3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+When families ask about Cyprus, we start by clarifying what Cyprus actually offers versus what expectations might be. Over twenty years, we’ve learned that mismatched expectations cause more problems than financial constraints or academic challenges. At Times Consultant, we guide families through Cyprus applications when Cyprus genuinely fits their situation and constraints.          </p>
+          <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
+Schedule a free Cyprus study visa consultation and let’s discuss whether Cyprus’s combination of affordability and EU access aligns with your realistic goals and constraints. If it does, we’ll map out the entire process. If it doesn’t, we’ll explain why and suggest alternatives that better serve your situation.</p>
 
           <button
             type="button"

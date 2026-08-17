@@ -27,7 +27,7 @@ const blogs: Blog[] = [
     desc: "Austria is one of the most affordable options for Pakistani students seeking a recognized European degree...",
     image: "/images/blog/austria-visa.webp",
     tags: ["Austria", "Visa", "Europe"],
-    link: "/austria",
+    link: "/Blog/austria",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const blogs: Blog[] = [
     desc: "Explore top study destinations across Europe with detailed visa guidance and application steps...",
     image: "/images/blog/MBA.png",
     tags: ["Europe", "Schengen", "Visa"],
-    link: "/europe",
+    link: "/Blog/europe",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const blogs: Blog[] = [
     desc: "Comprehensive guide to studying in the Netherlands, admission procedures, and MVV residence permit filing...",
     image: "/images/blog/neatherlands.webp",
     tags: ["Netherlands", "Visa", "Europe"],
-    link: "/netherlands",
+    link: "/Blog/netherland",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const blogs: Blog[] = [
     desc: "Essential insights into Canadian university admissions, study permits, SDS processing, and scholarships...",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Study Permit"],
-    link: "/canada",
+    link: "/Blog/canada",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const blogs: Blog[] = [
     desc: "A complete overview of CSC, Provincial, and University scholarships available for Pakistani students...",
     image: "/images/blog/china.webp",
     tags: ["China", "Scholarships"],
-    link: "/china",
+    link: "/Blog/china",
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const blogs: Blog[] = [
     desc: "Key advice and frequently asked questions for passing your Turkish student visa interview through Anatolia...",
     image: "/images/blog/turkey.webp",
     tags: ["Turkey", "Visa"],
-    link: "/turkey",
+    link: "/Blog/turkey",
   },
   {
     id: 7,
@@ -75,7 +75,7 @@ const blogs: Blog[] = [
     desc: "Everything you need to know about CAS, UK Student Visa requirements, post-study work rights, and intake deadlines...",
     image: "/images/blog/10-Tips.png",
     tags: ["UK", "Visa"],
-    link: "/uk",
+    link: "/Blog/united-kingdom",
   },
   {
     id: 8,
@@ -83,7 +83,7 @@ const blogs: Blog[] = [
     desc: "Learn about Danish higher education structure, tuition fees, residence permits, and language prerequisites...",
     image: "/images/blog/bunking-myths.png",
     tags: ["Denmark", "Europe"],
-    link: "/denmark",
+    link: "/Blog/bunking-myths",
   },
   {
     id: 9,
@@ -91,7 +91,7 @@ const blogs: Blog[] = [
     desc: "Step-by-step preparation for US university applications, F-1 visa interviews, I-20 documentation, and SAT/GRE tests...",
     image: "/images/blog/Exchange-programs.png",
     tags: ["USA", "Scholarships"],
-    link: "/usa",
+    link: "/Blog/usuni",
   },
   {
     id: 10,
@@ -99,7 +99,7 @@ const blogs: Blog[] = [
     desc: "Detailed guide to universityadmissions.se, Swedish Institute scholarships, and study residence permits...",
     image: "/images/blog/sweden.webp",
     tags: ["Sweden", "Scholarships"],
-    link: "/sweden",
+    link: "/Blog/sweden",
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ const blogs: Blog[] = [
     desc: "Explore Campus France application steps, France Excellence scholarships, and student visa processes...",
     image: "/images/blog/france-study.webp",
     tags: ["France", "Scholarships"],
-    link: "/france",
+    link: "/Blog/france",
   },
   {
     id: 12,
@@ -115,7 +115,7 @@ const blogs: Blog[] = [
     desc: "Discover study options, entry requirements, and Stamp 2 student visa guidance for studying in Ireland...",
     image: "/images/blog/Ireland-study.png",
     tags: ["Ireland", "Scholarships"],
-    link: "/ireland",
+    link: "/Blog/ireland",
   },
   {
     id: 13,
@@ -123,7 +123,7 @@ const blogs: Blog[] = [
     desc: "Affordable higher education in Asia: learn about EMGS approval, university fees, and living costs...",
     image: "/images/blog/maly.webp",
     tags: ["Malaysia", "Scholarships"],
-    link: "/malaysia",
+    link: "/Blog/malaysia",
   },
   {
     id: 14,
@@ -131,7 +131,7 @@ const blogs: Blog[] = [
     desc: "Guide to GKS scholarships, D-2 student visas, top universities, and living in South Korea...",
     image: "/images/blog/south-korea.webp",
     tags: ["South Korea", "Scholarships"],
-    link: "/south-korea",
+    link: "/Blog/south-korea",
   },
 ];
 

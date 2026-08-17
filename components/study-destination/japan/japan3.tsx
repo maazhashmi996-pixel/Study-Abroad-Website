@@ -58,49 +58,54 @@ export default function Japan3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Japan?",
+      question: "Can I study in Japan without knowing Japanese?",
       answer:
-        "To study in Japan, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "Yes. Hundreds of degree programs are taught entirely in English. You do not need Japanese language ability to start your program. However, Japanese language ability (particularly JLPT N2) significantly improves your employment options in Japan after graduation.",
     },
     {
-      question: "Is it possible to study in Japan without IELTS?",
+      question: "What is the minimum IELTS score required for Japan?",
       answer:
-        "Yes, some universities in Japan may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "Most English-taught programs require IELTS 6.0-6.5 or TOEFL iBT 72-90. Requirements vary by university and program. Some research-based postgraduate programs do not require a formal English test score.",
     },
     {
-      question: "How to get PR in Japan after study?",
+      question: "How much does it cost to study in Japan per year?",
       answer:
-        "To qualify for permanent residency in Japan after studying, you must have lived in Japan for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "National university tuition is approximately ¥535,800 per year (around USD 3,600). Private university tuition ranges from ¥800,000 to ¥1,200,000 per year. Monthly living costs range from ¥68,000 outside Tokyo to ¥175,000 in central Tokyo.",
     },
     {
-      question: "How to study in Japan for free?",
+      question: "What is the MEXT scholarship and who can apply?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Japan. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "The MEXT scholarship is the Japanese government’s flagship funding program for international students. It covers full tuition, a monthly stipend (¥117,000–¥145,000 depending on level), and return airfare. Applications are made through the Japanese Embassy in your home country. Pakistani students are eligible.",
     },
     {
-      question: "Can Pakistani students work while studying in Japan?",
+      question: "How long does a Japan student visa take to process?",
       answer:
-        "Yes. Japan allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "After submitting a complete application (including your Certificate of Eligibility) to the Japanese Embassy, processing takes approximately 3-6 weeks.",
     },
     {
-      question: "Why do Japan student visas get rejected from Pakistan?",
+      question: "Can I work while studying in Japan?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "Yes. Student visa holders are permitted to work up to 28 hours per week during term time, and full-time during official university holidays. You must obtain a “Permission to Engage in Activity Other Than That Permitted Under the Status of Residence” from immigration, this is usually arranged on arrival.",
     },
     {
-      question: "Which are the top universities in Japan for international students?",
+      question: "Is Japan good for international students from Pakistan?",
       answer:
-        "Top choices: Technical University of Japan (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "Yes. Japan and Pakistan have diplomatic relations that include the bilateral MEXT scholarship program. Pakistani students study across Japan’s national and private universities. There is an established Pakistani student community, particularly in Tokyo and Osaka. Japanese employers in the technology and engineering sectors actively hire international graduates.",
     },
     {
-      question: "What is a CPR number and how do students get it in Japan?",
+      question: "What happens after I graduate from a Japanese university?",
       answer:
-        "CPR (Det Centrale Personregister) is Japan’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Japan. Without a CPR number, daily student life in Japan is extremely difficult.",
+        "Graduates can apply for a Designated Activities Visa to remain in Japan for up to 1 year to job-hunt. Once employment is secured, visa status is changed to a Work Visa. Graduates in technology, engineering, and international business fields are in demand across Japan’s major cities.",
     },
     {
-      question: "Japan vs Germany, which is better for Pakistani students?",
+      question: "Do I need a Japanese degree to stay and work in Japan?",
       answer:
         "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Japan teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Japan suits those prioritising English-medium study and a high quality of life.",
+    },
+    {
+      question: "When should I apply to study in Japan?",
+      answer:
+        "For the April intake (the main intake), most universities open applications in September and close them between November and January. Applications for the MEXT scholarship through your home country Embassy open earlier, typically April to May of the year before entry. Plan your preparation at least 12 months in advance.For the April intake (the main intake), most universities open applications in September and close them between November and January. Applications for the MEXT scholarship through your home country Embassy open earlier, typically April to May of the year before entry. Plan your preparation at least 12 months in advance.",
     },
   ];
 

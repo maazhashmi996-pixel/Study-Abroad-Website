@@ -5,6 +5,8 @@ import Navbar from "../components/navbar"
 import Footer from "../components/footer" 
 
 
+      
+
 export default function RootLayout({
  
   children,
@@ -16,6 +18,7 @@ export default function RootLayout({
       lang="en">
       <body>
          <Navbar/>
+           
         {children}
         <Footer/>
         <BottomBanner />

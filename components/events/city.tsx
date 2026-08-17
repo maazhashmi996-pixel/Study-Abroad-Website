@@ -11,6 +11,7 @@ interface EventItem {
   date: string;
   time: string;
   location: string;
+  link:string;
 }
 
 interface FAQItem {
@@ -25,6 +26,7 @@ const eventData: EventItem[] = [
     date: "Monday, 10 August 2026",
     time: "12:00 PM TO 07:00 PM",
     location: "Location: Hotel One Abbottabad",
+    link:"/Event/abbottabad",
   },
   {
     city: "Bahawalpur",
@@ -32,6 +34,8 @@ const eventData: EventItem[] = [
     date: "Thursday, 06 August 2026",
     time: "12:00 PM TO 07:00 PM",
     location: "Location: D. Education Zone Office - Bahawalpur",
+        link:"/Event/bahawalpur",
+
   },
   {
     city: "Faisalabad",
@@ -39,6 +43,8 @@ const eventData: EventItem[] = [
     date: "Tuesday, 11 August 2026",
     time: "12:00 PM TO 07:00 PM",
     location: "Location: Serena Hotel - Faisalabad",
+        link:"/Event/faisalabad",
+
   },
   {
     city: "Gujranwala",
@@ -46,6 +52,8 @@ const eventData: EventItem[] = [
     date: "Saturday, 15 August 2026",
     time: "12:00 PM TO 07:00 PM",
     location: "Location: D. Education Zone Office - Gujranwala",
+        link:"/Events/gujranwala",
+
   },
   {
     city: "Gujrat",
@@ -53,6 +61,8 @@ const eventData: EventItem[] = [
     date: "Wednesday, 12 August 2026",
     time: "12:00 PM TO 07:00 PM",
     location: "Location: D. Education Zone Office - Gujrat",
+        link:"/Events/gujrat",
+
   },
   {
     city: "Hyderabad",
@@ -60,6 +70,8 @@ const eventData: EventItem[] = [
     date: "Friday, 07 August 2026",
     time: "12:00 PM TO 07:00 PM",
     location: "Location: Indus Hotel - Hyderabad",
+    link:"@/app/Events/hyderabad",
+
   },
 ];
 
@@ -170,9 +182,11 @@ export default function City() {
               </p>
 
               {/* Action Button */}
-              <button className="bg-[#0b5cff] hover:bg-blue-600 text-white font-bold text-xs px-5 py-2 rounded-xl transition-all mt-auto shadow border border-blue-400/20 active:scale-95">
-                More Details
-              </button>
+              <Link 
+              href={item.link}
+              className="bg-[#0b5cff] hover:bg-blue-600 text-white font-bold text-xs px-5 py-2 rounded-xl transition-all mt-auto shadow border border-blue-400/20 active:scale-95">
+                <span> More Details</span>
+              </Link>
             </div>
           ))}
         </div>

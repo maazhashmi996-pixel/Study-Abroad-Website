@@ -58,49 +58,54 @@ export default function France3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in France?",
-      answer:
-        "To study in France, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
-    },
-    {
-      question: "Is it possible to study in France without IELTS?",
-      answer:
-        "Yes, some universities in France may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
-    },
-    {
       question: "How to get PR in France after study?",
       answer:
-        "To qualify for permanent residency in France after studying, you must have lived in France for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "After completing your studies in France, you can apply for a ‘Temporary Residence Permit’ which allows you to stay for one year to look for work related to your degree. If you secure a job that pays at least 1.5 times the minimum wage, you can then apply for a residence permit aligned with your employment, setting a path towards permanent residency.",
     },
     {
-      question: "How to study in France for free?",
+      question: "Is study free in France?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in France. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "Public universities in France charge nominal fees, even for international students, typically around €170 per year for bachelor’s programs, €243 for master’s, and €380 for doctoral programs. However, private institutions and specialized programs may have higher fees.",
     },
     {
-      question: "Can Pakistani students work while studying in France?",
+      question: "Do we need to learn French to study in France?",
       answer:
-        "Yes. France allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "While many programs, especially at the graduate level, are offered in English, knowledge of French can be a significant advantage. Some programs may require proficiency in French, and daily life plus integration also become easier with French language skills.",
     },
     {
-      question: "Why do France student visas get rejected from Pakistan?",
+      question: "How much does it cost to study in France?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "Tuition at public universities is relatively low, with international students paying around €170 to €380 per year, depending on the level of study. Living expenses can range from €600 to €1,200 per month, depending on the city.",
     },
     {
-      question: "Which are the top universities in France for international students?",
+      question: "Can students work full-time during study in France?",
       answer:
-        "Top choices: Technical University of France (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "International students are allowed to work up to 964 hours per year, which equates to 20 hours per week during term time, allowing full-time employment during vacation periods.",
     },
     {
-      question: "What is a CPR number and how do students get it in France?",
+      question: "Is IELTS required to study in France?",
       answer:
-        "CPR (Det Centrale Personregister) is France’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in France. Without a CPR number, daily student life in France is extremely difficult.",
+        "IELTS is not mandatory for all programs but may be required for English-taught courses, especially in cases where the applicant does not come from an English-speaking country. Alternatives like TOEFL are also accepted.",
     },
     {
-      question: "France vs Germany, which is better for Pakistani students?",
+      question: "Do I get a work permit after studying in France?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. France teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. France suits those prioritising English-medium study and a high quality of life.",
+        "Graduates can apply for a one-year non-renewable temporary residence permit, which allows them to work in any job related to their field of study, as long as they earn at least 1.5 times the minimum wage. Success in securing such employment can lead to further work permit and residency options.",
+    },
+    {
+      question: "How to study in France from Pakistan?",
+      answer:
+        "Pakistani students should start by securing an admission offer from a French institution. Then, apply for a student visa through Campus France, the official agency supporting international students in France. Required documents typically include proof of admission, financial resources, health insurance, and proficiency in English or French, depending on the course language. For personalized assistance throughout the application process, consider consulting with Times Consultant, a specialized study visa consultant.",
+    },
+    {
+      question: "What is Campus France and is it mandatory from Pakistan?",
+      answer:
+        "Campus France is France’s official government platform for international student applications. Every Pakistani student must register, upload documents, and attend a Campus France interview at the French Embassy in Islamabad before applying for a student visa. Skipping this step means automatic visa rejection. France suits those prioritising English-medium study and a high quality of life.",
+    },
+    {
+      question: "What is titre de séjour and how do students get it?",
+      answer:
+        "Titre de séjour is your French residence permit, required for stays longer than 3 months. As a student, your long-stay visa initially acts as your titre de séjour. You validate it online via the ANEF portal within 3 months of arrival. Missing this validation step can void your legal right to stay and work in France.",
     },
   ];
 

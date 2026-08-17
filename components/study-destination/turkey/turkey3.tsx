@@ -283,8 +283,8 @@ export default function Turkey3() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
-            Danish universities are research-focused and highly ranked, but application deadlines are strict. Connect with our expert advisors to secure your seat.
-          </p>
+Will you stay in Turkey to finish your studies? We are always available to assist you! You can schedule a private meeting to talk about your options for studying abroad. Furthermore, we offer suggestions for over 60 nations, irrespective of your preferences for Europe, Asia, or the Americas. As part of our service, our team is dedicated to helping you achieve your study abroad goals and provides free consultations. Book an appointment with us right now, and we’ll help you achieve your study abroad objectives!   
+       </p>
 
           <button
             type="button"

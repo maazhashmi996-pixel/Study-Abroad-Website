@@ -58,9 +58,9 @@ export default function Italy3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Italy?",
+      question: "Is IELTS required to study in Italy?",
       answer:
-        "To study in Italy, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "IELTS is not universally required to study in Italy, but it depends on the program and university. Many English-taught programs may require IELTS or an equivalent English language proficiency test, especially for non-native English speakers.",
     },
     {
       question: "Is it possible to study in Italy without IELTS?",
@@ -73,34 +73,34 @@ export default function Italy3() {
         "To qualify for permanent residency in Italy after studying, you must have lived in Italy for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
     },
     {
-      question: "How to study in Italy for free?",
+      question: "Is it worth it to study in Italy?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Italy. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "SAfter completing your studies in Italy, you can convert your student visa into a work visa by finding employment. To apply for permanent residency, you must legally reside and work in Italy for at least 5 years.",
     },
     {
-      question: "Can Pakistani students work while studying in Italy?",
+      question: "What are the requirements to study in Italy?",
       answer:
-        "Yes. Italy allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "Studying in Italy can be very beneficial, particularly for those interested in fields like art, history, fashion, and culinary arts, due to the country’s rich cultural heritage and strong academic institutions. Additionally, tuition fees are relatively low compared to other Western European countries.",
     },
     {
-      question: "Why do Italy student visas get rejected from Pakistan?",
+      question: "How long does Italy student visa take from Pakistan?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "The Italian Embassy in Islamabad typically processes student visas in 30 to 90 days. Italy is known for slower processing than other EU countries, late applications from Pakistani students are the single biggest reason for missed intake dates.",
     },
     {
-      question: "Which are the top universities in Italy for international students?",
+      question: "What is dichiarazione di valore and who needs it?",
       answer:
-        "Top choices: Technical University of Italy (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "Dichiarazione di Valore is an official certificate issued by the Italian Embassy in Islamabad that verifies your Pakistani academic qualifications such as FSc, bachelor’s, or master’s degree. Most Italian universities require it for admission. It takes several weeks to process, so apply for it early, before or alongside your university application.",
     },
     {
-      question: "What is a CPR number and how do students get it in Italy?",
+      question: "Which Italian universities are best for Pakistani students?",
       answer:
-        "CPR (Det Centrale Personregister) is Italy’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Italy. Without a CPR number, daily student life in Italy is extremely difficult.",
+        "Top choices: Sapienza University of Rome, University of Bologna (world’s oldest), Politecnico di Milano, Politecnico di Torino, and Bocconi University for business. All offer English-taught programmes. Politecnico di Milano and Torino are most popular with Pakistani engineering students. Bologna and Sapienza attract medicine and humanities applicants from across Pakistan.",
     },
     {
-      question: "Italy vs Germany, which is better for Pakistani students?",
+      question: "IWhy do Italy student visas get rejected from Pakistan?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Italy teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Italy suits those prioritising English-medium study and a high quality of life.",
+        "Top rejection reasons: incomplete Universitaly pre-enrollment, missing or insufficient bank statements, no dichiarazione di valore for your degree, weak accommodation proof, and inconsistent travel history. Italian embassies scrutinise Pakistani applications carefully. Students who apply through an experienced Italy visa consultant in Pakistan have significantly fewer documentation errors and higher approval rates.",
     },
   ];
 

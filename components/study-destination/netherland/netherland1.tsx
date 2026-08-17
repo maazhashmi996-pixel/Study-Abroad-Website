@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
+import {  FaGlobeEurope, FaGraduationCap, FaShieldAlt, FaWallet } from "react-icons/fa";
 
 export default function Netherland1() {
      const tableOfContents = [
@@ -14,6 +15,41 @@ export default function Netherland1() {
     { title: "Cost of living in Netherland", id: "cost-of-living" },
     { title: "Book a meeting with an expert", id: "book-meeting" },
   ];
+    const reasons = [
+            {
+              title: "Universities That Compete With UK Without UK Prices",
+              description:
+                "Delft University of Technology ranks around 50th globally ahead of many top UK universities. University of Amsterdam sits in the top 60. Utrecht University, Leiden University, Erasmus University Rotterdam, all appear in the world’s top 100 or top 150 depending on which ranking you check. These aren’t institutions trading on historical reputation while academic quality declined. Dutch universities maintain strong research output, attract competitive international faculty, and produce graduates that European employers actively recruit. The engineering programs at TU Delft and TU Eindhoven particularly rival anything UK offers in those fields.The difference? TU Delft charges around €12,000 annually for bachelor’s programs. Compare that to Imperial College London at £37,000 yearly for similar engineering degrees. You’re getting comparable education quality at roughly one-third the cost.",
+              icon: FaGraduationCap,
+              accentBorder: "border-l-red-500",
+              iconBg: "bg-red-50 text-red-600 border-red-100",
+            },
+            {
+              title: "Problem-Based Learning: Dutch Teaching Methods",
+              description:
+                "Dutch universities pioneered something called “problem-based learning” (PBL) that you’ll encounter especially at places like Maastricht University and Erasmus. Instead of sitting through lectures passively, you work in small groups solving real-world problems, with professors acting more as facilitators than lecturers.The practical advantage of PBL becomes clear during job interviews. Employers across Europe recognize that Dutch-educated graduates can work in teams, tackle undefined problems, and communicate solutions effectively.",
+
+              icon: FaWallet,
+              accentBorder: "border-l-[#0b5cff]",
+              iconBg: "bg-blue-50 text-[#0b5cff] border-blue-100",
+            },
+            {
+              title: "English is the Working Language (Actually)",
+              description:
+                "Nearly every Dutch person under 40 speaks fluent English. Walk into a university office, and staff switch to English automatically when they see you’re international. Attend a seminar, and discussions happen comfortably in English even with mostly Dutch participants.",
+              icon: FaGlobeEurope,
+              accentBorder: "border-l-slate-700",
+              iconBg: "bg-slate-100 text-slate-700 border-slate-200",
+            },
+            {
+              title: "Location: The European Hub That Matters",
+              description:
+                "Amsterdam Airport Schiphol connects directly to 300+ destinations worldwide. Rotterdam port handles more cargo than any European port. The Netherlands sits where Germany, Belgium, and France meet, with excellent train connections to all major European cities. For students planning international careers, this matters. Your internship might be at a company doing business across six European countries. Your thesis research might involve partnerships with German firms and French universities. The job you land after graduation might require regular travel to Brussels, London, or Frankfurt, all easily accessible from Dutch cities.",
+              icon: FaShieldAlt,
+              accentBorder: "border-l-red-500",
+              iconBg: "bg-red-50 text-red-600 border-red-100",
+            },
+          ];
   return (
     <div>
         {/* hero section */}
@@ -99,23 +135,46 @@ Studying in Netherland isn't just about gaining a globally recognized degree—i
     
           </div>
         </section>
-         <section className="bg-white px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-14 ">
-      <div className="max-w-7xl mx-auto flex flex-col gap-4 sm:gap-6 md:gap-7">
+          <section className="bg-slate-50/80 text-slate-900 py-12 sm:py-16 px-4 sm:px-8 md:px-12 lg:px-20 border-y border-slate-200/60">
+      <div className="max-w-7xl mx-auto">
         
-        {/* Main Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl  font-bold text-[#1a233d] border-b-2  pb-3">
-          Why Study <span className="text-[#0b5cff]">In Netherland</span>
-        </h1>
+        {/* Header Section */}
+        <div className="mb-10 text-center md:text-left">
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-[#0b5cff] px-3.5 py-1 rounded-full text-xs uppercase tracking-widest font-semibold mb-3">
+            <span className="w-2 h-2 rounded-full bg-red-500 inline-block animate-pulse" />
+            Destination Guide
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Why Study in <span className="text-[#0b5cff]">Neatherland?</span>
+          </h2>
+        </div>
 
-        {/* Paragraph 1 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
-          Since Netherland lacks significant natural resources, its main export is knowledge. Its focus on education indicates that Danish education is excellent and emphasizes creativity, innovation, analysis, and critical thinking. Additionally, their universities specialize in sustainability, innovation, entrepreneurship, and global perspectives, and their teaching is grounded in the most recent research. Their daring methodology permeates the educational system as well. By fusing conventional lectures with industry internships, Danish universities encourage self-motivation and problem-based learning, enabling students to apply their knowledge practically and equipping them for the demands of the global labor market.
-        </p>
-        
-        {/* Paragraph 2 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 font-semibold">
-          Netherland has several very prestigious universities, such as the University of Copenhagen and the University of Southern Netherland, which are important reasons to study there. Additionally, universities like Roskilde University and Aarhus University are options for students.
-        </p>
+        {/* Structured Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {reasons.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={index}
+                className={`bg-white border border-slate-200/80 border-l-4 ${item.accentBorder} rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between`}
+              >
+                <div>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`p-3 rounded-xl border ${item.iconBg} shrink-0`}>
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
       </div>
     </section>
