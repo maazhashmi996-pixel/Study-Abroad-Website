@@ -28,7 +28,7 @@ const blogs: Blog[] = [
     desc: "Austria is one of the most affordable options for students seeking a respected European degree...",
     image: "/images/blog/austria-visa.webp",
     tags: ["Austria", "Visa", "Europe"],
-    link: "/austria",
+    link: "/Blog/austria",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const blogs: Blog[] = [
     desc: "Explore top opportunities across Schengen countries with comprehensive visa documentation guidelines...",
     image: "/images/blog/MBA.png",
     tags: ["Europe", "Visa"],
-    link: "/europe",
+    link: "/Blog/europe",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const blogs: Blog[] = [
     desc: "A step-by-step roadmap for Pakistani students applying to Dutch universities and MVV permits...",
     image: "/images/blog/neatherlands.webp",
     tags: ["Netherlands", "Visa"],
-    link: "/netherlands",
+    link: "/Blog/netherland",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const blogs: Blog[] = [
     desc: "Understand SDS visa processing times, DLIs, and financial proof required for study permits...",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Scholarships"],
-    link: "/canada",
+    link: "/Blog/canada",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const blogs: Blog[] = [
     desc: "Learn how to secure Chinese Government Scholarships (CSC) and provincial university grants...",
     image: "/images/blog/china.webp",
     tags: ["China", "Scholarships"],
-    link: "/china",
+    link: "/Blog/china",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const blogs: Blog[] = [
     desc: "Key questions and document preparation tips for passing your Turkish visa interview...",
     image: "/images/blog/turkey.webp",
     tags: ["Turkey", "Visa"],
-    link: "/turkey",
+    link: "/Blog/turkey",
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const blogs: Blog[] = [
     desc: "Navigating CAS issuance, Graduate Route visas, and university intake deadlines in the UK...",
     image: "/images/blog/10-Tips.png",
     tags: ["United Kingdom", "Visa"],
-    link: "/uk",
+    link: "/united-kindom",
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ const blogs: Blog[] = [
     desc: "Admission criteria, residence permits, and tuition details for international applicants...",
     image: "/images/blog/bunking-myths.png",
     tags: ["Denmark", "Europe"],
-    link: "/denmark",
+    link: "/Blog/bunking-myths",
   },
   {
     id: 9,
@@ -92,7 +92,7 @@ const blogs: Blog[] = [
     desc: "Complete guide to F-1 visa preparation, DS-160 forms, SEVIS fees, and university admissions...",
     image: "/images/blog/Exchange-programs.png",
     tags: ["United States", "Scholarships"],
-    link: "/usuni",
+    link: "/Blog/usuni",
   },
   {
     id: 10,
@@ -100,7 +100,7 @@ const blogs: Blog[] = [
     desc: "Essential guide to applying via universityadmissions.se and Migrationsverket residence permits...",
     image: "/images/blog/sweden.webp",
     tags: ["Sweden", "Scholarships"],
-    link: "/sweden",
+    link: "/Blog/sweden",
   },
   {
     id: 11,
@@ -108,7 +108,7 @@ const blogs: Blog[] = [
     desc: "Step-by-step process for Campus France registration, EEF procedure, and VLS-TS student visas...",
     image: "/images/blog/france-study.webp",
     tags: ["France", "Scholarships"],
-    link: "/france",
+    link: "/Blog/france",
   },
   {
     id: 12,
@@ -116,7 +116,7 @@ const blogs: Blog[] = [
     desc: "Explore Irish higher education, post-study work rights, and Stamp 2 visa requirements...",
     image: "/images/blog/Ireland-study.png",
     tags: ["Ireland", "Scholarships"],
-    link: "/ireland",
+    link: "/Blog/ireland",
   },
   {
     id: 13,
@@ -124,7 +124,7 @@ const blogs: Blog[] = [
     desc: "An affordable pathway to quality education, EMGS approval, and student pass applications...",
     image: "/images/blog/maly.webp",
     tags: ["Malaysia", "Scholarships"],
-    link: "/malaysia",
+    link: "/Blog/malaysia",
   },
   {
     id: 14,
@@ -132,7 +132,7 @@ const blogs: Blog[] = [
     desc: "Discover GKS scholarship programs, D-2 visa requirements, and top universities in Korea...",
     image: "/images/blog/south-korea.webp",
     tags: ["South Korea", "Scholarships"],
-    link: "/south-korea",
+    link: "/Blog/south-korea",
   },
 ];
 
@@ -203,12 +203,15 @@ export default function USBlogSection() {
 
                   {/* Read More Button */}
                   <div className="mt-6">
-                    <Link
-                      href={blog.link}
-                      className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-colors duration-200 text-sm shadow-sm"
-                    >
-                      Read Guide <ArrowRight size={16} />
-                    </Link>
+                   <Link
+  href={blog.link}
+  onClick={() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+  className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-colors duration-200 text-sm shadow-sm"
+>
+  Read Guide <ArrowRight size={16} />
+</Link>
                   </div>
                 </div>
 

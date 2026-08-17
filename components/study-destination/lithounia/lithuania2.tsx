@@ -467,7 +467,7 @@ export default function Lithuania2() {
                   </h2>
                 </div>
                 <p className="text-sm text-slate-600 mb-4">
-                  Hungarian universities usually offer two main intakes:
+                  Lithuanian universities usually offer two main intakes:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                   <div className="p-3.5 bg-slate-50 border border-slate-200/60 rounded-xl">
@@ -503,15 +503,15 @@ export default function Lithuania2() {
                   <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-4">
                     <li className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/50 rounded-lg">
                       <span className="w-2 h-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
-                      <span><strong>Stipendium Hungaricum Scholarship</strong> (Very popular among international students)</span>
+                      <span> Lithuanian State Scholarships</span>
                     </li>
                     <li className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/50 rounded-lg">
                       <span className="w-2 h-2 rounded-full bg-[#0b5cff] mt-1.5 shrink-0" />
-                      <span><strong>University-specific merit scholarships</strong></span>
+                      <span><strong>• Erasmus+ programs</strong></span>
                     </li>
                     <li className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/50 rounded-lg">
                       <span className="w-2 h-2 rounded-full bg-slate-700 mt-1.5 shrink-0" />
-                      <span><strong>Government-funded bilateral scholarships</strong></span>
+                      <span><strong> University-based merit scholarships</strong></span>
                     </li>
                   </ul>
                 </div>

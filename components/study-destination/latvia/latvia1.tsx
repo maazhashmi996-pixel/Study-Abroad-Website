@@ -16,34 +16,27 @@ export default function Latvia1() {
     { title: "Book a meeting with an expert", id: "book-meeting" },
   ];
   const reasons = [
+             
               {
-                title: "Academics That Follow a System",
+                title: "English-Taught Programs",
                 description:
-                  "Polish universities are traditional in a good way. Courses follow structured syllabi, attendance matters, assessments are scheduled in advance, and grading criteria are clear. Students who prefer knowing exactly what’s expected of them usually do well here.",
-                icon: FaGraduationCap,
-                accentBorder: "border-l-red-500",
-                iconBg: "bg-red-50 text-red-600 border-red-100",
-              },
-              {
-                title: "Fields With Global Relevance",
-                description:
-                  "Poland is especially known for medicine, engineering, computer science, business, and technical programs. Medical universities, in particular, attract international students from across Europe, Asia, and the Middle East due to their training standards and EU recognition.",
+                  "Latvian universities offer a range of English-taught programs in fields like business, IT, engineering, health sciences, and logistics. Class sizes are smaller, which makes interaction with faculty easier and learning more engaging.",
                 icon: FaWallet,
                 accentBorder: "border-l-[#0b5cff]",
                 iconBg: "bg-blue-50 text-[#0b5cff] border-blue-100",
               },
               {
-                title: "English Education",
+                title: "Living in a Friendlier City",
                 description:
-                  "Many programs are taught fully in English, but Poland also encourages students to pick up basic Polish. This becomes an advantage later, not only for part-time work but also for internships and post-study employment. Students say this dual exposure helps them feel more incorporated.",
+                  "Riga, Latvia’s capital, is a student-friendly city where daily life feels balanced. Public transport works, rent stays reasonable, and the city is safe. There’s enough culture and activity to stay inspired, without the stress that comes with larger European capitals.",
                 icon: FaGlobeEurope,
                 accentBorder: "border-l-slate-700",
                 iconBg: "bg-slate-100 text-slate-700 border-slate-200",
               },
               {
-                title: "A Balanced Lifestyle",
+                title: "An European Experience",
                 description:
-                  "Life in Poland doesn’t feel rushed. Cities are active but not chaotic. Students can manage studies, part-time work, and daily expenses without feeling constantly stretched. That balance plays a big role in academic performance and mental well-being.",
+                  "Latvia is part of the EU and Schengen Area, giving students access to Europe while living in a calmer, less expensive environment. Travel becomes an opportunity, not a financial burden.",
                 icon: FaShieldAlt,
                 accentBorder: "border-l-red-500",
                 iconBg: "bg-red-50 text-red-600 border-red-100",
@@ -73,9 +66,9 @@ export default function Latvia1() {
       <div className=" inset-0 flex items-end pb-2 sm:pb-6 md:pb-8 px-3 sm:px-88 md:px-10 z-20">
         <div className="absolute max-w-7xl mx-auto w-full">
           <ul className="relative list-disc text-xs b-0.5 l-6 pl-12 sm:ml-6 underline  sm:space-y-3 text-white sm:text-base md:text-xs lg:text-xl drop-shadow-md">
-            <li>15+ University and Colleges</li>
-            <li>DKK 80,000 Annual Tuition Fee</li>
-            <li>3 Year Post Study Visa</li>
+            <li>55+ Universities</li>
+            <li>€2,500 – €6,000 Annual Tuition Fee</li>
+            <li>Post Study Work Options Available</li>
           </ul>
         </div>
       </div>
@@ -90,12 +83,12 @@ export default function Latvia1() {
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Latvia offers an innovative, secure, and welcoming environment for international students.        </p>
-
+Once students arrive, the feedback is always positive. The cities feel organised. Universities are approachable. And life moves at a pace that helps students to focus on why they came in the first place, to study, grow, and build something meaningful.
+</p>
         {/* Paragraph 2 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-Studying in Latvia isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
-
+At Education Zone, students who choose Latvia tend to be calm decision-makers. They’re not chasing brand names. They want a place where education is taken seriously, life is affordable, and international students are actually welcomed, not just allowed.
+</p>
       </div>
     </section>
      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">

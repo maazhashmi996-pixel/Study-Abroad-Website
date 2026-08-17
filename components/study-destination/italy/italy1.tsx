@@ -73,9 +73,9 @@ export default function Italy1() {
       <div className=" inset-0 flex items-end pb-2 sm:pb-6 md:pb-8 px-3 sm:px-88 md:px-10 z-20">
         <div className="absolute max-w-7xl mx-auto w-full">
           <ul className="relative list-disc text-xs b-0.5 l-6 pl-12 sm:ml-6 underline  sm:space-y-3 text-white sm:text-base md:text-xs lg:text-xl drop-shadow-md">
-            <li>15+ University and Colleges</li>
-            <li>DKK 80,000 Annual Tuition Fee</li>
-            <li>3 Year Post Study Visa</li>
+            <li>53 Universities</li>
+            <li>1,000+ EUR Annual Tuition Fee</li>
+            <li>1 to 2 Years Post Study Work Visa</li>
           </ul>
         </div>
       </div>
@@ -90,12 +90,9 @@ export default function Italy1() {
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Italy offers an innovative, secure, and welcoming environment for international students.        </p>
-
-        {/* Paragraph 2 */}
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-Studying in Italy isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
-
+With its historical sites and picturesque scenery, Italy draws an increasing number of visitors annually. For international students seeking top-quality higher education and an affordable and comfortable lifestyle, Italy proves a perfect destination for future endeavors! Every year, hundreds of international students decide to pursue their higher education degrees in Italy and work towards a prosperous future. Italy is an excellent destination due to its renowned educational institutions and safe lifestyle.
+</p>
+  
       </div>
     </section>
      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">

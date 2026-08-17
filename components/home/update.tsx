@@ -26,7 +26,7 @@ export default function Update() {
       title: "How to Apply for Netherlands Study Visa in 2026 from Pakistan",
       description:
         "The Netherlands is becoming a preferred study destination with top ranked universities.",
-      link: "/Blog/neatherland",
+      link: "/Blog/netherland",
     },
     {
       id: 3,

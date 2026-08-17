@@ -14,9 +14,13 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [stepsOpen, setStepsOpen] = useState(false);
 
-  const isActive = (href) => {
-    return pathname === href || pathname.startsWith(`${href}/`);
-  };
+ const isActive = (href) => {
+  if (href === "/") {
+    return pathname === "/";
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+};
 
   const closeAllMenus = () => {
     setIsOpen(false);
@@ -44,16 +48,16 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center bg-slate-100/80 border sm:px-6 border-slate-200/60 rounded-full md:py-2 px-6 py-2.5">
           <ul className="flex items-center gap-5 text-xs font-semibold text-slate-700 px-4">
             <li>
-              <Link
-                href="/"
-                className={`transition-colors duration-200 ${
-                  isActive("/Home")
-                    ? "text-[#0b5cff]"
-                    : "text-slate-700 hover:text-[#0b5cff]"
-                }`}
-              >
-                Home
-              </Link>
+             <Link
+  href="/"
+  className={`transition-colors duration-200 ${
+    isActive("/")
+      ? "text-[#0b5cff]"
+      : "text-slate-700 hover:text-[#0b5cff]"
+  }`}
+>
+  Home
+</Link>
             </li>
             <li>
               <Link

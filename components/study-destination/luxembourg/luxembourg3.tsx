@@ -63,9 +63,9 @@ export default function Luxembourg3() {
         "To study in Luxemboura, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
     },
     {
-      question: "Is it possible to study in Luxemboura without IELTS?",
+      question: "Do I need IELTS to study in Luxembourg?",
       answer:
-        "Yes, some universities in Luxemboura may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "IELTS is not always compulsory for Luxembourg, but many English-taught programs will ask for proof of English at about IELTS 6.06.5 or an equivalent test. Some universities accept alternatives such as TOEFL, PTE, or proof that your previous education was in English, so you must always check the exact language requirement on the official page of your chosen program.",
     },
     {
       question: "How to get PR in Luxemboura after study?",

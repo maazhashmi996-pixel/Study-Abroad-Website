@@ -35,6 +35,7 @@ export default function RelatedBlogCard({ country, title, desc, date }: { countr
               title="How to Apply for Austria Study Visa in 2026 from Pakistan"
               desc="Austria is one of the most affordable options for students who want a respected European degree..."
               date="July 17, 2026"
+
             />
           </div>
         </section>

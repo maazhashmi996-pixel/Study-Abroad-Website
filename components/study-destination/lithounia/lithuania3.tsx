@@ -58,49 +58,54 @@ export default function Lithuania3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Lithounia?",
+      question: "How much does it cost to study in Lithuania?",
       answer:
-        "To study in Lithounia, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "For most international students, the total cost to study in Lithuania is usually around €8,000–€15,000 per year, including tuition and living expenses. Bachelor’s and master’s programmes typically cost about €2,000–€5,000 per year in tuition, while average living costs are roughly €500–€800 per month for accommodation, food, transport, and basic expenses, depending on the city and lifestyle.",
     },
     {
-      question: "Is it possible to study in Lithounia without IELTS?",
+      question: "Is IELTS needed for Lithuania?",
       answer:
-        "Yes, some universities in Lithounia may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "IELTS is not legally mandatory for Lithuania, but most English-taught programmes ask for B2-level English, which often means IELTS around 5.5–6.5 or an equivalent test. Many universities accept alternatives such as TOEFL, PTE, or internal English tests, or may accept proof that your previous education was in English, so you must always check the exact requirement on each university’s official page.",
     },
     {
-      question: "How to get PR in Lithounia after study?",
+      question: "How many Pakistani students are in Lithuania?",
       answer:
-        "To qualify for permanent residency in Lithounia after studying, you must have lived in Lithounia for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "Recent migration data show that there are around 700+ Pakistani students currently studying in Lithuania, with 709 Pakistani citizens holding study-related residence permits in 2024 according to Lithuania’s Migration Department. These numbers can change every year as new students arrive and others graduate or move on.",
     },
     {
-      question: "How to study in Lithounia for free?",
+      question: "Is Lithuania easy to get PR?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Lithounia. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "Lithuania is not “easy” for PR, but it is clear and rules-based: most non-EU nationals must complete about five years of continuous legal residence and meet language and integration requirements to qualify for long-term or permanent residence. Time spent on a student residence permit usually only counts partly towards these five years, so you normally need additional years on work or other qualifying permits before applying.",
     },
     {
-      question: "Can Pakistani students work while studying in Lithounia?",
+      question: "Does Lithuania give PR to international students?",
       answer:
-        "Yes. Lithounia allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "Yes, Lithuania can grant permanent residence (PR) to international students later, but not directly from a student visa or student residence permit. Your study years can contribute towards the five-year legal residence requirement, but usually at a reduced rate, and you must later hold eligible work or other residence permits and meet conditions such as Lithuanian language and integration before PR is approved.",
     },
     {
-      question: "Why do Lithounia student visas get rejected from Pakistan?",
+      question: "Which course is best in Lithuania?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "There is no single “best” course in Lithuania, but international students often choose IT and Computer Science, Engineering, Business and Management, Health Sciences, and Social Sciences. These fields align with Lithuania’s growing sectors such as IT, fintech, shared services, and startups, especially in cities like Vilnius and Kaunas.",
     },
     {
-      question: "Which are the top universities in Lithounia for international students?",
+      question: "Can I work while studying in Lithuania?",
       answer:
-        "Top choices: Technical University of Lithounia (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
+        "Yes, international students in Lithuania can work part-time while studying, usually up to 20 hours per week during the academic year and full-time during holidays or specific periods, provided they hold a valid temporary residence permit for studies. Rules are updated regularly, so you should always check the latest work-hour conditions on official Lithuanian or university websites before relying on job income.",
     },
     {
-      question: "What is a CPR number and how do students get it in Lithounia?",
+      question: "Can I stay in Lithuania after graduation?",
       answer:
-        "CPR (Det Centrale Personregister) is Lithounia’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Lithounia. Without a CPR number, daily student life in Lithounia is extremely difficult.",
+        "Yes, after graduation you can normally stay in Lithuania by applying for a temporary residence permit for job search and employment, which is often valid for up to 12 months. During this period you can look for work or start self-employment, and once you secure a suitable job you can switch to a work-based residence permit to continue living and working in Lithuania.",
     },
     {
-      question: "Lithounia vs Germany, which is better for Pakistani students?",
+      question: "Who is the best Lithuania Study Visa Consultant in Pakistan?",
       answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Lithounia teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Lithounia suits those prioritising English-medium study and a high quality of life.",
+        "There is no official government ranking of the “best” Lithuania study visa consultant in Pakistan, but Times Consultant is widely recognised as a leading study-abroad consultancy for European destinations, including Lithuania. Times Consultant helps students from Pakistan choose suitable Lithuanian universities, estimate real study and living costs, prepare financial and academic documents, and compile a complete Lithuania study-visa file with guidance on accommodation and post-study options.",
+    },
+    {
+      question: "Can I bring my family to Lithuania on a student visa?",
+      answer:
+        "Family members (spouse and children) can join you in Lithuania under a **family reunification residence permit**. Your spouse gets the right to work without a separate work permit. You must prove sufficient income typically equal to the Lithuanian minimum monthly wage (currently €1,153/month in 2026) per family member, plus valid health insurance and accommodation proof.",
     },
   ];
 

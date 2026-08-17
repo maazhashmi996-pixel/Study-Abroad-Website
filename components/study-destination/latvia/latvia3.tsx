@@ -58,49 +58,49 @@ export default function Latvia3() {
 
   const faqData = [
     {
-      question: "How much IELTS band required to study in Latvia?",
+      question: "How to get a Latvia study visa from Pakistan?",
       answer:
-        "To study in Latvia, non-native English speakers generally need a minimum IELTS score of 6.5. However, requirements can vary by institution and program, so it’s important to check specific requirements with the university.",
+        "To get a Latvia study visa from Pakistan, you must first secure admission at a recognised Latvian university, then apply for a long-term (D) visa and residence permit with your passport, admission letter, financial proof, accommodation details, insurance, and academic documents through the authorised visa centre or consulate. For a smoother process, Times Consultant helps Pakistani students shortlist universities, prepare documents as per Latvian requirements, and organise their Latvia study visa file from start to finish.",
     },
     {
-      question: "Is it possible to study in Latvia without IELTS?",
+      question: "How much does it cost to study in Latvia?",
       answer:
-        "Yes, some universities in Latvia may accept alternative English proficiency proofs, such as TOEFL, PTE, or Cambridge tests. Additionally, if you have completed previous education in English, some institutions might waive the IELTS requirement.",
+        "For most international students, the total cost to study in Latvia is usually around €8,000-€15,000 per year, including tuition and living expenses. Many bachelor’s and master’s programmes cost about €2,000-€5,000 per year in tuition, while average living costs are roughly €700-€1,000 per month for accommodation, food, transport, and personal expenses, depending on the city and lifestyle.",
     },
     {
-      question: "How to get PR in Latvia after study?",
+      question: "Is Latvia a good place to study?",
       answer:
-        "To qualify for permanent residency in Latvia after studying, you must have lived in Latvia for at least 8 years, or 4 years if you meet certain criteria like language skills and employment. Graduates can extend their stay with a post-study work visa, which can be a pathway to PR if employment and integration conditions are met.",
+        "Yes, Latvia is a good place to study if you want affordable EU education, English-taught programmes, and a calmer study environment. It offers reasonably priced tuition and living costs, recognised degrees within the EU, and student-friendly cities like Riga where life is organised, safe, and less expensive than many Western European capitals.",
     },
     {
-      question: "How to study in Latvia for free?",
+      question: "Is IELTS needed for Latvia?",
       answer:
-        "Students from the EU/EEA and Switzerland can study for free at public universities in Latvia. Non-EU/EEA students can look for scholarships from the Danish government or individual institutions, which can cover tuition fees and living costs.",
+        "Latvia does not currently have a full resident embassy in Pakistan, but it is represented through honorary consulates, including an Honorary Consulate of Latvia in Islamabad, which can provide basic consular support. Visa processing for Latvia from Pakistan is often handled via designated embassies or visa centres for Latvia or another Schengen state, as directed by Latvian authorities.",
     },
     {
-      question: "Can Pakistani students work while studying in Latvia?",
+      question: "Is there any embassy of Latvia in Pakistan?",
       answer:
-        "Yes. Latvia allows international students to work 20 hours per week during term time and full-time during June, July, and August. No separate work permit is needed as your student residence permit covers it. Copenhagen has strong part-time opportunities in hospitality, retail, and university campuses, with hourly rates among the highest in Europe.",
+        "A student residence permit in Latvia does not directly grant permanent residence (PR), but part of your legal stay as a student can count towards the five years of continuous residence generally required for EU long-term resident status. Only half of your study period usually counts towards this five-year total, so most graduates need additional years on work or other qualifying residence permits before they can apply for long-term or permanent status.",
+    },
+    {
+      question: "Can students get PR in Latvia?",
+      answer:
+        "There is no single “best” course in Latvia, but international students often choose Computer Science and IT, Engineering, Business and Management, Health Sciences, and Logistics/Transport. These areas match Latvia’s growing sectors and can offer stronger prospects for internships and jobs, especially in Riga’s emerging IT, fintech, and business service industries.",
+    },
+    {
+      question: "Which course is best to study in Latvia?",
+      answer:
+        "There is no single “best” course in Latvia, but international students often choose Computer Science and IT, Engineering, Business and Management, Health Sciences, and Logistics/Transport. These areas match Latvia’s growing sectors and can offer stronger prospects for internships and jobs, especially in Riga’s emerging IT, fintech, and business service industries.",
     },
     {
       question: "Why do Latvia student visas get rejected from Pakistan?",
       answer:
-        "Main rejection reasons: insufficient bank balance, weak or generic motivation letter, no clear connection between previous qualifications and chosen programme, missing health insurance, and unconvincing ties to Pakistan.",
+        "Common rejection reasons: insufficient bank balance, incomplete documents, weak university acceptance letter, inconsistent financial history, or missing health insurance. Students from Lahore and Karachi most often face rejection due to bank statements showing sudden large deposits. Genuine, gradual savings over 3–6 months significantly improve approval chances.",
     },
     {
-      question: "Which are the top universities in Latvia for international students?",
+      question: "Is Latvia part of the Schengen zone?",
       answer:
-        "Top choices: Technical University of Latvia (DTU) for engineering and technology, University of Copenhagen for sciences and medicine, Aarhus University for business and social sciences, and Copenhagen Business School for finance and management. DTU consistently ranks among Europe’s top technical universities.",
-    },
-    {
-      question: "What is a CPR number and how do students get it in Latvia?",
-      answer:
-        "CPR (Det Centrale Personregister) is Latvia’s national identity number, essential for opening a bank account, accessing healthcare, and starting work. You receive it automatically after registering your address at your local Citizen Service Centre within 5 days of arriving in Latvia. Without a CPR number, daily student life in Latvia is extremely difficult.",
-    },
-    {
-      question: "Latvia vs Germany, which is better for Pakistani students?",
-      answer:
-        "Germany offers near-free tuition but requires German language for most bachelor’s programmes and mandatory APS certification from Pakistan. Latvia teaches almost entirely in English at master’s level, has no APS requirement, and offers higher part-time wages. Germany suits engineering students comfortable with German. Latvia suits those prioritising English-medium study and a high quality of life.",
+        "Yes, Latvia is a full Schengen member. Your Latvian student residence permit lets you travel visa-free across 27 Schengen countries including Germany, France, Italy, and Spain for up to 90 days per 180-day period. For Pakistani students, this is one of Latvia’s biggest practical advantages over non-Schengen study destinations.",
     },
   ];
 

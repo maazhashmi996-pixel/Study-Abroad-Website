@@ -73,9 +73,11 @@ export default function Japan1() {
       <div className=" inset-0 flex items-end pb-2 sm:pb-6 md:pb-8 px-3 sm:px-88 md:px-10 z-20">
         <div className="absolute max-w-7xl mx-auto w-full">
           <ul className="relative list-disc text-xs b-0.5 l-6 pl-12 sm:ml-6 underline  sm:space-y-3 text-white sm:text-base md:text-xs lg:text-xl drop-shadow-md">
-            <li>15+ University and Colleges</li>
-            <li>DKK 80,000 Annual Tuition Fee</li>
-            <li>3 Year Post Study Visa</li>
+            <li>800+ Universities & Colleges</li>
+            <li>¥535,800 – ¥1,200,000 Annual Tuition Fee</li>
+            <li>2 Intakes Per Year – April & September</li>
+            <li>
+Post Study Work Opportunities Available</li>
           </ul>
         </div>
       </div>
@@ -90,12 +92,15 @@ export default function Japan1() {
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Japan offers an innovative, secure, and welcoming environment for international students.        </p>
-
+Japan accepts over 400,000 international students each year. Japan is associated with technology, innovation, and precision, yet fewer students initially consider it a study destination. At Times Consultant, many conversations about Japan start when students begin exploring alternatives to traditional destinations like the UK, USA or Australia and want a country that offers the best education alongside unique cultural exposure.
+</p>
         {/* Paragraph 2 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-Studying in Japan isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
-
+Over the past two decades, Japan has gradually opened its universities to international students. The government actively encourages global participation in higher education, and universities have introduced hundreds of English-taught programs across undergraduate and postgraduate levels. 
+</p>
+        {/* Paragraph */}
+        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
+Its universities rank among the top in Asia, tuition fees are lower than the UK or Australia, and the government actively funds scholarships for foreign students including the fully-funded MEXT scholarship.</p>
       </div>
     </section>
      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">

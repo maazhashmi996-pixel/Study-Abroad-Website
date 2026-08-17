@@ -18,37 +18,30 @@ export default function Luxembourg1() {
   
 const reasons = [
             {
-              title: "Academics That Follow a System",
+              title: "A European Hub for Careers and Education",
               description:
-                "Polish universities are traditional in a good way. Courses follow structured syllabi, attendance matters, assessments are scheduled in advance, and grading criteria are clear. Students who prefer knowing exactly what’s expected of them usually do well here.",
+                "Luxembourg is at the heart of Europe and hosts major EU institutions, global banks, fintech firms, and multinational companies. For students, this means studying in an environment where academics and industry are linked.",
               icon: FaGraduationCap,
               accentBorder: "border-l-red-500",
               iconBg: "bg-red-50 text-red-600 border-red-100",
             },
             {
-              title: "Fields With Global Relevance",
+              title: "Multilingual Learning Environment",
               description:
-                "Poland is especially known for medicine, engineering, computer science, business, and technical programs. Medical universities, in particular, attract international students from across Europe, Asia, and the Middle East due to their training standards and EU recognition.",
+                "Luxembourg is naturally multilingual, with English, French, and German commonly used across universities and workplaces. Most master’s programs are taught in English, while exposure to other languages is used through daily life. This multilingual experience becomes a major advantage for students aiming for international careers.",
               icon: FaWallet,
               accentBorder: "border-l-[#0b5cff]",
               iconBg: "bg-blue-50 text-[#0b5cff] border-blue-100",
             },
             {
-              title: "English Education",
+              title: "Safe & Organised Living",
               description:
-                "Many programs are taught fully in English, but Poland also encourages students to pick up basic Polish. This becomes an advantage later, not only for part-time work but also for internships and post-study employment. Students say this dual exposure helps them feel more incorporated.",
+                "Luxembourg ranks among Europe’s safest countries. Public transport is efficient (and free), cities are clean and well-planned, and the quality of life is high. For students adjusting to life abroad, this stability creates a comfortable learning environment.",
               icon: FaGlobeEurope,
               accentBorder: "border-l-slate-700",
               iconBg: "bg-slate-100 text-slate-700 border-slate-200",
             },
-            {
-              title: "A Balanced Lifestyle",
-              description:
-                "Life in Poland doesn’t feel rushed. Cities are active but not chaotic. Students can manage studies, part-time work, and daily expenses without feeling constantly stretched. That balance plays a big role in academic performance and mental well-being.",
-              icon: FaShieldAlt,
-              accentBorder: "border-l-red-500",
-              iconBg: "bg-red-50 text-red-600 border-red-100",
-            },
+          
           ];
 
   return (
@@ -75,9 +68,10 @@ const reasons = [
       <div className=" inset-0 flex items-end pb-2 sm:pb-6 md:pb-8 px-3 sm:px-88 md:px-10 z-20">
         <div className="absolute max-w-7xl mx-auto w-full">
           <ul className="relative list-disc text-xs b-0.5 l-6 pl-12 sm:ml-6 underline  sm:space-y-3 text-white sm:text-base md:text-xs lg:text-xl drop-shadow-md">
-            <li>15+ University and Colleges</li>
-            <li>DKK 80,000 Annual Tuition Fee</li>
-            <li>3 Year Post Study Visa</li>
+            <li>5+ Higher Education Institutions</li>
+            <li>€3,000 – €6,000 Annual Tuition Fee</li>
+            <li>
+Post Study Work Opportunities Available</li>
           </ul>
         </div>
       </div>
@@ -92,12 +86,12 @@ const reasons = [
 
         {/* Paragraph 1 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold ">
-Experience world-class education in one of the happiest and safest nations on earth. Consistently ranked at the top of the UN’s World Happiness Report since 2012, Luxemboura offers an innovative, secure, and welcoming environment for international students.        </p>
-
+Recently, we have seen that the interest of students has grown steadily in Luxembourg. Those who want a European degree, career exposure, and a multilingual environment are starting to look more closely at Luxembourg
+</p>
         {/* Paragraph 2 */}
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600  font-semibold">
-Studying in Luxemboura isn't just about gaining a globally recognized degree—it's about building a strong foundation for your international career while enjoying top-tier healthcare, high living standards, and unparalleled quality of life.        </p>
-
+What changed? Luxembourg positioned itself as an education and career gateway, not just an academic destination. With links to European institutions, global companies, and financial organisations, the country developed programs that connect education directly with employment. Universities are few in number but highly focused, well-funded, and internationally aligned.
+</p>
       </div>
     </section>
      <section className="bg-slate-50/70 border-y border-slate-100 px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-16">

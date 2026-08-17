@@ -28,7 +28,7 @@ const blogs: Blog[] = [
     desc: "Austria is one of the most affordable options for students who want a respected European degree with excellent post-study opportunities.",
     image: "/images/blog/austria-visa.webp",
     tags: ["Austria", "Visa", "Europe"],
-    link: "/blogs/austria-study-visa",
+    link: "/Blogs/austria",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const blogs: Blog[] = [
     desc: "A comprehensive guide to navigating European study visas, admission requirements, and scholarship paths for international students.",
     image: "/images/blog/MBA.png",
     tags: ["Hungary", "Visa", "Europe"],
-    link: "/blogs/europe-study-visa",
+    link: "/Blog/europe",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const blogs: Blog[] = [
     desc: "Explore top English-taught programs, post-study work options, and step-by-step visa guidelines for the Netherlands.",
     image: "/images/blog/neatherlands.webp",
     tags: ["Netherlands", "Visa", "Europe"],
-    link: "/blogs/netherlands-study-visa",
+    link: "/Blog/netherland",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const blogs: Blog[] = [
     desc: "Everything you need to know about SDS visa streams, university admissions, and popular scholarships in Canada.",
     image: "/images/blog/canada.webp",
     tags: ["Canada", "Scholarships"],
-    link: "/blogs/study-in-canada",
+    link: "/Blog/canada",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const blogs: Blog[] = [
     desc: "Discover fully funded CSC and provincial government scholarship opportunities available for international applicants.",
     image: "/images/blog/china.webp",
     tags: ["China", "Scholarships"],
-    link: "/blogs/china-scholarships",
+    link: "/Blog/china",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const blogs: Blog[] = [
     desc: "Master your Turkish embassy interview with essential preparation tips, sample questions, and document checklists.",
     image: "/images/blog/turkey.webp",
     tags: ["Turkey", "Visa"],
-    link: "/blogs/turkey-visa-tips",
+    link: "/Blog/turkey",
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const blogs: Blog[] = [
     desc: "Learn about intake deadlines, CAS issuance, English language waiver options, and Graduate Route policies in the UK.",
     image: "/images/blog/10-Tips.png",
     tags: ["United Kingdom", "Visa"],
-    link: "/blogs/uk-study-opportunities",
+    link: "/Blog/united-kingdom",
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ const blogs: Blog[] = [
     desc: "Find detailed information on Danish higher education institutions, tuition fee structure, and residence permits.",
     image: "/images/blog/bunking-myths.png",
     tags: ["Denmark", "Europe"],
-    link: "/blogs/denmark-education-requirements",
+    link: "/Blog/bunking-myths",
   },
   {
     id: 9,
@@ -92,7 +92,7 @@ const blogs: Blog[] = [
     desc: "A practical checklist for standardized tests, SOP writing, financial documentation, and F-1 visa preparation.",
     image: "/images/blog/Exchange-programs.png",
     tags: ["United States", "Scholarships"],
-    link: "/blogs/us-admission-checklist",
+    link: "/Blog/usuni",
   },
   {
     id: 10,
@@ -100,7 +100,7 @@ const blogs: Blog[] = [
     desc: "Complete step-by-step guidance on applying through Swedish central portals and obtaining Swedish Institute scholarships.",
     image: "/images/blog/sweden.webp",
     tags: ["Sweden", "Scholarships"],
-    link: "/blogs/sweden-study-guide",
+    link: "/Blog/sweden",
   },
   {
     id: 11,
@@ -108,7 +108,7 @@ const blogs: Blog[] = [
     desc: "Understand Campus France procedures, public university fees, and top funding programs like the Eiffel Scholarship.",
     image: "/images/blog/france-study.webp",
     tags: ["France", "Scholarships"],
-    link: "/blogs/france-study-guide",
+    link: "/Blog/france",
   },
   {
     id: 12,
@@ -116,7 +116,7 @@ const blogs: Blog[] = [
     desc: "Discover world-class research universities, stay-back options, and entry criteria for international students in Ireland.",
     image: "/images/blog/Ireland-study.png",
     tags: ["Ireland", "Scholarships"],
-    link: "/blogs/ireland-study-guide",
+    link: "/Blog/ireland",
   },
   {
     id: 13,
@@ -124,7 +124,7 @@ const blogs: Blog[] = [
     desc: "Explore affordable top-ranked branch campuses, lower cost of living, and streamlined student visa processing.",
     image: "/images/blog/maly.webp",
     tags: ["Malaysia", "Scholarships"],
-    link: "/blogs/malaysia-study-guide",
+    link: "/Blog/malaysia",
   },
   {
     id: 14,
@@ -132,7 +132,7 @@ const blogs: Blog[] = [
     desc: "Learn about GKS (Global Korea Scholarship) opportunities, TOPIK requirements, and top universities in South Korea.",
     image: "/images/blog/south-korea.webp",
     tags: ["South Korea", "Scholarships"],
-    link: "/blogs/south-korea-study-guide",
+    link: "/Blog/south-korea",
   },
 ];
 

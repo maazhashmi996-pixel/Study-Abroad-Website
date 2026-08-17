@@ -17,33 +17,33 @@ export default function Ireland1() {
   ];
   const reasons = [
               {
-                title: "Academics That Follow a System",
+              
                 description:
-                  "Polish universities are traditional in a good way. Courses follow structured syllabi, attendance matters, assessments are scheduled in advance, and grading criteria are clear. Students who prefer knowing exactly what’s expected of them usually do well here.",
+                  "Ireland’s universities and schools are well-known worldwide. In addition, their popularity implies that Irish university graduates may advance in their jobs globally.",
                 icon: FaGraduationCap,
                 accentBorder: "border-l-red-500",
                 iconBg: "bg-red-50 text-red-600 border-red-100",
               },
               {
-                title: "Fields With Global Relevance",
+          
                 description:
-                  "Poland is especially known for medicine, engineering, computer science, business, and technical programs. Medical universities, in particular, attract international students from across Europe, Asia, and the Middle East due to their training standards and EU recognition.",
+                  "Moreover, Ireland has one of the most effective educational systems in the world. The country has some of the top 3% of universities globally, and its graduates are in high demand worldwide..",
                 icon: FaWallet,
                 accentBorder: "border-l-[#0b5cff]",
                 iconBg: "bg-blue-50 text-[#0b5cff] border-blue-100",
               },
               {
-                title: "English Education",
+             
                 description:
-                  "Many programs are taught fully in English, but Poland also encourages students to pick up basic Polish. This becomes an advantage later, not only for part-time work but also for internships and post-study employment. Students say this dual exposure helps them feel more incorporated.",
+                  "Besides, Ireland is also a young nation, with one-third of the population under 25. Ireland routinely ranks among the top 20 countries in the world for peace, human development, and quality of life, making it a safe and welcoming place to live.",
                 icon: FaGlobeEurope,
                 accentBorder: "border-l-slate-700",
                 iconBg: "bg-slate-100 text-slate-700 border-slate-200",
               },
               {
-                title: "A Balanced Lifestyle",
+               
                 description:
-                  "Life in Poland doesn’t feel rushed. Cities are active but not chaotic. Students can manage studies, part-time work, and daily expenses without feeling constantly stretched. That balance plays a big role in academic performance and mental well-being.",
+                  "Furthermore, you will study in Ireland with over 35,000 international students.",
                 icon: FaShieldAlt,
                 accentBorder: "border-l-red-500",
                 iconBg: "bg-red-50 text-red-600 border-red-100",
@@ -165,9 +165,7 @@ The Irish are known for being gregarious, and as many of the country’s outlyin
                     <div className={`p-3 rounded-xl border ${item.iconBg} shrink-0`}>
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-snug">
-                      {item.title}
-                    </h3>
+                 
                   </div>
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                     {item.description}
